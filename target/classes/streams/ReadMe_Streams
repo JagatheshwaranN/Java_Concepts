@@ -1,0 +1,59 @@
+Streams
+-------
+ 1. To store the group of elements as single entity Collection is used.
+ 2. Streams is used to process the data in the collection.
+ 3. The Streams is introduced in Java8 inside the java.util.*; package.
+ 
+ Stream uses 2 mechanisms to the process the data in the collection are below,
+ 1. Filter - Based up on the condition filter can be used to filter the data in collection.
+ 2. Map - Whatever data we have in Source is updated/modified and stored in Target collection.
+ 		  It is an intermediate operation and used to transform the object from source to target collection.
+
+Lambda expression are important to work with the Stream.
+ 
+ FlatMap
+ -------
+ 1. FlapMap is part of Map mechanism which can be used to process the complex data in collection.
+ 2. FlatMap basically returns the stream of objects.
+ 
+ Non Terminal Methods in Stream
+ ------------------------------
+ 1. filter()
+ 2. map()
+ 3. flatMap()
+ 4. distinct()
+ 5. limit()
+ 
+ Terminal Methods in Stream
+ --------------------------
+ 1. collect()
+ 2. count()
+ 3. min()
+ 4. max()
+ 5. forEach()
+ 6. toArray()
+ 7. Sorted()
+ 8. reduce()
+ 
+ Other methods
+ -------------
+ 1. anyMatch()
+ 2. allMatch()
+ 3. noneMatch()
+ 4. findAny()
+ 5. findFirst()
+ 6. concat()
+ 
+ Parallel Stream
+ ---------------
+ The Stream process the data sequentially. By using parallel stream we can process the data in parallel.
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 

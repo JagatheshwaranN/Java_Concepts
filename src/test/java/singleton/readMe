@@ -1,0 +1,13 @@
+Singleton class / pattern
+==========================
+In OOPS, a singleton class is a class that can have only one object (instance of the class) at a time.
+
+Design Singleton
+================
+1. Make constructor as private
+2. Write a public static method that has return type of object of this singleton class( Lazy initialization)
+
+Difference between Normal and Singleton class
+=============================================
+1. For normal class we can use constructor whereas for Singleton class we can use getInstance() method for instantiation
+

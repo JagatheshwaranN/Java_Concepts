@@ -1,0 +1,72 @@
+Need for Lambda expression
+--------------------------
+Java is a Object oriented programming language and which don't have functional programming feature. 
+To have functional programming feature, Lambda expression comes into picture.
+
+Objectives of Lambda expression
+-------------------------------
+1. Functional programming feature
+2. Code optimization
+
+Lambda expression
+-----------------
+Lambda expression is a anonymous function(Nameless function), which doesn't have rerturnType and return any value. 
+Also, doesn't have access modifier.
+
+To use Lambda expression
+------------------------
+Invoking Lambda expression is done by Functional Interface. 
+Before Java7, A Interface which contains only ONE abstract method is called as Functional Interface. 
+From Java7, a Functional Interface may or may not contains default and static methods along with abstract method.
+
+Default Functional Interfaces in Java
+-------------------------------------
+1. Runnable -> run() 
+2. Callable -> call()
+3. Comparable -> compareTo()
+4. ActionListener -> actionPerformed()
+
+@FuntionalInterface - This annotation is used to explicitly represent Functional Interface.
+
+Predefined Functional Interface
+-------------------------------
+1. Predicate
+2. Function
+3. Consumer
+4. Supplier
+
+The above predefined Functional Interfaces are used to invoke the Lambda expression.
+Its located inside java.util.function
+
+Predicate
+---------
+It takes data of any type and return boolean value. It has test() method.
+It will be preferred when we have conditional check.
+
+Function
+--------
+It takes data of any type and return value of any type. It has apply() method.
+It will be preferred when we have to perform the operation and return the value.
+
+Consumer
+--------
+It takes data of any type and doesn't return any value. It has accept() method.
+It will be used to print the data.
+
+Supplier
+--------
+It doesn't take data of any type but return value of any type. It has get() method.
+It will be used to get the system properties, date and time.
+
+Function Chaining
+-----------------
+Function chaining is a process by which we can combine two functions together.
+andThen() and compose() are used to perform the function chaining.
+andThen() will process the first function first and the second function second.
+compose() will process the second function first and the first function second.
+
+
+
+
+
+ 
