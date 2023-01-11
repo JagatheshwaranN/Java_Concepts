@@ -29,6 +29,7 @@ public class LambdaExpWithCustomClassDemo6 {
 		object.add(new Employee(123, "John"));
 		object.add(new Employee(122, "Blake"));
 		System.out.println("Array List in insertion order " + object);
+		
 		Collections.sort(object, (e1, e2) -> e1.ename.compareTo(e2.ename));
 		System.out.println("Array List in ascending order " + object);
 	}
