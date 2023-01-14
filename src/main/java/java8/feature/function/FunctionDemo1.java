@@ -8,6 +8,8 @@ import java.util.function.Function;
  * input and produce results. If the result is of any type and not only boolean,
  * then in such case we should go for Function.
  * 
+ * Represents a function that accepts one argument and produces a result.
+ * 
  * interface Function<T, R> { public R apply (T t); }
  * 
  * T-Type & R-Return Type

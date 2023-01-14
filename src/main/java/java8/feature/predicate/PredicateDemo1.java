@@ -5,6 +5,8 @@ import java.util.function.Predicate;
 /**
  * Predicate Interface is used for conditional checks.
  * 
+ * Represents a predicate (boolean-valued function) of one argument.
+ * 
  * interface predicate<T> { public boolean test (T t); }
  * 
  * T - Type
