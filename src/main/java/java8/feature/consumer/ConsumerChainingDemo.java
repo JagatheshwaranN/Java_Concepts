@@ -20,7 +20,7 @@ public class ConsumerChainingDemo {
 	public static void main(String[] args) {
 
 		Consumer<Movie> c1 = m -> System.out.println(m + " movie was released for pongal 2023");
-		Consumer<Movie> c2 = m -> System.out.println(m + " movie was good and hit");
+		Consumer<Movie> c2 = m -> System.out.println(m + " movie was good");
 		Consumer<Movie> c3 = c1.andThen(c2);
 		c3.accept(new Movie("Thunivu"));
 	}
