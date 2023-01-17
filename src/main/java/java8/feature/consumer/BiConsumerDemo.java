@@ -10,7 +10,7 @@ import java.util.function.BiConsumer;
  * Represents an operation that accepts two input arguments and returns no
  * result.
  * 
- * interface Consumer <T, U> { public void accept (T t, U u); }
+ * interface BiConsumer <T, U> { public void accept (T t, U u); }
  * 
  * T & U - Type
  * 
