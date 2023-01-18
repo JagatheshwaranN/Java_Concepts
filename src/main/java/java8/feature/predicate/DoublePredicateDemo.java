@@ -3,8 +3,8 @@ package java8.feature.predicate;
 import java.util.function.DoublePredicate;
 
 /**
- * DoublePredicate is used to take input of Double and verify the conditional
- * check.
+ * DoublePredicate is used to take input of type Double and verify the
+ * conditional check.
  * 
  * interface DoublePredicate { public boolean test (double value); }
  * 

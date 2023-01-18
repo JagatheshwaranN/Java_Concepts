@@ -16,8 +16,7 @@ public class DoubleSupplierDemo {
 	public static void main(String[] args) {
 
 		DoubleSupplier ds = () -> {
-			double number;
-			number = Math.PI;
+			double number = Math.PI;
 			return number;
 		};
 		System.out.println(ds.getAsDouble());

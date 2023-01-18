@@ -3,7 +3,8 @@ package java8.feature.predicate;
 import java.util.function.IntPredicate;
 
 /**
- * IntPredicate is used to take input of Int and verify the conditional check.
+ * IntPredicate is used to take input of type Int and verify the conditional
+ * check.
  * 
  * interface IntPredicate { public boolean test (int value); }
  * 

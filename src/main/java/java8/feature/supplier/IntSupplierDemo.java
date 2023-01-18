@@ -17,8 +17,7 @@ public class IntSupplierDemo {
 
 		IntSupplier is = () -> {
 			
-			int number = 0;
-			number = (int)(Math.random()*1000000);
+			int number = (int)(Math.random()*1000000);
 			return number;
 		};
 		System.out.println(is.getAsInt());
