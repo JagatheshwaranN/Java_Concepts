@@ -11,7 +11,7 @@ import java.util.function.BiPredicate;
  * @author Jagatheshwaran N
  *
  */
-public class BiPredicateDemo {
+public class _5_BiPredicateDemo {
 
 	public static void main(String[] args) {
 

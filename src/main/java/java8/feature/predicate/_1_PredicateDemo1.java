@@ -14,7 +14,7 @@ import java.util.function.Predicate;
  * @author Jagatheshwaran N
  *
  */
-public class PredicateDemo1 {
+public class _1_PredicateDemo1 {
 
 	public static void main(String[] args) {
 

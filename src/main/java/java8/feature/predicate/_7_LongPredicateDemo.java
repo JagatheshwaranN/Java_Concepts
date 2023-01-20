@@ -11,7 +11,7 @@ import java.util.function.LongPredicate;
  * @author Jagatheshwaran N
  *
  */
-public class LongPredicateDemo {
+public class _7_LongPredicateDemo {
 
 	public static void main(String[] args) {
 

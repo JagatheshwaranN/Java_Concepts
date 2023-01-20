@@ -11,7 +11,7 @@ import java.util.function.IntPredicate;
  * @author Jagatheshwaran N
  *
  */
-public class IntPredicateDemo {
+public class _6_IntPredicateDemo {
 
 	public static void main(String[] args) {
 

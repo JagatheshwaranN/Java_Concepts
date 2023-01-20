@@ -11,7 +11,7 @@ import java.util.function.DoublePredicate;
  * @author Jagatheshwaran N
  *
  */
-public class DoublePredicateDemo {
+public class _8_DoublePredicateDemo {
 
 	public static void main(String[] args) {
 
