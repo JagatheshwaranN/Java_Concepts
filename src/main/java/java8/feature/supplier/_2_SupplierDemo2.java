@@ -2,7 +2,7 @@ package java8.feature.supplier;
 
 import java.util.function.Supplier;
 
-public class SupplierDemo2 {
+public class _2_SupplierDemo2 {
 
 	public static void main(String[] args) {
 

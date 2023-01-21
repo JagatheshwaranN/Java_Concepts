@@ -17,7 +17,7 @@ import java.util.function.Supplier;
  * @author Jagatheshwaran N
  *
  */
-public class SupplierDemo1 {
+public class _1_SupplierDemo1 {
 
 	public static void main(String[] args) {
 

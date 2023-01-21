@@ -11,7 +11,7 @@ import java.util.function.DoubleSupplier;
  * @author Jagatheshwaran N
  *
  */
-public class DoubleSupplierDemo {
+public class _5_DoubleSupplierDemo {
 
 	public static void main(String[] args) {
 

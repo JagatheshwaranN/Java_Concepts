@@ -12,7 +12,7 @@ import java.util.function.LongSupplier;
  * @author Jagatheshwaran N
  *
  */
-public class LongSupplierDemo {
+public class _4_LongSupplierDemo {
 
 	public static void main(String[] args) {
 

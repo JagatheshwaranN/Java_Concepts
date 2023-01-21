@@ -12,7 +12,7 @@ import java.util.function.BooleanSupplier;
  * @author Jagatheshwaran N
  *
  */
-public class BooleanSupplierDemo {
+public class _6_BooleanSupplierDemo {
 	
 	public static void main (String[] args) {
 		

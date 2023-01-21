@@ -11,7 +11,7 @@ import java.util.function.IntSupplier;
  * @author Jagatheshwaran N
  *
  */
-public class IntSupplierDemo {
+public class _3_IntSupplierDemo {
 
 	public static void main(String[] args) {
 
