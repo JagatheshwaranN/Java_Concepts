@@ -21,7 +21,7 @@ public class ToLongFunctionDemo {
 	
 	public static void main (String[] args) {
 		
-		ToLongFunction<Date> tlf = i -> new Date().getTime();
+		ToLongFunction<Date> tlf = i -> i.getTime();
 		System.out.println(tlf.applyAsLong(new Date()));
 	}
 }

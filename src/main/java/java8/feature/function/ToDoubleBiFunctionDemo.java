@@ -7,7 +7,7 @@ import java.util.function.ToDoubleBiFunction;
  * input and produce results. If the result is of any type and not only boolean,
  * then in such case we should go for Function.
  * 
- * Represents a function that produces an double-valued result.
+ * Represents a function that accepts two arguments and produces an double-valued result.
  * 
  * interface ToDoubleFunction<T, U> { public double applyAsDouble (T value, U
  * value); }

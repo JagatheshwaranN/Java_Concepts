@@ -8,7 +8,7 @@ import java.util.function.LongToDoubleFunction;
  * then in such case we should go for Function.
  * 
  * Represents a function that accepts a long-valued argument and produces an
- * int-valued result.
+ * double-valued result.
  * 
  * interface LongToDoubleFunction { public R applyAsDouble (long value); }
  * 
