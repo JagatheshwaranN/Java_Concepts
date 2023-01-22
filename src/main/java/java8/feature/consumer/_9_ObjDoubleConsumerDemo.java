@@ -18,7 +18,7 @@ import java.util.function.ObjDoubleConsumer;
  * @author Jagatheshwaran N
  *
  */
-public class ObjDoubleConsumerDemo {
+public class _9_ObjDoubleConsumerDemo {
 
 	public static void main (String[] args) {
 		

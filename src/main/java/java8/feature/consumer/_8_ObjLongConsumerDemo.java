@@ -18,7 +18,7 @@ import java.util.function.ObjLongConsumer;
  * @author Jagatheshwaran N
  *
  */
-public class ObjLongConsumerDemo {
+public class _8_ObjLongConsumerDemo {
 
 	public static void main(String[] args) {
 

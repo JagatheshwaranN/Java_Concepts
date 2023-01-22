@@ -16,7 +16,7 @@ import java.util.function.LongConsumer;
  * @author Jagatheshwaran N
  *
  */
-public class LongConsumerDemo {
+public class _5_LongConsumerDemo {
 
 	public static void main(String[] args) {
 		

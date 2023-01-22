@@ -30,7 +30,7 @@ class Students {
 	}
 }
 
-public class ConsumerDemo {
+public class _1_ConsumerDemo {
 
 	public static void main(String[] args) {
 

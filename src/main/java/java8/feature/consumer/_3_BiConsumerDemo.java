@@ -29,7 +29,7 @@ class Staff {
 	}
 }
 
-public class BiConsumerDemo {
+public class _3_BiConsumerDemo {
 
 	public static void main(String[] args) {
 

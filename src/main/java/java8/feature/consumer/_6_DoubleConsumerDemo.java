@@ -15,7 +15,7 @@ import java.util.function.DoubleConsumer;
  * @author Jagatheshwaran N
  *
  */
-public class DoubleConsumerDemo {
+public class _6_DoubleConsumerDemo {
 	
 	public static void main (String[] args) {
 		

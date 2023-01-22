@@ -17,7 +17,7 @@ import java.util.function.ObjIntConsumer;
  * @author Jagatheshwaran N
  *
  */
-public class ObjIntConsumerDemo {
+public class _7_ObjIntConsumerDemo {
 
 	public static void main(String[] args) {
 		

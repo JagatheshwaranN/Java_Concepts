@@ -15,7 +15,7 @@ import java.util.function.IntConsumer;
  * @author Jagatheshwaran N
  *
  */
-public class IntConsumerDemo {
+public class _4_IntConsumerDemo {
 
 	public static void main(String[] args) {
 		

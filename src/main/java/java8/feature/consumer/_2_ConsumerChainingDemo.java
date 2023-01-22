@@ -15,7 +15,7 @@ class Movie {
 
 }
 
-public class ConsumerChainingDemo {
+public class _2_ConsumerChainingDemo {
 
 	public static void main(String[] args) {
 
