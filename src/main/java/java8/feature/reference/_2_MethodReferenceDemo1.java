@@ -15,7 +15,7 @@ package java8.feature.reference;
  * @author Jagatheshwaran N
  *
  */
-public class MethodReferenceDemo1 {
+public class _2_MethodReferenceDemo1 {
 
 	public static void run() {
 		for (int i = 0; i < 10; i++) {
@@ -25,7 +25,7 @@ public class MethodReferenceDemo1 {
 
 	public static void main(String[] args) {
 
-		Runnable r = MethodReferenceDemo1::run;
+		Runnable r = _2_MethodReferenceDemo1::run;
 		Thread t = new Thread(r);
 		t.start();
 		for (int i = 0; i < 10; i++) {

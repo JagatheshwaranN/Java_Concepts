@@ -21,7 +21,7 @@ class Sample {
 	}
 }
 
-public class ConstructorReferenceDemo1 {
+public class _4_ConstructorReferenceDemo1 {
 
 	public static void main(String[] args) {
 

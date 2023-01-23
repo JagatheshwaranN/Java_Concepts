@@ -1,6 +1,6 @@
 package java8.feature.reference;
 
-public class WithoutMethodReference {
+public class _1_WithoutMethodReference {
 
 	public static void main(String[] args) {
 

@@ -17,16 +17,16 @@ class StudentDemo {
 	}
 
 	public String toString() {
-		return name + " " + mark;
+		return this.name + " " + this.mark;
 	}
 }
 
-public class ConstructorReferenceDemo3 {
+public class _6_ConstructorReferenceDemo3 {
 
 	public static void main(String[] args) {
-		
+
 		// Student s = (name, mark) -> new StudentDemo(name, mark);
 		Student s = StudentDemo::new;
-		s.get("Alex", 98);
+		System.out.println(s.get("Alex", 98).toString());
 	}
 }

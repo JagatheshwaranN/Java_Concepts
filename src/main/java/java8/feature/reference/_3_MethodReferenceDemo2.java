@@ -5,7 +5,7 @@ interface Calculation {
 	public void add(int a, int b);
 }
 
-public class MethodReferenceDemo2 {
+public class _3_MethodReferenceDemo2 {
 
 	public void sum(int x, int y) {
 		System.out.println("The sum is " + (x + y));
@@ -13,7 +13,7 @@ public class MethodReferenceDemo2 {
 
 	public static void main(String[] args) {
 		
-		MethodReferenceDemo2 mrd2 = new MethodReferenceDemo2();
+		_3_MethodReferenceDemo2 mrd2 = new _3_MethodReferenceDemo2();
 		Calculation c = mrd2::sum;
 		c.add(10, 20);
 	}
