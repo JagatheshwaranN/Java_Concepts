@@ -3,7 +3,7 @@ package java8.feature.examples;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class EmployeeFilterForEachDemo {
+public class EmployeeFilterCollectDemo {
 
 	public static List<Employee> taxEvaluationType1(String taxIndicator) {
 		

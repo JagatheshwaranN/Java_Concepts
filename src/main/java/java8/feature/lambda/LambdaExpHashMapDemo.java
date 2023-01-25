@@ -12,7 +12,7 @@ public class LambdaExpHashMapDemo {
 		map.put(102, "Blake");
 		map.put(103, "Cathy");
 		map.put(104, "Daric");
-		map.put(105, "Emmel");
+		map.put(105, "Emma");
 
 		// Without Stream
 		map.forEach((key, value) -> System.out.println(key + " " + value));

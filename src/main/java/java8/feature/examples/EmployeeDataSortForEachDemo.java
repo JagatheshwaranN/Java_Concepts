@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class EmployeeDataSortDemo {
+public class EmployeeDataSortForEachDemo {
 
 	public static List<Employee> employeeTemp;
 
