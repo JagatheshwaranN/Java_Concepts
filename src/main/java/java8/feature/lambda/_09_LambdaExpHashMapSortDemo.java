@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class LambdaExpHashMapSortDemo {
+public class _09_LambdaExpHashMapSortDemo {
 
 	public static List<Entry<Integer, String>> mapDataAsList() {
 

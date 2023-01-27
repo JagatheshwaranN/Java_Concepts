@@ -3,7 +3,7 @@ package java8.feature.lambda;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LambdaExpHashMapDemo {
+public class _08_LambdaExpHashMapDemo {
 
 	public static void main(String[] args) {
 
