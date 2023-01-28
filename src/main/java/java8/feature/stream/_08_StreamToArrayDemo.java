@@ -2,7 +2,7 @@ package java8.feature.stream;
 
 import java.util.ArrayList;
 
-public class _8_StreamToArrayDemo {
+public class _08_StreamToArrayDemo {
 
 	public static void main(String[] args) {
 		

@@ -7,12 +7,12 @@ import java.util.ArrayList;
  * helpful to do bulk operations on collection. The stream () method present
  * inside the Collection Interface.
  * 
- * filter() - It is used to check the conditions.
+ * count() - It is used to count the stream objects.
  * 
  * @author Jagatheshwaran N
  *
  */
-public class _1_StreamFilterDemo {
+public class _04_StreamCountDemo {
 
 	public static void main(String[] args) {
 
@@ -24,9 +24,7 @@ public class _1_StreamFilterDemo {
 		al.add(45);
 		al.add(48);
 		
-		Object[] s = al.stream().filter(i -> i > 50).toArray();
-		for (Object i : s) {
-			System.out.println(i);
-		}
+		long count = al.stream().filter(i -> i < 50).count();
+		System.out.println(count);
 	}
 }

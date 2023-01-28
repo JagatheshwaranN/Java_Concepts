@@ -2,7 +2,7 @@ package java8.feature.stream;
 
 import java.util.stream.Stream;
 
-public class _9_Stream_StreamOfDemo {
+public class _09_Stream_StreamOfDemo {
 
 	public static void main(String[] args) {
 

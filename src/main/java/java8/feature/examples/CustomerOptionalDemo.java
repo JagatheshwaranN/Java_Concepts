@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 public class CustomerOptionalDemo {
 
 	public static Customer getCustomerEmail(String email) throws Exception {
+		
 		List<Customer> customers = Stream
 				.of(new Customer(101, "Alex", "alex@email.com", Arrays.asList("9876543210", "9987554321")),
 						new Customer(102, "Bower", "bower@gmail.com", Arrays.asList("8765432109", "9887554321")))
@@ -29,7 +30,7 @@ public class CustomerOptionalDemo {
 		Optional<String> customerEmail = Optional.of(customers.get(0).getEmail());
 		System.out.println(customerEmail);
 
-		// The below line will trhow NullPointer Exception when we have null value. of()
+		// The below line will throw NullPointer Exception when we have null value. of()
 		// can be used when the object is non-null.
 //		customerEmail = Optional.of(customers.get(1).getEmail());
 //		System.out.println(customerEmail);

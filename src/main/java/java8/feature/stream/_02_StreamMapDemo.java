@@ -7,12 +7,12 @@ import java.util.ArrayList;
  * helpful to do bulk operations on collection. The stream () method present
  * inside the Collection Interface.
  * 
- * forEach() - It is used to perform the operations for each elements in the stream.
+ * map() - It is used to do manipulation on the stream objects.
  * 
  * @author Jagatheshwaran N
  *
  */
-public class _5_StreamForEachDemo {
+public class _02_StreamMapDemo {
 
 	public static void main(String[] args) {
 
@@ -24,6 +24,9 @@ public class _5_StreamForEachDemo {
 		al.add(45);
 		al.add(48);
 		
-		al.stream().filter(i -> i > 50).forEach(System.out::println);
+		Object[] s = al.stream().filter(i -> i < 50).map(i -> i + 5).toArray();
+		for (Object s1 : s) {
+			System.out.println(s1);
+		}
 	}
 }

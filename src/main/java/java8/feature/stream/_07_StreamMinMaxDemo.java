@@ -2,7 +2,7 @@ package java8.feature.stream;
 
 import java.util.ArrayList;
 
-public class _7_StreamMinMaxDemo {
+public class _07_StreamMinMaxDemo {
 
 	static int minVal;
 	static int maxVal;

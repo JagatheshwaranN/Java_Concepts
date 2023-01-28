@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author Jagatheshwaran N
  *
  */
-public class _6_StreamSortedDemo {
+public class _06_StreamSortedDemo {
 
 	public static void defaultSort() {
 
