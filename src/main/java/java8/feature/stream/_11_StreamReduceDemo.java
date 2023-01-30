@@ -16,7 +16,7 @@ import java.util.Optional;
  * @author Jagatheshwaran N
  *
  */
-public class _11_Stream_ReduceDemo {
+public class _11_StreamReduceDemo {
 
 	public static void main(String[] args) {
 

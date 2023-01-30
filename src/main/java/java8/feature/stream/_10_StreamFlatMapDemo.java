@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * @author Jagatheshwaran N
  *
  */
-public class _10_Stream_FlatMapDemo {
+public class _10_StreamFlatMapDemo {
 
 	public static void main(String[] args) {
 

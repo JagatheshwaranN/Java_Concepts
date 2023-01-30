@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class EmployeeDataStore {
 
@@ -16,6 +18,13 @@ public class EmployeeDataStore {
 		empObject.add(new Employee(175, "Jenni", "Hospitality", 550000));
 		empObject.add(new Employee(150, "Erica", "Admin", 700000));
 		return empObject;
+	}
+
+	public static List<Employees> getEmployeesDetail() {
+
+		return Stream.of(new Employees(101, "Alex", "C", 400000), new Employees(120, "Brown", "A", 600000),
+				new Employees(112, "John", "B", 500000), new Employees(175, "Jenni", "B", 550000),
+				new Employees(150, "Erica", "A", 700000)).collect(Collectors.toList());
 	}
 
 	public static Map<Integer, Employee> getEmployeesData() {
