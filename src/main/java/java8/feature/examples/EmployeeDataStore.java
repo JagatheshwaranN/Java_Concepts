@@ -3,6 +3,7 @@ package java8.feature.examples;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -35,6 +36,15 @@ public class EmployeeDataStore {
 		empObject.put(1012, new Employee(112, "John", "Infrastructure", 500000));
 		empObject.put(1075, new Employee(175, "Jenni", "Hospitality", 550000));
 		empObject.put(1050, new Employee(150, "Erica", "Admin", 700000));
+		return empObject;
+	}
+
+	public static List<Employee> createAndGetEmployees() {
+
+		List<Employee> empObject = new ArrayList<Employee>();
+		for (int i = 1; i <= 1000; i++) {
+			empObject.add(new Employee(i, "employee" + i, "dept" + i, Integer.valueOf(new Random().nextInt(1000*100))));
+		}
 		return empObject;
 	}
 }
