@@ -1,0 +1,6 @@
+PRODI PRODNAME               PRODCOST COMPC
+P1    LED TV                    20000 C101
+P2    Music System              10000 C101
+P3    Washing Machine           15000 C102
+P4    Fan                        5000 C102
+                                50000
