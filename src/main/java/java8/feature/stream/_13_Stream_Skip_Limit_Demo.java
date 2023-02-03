@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 
- * Skip operation is useful when we want to discard some number elements from
+ * Skip operation is useful when we want to discard some elements from
  * actual collection.
  * 
  * Limit operation is useful when we want to limit the number of elements from
