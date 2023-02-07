@@ -13,8 +13,8 @@ public class _01_PrivateMethod_Demo1 implements Interface1 {
 
 	public static void main(String[] args) {
 
-		Interface1 interfaceRef = new _01_PrivateMethod_Demo1();
-		interfaceRef.method1();
-		interfaceRef.method2();
+		Interface1 iReference = new _01_PrivateMethod_Demo1();
+		iReference.method1();
+		iReference.method2();
 	}
 }
