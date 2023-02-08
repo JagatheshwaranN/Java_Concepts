@@ -20,7 +20,7 @@ public class _01_TryWithResourceDemo1 {
 
 	public static void trywithResourceType1() {
 
-		try (InputStream inputStream = new FileInputStream("src/main/java/java9/feature/trywithresource/demo.txt");
+		try (InputStream inputStream = new FileInputStream("src/main/java/java9/feature/trywithresource/demo1.txt");
 				Scanner read = new Scanner(inputStream)) {
 			while (read.hasNextLine()) {
 				System.out.println(read.nextLine());
@@ -32,7 +32,7 @@ public class _01_TryWithResourceDemo1 {
 
 	public static void trywithResourceType2() throws FileNotFoundException {
 
-		InputStream inputStream = new FileInputStream("src/main/java/java9/feature/trywithresource/demo.txt");
+		InputStream inputStream = new FileInputStream("src/main/java/java9/feature/trywithresource/demo1.txt");
 		Scanner read = new Scanner(inputStream);
 		try (inputStream; read) {
 			while (read.hasNextLine()) {
