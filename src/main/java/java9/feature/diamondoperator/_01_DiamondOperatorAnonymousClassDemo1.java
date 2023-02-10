@@ -1,5 +1,15 @@
 package java9.feature.diamondoperator;
 
+/**
+ * Type inference is a feature of Java that was introduced in Java 7. Now, Java
+ * compiler can infer type of a data automatically. In Java 9, Java team
+ * improved its type inference feature and allowed us to use (diamond) in the
+ * anonymous class.
+ * 
+ * @author Jagatheshwaran N
+ *
+ * @param <T>
+ */
 abstract class BasicCalculator<T> {
 
 	public abstract T add(T t1, T t2);
