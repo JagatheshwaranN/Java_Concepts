@@ -21,7 +21,8 @@ public class _02_StreamAPIEnhancement_dropWhile_Demo2 {
 	public static void main(String[] args) {
 
 		List<Integer> numbers = List.of(2, 4, 8, 1, 6, 9, 10);
+		System.out.println("Initial List " + numbers);
 		List<Integer> numbersAfterDropWhile = numbers.stream().dropWhile(n -> n % 2 == 0).collect(Collectors.toList());
-		System.out.println(numbersAfterDropWhile);
+		System.out.println("List after dropwhile " + numbersAfterDropWhile);
 	}
 }
