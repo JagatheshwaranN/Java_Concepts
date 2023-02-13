@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * @author Jagatheshwaran N
  *
  */
-public class _02_StreamAPIEnhancement_dropWhile_Demo2 {
+public class _02_StreamAPIEnhancement_DropWhile_Demo1 {
 
 	public static void main(String[] args) {
 

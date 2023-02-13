@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @author Jagatheshwaran N
  *
  */
-public class _01_StreamAPIEnhancement_takeWhile_Demo1 {
+public class _01_StreamAPIEnhancement_TakeWhile_Demo1 {
 
 	public static void main(String[] args) {
 
@@ -26,7 +26,7 @@ public class _01_StreamAPIEnhancement_takeWhile_Demo1 {
 		// With filter()
 		List<Integer> numbersAfterFilter = numbers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
 		System.out.println("List after filter " + numbersAfterFilter);
-		// With takeWhile
+		// With takeWhile()
 		List<Integer> numbersAfterTakeWhile = numbers.stream().takeWhile(n -> n % 2 == 0).collect(Collectors.toList());
 		System.out.println("List after takewhile " + numbersAfterTakeWhile);
 	}
