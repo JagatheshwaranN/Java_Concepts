@@ -10,7 +10,7 @@ import java.util.Set;
  * @author Jagatheshwaran N
  *
  */
-public class _03_FactoryMethodForSet_Demo3 {
+public class _03_FactoryMethodForSet_Demo1 {
 
 	public static void main(String[] args) {
 

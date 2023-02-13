@@ -2,7 +2,7 @@ package java9.feature.factorymethods;
 
 import java.util.Set;
 
-public class _04_FactoryMethodForSet_Demo4 {
+public class _04_FactoryMethodForSet_Demo2 {
 
 	public static void main(String[] args) {
 

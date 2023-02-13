@@ -9,7 +9,7 @@ import java.util.Map;
  * @author Jagatheshwaran N
  *
  */
-public class _06_FactoryMethodForMap_Demo6 {
+public class _06_FactoryMethodForMap_Demo2 {
 
 	public static void main(String[] args) {
 
