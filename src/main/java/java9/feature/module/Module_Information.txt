@@ -1,0 +1,12 @@
+Java9 Module Feature
+====================
+1. Create a Java project in Eclipse ( Ex: Math_Module).
+2. You can see the src source folder and module-info.java.
+3. Create package (com.java9.module.addition) inside the src source folder and add sample java class (Addition) for addition functionality.
+4. Update the module-info file with the exports details of created package.
+5. Create an another Java project in Eclipse ( Ex: Calculator_Module).
+6. You can see the src source folder and module-info.java.
+7. Create package (com.java9.module.calculator) inside the src source folder and add main java class (Calculator) for calculator.
+8. Right click on the Calculator_Module -> BuildPath -> Configure BuildPath -> Projects -> ModulePath ->  Add the Math_Module.
+9. Create the object of the Addition Class inside Calculator Class and try to access the method of Addition Class.
+10. Run the Calculator Class as Java Application and it should work, the addition result should display.
