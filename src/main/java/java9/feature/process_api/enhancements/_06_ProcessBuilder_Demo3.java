@@ -9,13 +9,17 @@ import java.io.IOException;
  * 
  * @author Jagatheshwaran N
  */
-public class _05_ProcessBuilder_Demo2 {
+public class _06_ProcessBuilder_Demo3 {
 
 	public static ProcessBuilder builder;
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		ProcessBuilder builder = new ProcessBuilder("java", "Test.java");
-		builder.start();
+		Process process = builder.start();
+		System.out.println("The process with PID " + process.pid() + " is started");
+		Thread.sleep(10000);
+		process.destroy();
+		System.out.println("The process with PID " + process.pid() + " is destroyed");
 	}
 }
