@@ -5,7 +5,7 @@ import java.io.IOException;
 /**
  * ProcessBuilder - We can use ProcessBuilder to create Processes.
  * 
- * Here we have used ProcessBuilder to run the Java program.
+ * Here we have used ProcessBuilder to run the Java program and Process to destroy the Process.
  * 
  * @author Jagatheshwaran N
  */
