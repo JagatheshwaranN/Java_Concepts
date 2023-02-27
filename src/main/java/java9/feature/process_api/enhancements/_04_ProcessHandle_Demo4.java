@@ -8,7 +8,7 @@ import java.util.stream.Stream;
  * ProcessHandle.Info(I): It is an inner interface, it provides all the
  * information related to a process.
  * 
- * We can get the complete information of a particular process by using
+ * We can get the complete information of a all running processes by using
  * ProcessHandle.Info object.
  * 
  * This code is used to get the complete information of all available processes.

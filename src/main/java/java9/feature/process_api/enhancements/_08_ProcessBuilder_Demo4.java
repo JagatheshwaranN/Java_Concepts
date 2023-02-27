@@ -6,8 +6,8 @@ import java.util.Optional;
 /**
  * ProcessBuilder - We can use ProcessBuilder to create Processes.
  * 
- * Here we have used ProcessBuilder to run the Java program and Process to
- * destroy the Process.
+ * Here we have used ProcessBuilder to get the already running process and to
+ * destroy the same.
  * 
  * @author Jagatheshwaran N
  */
