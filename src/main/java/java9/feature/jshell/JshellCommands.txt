@@ -1,0 +1,108 @@
+Introduction
+============
+JShell is Java’s REPL (Read, Evaluate, Print, and Loop) tool. JShell is also known as interactive console.
+By using this tool we can execute java code snippets and we can get the immediate results. For beginners, it is very good to start programming in fun way.
+By using this JShell, we can test and execute java expressions, statements, methods, classes, etc. It is useful for testing small code snippets very quickly, which can be plugged into our main coding based on our requirement.
+It is not new thing in Java. It is already there in other programming languages like Python, Swift, Lisp, Scala, and Ruby, etc.
+
+Limitations
+===========
+1.	Not designed for Main coding, we can use just to test small coding snippets, which can be used in our Main Coding.
+2.	Not replacement for IDEs like Eclipse, NetBeans, etc.
+3.	Not impressive feature. Other programming languages like Python, Swift, Lisp, Scala, and Ruby already have this REPL tool.
+
+C:\Users\Jagatheshwaran N>java -version
+java version "17.0.3.1" 2022-04-22 LTS
+Java(TM) SE Runtime Environment (build 17.0.3.1+2-LTS-6)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.3.1+2-LTS-6, mixed mode, sharing)
+
+================================================================================
+Start and Stop Jshell in normal mode
+====================================
+C:\Users\Jagatheshwaran N>jshell
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> System.out.println("Hello JShell");
+Hello JShell
+
+jshell> 10+20
+$2 ==> 30
+
+jshell> /exit
+|  Goodbye
+
+C:\Users\Jagatheshwaran N>
+================================================================================
+Start and Stop Jshell in verbose mode
+=====================================
+C:\Users\Jagatheshwaran N>jshell -v
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> 10+20
+$1 ==> 30
+|  created scratch variable $1 : int
+
+jshell> Math.sqrt(5)
+$2 ==> 2.23606797749979
+|  created scratch variable $2 : double
+
+jshell> Math.max(10, 20)
+$3 ==> 20
+|  created scratch variable $3 : int
+
+jshell> Math.random();
+$4 ==> 0.6433571886187469
+|  created scratch variable $4 : double
+================================================================================
+Jshell Default Packages
+=======================
+jshell> /imports
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+================================================================================
+Jshell Compiler Check
+=====================
+jshell> Systm.out.println("Hello");
+|  Error:
+|  package Systm does not exist
+|  Systm.out.println("Hello");
+|  ^-------^
+================================================================================
+ArrayList Operations
+====================
+jshell> ArrayList<String> al = new ArrayList<String>();
+al ==> []
+|  created variable al : ArrayList<String>
+
+jshell> al.add("Alex"); al.add("John"); al.add("Jenni");
+$6 ==> true
+|  created scratch variable $6 : boolean
+$7 ==> true
+|  created scratch variable $7 : boolean
+$8 ==> true
+|  created scratch variable $8 : boolean
+
+jshell> al
+al ==> [Alex, John, Jenni]
+|  value of al : ArrayList<String>
+================================================================================
+IO Operations
+=============
+jshell> PrintWriter writer = new PrintWriter("sample1.txt");
+writer ==> java.io.PrintWriter@736e9adb
+|  created variable writer : PrintWriter
+
+jshell> writer.print("Hello from Jshell");
+
+jshell> writer.flush();
+================================================================================
