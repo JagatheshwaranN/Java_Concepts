@@ -106,3 +106,220 @@ jshell> writer.print("Hello from Jshell");
 
 jshell> writer.flush();
 ================================================================================
+Getting Help From Jshell
+========================
+To know introduction of Jshell
+==============================
+jshell> /help intro
+|
+|                                   intro
+|                                   =====
+|
+|  The jshell tool allows you to execute Java code, getting immediate results.
+|  You can enter a Java definition (variable, method, class, etc), like:  int x = 8
+|  or a Java expression, like:  x + x
+|  or a Java statement or import.
+|  These little chunks of Java code are called 'snippets'.
+|
+|  There are also the jshell tool commands that allow you to understand and
+|  control what you are doing, like:  /list
+|
+|  For a list of commands: /help
+
+To know the list of commands
+============================
+jshell> /help
+|  Type a Java language expression, statement, or declaration.
+|  Or type one of the following commands:
+|  /list [<name or id>|-all|-start]
+|       list the source you have typed
+|  /edit <name or id>
+|       edit a source entry
+|  /drop <name or id>
+|       delete a source entry
+|  /save [-all|-history|-start] <file>
+|       Save snippet source to a file
+|  /open <file>
+|       open a file as source input
+|  /vars [<name or id>|-all|-start]
+|       list the declared variables and their values
+|  /methods [<name or id>|-all|-start]
+|       list the declared methods and their signatures
+|  /types [<name or id>|-all|-start]
+|       list the type declarations
+|  /imports
+|       list the imported items
+|  /exit [<integer-expression-snippet>]
+|       exit the jshell tool
+|  /env [-class-path <path>] [-module-path <path>] [-add-modules <modules>] ...
+|       view or change the evaluation context
+|  /reset [-class-path <path>] [-module-path <path>] [-add-modules <modules>]...
+|       reset the jshell tool
+|  /reload [-restore] [-quiet] [-class-path <path>] [-module-path <path>]...
+|       reset and replay relevant history -- current or previous (-restore)
+|  /history [-all]
+|       history of what you have typed
+|  /help [<command>|<subject>]
+|       get information about using the jshell tool
+|  /set editor|start|feedback|mode|prompt|truncation|format ...
+|       set configuration information
+|  /? [<command>|<subject>]
+|       get information about using the jshell tool
+|  /!
+|       rerun last snippet -- see /help rerun
+|  /<id>
+|       rerun snippets by ID or ID range -- see /help rerun
+|  /-<n>
+|       rerun n-th previous snippet -- see /help rerun
+|
+|  For more information type '/help' followed by the name of a
+|  command or a subject.
+|  For example '/help /list' or '/help intro'.
+|
+|  Subjects:
+|
+|  intro
+|       an introduction to the jshell tool
+|  keys
+|       a description of readline-like input editing
+|  id
+|       a description of snippet IDs and how use them
+|  shortcuts
+|       a description of keystrokes for snippet and command completion,
+|       information access, and automatic code generation
+|  context
+|       a description of the evaluation context options for /env /reload and /reset
+|  rerun
+|       a description of ways to re-evaluate previously entered snippets
+
+To know the information about a particular command
+==================================================
+jshell> /help exit
+|
+|                                   /exit
+|                                   =====
+|
+|  Leave the jshell tool.  No work is saved.
+|  Save any work before using this command
+|
+|  /exit
+|       Leave the jshell tool.  The exit status is zero
+|
+|  /exit <integer-expression-snippet>
+|       Evaluate the snippet.  If the snippet fails or is not an integer expression,
+|       display the error.  Otherwise leave the jshell tool with the
+|       value of the expression as the exit status
+
+To get just names of all commands without description
+=====================================================
+jshell> /
+/!          /?          /drop       /edit       /env        /exit       /help       /history    /imports    /list       /methods    /open       /reload     /reset
+/save       /set        /types      /vars
+
+<press tab again to see synopsis>
+
+To know the list of options available for a particular command
+==============================================================
+jshell> /list -
+-all       -history   -start
+
+To know list of options available with JShell
+=============================================
+C:\Users>jshell --help
+Usage:   jshell <option>... <load-file>...
+where possible options include:
+    --class-path <path>   Specify where to find user class files
+    --module-path <path>  Specify where to find application modules
+    --add-modules <module>(,<module>)*
+                          Specify modules to resolve, or all modules on the
+                            module path if <module> is ALL-MODULE-PATHs
+    --enable-preview      Allow code to depend on preview features of this release
+    --startup <file>      One run replacement for the startup definitions
+    --no-startup          Do not run the startup definitions
+    --feedback <mode>     Specify the initial feedback mode. The mode may be
+                            predefined (silent, concise, normal, or verbose) or
+                            previously user-defined
+    -q                    Quiet feedback.  Same as: --feedback concise
+    -s                    Really quiet feedback.  Same as: --feedback silent
+    -v                    Verbose feedback.  Same as: --feedback verbose
+    -J<flag>              Pass <flag> directly to the runtime system.
+                            Use one -J for each runtime flag or flag argument
+    -R<flag>              Pass <flag> to the remote runtime system.
+                            Use one -R for each remote flag or flag argument
+    -C<flag>              Pass <flag> to the compiler.
+                            Use one -C for each compiler flag or flag argument
+    --version             Print version information and exit
+    --show-version        Print version information and continue
+    --help, -?, -h        Print this synopsis of standard options and exit
+    --help-extra, -X      Print help on non-standard options and exit
+
+A file argument may be a file name, or one of the predefined file names: DEFAULT,
+PRINTING, or JAVASE.
+A load-file may also be "-" to indicate standard input, without interactive I/O.
+
+For more information on the evaluation context options (--class-path,
+--module-path, and --add-modules) see:
+        /help context
+
+A path lists the directories and archives to search. For Windows, use a
+semicolon (;) to separate items in the path. On other platforms, use a
+colon (:) to separate items.
+
+To know the version of Jshell
+=============================
+C:\Users>jshell -version
+jshell 17.0.3.1
+
+To get the details of the startup snippets
+==========================================
+jshell> /list -start
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+ 
+To get the details of the active snippets
+=========================================
+ jshell> /list
+
+   1 : System.out.println("Hello");
+   2 : 10+20
+
+To get the details of the all snippets
+======================================
+jshell> /list -all
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+   1 : System.out.println("Hello");
+   2 : 10+20
+   3 : String s = "Jshell";
+
+To list the snippets by Id / Name
+=================================
+jshell> /list 1
+
+   1 : System.out.println("Hello");
+
+jshell> /list s1
+
+  s1 : import java.io.*;
+  
+jshell> /list s
+
+   3 : String s = "Jshell";
