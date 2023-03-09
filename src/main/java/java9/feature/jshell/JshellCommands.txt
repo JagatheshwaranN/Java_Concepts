@@ -323,3 +323,93 @@ jshell> /list s1
 jshell> /list s
 
    3 : String s = "Jshell";
+   
+To drop the snippets by Id / Name
+=================================
+jshell> /list
+
+   1 : System.out.println("Hello Jshell");
+   2 : int x = 10;
+   3 : x+20
+   
+jshell> /drop 1
+
+jshell> /list
+
+   2 : int x = 10;
+   3 : x+20
+
+jshell> /drop x
+|  dropped variable x
+
+Working with Jshell Variables
+=============================
+Explicit variables
+==================
+The variables which are created by the Programmer explicitly based on our requirement is called as Explicit Variables.
+
+jshell> int x = 10;
+x ==> 10
+|  created variable x : int
+
+Implicit variables
+==================
+Sometimes, Jshell itself create variables implicitly to hold temporary values, such type of variables are called as Implicit variables.
+
+jshell> 10+30
+$5 ==> 40
+|  created scratch variable $5 : int
+
+If we are trying to declare a variable with the same name which is already available then old variable will be replaced with new variable i.e., in Jshell, variable overriding is possible. 
+
+jshell> int y = 20;
+y ==> 20
+|  created variable y : int
+
+jshell> String y = "Hello";
+y ==> "Hello"
+|  replaced variable y : String
+|    update overwrote variable y : int
+
+While declaring the variables compulsory the types must be matched, otherwise we will get compile time error.
+
+jshell> String s = true;
+|  Error:
+|  incompatible types: boolean cannot be converted to java.lang.String
+|  String s = true;
+|             ^--^
+
+To get the details of the active variables
+==========================================
+jshell> /vars
+|    int $3 = 30
+|    int x = 10
+|    int $5 = 40
+|    String y = "Hello"
+
+To get the details of all variables
+===================================
+jshell> /vars -all
+|    int x = (not-active)
+|    int $3 = 30
+|    int x = 10
+|    int $5 = 40
+|    int y = (not-active)
+|    String y = "Hello"
+|    String s = (not-active)
+
+To drop the variable
+====================
+jshell> /drop y
+|  dropped variable y
+
+Print & Printf Difference
+=========================
+System.out.println(); method return type is void. But System.out.printf(); method return type is PrintStream object.
+
+jshell> System.out.print("Hello");
+Hello
+jshell> System.out.printf("Hello Jshell");
+Hello Jshell
+$9 ==> java.io.PrintStream@27f8302d
+|  created scratch variable $9 : PrintStream
