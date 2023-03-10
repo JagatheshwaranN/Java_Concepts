@@ -514,7 +514,45 @@ To drop method by Id
 jshell> /drop 2
 |  dropped method greet(String)
 ================================================================================
+Usage of Undeclared Variables and Methods
+=========================================
+In Jshell, inside method body we can use undeclared variables and methods. But until declaring all dependent variables and methods, we can’t invoke that method.
 
+jshell> public void method1()
+   ...> {
+   ...>     System.out.println(a);
+   ...> }
+|  created method method1(), however, it cannot be invoked until variable a is declared
+
+jshell> method1()
+|  attempted to call method method1() which cannot be invoked until variable a is declared
+
+jshell> int a = 10;
+a ==> 10
+|  created variable a : int
+|    update modified method method1()
+
+jshell> method1()
+10
+
+jshell> public void method2()
+   ...> {
+   ...>     method3();
+   ...> }
+|  created method method2(), however, it cannot be invoked until method method3() is declared
+
+jshell> method2()
+|  attempted to call method method2() which cannot be invoked until method method3() is declared
+
+jshell> public void method3(){
+   ...>     System.out.println("Method3 called from Method2");
+   ...> }
+|  created method method3()
+|    update modified method method2()
+
+jshell> method2()
+Method3 called from Method2
+================================================================================
 
 
 
