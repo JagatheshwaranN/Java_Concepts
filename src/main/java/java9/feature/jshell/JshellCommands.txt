@@ -125,7 +125,7 @@ jshell> /help intro
 |  control what you are doing, like:  /list
 |
 |  For a list of commands: /help
-
+================================================================================
 To know the list of commands
 ============================
 jshell> /help
@@ -191,7 +191,7 @@ jshell> /help
 |       a description of the evaluation context options for /env /reload and /reset
 |  rerun
 |       a description of ways to re-evaluate previously entered snippets
-
+================================================================================
 To know the information about a particular command
 ==================================================
 jshell> /help exit
@@ -217,12 +217,12 @@ jshell> /
 /save       /set        /types      /vars
 
 <press tab again to see synopsis>
-
+================================================================================
 To know the list of options available for a particular command
 ==============================================================
 jshell> /list -
 -all       -history   -start
-
+================================================================================
 To know list of options available with JShell
 =============================================
 C:\Users>jshell --help
@@ -264,12 +264,12 @@ For more information on the evaluation context options (--class-path,
 A path lists the directories and archives to search. For Windows, use a
 semicolon (;) to separate items in the path. On other platforms, use a
 colon (:) to separate items.
-
+================================================================================
 To know the version of Jshell
 =============================
 C:\Users>jshell -version
 jshell 17.0.3.1
-
+================================================================================
 To get the details of the startup snippets
 ==========================================
 jshell> /list -start
@@ -284,14 +284,14 @@ jshell> /list -start
   s8 : import java.util.prefs.*;
   s9 : import java.util.regex.*;
  s10 : import java.util.stream.*;
- 
+ ================================================================================
 To get the details of the active snippets
 =========================================
  jshell> /list
 
    1 : System.out.println("Hello");
    2 : 10+20
-
+================================================================================
 To get the details of the all snippets
 ======================================
 jshell> /list -all
@@ -309,7 +309,7 @@ jshell> /list -all
    1 : System.out.println("Hello");
    2 : 10+20
    3 : String s = "Jshell";
-
+================================================================================
 To list the snippets by Id / Name
 =================================
 jshell> /list 1
@@ -323,7 +323,7 @@ jshell> /list s1
 jshell> /list s
 
    3 : String s = "Jshell";
-   
+================================================================================
 To drop the snippets by Id / Name
 =================================
 jshell> /list
@@ -341,7 +341,7 @@ jshell> /list
 
 jshell> /drop x
 |  dropped variable x
-
+================================================================================
 Working with Jshell Variables
 =============================
 Explicit variables
@@ -378,7 +378,7 @@ jshell> String s = true;
 |  incompatible types: boolean cannot be converted to java.lang.String
 |  String s = true;
 |             ^--^
-
+================================================================================
 To get the details of the active variables
 ==========================================
 jshell> /vars
@@ -386,7 +386,7 @@ jshell> /vars
 |    int x = 10
 |    int $5 = 40
 |    String y = "Hello"
-
+================================================================================
 To get the details of all variables
 ===================================
 jshell> /vars -all
@@ -397,12 +397,12 @@ jshell> /vars -all
 |    int y = (not-active)
 |    String y = "Hello"
 |    String s = (not-active)
-
+================================================================================
 To drop the variable
 ====================
 jshell> /drop y
 |  dropped variable y
-
+================================================================================
 Print & Printf Difference
 =========================
 System.out.println(); method return type is void. But System.out.printf(); method return type is PrintStream object.
@@ -413,3 +413,108 @@ jshell> System.out.printf("Hello Jshell");
 Hello Jshell
 $9 ==> java.io.PrintStream@27f8302d
 |  created scratch variable $9 : PrintStream
+================================================================================
+Working with Jshell Methods
+===========================
+jshell> public void m1(){}
+|  created method m1()
+
+jshell> public void greet(String name){
+   ...>     System.out.println("Hello "+name);
+   ...> }
+|  created method greet(String)
+
+jshell> greet("alex");
+Hello alex
+================================================================================
+In Jshell, there may be chance of having multiple methods with same name but different argument types and such methods are called as overloaded methods.
+
+jshell> public void display()
+   ...> {
+   ...>     System.out.println("Method From Jshell");
+   ...> }
+|  created method display()
+
+jshell> display()
+Method From Jshell
+
+jshell> public void display(String message)
+   ...> {
+   ...>     System.out.println("Welcome "+message);
+   ...> }
+|  created method display(String)
+
+jshell> display("John");
+Welcome John
+================================================================================
+We can list all the methods information by using /methods command.
+
+To get active method details
+============================
+jshell> /methods
+|    void m1()
+|    void greet(String)
+|    void display()
+|    void display(String)
+
+To get the methods details by Name
+==================================
+jshell> /methods display
+|    void display()
+|    void display(String)
+
+To get the methods details by Id
+================================
+jshell> /methods 1
+|    void m1()
+
+To get all the methods details
+==============================
+jshell> /methods -all
+|    void m1()
+|    void greet(String)
+|    void display()
+|    void display(String)
+================================================================================
+If we are trying to declare a method with same signature of already existing method in Jshell, then old method will be overridden with new method (Even though the return types are different) i.e., In Jshell at a time only one method with unique signature is possible.
+
+jshell> public void m1(int i) {}
+|  created method m1(int)
+
+jshell> public int m1(int i) {return 10;}
+|  replaced method m1(int)
+|    update overwrote method m1(int)
+================================================================================
+"Not Recommended" ==>> In Jshell, we can create more complex methods as well, 
+
+jshell> public void sum(int... x)
+   ...> {
+   ...>     int total=0;
+   ...>     for(int x1:x){
+   ...>         total = total+x1;
+   ...>     }
+   ...>     System.out.println("The Sum : "+total);
+   ...> }
+|  created method sum(int...)
+
+jshell> sum(10, 20, 30)
+The Sum : 60
+
+jshell> sum(10, 20, 30, 40, 50)
+The Sum : 150
+================================================================================
+To drop method by Name
+======================
+jshell> /drop m1
+|  dropped method m1()
+|  dropped method m1(int)
+
+To drop method by Id
+====================
+jshell> /drop 2
+|  dropped method greet(String)
+================================================================================
+
+
+
+
