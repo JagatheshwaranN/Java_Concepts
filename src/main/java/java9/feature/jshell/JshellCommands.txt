@@ -553,6 +553,33 @@ jshell> public void method3(){
 jshell> method2()
 Method3 called from Method2
 ================================================================================
+Using External Editor with Jshell
+=================================
+It is every difficult to type lengthy code from Jshell. To overcome this problem, Jshell provides inbuilt editor.
 
+To open the editor in Jshell,
+============================= 
+jshell> /edit 
+The above command will open the default editor window.
+
+To set the external editor as Jshell editor, 
+============================================
+jshell> /set editor "C:\\Program Files\\Notepad++\\notepad++.exe";
+|  Editor set to: C:\Program Files\Notepad++\notepad++.exe ;
+
+The external editor by default available for the current session and once the session is completed, then Jshell default editor only will show. 
+
+To make the external editor as permanent editor in Jshell, 
+==========================================================
+jshell> /set editor -retain
+|  Editor setting retained: C:\Program Files\Notepad++\notepad++.exe ;
+
+The above command will make the external editor as permanent editor in Jshell.
+
+If suppose, we need to switch back to default Jshell editor,
+============================================================ 
+jshell> /set editor -default
+|  Editor set to: -default
+================================================================================
 
 
