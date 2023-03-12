@@ -581,5 +581,105 @@ If suppose, we need to switch back to default Jshell editor,
 jshell> /set editor -default
 |  Editor set to: -default
 ================================================================================
+Working with Classes, Interfaces and Enums in Jshell
+====================================================
+In Jshell,  we can declare classes, interfaces, enums as well.
+We can use /types command to list out the created types like classes, interfaces, and enums.
 
+Class
+=====
+jshell> /edit
+|  created class Student
 
+jshell> /types
+|    class Student
+
+jshell> /list Student
+
+   1 : public class Student{
+
+       String name;
+       int rollno;
+
+       Student(String name, int rollno){
+        this.name = name;
+        this.rollno = rollno;
+       }
+
+       public String getName(){
+        return name;
+       }
+
+       public int getRollno(){
+        return rollno;
+       }
+
+       }
+
+jshell> Student s = new Student("John", 101);
+s ==> Student@443b7951
+|  created variable s : Student
+
+jshell> s.getName()
+$3 ==> "John"
+|  created scratch variable $3 : String
+
+jshell> s.getRollno()
+$4 ==> 101
+|  created scratch variable $4 : int
+
+Interface
+=========
+jshell> /edit
+|  created interface Interim
+
+jshell> /types
+|    interface Interim
+
+jshell> /list Interim
+
+   5 : interface Interim
+       {
+
+       public static void display(){
+        System.out.println("Method from Interface");
+       }
+
+       }
+
+jshell> Interim.display();
+Method from Interface
+
+Enum
+====
+jshell> /edit
+|  created enum FreshJuice
+
+jshell> /types
+|    enum FreshJuice
+
+jshell> /list FreshJuice
+
+   7 : public enum FreshJuice{
+
+        Apple("Sweet"), Grape("Bitter");
+
+        String taste;
+
+        FreshJuice(String taste){
+        this.taste = taste;
+        }
+
+        public String getTaste(){
+                return taste;
+        }
+       }
+       
+jshell> FreshJuice.Apple.taste;
+$8 ==> "Sweet"
+|  created scratch variable $8 : String
+
+jshell> FreshJuice.Grape.getTaste();
+$9 ==> "Bitter"
+|  created scratch variable $9 : String
+================================================================================
