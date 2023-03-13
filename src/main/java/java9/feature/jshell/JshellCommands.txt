@@ -683,3 +683,115 @@ jshell> FreshJuice.Grape.getTaste();
 $9 ==> "Bitter"
 |  created scratch variable $9 : String
 ================================================================================
+Loading and Saving Snippets in Jshell
+=====================================
+We can load snippets from the file and save snippets to the file.
+
+Load from external file
+=======================
+jshell> /list
+
+jshell> /open snippet.jsh
+Hello from external snippet file
+
+jshell> /list
+
+   1 : System.out.println("Hello from external snippet file");
+   2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+
+jshell> method()
+Method from external snippet file
+
+Save into external file
+=======================
+jshell> /list
+
+   1 : System.out.println("Hello from external snippet file");
+   2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+   3 : method()
+   4 : public void display(){
+           System.out.println("Hello message to save into snippet file");
+       }
+   5 : String s = "jshell";
+   6 : System.out.println(s);
+   
+jshell> /save exportsnippet.jsh
+================================================================================
+Reload Previous State (Session) into Jshell
+===========================================
+Previous State
+==============
+jshell> /list
+
+   1 : System.out.println("Hello from external snippet file");
+   2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+   3 : method()
+   4 : public void display(){
+           System.out.println("Hello message to save into snippet file");
+       }
+   5 : String s = "jshell";
+   6 : System.out.println(s);
+
+jshell> /exit
+|  Goodbye
+
+C:\Users>jshell -v
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list
+
+jshell>
+
+After Reload
+============
+The below command is used to restore the previous session snippets of jshell into the current session.
+
+jshell> /reload -restore
+|  Restarting and restoring from previous state.
+-: System.out.println("Hello from external snippet file");
+Hello from external snippet file
+-: public void method(){
+        System.out.println("Method from external snippet file");
+   }
+-: method()
+Method from external snippet file
+-: public void display(){
+       System.out.println("Hello message to save into snippet file");
+   }
+-: String s = "jshell";
+-: System.out.println(s);
+jshell
+
+jshell> /list
+
+   1 : System.out.println("Hello from external snippet file");
+   2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+   3 : method()
+   4 : public void display(){
+           System.out.println("Hello message to save into snippet file");
+       }
+   5 : String s = "jshell";
+   6 : System.out.println(s);
+
+jshell>
+================================================================================
+Reset Jshell State
+==================
+If we want to reset the Jshell to default state, then below command can be used.
+
+jshell> /reset
+|  Resetting state.
+
+jshell> /list
+
+jshell>
+================================================================================
