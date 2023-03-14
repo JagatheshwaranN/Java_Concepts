@@ -720,6 +720,19 @@ jshell> /list
    6 : System.out.println(s);
    
 jshell> /save exportsnippet.jsh
+
+Note: Various options to save the snippets to the file.
+
+If the specified file is not available then this save command itself will create the file and save the snippets.
+
+jshell> /save active.jsh
+jshell> /save -all all.jsh
+jshell> /save -start start.jsh
+jshell> /save -history history.jsh
+
+By default, all files will be created in the current working directory. If we want in some other location then we have to use absolute path as below,
+
+jshell> /save D://Java_Sessions//snippets.jsh
 ================================================================================
 Reload Previous State (Session) into Jshell
 ===========================================
