@@ -8,9 +8,9 @@ It is not new thing in Java. It is already there in other programming languages 
 
 Limitations
 ===========
-1.	Not designed for Main coding, we can use just to test small coding snippets, which can be used in our Main Coding.
-2.	Not replacement for IDEs like Eclipse, NetBeans, etc.
-3.	Not impressive feature. Other programming languages like Python, Swift, Lisp, Scala, and Ruby already have this REPL tool.
+1.Not designed for Main coding, we can use just to test small coding snippets, which can be used in our Main Coding.
+2.Not replacement for IDEs like Eclipse, NetBeans, etc.
+3.Not impressive feature. Other programming languages like Python, Swift, Lisp, Scala, and Ruby already have this REPL tool.
 
 C:\Users\Jagatheshwaran N>java -version
 java version "17.0.3.1" 2022-04-22 LTS
