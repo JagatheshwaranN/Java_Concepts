@@ -12,7 +12,7 @@ Limitations
 2.Not replacement for IDEs like Eclipse, NetBeans, etc.
 3.Not impressive feature. Other programming languages like Python, Swift, Lisp, Scala, and Ruby already have this REPL tool.
 
-C:\Users\Jagatheshwaran N>java -version
+C:\Users>java -version
 java version "17.0.3.1" 2022-04-22 LTS
 Java(TM) SE Runtime Environment (build 17.0.3.1+2-LTS-6)
 Java HotSpot(TM) 64-Bit Server VM (build 17.0.3.1+2-LTS-6, mixed mode, sharing)
@@ -20,7 +20,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.3.1+2-LTS-6, mixed mode, sharing)
 ================================================================================
 Start and Stop Jshell in normal mode
 ====================================
-C:\Users\Jagatheshwaran N>jshell
+C:\Users>jshell
 |  Welcome to JShell -- Version 17.0.3.1
 |  For an introduction type: /help intro
 
@@ -33,11 +33,11 @@ $2 ==> 30
 jshell> /exit
 |  Goodbye
 
-C:\Users\Jagatheshwaran N>
+C:\Users>
 ================================================================================
 Start and Stop Jshell in verbose mode
 =====================================
-C:\Users\Jagatheshwaran N>jshell -v
+C:\Users>jshell -v
 |  Welcome to JShell -- Version 17.0.3.1
 |  For an introduction type: /help intro
 
@@ -912,7 +912,7 @@ jshell>
 Note: To import all JAVASE packages (almost around 170+ packages) at the time of startup we have to 
 open the Jshell as follows,
 
-C:\Users\Jagatheshwaran N>jshell -v --startup JAVASE
+C:\Users>jshell -v --startup JAVASE
 |  Welcome to JShell -- Version 17.0.3.1
 |  For an introduction type: /help intro
 
