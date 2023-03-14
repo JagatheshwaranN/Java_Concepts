@@ -808,3 +808,24 @@ jshell> /list
 
 jshell>
 ================================================================================
+Using Jar Files in Jshell
+=========================
+It is very easy to use external jar files in the Jshell. We can add Jar files to the Jshell in 3 ways.
+1.	From Environment Variables -> Classpath
+2.	From Command Prompt
+3.	From Jshell itself
+
+From Command Prompt
+===================
+We have to open the Jshell with --class-path option.
+C:\User> jshell -v --class-path C:\oracle\jars\ojdbc6.jar
+
+From Jshell Itself
+==================
+We can add External Jars to the Jshell from the Jshell itself with /env command.
+jshell> /env --class-path C:\oracle\jars\ojdbc6.jar
+
+Note: Internally Jshell will use environment variable classpath if we are not setting classpath explicitly.
+
+Example: Fetch Data from DataBase requires the ojdbc jar file.
+================================================================================
