@@ -2,7 +2,8 @@ Introduction
 ============
 JShell is Java’s REPL (Read, Evaluate, Print, and Loop) tool. JShell is also known as interactive console.
 By using this tool we can execute java code snippets and we can get the immediate results. For beginners, it is very good to start programming in fun way.
-By using this JShell, we can test and execute java expressions, statements, methods, classes, etc. It is useful for testing small code snippets very quickly, which can be plugged into our main coding based on our requirement.
+By using this JShell, we can test and execute java expressions, statements, methods, classes, etc. It is useful for testing small code snippets very quickly, 
+which can be plugged into our main coding based on our requirement.
 It is not new thing in Java. It is already there in other programming languages like Python, Swift, Lisp, Scala, and Ruby, etc.
 
 Limitations
@@ -213,7 +214,8 @@ jshell> /help exit
 To get just names of all commands without description
 =====================================================
 jshell> /
-/!          /?          /drop       /edit       /env        /exit       /help       /history    /imports    /list       /methods    /open       /reload     /reset
+/!          /?          /drop       /edit       /env        /exit       /help       /history    
+/imports    /list       /methods    /open       /reload     /reset
 /save       /set        /types      /vars
 
 <press tab again to see synopsis>
@@ -346,7 +348,8 @@ Working with Jshell Variables
 =============================
 Explicit variables
 ==================
-The variables which are created by the Programmer explicitly based on our requirement is called as Explicit Variables.
+The variables which are created by the Programmer explicitly based on our requirement is called 
+as Explicit Variables.
 
 jshell> int x = 10;
 x ==> 10
@@ -354,13 +357,15 @@ x ==> 10
 
 Implicit variables
 ==================
-Sometimes, Jshell itself create variables implicitly to hold temporary values, such type of variables are called as Implicit variables.
+Sometimes, Jshell itself create variables implicitly to hold temporary values, such type of variables 
+are called as Implicit variables.
 
 jshell> 10+30
 $5 ==> 40
 |  created scratch variable $5 : int
 
-If we are trying to declare a variable with the same name which is already available then old variable will be replaced with new variable i.e., in Jshell, variable overriding is possible. 
+If we are trying to declare a variable with the same name which is already available then old variable 
+will be replaced with new variable i.e., in Jshell, variable overriding is possible. 
 
 jshell> int y = 20;
 y ==> 20
@@ -405,7 +410,8 @@ jshell> /drop y
 ================================================================================
 Print & Printf Difference
 =========================
-System.out.println(); method return type is void. But System.out.printf(); method return type is PrintStream object.
+System.out.println(); method return type is void. But System.out.printf(); method return type 
+is PrintStream object.
 
 jshell> System.out.print("Hello");
 Hello
@@ -427,7 +433,8 @@ jshell> public void greet(String name){
 jshell> greet("alex");
 Hello alex
 ================================================================================
-In Jshell, there may be chance of having multiple methods with same name but different argument types and such methods are called as overloaded methods.
+In Jshell, there may be chance of having multiple methods with same name but different argument types and 
+such methods are called as overloaded methods.
 
 jshell> public void display()
    ...> {
@@ -476,7 +483,9 @@ jshell> /methods -all
 |    void display()
 |    void display(String)
 ================================================================================
-If we are trying to declare a method with same signature of already existing method in Jshell, then old method will be overridden with new method (Even though the return types are different) i.e., In Jshell at a time only one method with unique signature is possible.
+If we are trying to declare a method with same signature of already existing method in Jshell, then old 
+method will be overridden with new method (Even though the return types are different) i.e., In Jshell 
+at a time only one method with unique signature is possible.
 
 jshell> public void m1(int i) {}
 |  created method m1(int)
@@ -516,7 +525,8 @@ jshell> /drop 2
 ================================================================================
 Usage of Undeclared Variables and Methods
 =========================================
-In Jshell, inside method body we can use undeclared variables and methods. But until declaring all dependent variables and methods, we can’t invoke that method.
+In Jshell, inside method body we can use undeclared variables and methods. But until declaring all 
+dependent variables and methods, we can’t invoke that method.
 
 jshell> public void method1()
    ...> {
@@ -555,7 +565,8 @@ Method3 called from Method2
 ================================================================================
 Using External Editor with Jshell
 =================================
-It is every difficult to type lengthy code from Jshell. To overcome this problem, Jshell provides inbuilt editor.
+It is every difficult to type lengthy code from Jshell. To overcome this problem, Jshell provides 
+inbuilt editor.
 
 To open the editor in Jshell,
 ============================= 
@@ -567,7 +578,8 @@ To set the external editor as Jshell editor,
 jshell> /set editor "C:\\Program Files\\Notepad++\\notepad++.exe";
 |  Editor set to: C:\Program Files\Notepad++\notepad++.exe ;
 
-The external editor by default available for the current session and once the session is completed, then Jshell default editor only will show. 
+The external editor by default available for the current session and once the session is completed, 
+then Jshell default editor only will show. 
 
 To make the external editor as permanent editor in Jshell, 
 ==========================================================
@@ -723,14 +735,16 @@ jshell> /save exportsnippet.jsh
 
 Note: Various options to save the snippets to the file.
 
-If the specified file is not available then this save command itself will create the file and save the snippets.
+If the specified file is not available then this save command itself will create the file and 
+save the snippets.
 
 jshell> /save active.jsh
 jshell> /save -all all.jsh
 jshell> /save -start start.jsh
 jshell> /save -history history.jsh
 
-By default, all files will be created in the current working directory. If we want in some other location then we have to use absolute path as below,
+By default, all files will be created in the current working directory. If we want in some other location 
+then we have to use absolute path as below,
 
 jshell> /save D://Java_Sessions//snippets.jsh
 ================================================================================
@@ -828,4 +842,541 @@ jshell> /env --class-path C:\oracle\jars\ojdbc6.jar
 Note: Internally Jshell will use environment variable classpath if we are not setting classpath explicitly.
 
 Example: Fetch Data from DataBase requires the ojdbc jar file.
+================================================================================
+Customize Jshell startup
+========================
+
+Default Startup
+===============
+jshell> /list -start
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+
+We can customize these startup snippets based on our requirement. Assume our required startup snippets 
+are available in mystartup.jsh
+To provide the snippets available in mystartup.jsh, we have to open the jshell as follows,
+
+C:\Users>jshell -v --startup snippet.jsh
+Hello from external snippet file
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list -start
+
+  s1 : System.out.println("Hello from external snippet file");
+  s2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+
+jshell>
+
+Note: If we want DEFAULT imports startup snippets along with our own snippets then we have to open the 
+Jshell as follows,
+
+C:\Users>jshell -v --startup DEFAULT snippet.jsh
+Hello from external snippet file
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list
+
+   1 : System.out.println("Hello from external snippet file");
+   2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+
+jshell> /list -start
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+
+jshell> 
+
+Note: To import all JAVASE packages (almost around 170+ packages) at the time of startup we have to 
+open the Jshell as follows,
+
+C:\Users\Jagatheshwaran N>jshell -v --startup JAVASE
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list -start
+
+  s1 : import java.applet.*;
+  s2 : import java.awt.*;
+  s3 : import java.awt.color.*;
+  s4 : import java.awt.datatransfer.*;
+  s5 : import java.awt.desktop.*;
+  s6 : import java.awt.dnd.*;
+  s7 : import java.awt.event.*;
+  s8 : import java.awt.font.*;
+  s9 : import java.awt.geom.*;
+ s10 : import java.awt.im.*;
+ s11 : import java.awt.im.spi.*;
+ s12 : import java.awt.image.*;
+ s13 : import java.awt.image.renderable.*;
+ s14 : import java.awt.print.*;
+ s15 : import java.beans.*;
+ s16 : import java.beans.beancontext.*;
+ s17 : import java.io.*;
+ s18 : import java.lang.*;
+ s19 : import java.lang.annotation.*;
+ s20 : import java.lang.constant.*;
+ s21 : import java.lang.instrument.*;
+ s22 : import java.lang.invoke.*;
+ s23 : import java.lang.management.*;
+ s24 : import java.lang.module.*;
+ s25 : import java.lang.ref.*;
+ s26 : import java.lang.reflect.*;
+ s27 : import java.lang.runtime.*;
+ s28 : import java.math.*;
+ s29 : import java.net.*;
+ s30 : import java.net.http.*;
+ s31 : import java.net.spi.*;
+ s32 : import java.nio.*;
+ s33 : import java.nio.channels.*;
+ s34 : import java.nio.channels.spi.*;
+ s35 : import java.nio.charset.*;
+ s36 : import java.nio.charset.spi.*;
+ s37 : import java.nio.file.*;
+ s38 : import java.nio.file.attribute.*;
+ s39 : import java.nio.file.spi.*;
+ s40 : import java.rmi.*;
+ s41 : import java.rmi.dgc.*;
+ s42 : import java.rmi.registry.*;
+ s43 : import java.rmi.server.*;
+ s44 : import java.security.*;
+ s45 : import java.security.cert.*;
+ s46 : import java.security.interfaces.*;
+ s47 : import java.security.spec.*;
+ s48 : import java.sql.*;
+ s49 : import java.text.*;
+ s50 : import java.text.spi.*;
+ s51 : import java.time.*;
+ s52 : import java.time.chrono.*;
+ s53 : import java.time.format.*;
+ s54 : import java.time.temporal.*;
+ s55 : import java.time.zone.*;
+ s56 : import java.util.*;
+ s57 : import java.util.concurrent.*;
+ s58 : import java.util.concurrent.atomic.*;
+ s59 : import java.util.concurrent.locks.*;
+ s60 : import java.util.function.*;
+ s61 : import java.util.jar.*;
+ s62 : import java.util.logging.*;
+ s63 : import java.util.prefs.*;
+ s64 : import java.util.random.*;
+ s65 : import java.util.regex.*;
+ s66 : import java.util.spi.*;
+ s67 : import java.util.stream.*;
+ s68 : import java.util.zip.*;
+ s69 : import javax.accessibility.*;
+ s70 : import javax.annotation.processing.*;
+ s71 : import javax.crypto.*;
+ s72 : import javax.crypto.interfaces.*;
+ s73 : import javax.crypto.spec.*;
+ s74 : import javax.imageio.*;
+ s75 : import javax.imageio.event.*;
+ s76 : import javax.imageio.metadata.*;
+ s77 : import javax.imageio.plugins.bmp.*;
+ s78 : import javax.imageio.plugins.jpeg.*;
+ s79 : import javax.imageio.plugins.tiff.*;
+ s80 : import javax.imageio.spi.*;
+ s81 : import javax.imageio.stream.*;
+ s82 : import javax.lang.model.*;
+ s83 : import javax.lang.model.element.*;
+ s84 : import javax.lang.model.type.*;
+ s85 : import javax.lang.model.util.*;
+ s86 : import javax.management.*;
+ s87 : import javax.management.loading.*;
+ s88 : import javax.management.modelmbean.*;
+ s89 : import javax.management.monitor.*;
+ s90 : import javax.management.openmbean.*;
+ s91 : import javax.management.relation.*;
+ s92 : import javax.management.remote.*;
+ s93 : import javax.management.remote.rmi.*;
+ s94 : import javax.management.timer.*;
+ s95 : import javax.naming.*;
+ s96 : import javax.naming.directory.*;
+ s97 : import javax.naming.event.*;
+ s98 : import javax.naming.ldap.*;
+ s99 : import javax.naming.ldap.spi.*;
+s100 : import javax.naming.spi.*;
+s101 : import javax.net.*;
+s102 : import javax.net.ssl.*;
+s103 : import javax.print.*;
+s104 : import javax.print.attribute.*;
+s105 : import javax.print.attribute.standard.*;
+s106 : import javax.print.event.*;
+s107 : import javax.rmi.ssl.*;
+s108 : import javax.script.*;
+s109 : import javax.security.auth.*;
+s110 : import javax.security.auth.callback.*;
+s111 : import javax.security.auth.kerberos.*;
+s112 : import javax.security.auth.login.*;
+s113 : import javax.security.auth.spi.*;
+s114 : import javax.security.auth.x500.*;
+s115 : import javax.security.cert.*;
+s116 : import javax.security.sasl.*;
+s117 : import javax.sound.midi.*;
+s118 : import javax.sound.midi.spi.*;
+s119 : import javax.sound.sampled.*;
+s120 : import javax.sound.sampled.spi.*;
+s121 : import javax.sql.*;
+s122 : import javax.sql.rowset.*;
+s123 : import javax.sql.rowset.serial.*;
+s124 : import javax.sql.rowset.spi.*;
+s125 : import javax.swing.*;
+s126 : import javax.swing.border.*;
+s127 : import javax.swing.colorchooser.*;
+s128 : import javax.swing.event.*;
+s129 : import javax.swing.filechooser.*;
+s130 : import javax.swing.plaf.*;
+s131 : import javax.swing.plaf.basic.*;
+s132 : import javax.swing.plaf.metal.*;
+s133 : import javax.swing.plaf.multi.*;
+s134 : import javax.swing.plaf.nimbus.*;
+s135 : import javax.swing.plaf.synth.*;
+s136 : import javax.swing.table.*;
+s137 : import javax.swing.text.*;
+s138 : import javax.swing.text.html.*;
+s139 : import javax.swing.text.html.parser.*;
+s140 : import javax.swing.text.rtf.*;
+s141 : import javax.swing.tree.*;
+s142 : import javax.swing.undo.*;
+s143 : import javax.tools.*;
+s144 : import javax.transaction.xa.*;
+s145 : import javax.xml.*;
+s146 : import javax.xml.catalog.*;
+s147 : import javax.xml.crypto.*;
+s148 : import javax.xml.crypto.dom.*;
+s149 : import javax.xml.crypto.dsig.*;
+s150 : import javax.xml.crypto.dsig.dom.*;
+s151 : import javax.xml.crypto.dsig.keyinfo.*;
+s152 : import javax.xml.crypto.dsig.spec.*;
+s153 : import javax.xml.datatype.*;
+s154 : import javax.xml.namespace.*;
+s155 : import javax.xml.parsers.*;
+s156 : import javax.xml.stream.*;
+s157 : import javax.xml.stream.events.*;
+s158 : import javax.xml.stream.util.*;
+s159 : import javax.xml.transform.*;
+s160 : import javax.xml.transform.dom.*;
+s161 : import javax.xml.transform.sax.*;
+s162 : import javax.xml.transform.stax.*;
+s163 : import javax.xml.transform.stream.*;
+s164 : import javax.xml.validation.*;
+s165 : import javax.xml.xpath.*;
+s166 : import org.ietf.jgss.*;
+s167 : import org.w3c.dom.*;
+s168 : import org.w3c.dom.bootstrap.*;
+s169 : import org.w3c.dom.events.*;
+s170 : import org.w3c.dom.ls.*;
+s171 : import org.w3c.dom.ranges.*;
+s172 : import org.w3c.dom.traversal.*;
+s173 : import org.w3c.dom.views.*;
+s174 : import org.xml.sax.*;
+s175 : import org.xml.sax.ext.*;
+s176 : import org.xml.sax.helpers.*;
+
+jshell>
+
+Note: In addition to the JAVASE, to provide our own snippets we have to open the Jshell as follows,
+
+C:\Users>jshell -v --startup JAVASE snippet.jsh
+Hello from external snippet file
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list
+
+   1 : System.out.println("Hello from external snippet file");
+   2 : public void method(){
+        System.out.println("Method from external snippet file");
+       }
+
+jshell> /list -start
+
+  s1 : import java.applet.*;
+  s2 : import java.awt.*;
+  s3 : import java.awt.color.*;
+  s4 : import java.awt.datatransfer.*;
+  s5 : import java.awt.desktop.*;
+  s6 : import java.awt.dnd.*;
+  s7 : import java.awt.event.*;
+  s8 : import java.awt.font.*;
+  s9 : import java.awt.geom.*;
+ s10 : import java.awt.im.*;
+ s11 : import java.awt.im.spi.*;
+ s12 : import java.awt.image.*;
+ s13 : import java.awt.image.renderable.*;
+ s14 : import java.awt.print.*;
+ s15 : import java.beans.*;
+ s16 : import java.beans.beancontext.*;
+ s17 : import java.io.*;
+ s18 : import java.lang.*;
+ s19 : import java.lang.annotation.*;
+ s20 : import java.lang.constant.*;
+ s21 : import java.lang.instrument.*;
+ s22 : import java.lang.invoke.*;
+ s23 : import java.lang.management.*;
+ s24 : import java.lang.module.*;
+ s25 : import java.lang.ref.*;
+ s26 : import java.lang.reflect.*;
+ s27 : import java.lang.runtime.*;
+ s28 : import java.math.*;
+ s29 : import java.net.*;
+ s30 : import java.net.http.*;
+ s31 : import java.net.spi.*;
+ s32 : import java.nio.*;
+ s33 : import java.nio.channels.*;
+ s34 : import java.nio.channels.spi.*;
+ s35 : import java.nio.charset.*;
+ s36 : import java.nio.charset.spi.*;
+ s37 : import java.nio.file.*;
+ s38 : import java.nio.file.attribute.*;
+ s39 : import java.nio.file.spi.*;
+ s40 : import java.rmi.*;
+ s41 : import java.rmi.dgc.*;
+ s42 : import java.rmi.registry.*;
+ s43 : import java.rmi.server.*;
+ s44 : import java.security.*;
+ s45 : import java.security.cert.*;
+ s46 : import java.security.interfaces.*;
+ s47 : import java.security.spec.*;
+ s48 : import java.sql.*;
+ s49 : import java.text.*;
+ s50 : import java.text.spi.*;
+ s51 : import java.time.*;
+ s52 : import java.time.chrono.*;
+ s53 : import java.time.format.*;
+ s54 : import java.time.temporal.*;
+ s55 : import java.time.zone.*;
+ s56 : import java.util.*;
+ s57 : import java.util.concurrent.*;
+ s58 : import java.util.concurrent.atomic.*;
+ s59 : import java.util.concurrent.locks.*;
+ s60 : import java.util.function.*;
+ s61 : import java.util.jar.*;
+ s62 : import java.util.logging.*;
+ s63 : import java.util.prefs.*;
+ s64 : import java.util.random.*;
+ s65 : import java.util.regex.*;
+ s66 : import java.util.spi.*;
+ s67 : import java.util.stream.*;
+ s68 : import java.util.zip.*;
+ s69 : import javax.accessibility.*;
+ s70 : import javax.annotation.processing.*;
+ s71 : import javax.crypto.*;
+ s72 : import javax.crypto.interfaces.*;
+ s73 : import javax.crypto.spec.*;
+ s74 : import javax.imageio.*;
+ s75 : import javax.imageio.event.*;
+ s76 : import javax.imageio.metadata.*;
+ s77 : import javax.imageio.plugins.bmp.*;
+ s78 : import javax.imageio.plugins.jpeg.*;
+ s79 : import javax.imageio.plugins.tiff.*;
+ s80 : import javax.imageio.spi.*;
+ s81 : import javax.imageio.stream.*;
+ s82 : import javax.lang.model.*;
+ s83 : import javax.lang.model.element.*;
+ s84 : import javax.lang.model.type.*;
+ s85 : import javax.lang.model.util.*;
+ s86 : import javax.management.*;
+ s87 : import javax.management.loading.*;
+ s88 : import javax.management.modelmbean.*;
+ s89 : import javax.management.monitor.*;
+ s90 : import javax.management.openmbean.*;
+ s91 : import javax.management.relation.*;
+ s92 : import javax.management.remote.*;
+ s93 : import javax.management.remote.rmi.*;
+ s94 : import javax.management.timer.*;
+ s95 : import javax.naming.*;
+ s96 : import javax.naming.directory.*;
+ s97 : import javax.naming.event.*;
+ s98 : import javax.naming.ldap.*;
+ s99 : import javax.naming.ldap.spi.*;
+s100 : import javax.naming.spi.*;
+s101 : import javax.net.*;
+s102 : import javax.net.ssl.*;
+s103 : import javax.print.*;
+s104 : import javax.print.attribute.*;
+s105 : import javax.print.attribute.standard.*;
+s106 : import javax.print.event.*;
+s107 : import javax.rmi.ssl.*;
+s108 : import javax.script.*;
+s109 : import javax.security.auth.*;
+s110 : import javax.security.auth.callback.*;
+s111 : import javax.security.auth.kerberos.*;
+s112 : import javax.security.auth.login.*;
+s113 : import javax.security.auth.spi.*;
+s114 : import javax.security.auth.x500.*;
+s115 : import javax.security.cert.*;
+s116 : import javax.security.sasl.*;
+s117 : import javax.sound.midi.*;
+s118 : import javax.sound.midi.spi.*;
+s119 : import javax.sound.sampled.*;
+s120 : import javax.sound.sampled.spi.*;
+s121 : import javax.sql.*;
+s122 : import javax.sql.rowset.*;
+s123 : import javax.sql.rowset.serial.*;
+s124 : import javax.sql.rowset.spi.*;
+s125 : import javax.swing.*;
+s126 : import javax.swing.border.*;
+s127 : import javax.swing.colorchooser.*;
+s128 : import javax.swing.event.*;
+s129 : import javax.swing.filechooser.*;
+s130 : import javax.swing.plaf.*;
+s131 : import javax.swing.plaf.basic.*;
+s132 : import javax.swing.plaf.metal.*;
+s133 : import javax.swing.plaf.multi.*;
+s134 : import javax.swing.plaf.nimbus.*;
+s135 : import javax.swing.plaf.synth.*;
+s136 : import javax.swing.table.*;
+s137 : import javax.swing.text.*;
+s138 : import javax.swing.text.html.*;
+s139 : import javax.swing.text.html.parser.*;
+s140 : import javax.swing.text.rtf.*;
+s141 : import javax.swing.tree.*;
+s142 : import javax.swing.undo.*;
+s143 : import javax.tools.*;
+s144 : import javax.transaction.xa.*;
+s145 : import javax.xml.*;
+s146 : import javax.xml.catalog.*;
+s147 : import javax.xml.crypto.*;
+s148 : import javax.xml.crypto.dom.*;
+s149 : import javax.xml.crypto.dsig.*;
+s150 : import javax.xml.crypto.dsig.dom.*;
+s151 : import javax.xml.crypto.dsig.keyinfo.*;
+s152 : import javax.xml.crypto.dsig.spec.*;
+s153 : import javax.xml.datatype.*;
+s154 : import javax.xml.namespace.*;
+s155 : import javax.xml.parsers.*;
+s156 : import javax.xml.stream.*;
+s157 : import javax.xml.stream.events.*;
+s158 : import javax.xml.stream.util.*;
+s159 : import javax.xml.transform.*;
+s160 : import javax.xml.transform.dom.*;
+s161 : import javax.xml.transform.sax.*;
+s162 : import javax.xml.transform.stax.*;
+s163 : import javax.xml.transform.stream.*;
+s164 : import javax.xml.validation.*;
+s165 : import javax.xml.xpath.*;
+s166 : import org.ietf.jgss.*;
+s167 : import org.w3c.dom.*;
+s168 : import org.w3c.dom.bootstrap.*;
+s169 : import org.w3c.dom.events.*;
+s170 : import org.w3c.dom.ls.*;
+s171 : import org.w3c.dom.ranges.*;
+s172 : import org.w3c.dom.traversal.*;
+s173 : import org.w3c.dom.views.*;
+s174 : import org.xml.sax.*;
+s175 : import org.xml.sax.ext.*;
+s176 : import org.xml.sax.helpers.*;
+
+jshell>
+================================================================================
+Need of Printing Option at Startup
+==================================
+Usually, we can use System.out.print() or System.out.println() methods to print some statements to the console. 
+If we use PRINTING option then several overloaded print() and println() methods will be provided at the time of 
+startup and these internally call System.out.print() and System.out.println() methods.
+
+C:\Users>jshell -v --startup PRINTING
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list -start
+
+  s1 : void print(boolean b) { System.out.print(b); }
+  s2 : void print(char c) { System.out.print(c); }
+  s3 : void print(int i) { System.out.print(i); }
+  s4 : void print(long l) { System.out.print(l); }
+  s5 : void print(float f) { System.out.print(f); }
+  s6 : void print(double d) { System.out.print(d); }
+  s7 : void print(char s[]) { System.out.print(s); }
+  s8 : void print(String s) { System.out.print(s); }
+  s9 : void print(Object obj) { System.out.print(obj); }
+ s10 : void println() { System.out.println(); }
+ s11 : void println(boolean b) { System.out.println(b); }
+ s12 : void println(char c) { System.out.println(c); }
+ s13 : void println(int i) { System.out.println(i); }
+ s14 : void println(long l) { System.out.println(l); }
+ s15 : void println(float f) { System.out.println(f); }
+ s16 : void println(double d) { System.out.println(d); }
+ s17 : void println(char s[]) { System.out.println(s); }
+ s18 : void println(String s) { System.out.println(s); }
+ s19 : void println(Object obj) { System.out.println(obj); }
+ s20 : void printf(java.util.Locale l, String format, Object... args) { System.out.printf(l, format, args); }
+ s21 : void printf(String format, Object... args) { System.out.printf(format, args); }
+
+jshell> print("Hello from Jshell");
+Hello from Jshell
+
+Note: Whenever we are using the PRINTING shortcut, then DEFAULT imports won’t come. Hence to get the DEFAULT imports 
+and PRINTING shortcut simultaneously, we have to open Jshell as follows.
+
+C:\Users>jshell -v --startup DEFAULT PRINTING
+|  Welcome to JShell -- Version 17.0.3.1
+|  For an introduction type: /help intro
+
+jshell> /list
+
+   1 : void print(boolean b) { System.out.print(b); }
+   2 : void print(char c) { System.out.print(c); }
+   3 : void print(int i) { System.out.print(i); }
+   4 : void print(long l) { System.out.print(l); }
+   5 : void print(float f) { System.out.print(f); }
+   6 : void print(double d) { System.out.print(d); }
+   7 : void print(char s[]) { System.out.print(s); }
+   8 : void print(String s) { System.out.print(s); }
+   9 : void print(Object obj) { System.out.print(obj); }
+  10 : void println() { System.out.println(); }
+  11 : void println(boolean b) { System.out.println(b); }
+  12 : void println(char c) { System.out.println(c); }
+  13 : void println(int i) { System.out.println(i); }
+  14 : void println(long l) { System.out.println(l); }
+  15 : void println(float f) { System.out.println(f); }
+  16 : void println(double d) { System.out.println(d); }
+  17 : void println(char s[]) { System.out.println(s); }
+  18 : void println(String s) { System.out.println(s); }
+  19 : void println(Object obj) { System.out.println(obj); }
+  20 : void printf(java.util.Locale l, String format, Object... args) { System.out.printf(l, format, args); }
+  21 : void printf(String format, Object... args) { System.out.printf(format, args); }
+
+jshell> /list -start
+
+  s1 : import java.io.*;
+  s2 : import java.math.*;
+  s3 : import java.net.*;
+  s4 : import java.nio.file.*;
+  s5 : import java.util.*;
+  s6 : import java.util.concurrent.*;
+  s7 : import java.util.function.*;
+  s8 : import java.util.prefs.*;
+  s9 : import java.util.regex.*;
+ s10 : import java.util.stream.*;
+
+jshell>
+
+Note: Various allowed options with --startup is,
+1.	DEFAULT
+2.	JAVASE
+3.	PRINTING
 ================================================================================
