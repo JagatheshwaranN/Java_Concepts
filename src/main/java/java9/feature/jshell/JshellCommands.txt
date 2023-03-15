@@ -1380,3 +1380,126 @@ Note: Various allowed options with --startup is,
 2.	JAVASE
 3.	PRINTING
 ================================================================================
+Shortcuts and Autocompletion of Commands
+========================================
+Variable Creation Shortcut
+==========================
+Just type the value on the Jshell and then press "Shift+Tab" followed by "v" then complete variable declaration 
+code will be generated. We have to provide only the name of the variable.
+
+jshell> "java"
+jshell> String s = "jshell";
+s ==> "jshell"
+|  created variable s : String
+
+Auto Import Shortcut
+====================
+Just type the class or interface name on the Jshell and press "Shift+Tab" followed by "i". Then we will get the 
+options for import.
+
+jshell> Connection
+0: Do nothing
+1: import: com.sun.jdi.connect.spi.Connection
+2: import: java.sql.Connection
+Choice:
+Imported: java.sql.Connection
+jshell> Connection
+
+jshell> /imports
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+|    import java.sql.Connection
+
+To get all the static members of a Class
+========================================
+jshell> ClassName.<Tab>
+
+jshell> String.
+CASE_INSENSITIVE_ORDER   class                    copyValueOf(             format(                  
+join(                    valueOf(
+jshell> String.
+
+To get all the instance members of a Class
+==========================================
+jshell> ClassObjectReference.<Tab>
+
+jshell> String s = "Hello";
+s ==> "Hello"
+|  modified variable s : String
+|    update overwrote variable s : String
+
+jshell> s.
+charAt(                chars()                codePointAt(           codePointBefore(       codePointCount(        
+codePoints()           compareTo(             compareToIgnoreCase(   concat(                contains(              
+contentEquals(         describeConstable()    endsWith(              equals(                equalsIgnoreCase(      
+formatted(             getBytes(              getChars(              getClass()             hashCode()             
+indent(                indexOf(               intern()               isBlank()              isEmpty()              
+lastIndexOf(           length()               lines()                matches(               notify()               
+notifyAll()            offsetByCodePoints(    regionMatches(         repeat(                replace(
+replaceAll(            replaceFirst(          resolveConstantDesc(   split(                 startsWith(            
+strip()                stripIndent()          stripLeading()         stripTrailing()        subSequence(           
+substring(             toCharArray()          toLowerCase(           toString()             toUpperCase(           
+transform(             translateEscapes()     trim()                 wait(
+jshell> s.
+
+To get the signature and documentation of a method
+==================================================
+jshell> ClassName.MethodName(<Tab>
+jshell> ClassObjectReference.MethodName(<Tab>
+
+jshell> s.length(
+Signatures:
+int String.length()
+
+<press tab again to see documentation>
+jshell> s.length(
+int String.length()
+Returns the length of this string.The length is equal to the number of Unicode code units in
+the string.
+
+Returns:
+the length of the sequence of characters represented by this object.
+
+<press tab again to see all possible completions; total possible completions: 545>
+
+Note: Even this <Tab> shortcut applicable for our own classes and methods as well.
+
+jshell> public void display(String name){
+   ...>     System.out.println("Hello "+name);
+   ...> }
+|  created method display(String)
+
+jshell> display(
+Signatures:
+void display(String name)
+
+<press tab again to see documentation>
+jshell> display(
+void display(String name)
+<no documentation found>
+
+<press tab again to see all possible completions; total possible completions: 544>
+jshell> display(
+
+
+jshell> /edit
+|  created class JshellDemo
+
+jshell> JshellDemo.
+class             staticDisplay()
+jshell> JshellDemo.
+
+jshell> demo.
+InstanceDisplay()   equals()             getClass()          hashCode()          notify()            notifyAll()         
+wait()				toString()         
+
+
+================================================================================
