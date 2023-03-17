@@ -6,6 +6,9 @@ package java10.feature.var;
  * it. The Compiler infer / identify the type of the variable using the value
  * provided.
  * 
+ * This var variable declaration is restricted to local variables and can’t be
+ * used globally.
+ * 
  * @author Jagatheshwaran N
  *
  */
