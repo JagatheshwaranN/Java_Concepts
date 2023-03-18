@@ -3,7 +3,7 @@ package java10.feature.collections.enhancements;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class _04_ImmutableCollections_Demo4 {
+public class _07_ImmutableCollections_Demo4 {
 
 	public static void main(String[] args) {
 

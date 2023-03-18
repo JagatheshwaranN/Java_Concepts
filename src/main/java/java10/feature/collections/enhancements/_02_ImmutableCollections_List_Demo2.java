@@ -2,17 +2,17 @@ package java10.feature.collections.enhancements;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
- * In Java 10, we have enhancements to the Collections. We have option to make
- * the collections as unmodifiable collections.
+ * In Java 10, we also have facility to create immutable copies of collections.
+ * For this purpose, we have static methods introduced in the Interfaces.
  * 
- * unmodifiableList (), unmodifiableSet (), unmodifiableMap (),
- * unmodifiableCollection ()
+ * List.CopyOf(), Set.CopyOf(), Map.CopyOf()
  * 
  * @author Jagatheshwaran N
  */
-public class _01_ImmutableCollections_List_Demo1 {
+public class _02_ImmutableCollections_List_Demo2 {
 
 	public static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class _01_ImmutableCollections_List_Demo1 {
 		list.add(1);
 		list.add(2);
 		list.add(3);
-		var immutableList = Collections.unmodifiableList(list);
+		var immutableList = List.copyOf(list);
 		System.out.println(immutableList);
 		// immutableList.add(4); // java.lang.UnsupportedOperationException
 		list.add(4);
