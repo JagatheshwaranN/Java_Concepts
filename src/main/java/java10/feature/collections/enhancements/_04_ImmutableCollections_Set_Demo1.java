@@ -3,7 +3,7 @@ package java10.feature.collections.enhancements;
 import java.util.Collections;
 import java.util.HashSet;
 
-public class _03_ImmutableCollections_Set_Demo1 {
+public class _04_ImmutableCollections_Set_Demo1 {
 
 	public static void main(String[] args) {
 
