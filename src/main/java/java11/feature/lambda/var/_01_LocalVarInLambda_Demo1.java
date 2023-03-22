@@ -10,7 +10,7 @@ public class _01_LocalVarInLambda_Demo1 {
 
 	public static void main(String[] args) {
 
-		calc c = (var x, var y) -> {
+		Calc c = (var x, var y) -> {
 			return (x + y);
 		};
 		int sum = c.add(2, 3);
@@ -18,6 +18,6 @@ public class _01_LocalVarInLambda_Demo1 {
 	}
 }
 
-interface calc {
+interface Calc {
 	public int add(int a, int b);
 }
