@@ -1,7 +1,7 @@
 package java11.feature.string.enhancements;
 
 /**
- * Repeats a string given number of times. Returns the concatenated string. The
+ * repeat() - Repeats a string given number of times. Returns the concatenated string. The
  * repeat method simply repeats the string that many numbers of times as
  * mentioned in the method in the form of an int.
  * 
