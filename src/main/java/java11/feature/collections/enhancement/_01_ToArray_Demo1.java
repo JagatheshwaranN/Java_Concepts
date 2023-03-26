@@ -1,4 +1,4 @@
-package java11.feature.collections.enhancements;
+package java11.feature.collections.enhancement;
 
 import java.util.ArrayList;
 import java.util.Arrays;
