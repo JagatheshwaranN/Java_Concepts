@@ -14,7 +14,7 @@ import java.time.Duration;
  * 
  * @author Jagatheshwaran N
  */
-public class _01_Http2Client_Demo1 {
+public class _01_Http2Client_Sync_Demo1 {
 
 	public static void main(String[] args) {
 
