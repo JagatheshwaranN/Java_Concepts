@@ -1,0 +1,17 @@
+===================================================================================
+JEP 330 - Single File Source Code Program
+=========================================
+Java 11 onwards, now a single java file can be tested easily without compiling as well. 
+In Earlier versions of java we have to compile java file first and then we can execute code but from java11 
+we can directly execute code without compiling it. Suppose if we have Sample.java file we can directly run 
+java Sample.java for execution of code in JAVA11 without compiling it.
+
+Example, 
+
+Before Java11, to run a Java program, we have to follow 2 steps as below,
+javac sample.java
+java sample
+
+From Java11, we can run Java prgoram using single command as below,
+java sample
+===================================================================================
