@@ -25,11 +25,11 @@ public class _01_Switch_Expression_Demo1 {
 
 	public static String getDayDetail(String day) {
 
-		String result = switch (day) {
-		case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" -> "Weekday";
+		String today = switch (day) {
+		case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" -> "Week Day";
 		case "SATURDAY", "SUNDAY" -> "Weekend";
-		default -> "Invalid day";
+		default -> "Invalid Day";
 		};
-		return result;
+		return today;
 	}
 }
