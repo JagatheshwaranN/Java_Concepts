@@ -28,6 +28,8 @@ public class _03_File_String_Mismatch_Demo1 {
 		Files.writeString(path1, "Java 12 Features");
 		Files.writeString(path2, "Java 12 Features");
 		System.out.println(Files.mismatch(path1, path2));
+		path1.toFile().deleteOnExit();
+		path2.toFile().deleteOnExit();
 	}
 
 	private static void verifyDifferentFiles() throws IOException {
@@ -37,5 +39,7 @@ public class _03_File_String_Mismatch_Demo1 {
 		Files.writeString(path1, "Java 12 Article");
 		Files.writeString(path2, "Java 12 Features");
 		System.out.println(Files.mismatch(path1, path2));
+		path1.toFile().deleteOnExit();
+		path2.toFile().deleteOnExit();
 	}
 }
