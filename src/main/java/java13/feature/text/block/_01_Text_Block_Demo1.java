@@ -20,7 +20,10 @@ public class _01_Text_Block_Demo1 {
 
 				""";
 		System.out.println(text_json);
-
+		System.out.println(text_json.contains("John"));
+		System.out.println(text_json.indexOf("John"));
+		System.out.println(text_json.length());
+		System.out.println("*********************************************");
 		var text_html = """
 				<html>
 					<head>
@@ -32,7 +35,7 @@ public class _01_Text_Block_Demo1 {
 				</html>
 				""";
 		System.out.println(text_html);
-
+		System.out.println("*********************************************");
 		var text_sql = """
 				SELECT id, firstName, lastName FROM Employee
 				WHERE departmentId = "IT"
