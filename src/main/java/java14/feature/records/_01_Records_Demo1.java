@@ -26,8 +26,16 @@ public class _01_Records_Demo1 {
 
 	public static void main(String[] args) {
 
-		AuthenticateUser authenticateUser = new AuthenticateUser("admin", "password");
-		System.out.println(authenticateUser.username());
-		System.out.println(authenticateUser.password());
+		AuthenticateUser authenticateUser1 = new AuthenticateUser("admin", "password");
+		System.out.println(authenticateUser1.username());
+		System.out.println(authenticateUser1.password());
+		
+		AuthenticateUser authenticateUser2 = new AuthenticateUser("admin", "password");
+		System.out.println(authenticateUser2.username());
+		System.out.println(authenticateUser2.password());
+		
+		System.out.println(authenticateUser1.equals(authenticateUser2));
+		System.out.println(authenticateUser1.hashCode());
+		System.out.println(authenticateUser1.toString());
 	}
 }
