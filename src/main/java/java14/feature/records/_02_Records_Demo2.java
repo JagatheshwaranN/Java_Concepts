@@ -6,7 +6,7 @@ public class _02_Records_Demo2 {
 
 		static int followers = 0;
 
-		public static String followerCount() {
+		public static String followers() {
 			return "Followers count " + followers;
 		}
 
@@ -28,7 +28,7 @@ public class _02_Records_Demo2 {
 		System.out.println(author.bookId());
 		System.out.println(author.authorName());
 		System.out.println(author.bookName());
-		System.out.println(author.followerCount());
+		System.out.println(author.followers());
 		System.out.println(author.details());
 		System.out.println(author.hashCode());
 		System.out.println(author.toString());
