@@ -1,0 +1,60 @@
+======================================================================
+Introduction
+============
+
+JPackage allows developers to create such an installable package for their JAR files. 
+The user doesn't have to explicitly copy the JAR file or even install Java to run the application. 
+The installable package takes care of all of this.
+
+The jpackage tool is being developed based on JDK Enhancement Proposal 343. 
+You can use this tool to create a platform-specific installer for a Java application, which in turn installs 
+the application and the JRE required for it.
+
+Platform-specific means that the installer feels familiar to users of a particular platform. On Windows, 
+for example, this is an .msi or .exe file that is launched by double-clicking it. For macOS, a .pkg or .dmg file. 
+And for Linux, a .deb or .rpm file.
+
+Java 14 introduces a new packaging tool, jpackage based on javapackager. 
+javapackager was introduced in Java 8 and was part of JavaFX kit. 
+As JavaFX is split from Java from 11 version, this packaging tool is no more available in standard offering.
+
+This new tool is developed to provide native installer for an operating system. For example, an msi/exe for windows, 
+pkg/dmg for MacOS, deb/rpm for Linux and so on. Without this tool, developer generally share a jar file which a user 
+has to run within own JVM.
+
+Developer can use jlink to compress the required JDK modules to minimum modules and use the jpackage to create a 
+lightweight image.
+
+
+Steps to convert Jar into .exe file
+===================================
+
+Step-1:
+Create your project/required java class
+Compile and Run
+D:\Environment_Collection\Eclipse_Env\Workspace\Java_Concepts>Javac Test.java
+D:\Environment_Collection\Eclipse_Env\Workspace\Java_Concepts>java Test
+ 
+Step-2:
+Create a executable jar file.
+jar -cfe jpDemo3.jar org.java14.JPackDemo org/java14/*.class
+jar -cfe JPKDemo.jar Java_Concepts/Test Test.class Test$1.class
+D:\Environment_Collection\Eclipse_Env\Workspace\Java_Concepts>jar -cfe JPKDemo.jar Java_Concepts/Test Test.class Test$1.class
+
+Step-3:
+Install Wix 3.0 or able and set path under system variable.
+Download wix from https://wixtoolset.org/.
+
+Step-4:
+Use JPackaging tool/Command line utility to create exe file
+Command to create exe file: 
+jpackage --input . --name JPackageDemoApp --main-jar JPKGDemo.jar --main-class org.java14.JPackDemo --type exe   --java-options '--enable-preview' --win-shortcut
+jpackage --input . --name JPackageDemoApp --main-jar JPKDemo.jar --main-class Java_Concepts/Test --type exe --java-options '--enable-preview' --win-shortcut
+D:\Environment_Collection\Eclipse_Env\Jars>jpackage --input . --name JPackageDemoApp --main-jar JPKDemo.jar --main-class Java_Concepts/Test --type exe --java-options '--enable-preview' --win-shortcut
+
+Step-5:
+In step-4 the .exe file will get created, you can use the .exe file to instal the same.
+Install your exe into ur window desktop/laptop
+
+
+======================================================================
