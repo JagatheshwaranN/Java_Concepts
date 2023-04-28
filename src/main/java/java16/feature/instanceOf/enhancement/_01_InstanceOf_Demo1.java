@@ -1,4 +1,4 @@
-package Java16.feature.instanceOf.enhancement;
+package java16.feature.instanceOf.enhancement;
 
 /**
  * A matched variable is only visible within the if block. That is logical,

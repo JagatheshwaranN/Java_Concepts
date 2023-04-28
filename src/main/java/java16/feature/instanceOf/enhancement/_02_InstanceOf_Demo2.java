@@ -1,4 +1,4 @@
-package Java16.feature.instanceOf.enhancement;
+package java16.feature.instanceOf.enhancement;
 
 /**
  * Pattern variables are no longer implicitly final, i.e., they can be changed.

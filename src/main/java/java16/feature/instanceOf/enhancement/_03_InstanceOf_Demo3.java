@@ -1,4 +1,4 @@
-package Java16.feature.instanceOf.enhancement;
+package java16.feature.instanceOf.enhancement;
 
 public class _03_InstanceOf_Demo3 {
 
