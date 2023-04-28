@@ -8,7 +8,6 @@ import java.util.List;
  * easily.
  * 
  * @author Jagatheshwaran N
- *
  */
 public class _01_Stream_Enhancement_Demo1 {
 
