@@ -1,9 +1,10 @@
 package java16.feature.sealed.classes.enhancement;
 
 /**
- * In Java16, In the second preview of Sealed Classes is that local classes
- * (that is, classes defined within methods) are not allowed to extend sealed
- * classes.
+ * In Java16, . For instanceof tests, the compiler checks whether the class
+ * hierarchy allows the check ever to return true. Since the second preview of
+ * Sealed Classes, the information from sealed class hierarchies is included in
+ * this check.
  * 
  * @author Jagatheshwaran N
  */
