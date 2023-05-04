@@ -11,6 +11,8 @@ public class _01_Switch_Exp_InstanceOf_Demo1 {
         return switch(obj){
             case Integer i -> String.format("Int %d", i);
             case String s -> String.format("String %s", s);
+            case Long l -> String.format("Long %d", l);
+            case Double d -> String.format("Double %f", d);
             default -> obj.toString();
         };
     }
