@@ -10,14 +10,6 @@ public class _03_Switch_Exp_InstanceOf_Demo3 {
         testTriangle(r);
     }
 
-    private static void testTriangle(Shape s){
-         switch(s){
-            case Triangle t && (t.calculateArea() > 100) -> System.out.println("Large Triangle");
-            case Triangle t -> System.out.println("Normal Triangle");
-            default -> System.out.println("Unknown");
-        }
-    }
-
     static class Shape {
 
     }
@@ -32,4 +24,14 @@ public class _03_Switch_Exp_InstanceOf_Demo3 {
             return 150;
         }
     }
+    @SuppressWarnings("preview")
+	private static void testTriangle(Shape s){
+         switch(s){
+            // case Triangle t && (t.calculateArea() > 100) -> System.out.println("Large Triangle");
+            case Triangle t -> System.out.println("Normal Triangle");
+            default -> System.out.println("Unknown");
+        }
+    }
+
+   
 }

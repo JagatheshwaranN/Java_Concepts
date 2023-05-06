@@ -9,7 +9,8 @@ public class _02_Switch_Exp_InstanceOf_Demo2 {
         testSwitchExp(null);
     }
 
-    private static void testSwitchExp(String var){
+    @SuppressWarnings("preview")
+	private static void testSwitchExp(String var){
          switch(var){
             case "Java 11", "Java 16" -> System.out.println("Java LTS Version");
             case null -> System.out.println("Unknown");
