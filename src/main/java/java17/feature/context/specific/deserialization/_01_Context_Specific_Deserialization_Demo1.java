@@ -25,6 +25,7 @@ import java.io.Serializable;
 public class _01_Context_Specific_Deserialization_Demo1 {
 
 	public static void main(String[] args) throws IOException {
+		
 		byte[] bytes = convertObjectToStream(new DeserializeExample());
 		InputStream inputStream = new ByteArrayInputStream(bytes);
 		ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
@@ -37,20 +38,19 @@ public class _01_Context_Specific_Deserialization_Demo1 {
 		try {
 			Object object = objectInputStream.readObject();
 			System.out.println("Read Object ==> " + object);
-
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
 
 	private static byte[] convertObjectToStream(Object object) {
+		
 		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 		try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream)) {
 			objectOutputStream.writeObject(object);
 			return byteArrayOutputStream.toByteArray();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
 		}
 		throw new RuntimeException();
 	}
