@@ -58,9 +58,6 @@ public class _01_Context_Specific_Deserialization_Demo1 {
 
 class DeserializeExample implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public String toString() {
