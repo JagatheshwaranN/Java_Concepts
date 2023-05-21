@@ -82,12 +82,13 @@ public class _01_Structured_Concurrency_Demo1 {
 	 */
 
 	ResultSet handleStructuredAPI() {
-		try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-			Future<String> user = scope.fork(this::findUser);
-			Future<Integer> order = scope.fork(this::fetchOrder);
-			scope.join();
-			scope.throwIfFailed();
-			return new ResultSet(user.resultNow(), order.resultNow());
-		}
+//		try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+//			Future<String> user = scope.fork(this::findUser);
+//			Future<Integer> order = scope.fork(this::fetchOrder);
+//			scope.join();
+//			scope.throwIfFailed();
+//			return new ResultSet(user.resultNow(), order.resultNow());
+//		}
+		return new ResultSet("Test",1);
 	}
 }
