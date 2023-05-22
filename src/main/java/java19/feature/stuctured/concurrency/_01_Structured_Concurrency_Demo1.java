@@ -81,14 +81,14 @@ public class _01_Structured_Concurrency_Demo1 {
 	 * java --enable-preview --add-modules jdk.incubator.concurrent Main
 	 */
 
-	ResultSet handleStructuredAPI() {
+	ResultSet handleStructuredAPI() {	
 //		try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-//			Future<String> user = scope.fork(this::findUser);
-//			Future<Integer> order = scope.fork(this::fetchOrder);
-//			scope.join();
-//			scope.throwIfFailed();
-//			return new ResultSet(user.resultNow(), order.resultNow());
-//		}
+//		Future<String> user = scope.fork(this::findUser);
+//		Future<Integer> order = scope.fork(this::fetchOrder);
+//		scope.join();
+//		scope.throwIfFailed();
+//		return new ResultSet(user.resultNow(), order.resultNow());
+//	}
 		return new ResultSet("Test",1);
 	}
 }
