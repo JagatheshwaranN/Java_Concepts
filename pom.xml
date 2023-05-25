@@ -10,10 +10,10 @@
 	<url>http://www.example.com</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jre.level>17</jre.level>
-		<jdk.level>17</jdk.level>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<jre.level>19</jre.level>
+		<jdk.level>19</jdk.level>
+		<maven.compiler.source>19</maven.compiler.source>
+		<maven.compiler.target>19</maven.compiler.target>
 	</properties>
 	<dependencies></dependencies>
 	<build>

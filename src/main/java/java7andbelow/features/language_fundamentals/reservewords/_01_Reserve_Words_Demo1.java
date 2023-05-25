@@ -5,10 +5,10 @@ package java7andbelow.features.language_fundamentals.reservewords;
  *
  * @author Jagatheshwaran N
  */
-public class _01_Reserve_Words_Dem01 {
+public class _01_Reserve_Words_Demo1 {
 
     public static void main(String[] args) {
-       /**
+       /*
             Reserve words (53) -> Keywords (50) + Reserved literals (3)
 
             Reserved literals (3) -> true, false, null
@@ -33,9 +33,9 @@ public class _01_Reserve_Words_Dem01 {
             Return Type Keyword (1) -> void
 
             enum (1.5 Intro)
-        */
+    */
 
-        /**
+        /*
          *  Points to note about Reserve Words
          *  ==================================
          *  1.	Usage of goto created several issues in old programming languages. Hence, SUN people banned this keyword in Java.
