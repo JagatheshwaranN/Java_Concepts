@@ -5,9 +5,13 @@ public class _01_Byte_Demo1 {
     public static void main(String[] args) {
 
         /*
-           1 byte -> 8 bits
+           1 byte => 8 bits
 
            Bytes value can range from -128 to +127
+
+           Max value => +127 and Min Value => -128
+
+           Representation => -2->7 to 2->7-1
 
            In Bytes, The most significant bit acts as sign bit. 0 means +ve and 1 means -ve.
            Positive numbers will be represented directly in memory whereas negative numbers
