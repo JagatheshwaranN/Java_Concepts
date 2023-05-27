@@ -9,9 +9,9 @@ public class _02_Short_Demo1 {
 
             1 short => 2 bytes => 16 bits
 
-            Short values can range from -32768 to +32767
+            Max value => +32767 and Min Value => -32768
 
-            Max value => +32767, Min Value => -32768,
+            Short values can range from -32768 to +32767
 
             Representation => -2->15 to 2->15-1
 
