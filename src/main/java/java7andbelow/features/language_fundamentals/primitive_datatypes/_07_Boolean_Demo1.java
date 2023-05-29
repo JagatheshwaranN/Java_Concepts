@@ -7,7 +7,7 @@ public class _07_Boolean_Demo1 {
         /*
             Boolean - The size is not applicable, but its Virtual Machine dependent.
 
-            Boolean - The range is not applicable, but the allowed values are True / False.
+            Boolean - The range is not applicable, but the allowed values are True and False.
         */
 
         Boolean b1 = true;
