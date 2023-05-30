@@ -18,13 +18,15 @@ public class _10_Integer_Literals_Demo1 {
             For Integral data types, we can specify the literal values in following ways,
 
             1.	Decimal form (Base 10), allowed digits are 0 to 9.
-            int x = 10;
+                int x = 10;
 
             2.	Octal form (Base 8), allowed digits are 0 to 7. The literal should be prefixed with 0.
-            int x = 010;
+                int x = 010;
 
-            3.	Hexadecimal form (Base 16), allowed digits are 0 to 9 and (a to f / A to F) for extra digits. This is one of the very few areas where java is not case sensitive. The literal should be prefixed with 0x/0X.
-            int x = 0x10;
+            3.	Hexadecimal form (Base 16), allowed digits are 0 to 9 and (a to f / A to F) for extra digits.
+                This is one of the very few areas where java is not case-sensitive.
+                The literal should be prefixed with 0x/0X.
+                int x = 0x10;
         */
 
         // The programmer has choice to provide the values in decimal, octal and hexadecimal forms
