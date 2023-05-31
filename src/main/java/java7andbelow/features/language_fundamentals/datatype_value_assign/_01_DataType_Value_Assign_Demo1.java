@@ -1,4 +1,4 @@
-package java7andbelow.features.language_fundamentals.DataTypeValueAssign;
+package java7andbelow.features.language_fundamentals.datatype_value_assign;
 
 public class _01_DataType_Value_Assign_Demo1 {
 
