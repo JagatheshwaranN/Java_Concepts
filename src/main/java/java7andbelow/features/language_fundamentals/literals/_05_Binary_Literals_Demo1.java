@@ -1,11 +1,11 @@
-package java7andbelow.features.language_fundamentals.primitive_datatypes;
+package java7andbelow.features.language_fundamentals.literals;
 
-public class _13_Binary_Literals_Demo1 {
+public class _05_Binary_Literals_Demo1 {
 
     public static void main(String[] args) {
 
         /*
-            In Java 1.7 version enhancement with respect to Literal is as below,
+            Java 1.7 version enhancement with respect to Literal as below,
 
             Binary Literal
             ==============
@@ -30,7 +30,7 @@ public class _13_Binary_Literals_Demo1 {
         System.out.println(d2);
 
         // At the time of compilation, these underscore symbols will be removed automatically.
-        // Hence, after compilation, the above code will become as double d = 123456.789.
+        // Hence, after compilation, the above code will become as double d1 = 123456.789123.
         // We can use underscore symbols only between the numbers(digits).
         // If we use anywhere else, then compile time error will be triggered.
         // We can use more than one underscore symbols between the numeric values.

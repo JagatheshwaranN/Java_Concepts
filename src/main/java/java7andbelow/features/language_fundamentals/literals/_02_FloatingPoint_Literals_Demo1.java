@@ -1,6 +1,6 @@
-package java7andbelow.features.language_fundamentals.primitive_datatypes;
+package java7andbelow.features.language_fundamentals.literals;
 
-public class _11_FloatingPoint_Literals_Demo1 {
+public class _02_FloatingPoint_Literals_Demo1 {
 
     public static void main(String[] args) {
 
