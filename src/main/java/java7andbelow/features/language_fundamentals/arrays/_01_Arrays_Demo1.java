@@ -66,7 +66,7 @@ public class _01_Arrays_Demo1 {
             3D Array Declaration
             ====================
             int[][][] a; -> Recommended because the name is clearly separated from the type.
-                            This is called as 3 D array declaration.
+                            This is called as 3D array declaration.
             int [][][]a;
 
             int a[][][];
