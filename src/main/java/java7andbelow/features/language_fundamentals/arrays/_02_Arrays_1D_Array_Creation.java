@@ -2,7 +2,7 @@ package java7andbelow.features.language_fundamentals.arrays;
 
 import java.util.Arrays;
 
-public class _01_Arrays_Demo2 {
+public class _02_Arrays_1D_Array_Creation {
 
     public static void main(String[] args) {
 
@@ -29,11 +29,14 @@ public class _01_Arrays_Demo2 {
         double[] d1 = new double[5];
         System.out.println(d1.getClass().getName()); // [D
 
-        boolean[] b1 = new boolean[5];
-        System.out.println(b1.getClass().getName()); // [Z
+        boolean[] bn1 = new boolean[5];
+        System.out.println(bn1.getClass().getName()); // [Z
 
         short[] s1 = new short[5];
         System.out.println(s1.getClass().getName()); // [S
+
+        byte[] b1 = new byte[5];
+        System.out.println(b1.getClass().getName()); // [B
 
         /*
             Loop-holes in Array creation

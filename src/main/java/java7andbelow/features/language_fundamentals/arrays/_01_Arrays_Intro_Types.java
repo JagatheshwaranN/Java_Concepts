@@ -1,6 +1,6 @@
 package java7andbelow.features.language_fundamentals.arrays;
 
-public class _01_Arrays_Demo1 {
+public class _01_Arrays_Intro_Types {
 
     public static void main(String[] args) {
 
