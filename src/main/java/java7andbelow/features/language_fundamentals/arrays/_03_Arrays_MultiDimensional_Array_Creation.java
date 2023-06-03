@@ -5,8 +5,8 @@ public class _03_Arrays_MultiDimensional_Array_Creation {
     public static void main(String[] args) {
 
         /*
-            In java, 2 D array is not implemented using Matrix style. SUN MicroSystem people followed array of arrays
-            approach for multidimensional array creation.
+            In java, 2D array is not implemented using Matrix style. SUN MicroSystem people followed array
+            of arrays approach for multidimensional array creation.
 
             The advantage of this approach is memory utilization will be improved.
         */
