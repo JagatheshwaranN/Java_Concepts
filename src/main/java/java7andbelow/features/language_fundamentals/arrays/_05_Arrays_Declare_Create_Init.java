@@ -1,9 +1,8 @@
 package java7andbelow.features.language_fundamentals.arrays;
 
-public class _05_Array_Declare_Create_Init {
+public class _05_Arrays_Declare_Create_Init {
 
     public static void main(String[] args) {
-
 
         // Array Declaration
         int[] x;
