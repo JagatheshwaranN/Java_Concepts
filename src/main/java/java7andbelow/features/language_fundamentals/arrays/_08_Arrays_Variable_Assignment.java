@@ -27,13 +27,13 @@ public class _08_Arrays_Variable_Assignment {
                 copied just the reference variables will be re-assigned.
         */
         int[] i2 = {10, 20, 30};
-        int[] i3 = {50, 50};
+        int[] i3 = {50, 60};
         i2 = i3;
         i3 = i2;
 
         /*
             4.	Whenever we are assigning one array to another array, the dimension must be matched.
-                For example, in the place of 1 D array, we have to provide 1 D array only. If we are trying
+                For example, in the place of 1D array, we have to provide 1D array only. If we are trying
                 to provide any other dimension, then we will get compile time error.
         */
         int[][] i4 =  new int[3][];
@@ -44,6 +44,5 @@ public class _08_Arrays_Variable_Assignment {
             5.	Whenever we are assigning one array to another array, both dimension and type must be
                 matched whereas sizes are not need to be matched.
         */
-
     }
 }
