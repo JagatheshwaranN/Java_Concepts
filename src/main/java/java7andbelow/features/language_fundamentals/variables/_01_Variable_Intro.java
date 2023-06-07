@@ -10,10 +10,10 @@ public class _01_Variable_Intro {
             Based on the type of the value represented by the variable, all variables are divided into 2 types.
 
             1.	Primitive variable - It can be used to represent the primitive values
-            int x = 10;
+                int x = 10;
 
             2.	Reference variable - It can be used to refer the objects.
-            Student s = new Student ();
+                Student s = new Student ();
         */
 
         /*
