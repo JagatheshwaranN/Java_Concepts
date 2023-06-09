@@ -7,6 +7,8 @@ public class _07_Local_Variable_Demo {
         // private int i5 = 10; - illegal start of expression
         // public int i6 = 20; - illegal start of expression
         final int i7 = 30;
+        System.out.println(i7);
+
         _07_Local_Variable_Demo.insideLoopDemo();
         _07_Local_Variable_Demo.insideTryCatch();
         _07_Local_Variable_Demo.variableNotInitDemo();
