@@ -13,9 +13,9 @@ public class _01_Var_Arg_Method {
 
             To overcome this problem, SUN people introduced the var-arg method in Java 1.5v according to this,
             a method can take variable number of arguments such type of methods are called as Var-Arg Methods.
-            The Var Arg method can be declared as follows,
+            The Var-Arg method can be declared as follows,
 
-            m1(int… x)
+            m1(int... x)
 
             We can call this method by passing any number of int values including zero (0) number.
 

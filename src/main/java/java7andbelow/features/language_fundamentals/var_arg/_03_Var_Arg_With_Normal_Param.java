@@ -16,7 +16,8 @@ public class _03_Var_Arg_With_Normal_Param {
         If we mix the normal parameter with Var-Arg parameter then Var-Arg parameter should be the last parameter.
         m1(String... s, char c); => invalid
 
-        Inside the Var Arg method, we can take only one Var Arg parameter, and we can’t take more than one Var Arg parameter.
+        Inside the Var-Arg method, we can take only one Var-Arg parameter, and we can’t take more than one Var-Arg
+        parameter.
         m1(int... x, double... d); => invalid
 
         Inside a class, we can’t declare the Var-Arg method and the corresponding 1D array method simultaneously
@@ -32,7 +33,7 @@ public class _03_Var_Arg_With_Normal_Param {
 
     /*
         In general, Var-Arg method will get the least priority i.e. if no other methods in the class is not matched
-        then only var arg will be called. It is exactly same as the default case inside the switch statement.
+        then only var-Arg method will be called. It is exactly same as the default case inside the switch statement.
     */
 
     public static void display(int i2){
