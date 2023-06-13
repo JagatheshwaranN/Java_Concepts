@@ -5,12 +5,12 @@ public class _03_Main_Special_Significance {
     public static void main(String[] args) {
 
         /*
-        Points to Remember
-        ==================
+            Points to Remember
+            ==================
             1.	Until Java 1.6 version, if the class does not contain the main method then we will get the runtime
-                exception saying NoSuchMethodError: main. But from 1.7 version instead of NoSuchMethod Error, we will
-                get the more elaborated error message as Error: Main method not found in class Test, Please declare
-                the main method as public static void main(String[] args).
+                exception saying NoSuchMethodError: main. But from Java 1.7 version instead of NoSuchMethod Error,
+                we will get the more elaborated error message as Error: Main method not found in class Test, Please
+                declare the main method as public static void main(String[] args).
 
                 Now, the latest message as below,
                 "Error: Main method not found in class Test, please define the main method as:
@@ -19,7 +19,8 @@ public class _03_Main_Special_Significance {
 
             2.	From Java 1.7 version onwards, main method is mandatory to start program execution. Hence, even though
                 the class contain the static block it won’t be executed if the class does not contain main method. But
-                in Java 1.6 version, the static block will get execute and throw the Runtime Exception for main method.
+                in Java 1.6 version, the static block will get execute and throw the Runtime Exception for main method
+                if we don't declare it.
                 class Test {
                 static {
                 SOP("Static block");
