@@ -10,10 +10,10 @@
 	<url>http://www.example.com</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jre.level>19</jre.level>
-		<jdk.level>19</jdk.level>
-		<maven.compiler.source>19</maven.compiler.source>
-		<maven.compiler.target>19</maven.compiler.target>
+		<jre.level>20</jre.level>
+		<jdk.level>20</jdk.level>
+		<maven.compiler.source>20</maven.compiler.source>
+		<maven.compiler.target>20</maven.compiler.target>
 	</properties>
 	<dependencies></dependencies>
 	<build>
@@ -66,8 +66,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>19</source>
-                    <target>19</target>
+                    <source>20</source>
+                    <target>20</target>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>

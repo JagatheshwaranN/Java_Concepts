@@ -15,12 +15,11 @@ public class _01_Switch_Exp_Enhancement_Demo1 {
 		testSwitchExp("Java19");
 	}
 
-	@SuppressWarnings("preview")
 	private static void testSwitchExp(Object obj) {
 		switch (obj) {
 		case String str when str.length() > 10 -> System.out.println("String length greater than 10");
 		case String str -> System.out.println("String length " + str.length());
-		case default -> {
+		default -> {
 		}
 		}
 	}

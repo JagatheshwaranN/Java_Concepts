@@ -9,12 +9,11 @@ public class _02_Records_PatternMatch_Switch_Demo2 {
 		printCarDetail(new Car("Audi", "A6100"));
 	}
 
-	@SuppressWarnings("preview")
 	private static void printCarDetail(Object obj) {
 		switch (obj) {
 		case Car(String name, String model) ->
 			System.out.println("Object is Car, Name = " + name + " and Model = " + model);
-		case default -> {
+		default -> {
 		}
 		}
 	}
