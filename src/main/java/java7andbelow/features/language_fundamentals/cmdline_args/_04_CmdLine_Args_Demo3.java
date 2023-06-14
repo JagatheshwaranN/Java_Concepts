@@ -4,11 +4,10 @@ public class _04_CmdLine_Args_Demo3 {
 
     public static void main(String[] args) {
 
-        String[] ar = {"X", "Y", "Z"};
-        args = ar;
+        args = new String[]{"X", "Y", "Z"};
 
-        for(int i = 0; i< args.length; i++) {
-            System.out.println(args[i]);
+        for (String arg : args) {
+            System.out.println(arg);
         }
     }
 
