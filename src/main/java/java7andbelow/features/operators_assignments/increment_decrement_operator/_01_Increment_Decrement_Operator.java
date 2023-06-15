@@ -20,7 +20,7 @@ public class _01_Increment_Decrement_Operator {
 
         int x3 = 10;
         int y3 = --x3;
-        System.out.println(x3); // 10
+        System.out.println(x3); // 9
         System.out.println(y3); // 9
 
         int x4 = 10;
