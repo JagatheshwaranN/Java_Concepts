@@ -67,6 +67,7 @@ public class _01_Arithmetic_Operator {
         System.out.println( x != NaN);
         System.out.println( Float.NaN != Float.NaN);
 
+        // For any x value including NAN the following expressions returns true.
         System.out.println( Float.NaN == Float.NaN);
         System.out.println( x < Float.NaN);
         System.out.println( x <= Float.NaN);
