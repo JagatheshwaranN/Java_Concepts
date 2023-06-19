@@ -1,4 +1,4 @@
-package java7andbelow.features.operators_assignments.arithmetic_operators;
+package java7andbelow.features.operators_assignments.arithmetic_operator;
 
 import static java.lang.Double.NaN;
 
