@@ -22,7 +22,7 @@ public class _01_InstanceOf_Operator {
 
             To use instanceof operator, compulsory there should be some relation between the argument types
             (Either Child -> Parent, Parent -> Child, or same type). Otherwise, we will get the compile time
-            error saying Inconvertible Type.
+            error saying Incompatible Type.
 
             Note: null instanceof X -> False
         */

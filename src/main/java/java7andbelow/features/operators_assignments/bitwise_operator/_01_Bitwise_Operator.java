@@ -41,8 +41,8 @@ public class _01_Bitwise_Operator {
             1. Complement => Write the number in binary form and reverse the given number
             2. 1’s complement => Reverse the above complement number form
             3. 2’s complement => Add 1 at the last and perform the calculation, the resulting value will be the correct
-                              value.
-            4. When doing the 1’s complements the MSB become 1 which indicates the negative sign.
+                                 value.
+            4. When doing the 1’s complements the MSB becomes 1 which indicates the negative sign.
         */
 
         System.out.println(~4);

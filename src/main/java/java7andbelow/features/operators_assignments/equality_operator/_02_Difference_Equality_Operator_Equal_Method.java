@@ -10,7 +10,7 @@ public class _02_Difference_Equality_Operator_Equal_Method {
             In general, we can use the == operator for reference comparison (address comparison) and
             equals () method for content comparison.
 
-            Note: For any object reference R, R== null is always False. But, null==null is always True.
+            Note: For any object reference R, R==null is always False. But, null==null is always True.
         */
         String s1 = new String("Java");
         String s2 = new String("Java");
