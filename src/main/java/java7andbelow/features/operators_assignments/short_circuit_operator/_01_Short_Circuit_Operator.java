@@ -27,7 +27,7 @@ public class _01_Short_Circuit_Operator {
             2. X || Y -> Y will be evaluated only if X is False.
         */
         int x = 10, y = 15;
-        if(++x < 10 & ++y < 15){
+        if(++x < 10 && ++y < 15){
             x++;
         }else{
             y++;
@@ -35,7 +35,7 @@ public class _01_Short_Circuit_Operator {
         System.out.println(x);
         System.out.println(y);
 
-        if(++x < 10 && (x/0 > 10)){
+        if(++x < 10 || (x == 12)){
             System.out.println("Hai");
         }
         else {

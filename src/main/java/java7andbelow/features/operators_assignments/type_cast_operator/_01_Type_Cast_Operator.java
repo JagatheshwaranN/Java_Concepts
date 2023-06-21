@@ -46,5 +46,20 @@ public class _01_Type_Cast_Operator {
         // byte b1 = i2; // incompatible types: possible lossy conversion from int to byte
         byte b1 = (byte)i2;
         System.out.println(b1); // -126 - Loss of information.
+
+        // Whenever we are assigning the bigger data type value to the smaller data type variable by explicit
+        // type casting, then the MSB will be lost and we have to consider only the LSB (last 16 bits since
+        // its short).
+        int i3 =150;
+        short s1 = (short)i3;
+        System.out.println(s1);
+        // int x = 150 => 0000...010010110
+        // short s = (short)x => 00...010010110 => +150 <= Considering only last 16 LSB bits.
+
+        // If we assign the floating-point values to the integral data type variable by explicit type casting
+        // then the digits after the decimal points will be gone.
+        double d2 = 130.456;
+        int i4 = (int)d2;
+        System.out.println(i4);
     }
 }
