@@ -1,5 +1,7 @@
 package java7andbelow.features.operators_assignments.other_operators;
 
+import java.lang.reflect.InvocationTargetException;
+
 class _02_New_Vs_NewInstance {
 
     public static void main(String[] args) throws ClassNotFoundException {
@@ -41,19 +43,21 @@ class _02_New_Vs_NewInstance {
         */
 
         _02_New_Vs_NewInstance object = new _02_New_Vs_NewInstance();
-        func("Student");
+        func("Sample");
     }
 
     private static void func(String clazz) {
         try {
             Object object1 = Class.forName(clazz).newInstance();
             System.out.println("Object created : " + object1.getClass().getName());
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException  e) {
             throw new RuntimeException(e);
         }
     }
 
 }
-class Student {
+class Sample {
+    Sample(){
 
+    }
 }
