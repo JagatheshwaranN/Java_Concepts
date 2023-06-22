@@ -18,6 +18,13 @@ public class _01_Conditional_New_Array_Operators {
         System.out.println(i2);
 
         /*
+            [] Operator
+            ===========
+            1. We can use this operator to declare and create the arrays.
+        */
+        int[] i3 = new int[10];
+
+        /*
             New Operator
             ============
             1. We can use the new operator to create the object.
@@ -28,11 +35,5 @@ public class _01_Conditional_New_Array_Operators {
         */
         _01_Conditional_New_Array_Operators object = new _01_Conditional_New_Array_Operators();
 
-        /*
-            [] Operator
-            ===========
-            1. We can use this operator to declare and create the arrays.
-        */
-        int[] i3 = new int[10];
     }
 }
