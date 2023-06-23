@@ -1,6 +1,6 @@
 package dsa.leetcode_problems;
 
-public class _06_FindSmallestLetterGreaterThanTarget {
+public class _03_FindSmallestLetterGreaterThanTarget {
 
     public static void main(String[] args) {
 

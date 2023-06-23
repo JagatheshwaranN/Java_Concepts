@@ -1,6 +1,6 @@
 package dsa.leetcode_problems;
 
-public class _05_RichestCustomerWealth_Type2 {
+public class _02_RichestCustomerWealth {
 
     public static void main(String[] args) {
         int[][] person_accounts = {{1, 2, 3}, {3, 3, 2}};
@@ -11,10 +11,10 @@ public class _05_RichestCustomerWealth_Type2 {
 
         int maxwealth = Integer.MIN_VALUE;
 
-        for (int[] onePersonActs : accounts) {
+        for (int person = 0; person < accounts.length; person++) {
             int sumOfAccounts = 0;
-            for (int account : onePersonActs) {
-                sumOfAccounts += account;
+            for (int account = 0; account < accounts[person].length; account++) {
+                sumOfAccounts += accounts[person][account];
             }
             if (sumOfAccounts > maxwealth) {
                 maxwealth = sumOfAccounts;

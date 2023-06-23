@@ -1,6 +1,6 @@
 package dsa.leetcode_problems;
 
-public class _02_EvenDigits_Type2 {
+public class _01_EvenDigits_Type2 {
 
     public static void main(String[] args) {
 
