@@ -19,10 +19,11 @@ class _02_New_Vs_NewInstance {
                For example,
                class Test {
                public static void main(String[] args){
-               Object o = class.forName(args[0]).newInstance();
-               SOP(“Object created for : “+o.getclass().getName());
+               Object o = Class.forName(args[0]).newInstance();
+               SOP("Object created for : "+o.getclass().getName());
                }
                }
+
             3. In case of new() operator, based on our requirement we can invoke any constructor.
                Test t1 = new Test();
                Test t2 = new Test(10);
@@ -35,8 +36,8 @@ class _02_New_Vs_NewInstance {
                SOP(i);
                }
                public static void main(String[] args){
-               Object o = class.forName(args[0]).newInstance();
-               SOP(“Object created for : “+o.getclass().getName());
+               Object o = Class.forName(args[0]).newInstance();
+               SOP("Object created for : "+o.getclass().getName());
                }
                }
                RE: Exception in main thread: Instantiation Exception

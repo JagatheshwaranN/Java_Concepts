@@ -2,7 +2,7 @@ package java7andbelow.features.operators_assignments.instanceof_operator;
 
 public class _01_InstanceOf_Operator {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
 
         /*
             InstanceOf Operator
@@ -35,5 +35,23 @@ public class _01_InstanceOf_Operator {
         // System.out.println(t instanceof String); // incompatible types: java.lang.Thread cannot be converted to java.lang.String
         System.out.println(null instanceof Thread);
         System.out.println(null instanceof Object);
+
+        /*
+            InstanceOf vs IsInstance ()
+            ============================
+            InstanceOf is an operator in Java. We can use the instanceof to check whether the given object
+            is of particular type or not and we know the type at the beginning.
+
+            IsInstance () is a method present in the java.lang.class. We can use the IsInstance () method
+            to check whether the given object is of particular type or not when we don’t know the type
+            at the beginning and its available dynamically at the runtime.
+        */
+
+        Thread t2 = new Thread();
+        System.out.println(t2 instanceof Thread);
+
+        //args[0] = java.lang.Object
+        Thread t3 = new Thread();
+        System.out.println(Class.forName(args[0]).isInstance(t3));
     }
 }
