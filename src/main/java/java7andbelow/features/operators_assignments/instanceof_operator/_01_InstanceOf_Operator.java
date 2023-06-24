@@ -40,7 +40,7 @@ public class _01_InstanceOf_Operator {
             InstanceOf vs IsInstance ()
             ============================
             InstanceOf is an operator in Java. We can use the instanceof to check whether the given object
-            is of particular type or not and we know the type at the beginning.
+            is of particular type or not when we know the type at the beginning.
 
             IsInstance () is a method present in the java.lang.class. We can use the IsInstance () method
             to check whether the given object is of particular type or not when we don’t know the type

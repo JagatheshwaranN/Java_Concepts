@@ -17,7 +17,7 @@ public class _01_Class_Exception_Details {
             While using the newInstance() method, at runtime if the corresponding .class is not available
             then we will get the runtime exception saying "ClassNotFoundException".
             For example,
-            Object o = class.forName(args[0]).newInstance();
+            Object o = Class.forName(args[0]).newInstance();
             Java Test Test123; At runtime, if Test123.class is not available, then RE: will trigger.
 
             new()
