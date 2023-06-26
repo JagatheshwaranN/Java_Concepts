@@ -12,11 +12,11 @@ public class _02_Switch_Statement {
                statement.
 
             switch(x){
-                case 1: Action 1
+                case 1: Action 1;
                     break;
                 ...
                 default:
-                    default action
+                    default action;
             }
 
             2. The allowed argument types for the switch statements are byte, short, char, and int until
@@ -45,7 +45,7 @@ public class _02_Switch_Statement {
         int x3 = 20;
         switch (x2){
             case 10:
-            // case x3: - constant expression required. If we declare the y as final,
+            // case x3: - constant expression required. If we declare the x2 as final,
                 // then we won’t get any compile time error.
         }
 
@@ -92,7 +92,5 @@ public class _02_Switch_Statement {
             2.	The value should be in the range of switch argument type.
             3.	Duplicate case labels are not allowed.
         */
-
-
     }
 }
