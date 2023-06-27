@@ -22,7 +22,7 @@ public class _01_While_Loop {
         */
         int x = 3;
         int i = 1;
-        while (i < 3){
+        while (i < x){
             System.out.println(i);
             i++;
         }
@@ -58,5 +58,37 @@ public class _01_While_Loop {
             System.out.println("condition true");
         }
         System.out.println("out of while loop");
+
+        // If the variables are final then it's always same value, so compiler will check for its value.
+        final int x3 = 10;
+        final int x4 = 20;
+        // while(x3 < x4){
+        //    System.out.println("Condition true");
+        // }
+        // System.out.println("Out of while loop"); - unreachable statement
+
+        // while(x3 > x4) {
+            // System.out.println("Condition false"); - unreachable statement
+        // }
+        // System.out.println("Out of while loop");
+
+        /*
+            Points to Remember
+            ==================
+            1. Every final variable will be replaced by the value at the compile time only.
+
+            2. If every argument is final variable (compile time constant) then that operation should
+               be performed at the compile time only.
+        */
+        final int x5 = 10;
+        final int x6 = 20;
+        int x7 = 30;
+        // System.out.println(x5); - After compilation, it will be 10
+        // System.out.println(x7); - After compilation, it will be b
+
+        // System.out.println(x5+x6); - After compilation, it will be 30
+        // System.out.println(x7+x5); - After compilation, it will be x7+10
+        // System.out.println(x5<x6); - After compilation, it will be true
+        // System.out.println(x5<x7); - After compilation, it will be 10<x7
     }
 }

@@ -49,7 +49,8 @@ public class _03_Switch_Statement_Scenarios {
             ====================
             1.	Within the switch, we can take default case only once.
             2.	Default case will be executed if and only if there is no case matched.
-            3.	Within the switch, we can write default case anywhere, but it’s recommended to write as last case.
+            3.	Within the switch, we can write default case anywhere, but it’s recommended to write
+                as last case.
         */
         switch(x){
 
