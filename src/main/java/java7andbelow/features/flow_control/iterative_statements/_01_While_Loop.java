@@ -84,7 +84,7 @@ public class _01_While_Loop {
         final int x6 = 20;
         int x7 = 30;
         // System.out.println(x5); - After compilation, it will be 10
-        // System.out.println(x7); - After compilation, it will be b
+        // System.out.println(x7); - After compilation, it will be x7
 
         // System.out.println(x5+x6); - After compilation, it will be 30
         // System.out.println(x7+x5); - After compilation, it will be x7+10
