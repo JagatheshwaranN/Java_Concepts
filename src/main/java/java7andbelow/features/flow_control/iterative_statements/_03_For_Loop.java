@@ -73,5 +73,72 @@ public class _03_For_Loop {
         //    System.out.println("Hello");
         // }
         // System.out.println("Hi"); - unreachable statement
+
+        /*
+            For Each Loop (Enhanced For Loop - 1.5v)
+            ========================================
+            Introduced in java 1.5 version, it is a specially designed loop to retrieve the elements of
+            arrays and collections.
+        */
+
+        // Traditional For Loop
+        int[] x1 = {1, 2, 3};
+        for(int i = 0; i < x1.length; i++){
+            System.out.println(x1[i]);
+        }
+
+        // Enhanced For Loop
+        for(int x : x1){
+            System.out.println(x);
+        }
+
+        // 2D Array Iteration using Enhanced For Loop
+        int[][] x2 = {{1, 2}, {3, 4}};
+        for(int[] x : x2){
+            for(int i : x){
+                System.out.println(i);
+            }
+        }
+
+        /*
+        Limitations of For Each Loop
+        ============================
+        1. For Each Loop is the best choice to retrieve the elements of arrays and collections but its
+           limitation is, its applicable only for arrays and collections. And, it's not a
+           general-purpose loop.
+
+        2. By using the normal for loop, we can print the array elements either in original order or
+           in reverse order but using for each loop we can print the array elements only in original
+           order.
+        */
+
+        // We can't the enhanced for loop for the below traditional loop.
+        for(int i = 0; i < 1; i++){
+            System.out.println("for loop");
+        }
+
+        // We can't the enhanced for loop for the below traditional loop.
+        int[] x3 = {1, 2, 3};
+        for(int i = x3.length-1; i>=0; i--){
+            System.out.println(x3[i]);
+        }
+
+        /*
+            Iterable Interface
+            ==================
+            The target element in for each loop should be Iterable object. An object is said to be Iterable if
+            and only if corresponding class implements java.lang.iterable interface. Iterable Interface
+            introduced in java 1.5 version, and it contains only one method iterator () and its return
+            type is Iterator. All array related classes and collection implemented classes already
+            implement Iterable interface.Being a programmer, we are not require to do anything just we
+            should be aware of the concept.
+
+            Iterable (Interface)
+            ====================
+            1. It is related to For Each Loop
+            2. The target element in for each loop should be Iterable
+            3. Present in java.lang package
+            4. It contains 1 method - iterator()
+        */
     }
 }
