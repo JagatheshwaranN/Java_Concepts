@@ -13,7 +13,7 @@ public class _01_Break_Statement {
         /*  Break
             =====
             We can use the break statement in the following places as below,
-            1.	Inside Switch -To stop fall through
+            1.	Inside switch - To stop fall through
             2.	Inside loop - To break loop execution based on some condition
             3.	Inside labelled block - To break labelled block execution based on some condition
         */
