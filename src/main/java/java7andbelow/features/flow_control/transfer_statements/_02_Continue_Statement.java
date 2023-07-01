@@ -23,6 +23,5 @@ public class _02_Continue_Statement {
         // int x = 10;
         // if(x == 10)
             // continue; - continue outside of loop
-
     }
 }

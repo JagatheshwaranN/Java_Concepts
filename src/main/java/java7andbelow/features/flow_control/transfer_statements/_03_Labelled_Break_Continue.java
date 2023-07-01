@@ -7,7 +7,8 @@ public class _03_Labelled_Break_Continue {
         /*
             Labelled Break and Continue
             ===========================
-            We can use the labelled Break and Continue to break or continue a particular loop in the nested loops.
+            We can use the labelled Break and Continue to break or continue a particular loop in the
+            nested loops.
 
             r:
               for()
@@ -59,7 +60,7 @@ public class _03_Labelled_Break_Continue {
                 continue;  // continue statement will transfer the control to the while statement.
             x++;
             System.out.print(x+ " ");
-        } while(++x <10);
+        } while(++x < 10);
 
     }
 }
