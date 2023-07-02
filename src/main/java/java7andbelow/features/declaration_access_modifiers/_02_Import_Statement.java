@@ -19,7 +19,7 @@ public class _02_Import_Statement {
             Note:
             =====
             The problem with usage of fully qualified name every time is, it increases the length of the
-            code and reduces the readability of the code. We can solve this problem by using the important
+            code and reduces the readability of the code. We can solve this problem by using the import
             statement. Whenever we are writing the import statement it’s not required to use the fully
             qualified name every time, instead we can use the short name directly.
         */
@@ -30,7 +30,7 @@ public class _02_Import_Statement {
         /*
             Types of Import Statements
             ==========================
-            There are 2 types of import statements are as below,
+            There are 2 types of import statements as below,
             1.	Explicit class import (recommended)
             2.	Implicit class import
         */
@@ -89,7 +89,7 @@ public class _02_Import_Statement {
             =======================
             Difference between the C language #include<stdio.h> and Java language import statement,
             in the case of the c language #include, all the input and output header files will be
-            loaded at the beginning only (At translation time) Hence it is Static include.
+            loaded at the beginning only (At translation time). Hence, it is Static include.
 
             But in the case of Java import statement, no .class file will be loaded at the beginning,
             whenever we are using a particular class, then only corresponding .class file will be

@@ -20,10 +20,10 @@ public class _03_Static_Import_SOP_Explain {
         */
 
         // Example without static import
-        out.println(Math.sqrt(4));
+        System.out.println(Math.sqrt(4));
 
         // Example with static import
-        out.println(sqrt(4));
+        System.out.println(sqrt(4));
 
         /*
             Explanation about System.out.println
@@ -50,5 +50,68 @@ public class _03_Static_Import_SOP_Explain {
             to use class name, and we can access the out directly.
         */
         out.println("SOP without System class");
+
+        /*
+            While resolving the static members the compiler will always consider the precedence
+            in the following order,
+            1.	Current class static members
+            2.	Explicit static import
+            3.	Implicit static import
+
+            import static java.lang.Integer.MAX_VALUE;
+            import static java.lang.Byte.*;
+            class Test {
+            static int MAX_VALUE = 999;
+            public static void main(String[] args) {
+            System.out.println(MAX_VALUE); 999
+            }
+            }
+        */
+
+        /*
+            Normal Import vs Static Import
+            ==============================
+            Normal
+            ======
+            Explicit import
+            ===============
+            import packagename.classname;
+            import java.util.ArrayList;
+            Implicit import
+            ===============
+            import packagename.*;
+            import java.util.*;
+
+            Static
+            ======
+            Explicit import
+            ===============
+            import static packagename.classname;
+            import static java.lang.Math.sqrt;
+            Implicit import
+            ===============
+            import static packagename.classname.*;
+            import static java.lang.Math.*;
+
+            Difference between Normal and Static Import
+            ===========================================
+            We can use normal import to import the classes and interfaces of a particular package. Whenever we are
+            using the normal imports, it’s not required to use the fully qualified names, and we can use short names.
+
+            We can use static import to import the static members of a particular class / interface. Whenever we are
+            using the static imports, it’s not required to use the class name to access the static members and we can
+            access directly.
+        */
+
+        /*
+            Why Static import not recommended?
+            ==================================
+            1.	Two packages containing the class / interface with the same name is very rare. Hence, the ambiguity
+                problem is very rare in normal import. But, two classes / interfaces contain a variable / method with
+                the same name is very common and hence the ambiguity problem is also very common problem in Static import.
+
+            2.	Usage of static import reduces the code readability and creates the confusion. Hence, if there is no
+                specific requirement, then it’s not recommended to use Static import.
+        */
     }
 }
