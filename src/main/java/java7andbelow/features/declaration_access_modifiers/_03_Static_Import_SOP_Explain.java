@@ -77,6 +77,7 @@ public class _03_Static_Import_SOP_Explain {
             ===============
             import packagename.classname;
             import java.util.ArrayList;
+
             Implicit import
             ===============
             import packagename.*;
@@ -88,6 +89,7 @@ public class _03_Static_Import_SOP_Explain {
             ===============
             import static packagename.classname;
             import static java.lang.Math.sqrt;
+
             Implicit import
             ===============
             import static packagename.classname.*;
