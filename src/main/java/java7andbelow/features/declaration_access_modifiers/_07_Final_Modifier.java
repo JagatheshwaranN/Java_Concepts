@@ -21,6 +21,25 @@ public class _07_Final_Modifier {
 
         */
 
+        /*
+            Final Classes
+            =============
+            If a class is declared as Final, we can’t extend the functionality of that class
+            i.e., we can’t create the child class for that class i.e., Inheritance is not possible
+            for Final classes.
+
+            Note: Every method present inside the Final class is always Final by default whereas every
+            variable present inside the Final class need not be Final.
+        */
+
+        FinalClassDemo.display();
+
+        /*
+            The main advantage of the Final keyword is we can achieve Security, and we can provide
+            Unique implementation. But, the main disadvantage of Final keyword is we are missing
+            the key benefits of the OOPS (Inheritance and Polymorphism). Hence, if there is no specific
+            requirement, then it’s not recommended to use Final Keyword.
+        */
     }
 
     final public void finalMethodDemo(){
@@ -34,3 +53,17 @@ class Child extends _07_Final_Modifier {
     //    System.out.println("This method is final");
     // }
 }
+
+final class FinalClassDemo {
+
+    static int x = 10;
+    public static void display(){
+        x = 20;
+        System.out.println("Final Class Demo method " + x);
+    }
+}
+
+// class Derived extends FinalClassDemo {
+// cannot inherit from final java7andbelow.features.declaration_access_modifiers.FinalClassDemo
+// }
+
