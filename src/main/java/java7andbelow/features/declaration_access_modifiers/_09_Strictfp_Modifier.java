@@ -55,5 +55,6 @@ abstract strictfp class Demo3 {
 
 abstract strictfp class Demo4 {
     // abstract strictfp public void m1(); - illegal combination of modifiers: abstract and strictfp
+
 }
 
