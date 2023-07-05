@@ -69,6 +69,24 @@ public class _08_Abstract_Modifier {
             as abstract.
         */
 
+        /*
+            Final vs Abstract
+            =================
+            1.	For Abstract methods, compulsory we should override in child classes to provide implementation
+                whereas we can’t override the final methods. Hence, Final Abstract combination is illegal
+                combination for methods.
+
+            2.	For Final classes we can’t create the child class whereas for Abstract classes we should create
+                child class to provide implementation. Hence, Final Abstract combination is illegal for Classes.
+
+            3.	Abstract class can contain the Final method whereas Final class can’t contain Abstract method.
+
+        */
+
+        /*
+            Note: It is highly recommended to use abstract modifier because it promotes the several OOPS
+            features like inheritance and polymorphism.
+        */
     }
 }
     abstract class Vehicle {
@@ -113,3 +131,12 @@ abstract class Parent {
     //  java7andbelow.features.declaration_access_modifiers.Children
 //    }
 // }
+
+abstract class Demo1 {
+    public final void m1() {}
+}
+
+final class Demo2 {
+    // public abstract void m1(); - .Demo2 is not abstract and does not override abstract method m1()
+}
+
