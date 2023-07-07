@@ -1,6 +1,6 @@
 package java7andbelow.features.declaration_access_modifiers;
 
-public class _11_Final_Variables {
+public class _11_Final_Variable_Instance {
 
     public static void main(String[] args) {
 
@@ -39,7 +39,7 @@ public class _11_Final_Variables {
         x3 = 10;
     }
 
-    _11_Final_Variables () {
+    _11_Final_Variable_Instance () {
         x2 = 10;
     }
 }
