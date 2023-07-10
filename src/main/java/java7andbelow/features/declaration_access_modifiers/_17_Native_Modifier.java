@@ -16,6 +16,7 @@ public class _17_Native_Modifier {
                 1.	To improve the performance of the system.
                 2.	To achieve the machine level / memory level communication.
                 3.	To use already existing legacy non java code.
+
             4. Pseudocode to use Native keyword in Java
                 1.	Load native libraries
                 2.	Declare a native method
@@ -51,7 +52,7 @@ public class _17_Native_Modifier {
             abstract i.e., Native Abstract combination is illegal for methods.
 
             We can’t declare the native method as strictfp because there is no guarantee that old
-            languages will follow IEEE754 standard.Hence, Native Strictfp combination is illegal for
+            languages will follow IEEE754 standard. Hence, Native Strictfp combination is illegal for
             methods.
 
             The main advantage of native keyword is performance will be improved but the disadvantage of
@@ -71,7 +72,7 @@ public class _17_Native_Modifier {
             Static		No          Yes	        Yes	    Yes	        Yes		No                  Yes		            No          Yes         No
             SynchronizedNo			No          Yes		No          Yes     No                  No                  No          No          No
             Native		No	        No          Yes     No          No      No                  No                  No          No          No
-            Strictfp	Yes	        Yes	        Yes		No	        No      Yes	                Yes	Yes	Yes         Yes         Yes         No
+            Strictfp	Yes	        Yes	        Yes		No	        No      Yes	                Yes                 Yes         Yes         No
             Transient	No			No          No      Yes         No      No                  No                  No          No          No
             Volatile	No			No          No      Yes         No      No                  No                  No          No          No
 
