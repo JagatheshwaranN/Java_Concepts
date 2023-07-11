@@ -23,6 +23,7 @@ public class _05_Interface_Method_NamingConflicts {
 }
 
 interface Left {
+
     void case1();
     void case2();
     void case3();
