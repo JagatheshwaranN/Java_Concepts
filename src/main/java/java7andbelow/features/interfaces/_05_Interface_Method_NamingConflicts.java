@@ -1,6 +1,6 @@
 package java7andbelow.features.interfaces;
 
-public class _05_Interface_NamingConflicts {
+public class _05_Interface_Method_NamingConflicts {
 
     public static void main(String[] args) {
 
