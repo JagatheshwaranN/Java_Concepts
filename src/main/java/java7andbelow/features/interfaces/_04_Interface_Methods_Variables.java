@@ -39,19 +39,19 @@ public class _04_Interface_Methods_Variables {
             int x = 10;
             }
             Public > To make this variable available to every implementation class.
-            Static > Without existing object also, Implementation class has access to this variable.
+            Static > Without the existence of object also, Implementation class has access to the variable.
             Final  > If one implementation class changes the value, then all other implementation
                      classes will be affected. To restrict this every interface variable is always final.
 
-            As every interface variable is always public static final. We can’t declare with the
-            following modifiers with interface.
+            As every interface variable is always public static final. We can’t declare the interface
+            variable with the following modifiers.
 
             Protected, Private, Transient and Volatile.
 
             For interface variables, compulsory we should perform declaration at the time of declaration
             otherwise we will get the compile time error.
 
-            Inside implementation class, we can access the interface variable but we can’t modify the
+            Inside implementation class, we can access the interface variable, but we can’t modify the
             values of the variable.
         */
     }
