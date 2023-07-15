@@ -40,7 +40,6 @@ public class _10_Interface_AbstractClass_Notes {
 
         // While extending the Abstract class, it’s not possible to extend any other class and hence
         // we are missing the inheritance benefits. In this case, the object creation is costly.
-        // (It will take 1 minute to create object).
         Product product = new Product();
 
         // While implementing the Interface we can extend some other class and hence we won’t miss any
