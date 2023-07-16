@@ -38,5 +38,18 @@ public class _04_Multiple_Inheritance {
             An Interface can extend any number of Interfaces simultaneously. Hence, Java provides the
             support for Multiple Inheritance with respect to the Interfaces.
         */
+
+        /*
+            Cyclic Inheritance
+            ==================
+            Cyclic Inheritance is not allowed in java and off course it’s not required.
+            Example,
+            class A extends A {
+            }
+            class A extends B {
+            }
+            class B extends A {
+            }
+        */
     }
 }
