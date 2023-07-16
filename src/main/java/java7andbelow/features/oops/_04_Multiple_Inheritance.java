@@ -29,9 +29,9 @@ public class _04_Multiple_Inheritance {
 
             There may be a chance of the ambiguity problem. Hence, Java won’t provide the support
             for Multiple Inheritance.
-            P1 (m1()) 	P2(m1())
+            P1(m1()) 	P2(m1())
 
-                    C.m1();
+                   C.m1();
 
             Multiple Inheritance in Interface
             ==================================

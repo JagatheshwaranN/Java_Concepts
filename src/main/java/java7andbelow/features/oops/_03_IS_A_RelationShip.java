@@ -62,7 +62,6 @@ public class _03_IS_A_RelationShip {
 }
 
 class Parent{
-
     public void m1(){
         System.out.println("Parent Method");
     }
@@ -98,13 +97,13 @@ class Loan {
     // 20 methods
 }
 class VLoan1 extends Loan {
-    // 30 methods
+    // 10 methods
 }
 
 class HLoan1 extends Loan {
-    // 30 methods
+    // 10 methods
 }
 
 class PLoan1 extends Loan {
-    // 30 methods
+    // 10 methods
 }

@@ -37,6 +37,7 @@ public class _02_Encapsulation {
 
             Note: If the parent class is not tightly encapsulated, then there is no tightly encapsulated
             child class.
+
             Example,
             class A {
             int x = 10;
@@ -46,18 +47,14 @@ public class _02_Encapsulation {
             int y = 20;
             }
         */
-
     }
 }
 
 class Accounts {
-
     private double balance;
-
     public double getBalance(){
         return balance;
     }
-
     public void setBalance(double amount){
         this.balance = amount;
     }
