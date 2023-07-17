@@ -21,22 +21,22 @@ public class _05_Has_A_Relationship {
 
             Composition
             ===========
-            Without existing of the container object, if there is no chance of existing contained objects,
+            Without the existence of the container object, if there is no chance of existence of contained objects,
             then container and contained objects are strongly associated and this strong association is
             called as Composition.
 
-            Example, University consists of several departments, without existing of the university, there
-                     is no chance of existing of the departments. Hence, the university and departments are
+            Example, University consists of several departments, without existence of the university, there
+                     is no chance of existence of the departments. Hence, the university and departments are
                      strongly associated is known as Composition.
 
             Aggregation
             ===========
-            Without existing of the container object, if there is chance of existing of the contained objects,
+            Without the existence of the container object, if there is chance of existence of the contained objects,
             then container and contained objects are weekly associated and the week association is called as
             Aggregation.
 
-            Example, Department consists of several professors, without the existing of the department there
-                     may be chance of existing of the professors. Hence, the Department and Professor objects
+            Example, Department consists of several professors, without the existence of the department there
+                     may be chance of existence of the professors. Hence, the Department and Professor objects
                      are weekly associated is known as Aggregation.
 
             Note
@@ -59,7 +59,7 @@ public class _05_Has_A_Relationship {
         List<College> colleges = new ArrayList<College>();
         colleges.add(college1);
         University university = new University(colleges);
-        List<College> collegesList = university.getTCollegeList();
+        List<College> collegesList = university.getCollegeList();
         for(College college : collegesList){
             System.out.println("Name    : "+college.name);
             System.out.println("Address : "+college.address);
@@ -89,7 +89,7 @@ class University {
     University(List<College> collegeList){
         this.collegeList = collegeList;
     }
-    public List<College> getTCollegeList(){
+    public List<College> getCollegeList(){
         return collegeList;
     }
 }
