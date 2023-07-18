@@ -19,7 +19,7 @@ public class _07_Method_Overloading {
                labs (long)
                fabs (float)
 
-               3. In Java, we can declare the multiple methods with same name and different argument types.
+               3. In Java, we can declare multiple methods with same name and different argument types.
                   Such type of methods is called as Overloaded methods.
                   abs (int)
                   abs (long)
