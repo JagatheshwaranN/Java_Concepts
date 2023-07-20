@@ -23,10 +23,13 @@ public class _09_Method_Overriding {
         */
 
         Parents parents = new Parents();
+        parents.property();
         parents.marry();
         Son son = new Son();
+        son.property();
         son.marry();
         Parents parents1 = new Son();
+        parents1.property();
         parents1.marry();
     }
 
@@ -46,6 +49,6 @@ class Son extends Parents {
 
     @Override
     public void marry() {
-        System.out.println("Son, I will marry Maya");
+        System.out.println("Son, I will marry Maya and not Kannama");
     }
 }
