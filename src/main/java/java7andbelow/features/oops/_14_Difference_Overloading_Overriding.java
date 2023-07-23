@@ -25,8 +25,8 @@ public class _14_Difference_Overloading_Overriding {
                                                             throw same or its parent exception
             Method Resolution   Takes care by               Takes care by JVM
                                 Compiler
-            AKA                 Compile Time Polymorphism,  Runtime Polymorphism, Dynamic Polymorphism,
-                                Static Polymorphism,        Late Binding
+            AKA                 Compile Time Polymorphism/  Runtime Polymorphism/ Dynamic Polymorphism/
+                                Static Polymorphism/        Late Binding
                                 Early Binding
 
             Note: In overloading, we have to check only the method names (must be same) and
