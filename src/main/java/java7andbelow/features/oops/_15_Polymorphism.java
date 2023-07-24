@@ -54,7 +54,7 @@ public class _15_Polymorphism {
             4. ArrayList al = new ArrayList ();
 
             Parent p = new Child ();
-            1. We can use this approach, if we don’t know the exact runtime typeof object
+            1. We can use this approach, if we don’t know the exact runtime typeof object.
             2. By using Parent reference, we can call only methods available in Parent class,
                and we can’t call Child specific methods (Disadvantage of this approach)
             3. We can use the parent class reference to hold any child class objects
