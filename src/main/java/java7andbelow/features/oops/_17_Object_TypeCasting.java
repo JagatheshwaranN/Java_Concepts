@@ -144,15 +144,6 @@ public class _17_Object_TypeCasting {
         System.out.println(c4.z);
         System.out.println(((B)c).y);
         System.out.println(((A)((B)c)).x);
-        C c5 = new C();
-        c5.method();
-        ((B)c).method();
-        ((A)((B)c)).method();
-
-
-
-
-
     }
 
     // Mantra 1
