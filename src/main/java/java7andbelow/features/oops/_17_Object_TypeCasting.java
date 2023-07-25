@@ -48,7 +48,7 @@ public class _17_Object_TypeCasting {
 
             Example 1,
             In the below example, we have only one object but two reference variables pointing
-            to the one object.
+            to one object.
             String s = new String("java");
             Object o = (Object) s;
 
@@ -67,7 +67,7 @@ public class _17_Object_TypeCasting {
 
             Example 1,
             C c = new C ();
-            (B)c => B b = new C ();
+            (B)c      => B b = new C ();
             (A)((B)c) => A a = new C ();
 
             Example 2,
@@ -80,7 +80,79 @@ public class _17_Object_TypeCasting {
             c.m2();
             ((P)c).m1();
             ((P)c).m2(); -> Not possible and valid
+
+            Example 3 -> Method Overriding - Method resolution is always based on runtime object,
+            A -> m1() {SOP(A)}
+            |
+            B -> m1() {SOP(B)}
+            |
+            C -> m1() {SOP(C)}
+            C c = new C ();
+            c.m1(); -> C
+            ((B)c).m1(); -> C
+            ((A)((B)c)).m1(); -> C
+
+            Example 4 -> Method Hiding - Method resolution is always based on reference type,
+            A -> static m1() {SOP(A)}
+            |
+            B -> static m1() {SOP(B)}
+            |
+            C -> static m1() {SOP(C)}
+            C c = new C ();
+            c.m1(); -> C
+            ((B)c).m1(); -> B
+            ((A)((B)c)).m1(); -> A
+
+            Example 5 -> Variable resolution is always based on reference type,
+            A -> int x = 777;
+            |
+            B -> int x = 888;
+            |
+            C -> int x = 999;
+            C c = new C ();
+            c.m1(); -> 999
+            ((B)c).m1(); -> 888
+            ((A)((B)c)).m1(); -> 777
         */
+
+        // Example1 Demo
+        C c = new C();
+        ((B)c).method();
+        ((A)((B)c)).method();
+
+        // Example2 Demo
+        C c1 = new C();
+        c1.method();
+        c1.method2();
+        ((B)c).method();
+        // ((B)c).method2(); - cannot find symbol method method2()
+
+        // Example3 Demo
+        C c2 = new C();
+        c2.method();
+        ((B)c).method();
+        ((A)((B)c)).method();
+
+        // Example4 Demo
+        C c3 = new C();
+        c2.display();
+        ((B)c).display();
+        ((A)((B)c)).display();
+
+        // Example5 Demo
+        C c4 = new C();
+        System.out.println(c4.z);
+        System.out.println(((B)c).y);
+        System.out.println(((A)((B)c)).x);
+        C c5 = new C();
+        c5.method();
+        ((B)c).method();
+        ((A)((B)c)).method();
+
+
+
+
+
     }
 
     // Mantra 1
@@ -88,7 +160,7 @@ public class _17_Object_TypeCasting {
     StringBuffer sb1 = (StringBuffer) o1;
 
     String s1 = new String("java");
-    // StringBuffer sb = (StringBuffer) s; - Inconvertible types; cannot cast 'java.lang.String' to 'java.lang.StringBuffer'
+    // StringBuffer sb = (StringBuffer) s1; - Inconvertible types; cannot cast 'java.lang.String' to 'java.lang.StringBuffer'
 
     // Mantra 2
     Object o2 = new String("java");
@@ -101,7 +173,52 @@ public class _17_Object_TypeCasting {
     Object o4 = new String("java");
     Object o5 = (String) o4;
     Object o6 = new String("java");
-    // String sb4 = (StringBuffer) o6; - java: incompatible types: java.lang.StringBuffer cannot be converted to java.lang.String
+    // String s2 = (StringBuffer) o6; - java: incompatible types: java.lang.StringBuffer cannot be converted to java.lang.String
+
+    String s = new String("java");
+    Object o = (Object) s;
+
+    // Type Casting - Not Object Creation
+    Integer i1 = Integer.valueOf(10);
+    Number n1 = (Number) i1;
+    Object ob1 = (Object) n1;
+
+    Number n2 = Integer.valueOf(10);
+    Object ob2 = Integer.valueOf(10);
+
+}
+
+class A {
+    int x = 10;
+    public void method(){
+        System.out.println("A Class Method");
+    }
+    public static void display(){
+        System.out.println("A Class Display");
+    }
+}
+
+class B extends A {
+    int y = 20;
+    public void method(){
+        System.out.println("B Class Method");
+    }
+    public static void display(){
+        System.out.println("B Class Display");
+    }
+}
+
+class C extends B {
+    int z = 30;
+    public void method(){
+        System.out.println("C Class Method");
+    }
+    public static void display(){
+        System.out.println("C Class Display");
+    }
+    public void method2(){
+        System.out.println("C Class Method2");
+    }
 }
 
 
