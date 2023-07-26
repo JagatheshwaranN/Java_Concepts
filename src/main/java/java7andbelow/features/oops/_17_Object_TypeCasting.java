@@ -141,22 +141,20 @@ public class _17_Object_TypeCasting {
 
         // Example5 Demo
         C c4 = new C();
-        System.out.println(c4.z);
-        System.out.println(((B)c).y);
+        System.out.println(c4.x);
+        System.out.println(((B)c).x);
         System.out.println(((A)((B)c)).x);
     }
 
     // Mantra 1
     Object o1 = new String("java");
     StringBuffer sb1 = (StringBuffer) o1;
-
     String s1 = new String("java");
     // StringBuffer sb = (StringBuffer) s1; - Inconvertible types; cannot cast 'java.lang.String' to 'java.lang.StringBuffer'
 
     // Mantra 2
     Object o2 = new String("java");
     StringBuffer sb2 = (StringBuffer) o2;
-
     Object o3 = new String("java");
     // StringBuffer sb3 = (String) o3; - incompatible types: java.lang.String cannot be converted to java.lang.StringBuffer
 
@@ -190,7 +188,7 @@ class A {
 }
 
 class B extends A {
-    int y = 20;
+    int x = 20;
     public void method(){
         System.out.println("B Class Method");
     }
@@ -200,7 +198,7 @@ class B extends A {
 }
 
 class C extends B {
-    int z = 30;
+    int x = 30;
     public void method(){
         System.out.println("C Class Method");
     }
