@@ -40,8 +40,8 @@ public class _18_StaticControlFlow {
             Read Indirectly Write Only
             ==========================
             Inside static block, if we are trying to read a static variable that read operation
-            is called Direct Read. If we are calling a method and within that method if we are
-            trying to read a static variable that read operation is called Indirect Read.
+            is called as Direct Read. If we are calling a method and within that method if we are
+            trying to read a static variable that read operation is called as Indirect Read.
         */
     }
 
