@@ -74,8 +74,8 @@ public class _20_Static_Block {
                 }
 
                 Note: From 1.7 version onwards, the main method is mandatory to start the
-                      execution of the program. So, from 1.7v onwards it's impossible to print
-                      the statements to console without main method.
+                      execution of the program. So, from 1.7 version onwards it's impossible
+                      to print the statements to console without main method.
         */
     }
 }
