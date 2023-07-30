@@ -14,27 +14,27 @@ public class _27_DifferentWaysOfObjectCreation {
 
             By using new operator
             =====================
-            Test t = new Test ();
+            Test t = new Test();
 
-            By using newInstance () method
-            ==============================
-            Test t = (Test)Class.forName(“Test”). newInstance ();
+            By using newInstance() method
+            =============================
+            Test t = (Test)Class.forName("Test").newInstance();
 
             By using Factory method
             =======================
             Runtime r = Runtime.getRuntime();
             DateFormat df = DateFormat.getInstance();
 
-            By using clone () method
-            ========================
-            Test t1 = new Test ();
-            Test t2 = (Test)t1. clone ();
+            By using clone() method
+            =======================
+            Test t1 = new Test();
+            Test t2 = (Test)t1.clone();
 
             By using Deserialization
             ========================
-            FileInputStream fis = new FileInputStream(“abc.txt”);
+            FileInputStream fis = new FileInputStream("abc.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            Reader r1 = (Reader)ois. readObject ();
+            Reader r1 = (Reader)ois.readObject();
         */
     }
 }

@@ -8,7 +8,7 @@ public class _28_Constructor {
             Constructor
             ===========
             1.	Once we create the object compulsory we should perform the initialization, then
-                only the object in position to respond properly.
+                only the object is in position to respond properly.
 
             2.	Whenever we are creating an object, some piece of the code is executed automatically
                 to perform the initialization of the object. This piece of code is called as Constructor.

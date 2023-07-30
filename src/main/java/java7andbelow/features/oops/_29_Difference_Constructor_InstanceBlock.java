@@ -9,7 +9,7 @@ public class _29_Difference_Constructor_InstanceBlock {
             =================================================
             1.	The main purpose of Constructor is to perform the initialization of the object
                 but other than initialization if we want to perform any activity for every object
-                creation then we should go for Instance block. Example, updating one entry in DB
+                creation, then we should go for Instance block. Example, updating one entry in DB
                 for every object creation or incrementing the count value for every object creation,
                 etc.
 
