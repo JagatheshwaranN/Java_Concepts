@@ -1,7 +1,20 @@
 package java7andbelow.features.oops;
 
 public class _29_Difference_Constructor_InstanceBlock {
+    static int count = 0;
 
+    {
+        count++;
+    }
+    _29_Difference_Constructor_InstanceBlock(){
+
+    }
+    _29_Difference_Constructor_InstanceBlock(int i){
+
+    }
+    _29_Difference_Constructor_InstanceBlock(double d){
+
+    }
     public static void main(String[] args) {
 
         /*
@@ -19,5 +32,13 @@ public class _29_Difference_Constructor_InstanceBlock {
             3.	Both Constructor and Instance Block will be executed for every object creation but
                 Instance Block executes first followed by Constructor next.
         */
+
+        _29_Difference_Constructor_InstanceBlock object1 = new _29_Difference_Constructor_InstanceBlock();
+
+        _29_Difference_Constructor_InstanceBlock object2 = new _29_Difference_Constructor_InstanceBlock(1);
+
+        _29_Difference_Constructor_InstanceBlock object3 = new _29_Difference_Constructor_InstanceBlock(1.5);
+
+        System.out.println(count);
     }
 }
