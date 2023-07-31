@@ -21,6 +21,36 @@ public class _31_Constructor_CaseStudies {
             to use outside the constructor, we will get the compile time error. i.e., we
             can call a constructor directly from another constructor only.
         */
+
+        /*
+            Super () / This () Conclusion
+            =============================
+            1.	We can use only in constructor
+            2.	We can use only in first line
+            3.	We can use only one and not both at a time
+
+            Super ()/This () vs Super/This
+            ==============================
+            Super () / This ()
+            ==================
+            1. These are constructor calls to call super class and current class constructors
+            2. We can use only in constructors as first line
+            3. We can use only once in constructor
+
+            Super / This
+            ============
+            1. These are keywords to refer to super class and current class instance members
+            2. We can use anywhere except static area
+            3. We can use any number of times
+
+            Example,
+            class Test {
+            public static void main (String[] args) {
+            SOP (super.hascode());
+            }
+            }
+            CE: Non-Static variable super cannot be referenced from a static context
+        */
     }
 }
 
