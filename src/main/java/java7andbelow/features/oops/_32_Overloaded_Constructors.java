@@ -29,8 +29,6 @@ public class _32_Overloaded_Constructors {
             2.	Every class in java including abstract class can contain constructor but interface
                 cannot contain constructor.
         */
-
-
     }
 }
 

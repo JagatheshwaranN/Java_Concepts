@@ -1,5 +1,7 @@
 package java7andbelow.features.oops;
 
+import java.io.IOException;
+
 public class _33_Constructor_CaseStudies {
 
     public static void main(String[] args) {
@@ -20,6 +22,11 @@ public class _33_Constructor_CaseStudies {
             writing any argument constructor, then it's highly recommended to write the No Arg
             constructor.
 
+            Case 3: Handle Exception
+            ========================
+            If Parent class constructor throws any checked exception compulsory the Child class
+            exception should throw same checked exception or its parent. Otherwise, the code
+            won’t compile.
         */
     }
 }
@@ -54,9 +61,19 @@ class Parent3 {
     }
 }
 
-// class Child3 extends Parent3 { - There is no default constructor available in 'java7andbelow.features.oops.Parent3'
-//    java: constructor Parent3 in class java7andbelow.features.oops.Parent3 cannot be applied to given types;
+// class Child3 extends Parent3 { - There is no default constructor available in 'java7andbelow.
+// features.oops.Parent3' java: constructor Parent3 in class java7andbelow.features.oops.Parent3
+// cannot be applied to given types;
 //    required: int
 //    found:    no arguments
 //    reason: actual and formal argument lists differ in length
+// }
+
+class HEParentCaseDemo {
+    HEParentCaseDemo () throws IOException {
+    }
+}
+
+// class HEChildClassDemo extends HEParentCaseDemo {
+    // unreported exception java.io.IOException in default constructor
 // }
