@@ -33,12 +33,47 @@ public class _01_Exception_Handling_Intro {
             be terminated abnormally. We have to provide some local file to continue the rest
             of the program normally. This way of defining the alternative is called as
             Exception Handling.
+
             try {
             Read data from London file
             }
             Catch(FileNotFoundException ex) {
             Use local file
             }
+        */
+
+        /*
+            Runtime Stack Mechanism
+            =======================
+            For every thread, JVM will create a runtime stack. Each and every method call
+            performed by that thread will be stored in the corresponding stack. Each entry
+            in the stack is called as Stack Frame or Activation Record. After completing
+            every method call, the corresponding entry from the stack will be removed. After
+            completing all the method calls, the stack will become empty and that empty stack
+            will be destroyed by the JVM before terminating the thread.
+
+            class Test {
+                public static void main (String[] args) {
+                doStuff();
+                }
+                public static void doStuff () {
+                doMoreStuff ();
+                }
+                public static void doMoreStuff () {
+                SOP (Hello);
+                }
+            }
+
+            =================
+            |               |
+            =================
+            |doMoreStuff    |
+            =================
+            |doStuff        |
+            =================
+            |Main           |
+            =================
+            Runtime stack for Main thread
         */
     }
 }

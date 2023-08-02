@@ -25,8 +25,7 @@ public class _33_Constructor_CaseStudies {
             Case 3: Handle Exception
             ========================
             If Parent class constructor throws any checked exception compulsory the Child class
-            exception should throw same checked exception or its parent. Otherwise, the code
-            won’t compile.
+            should throw same checked exception or its parent. Otherwise, the code won’t compile.
         */
     }
 }
