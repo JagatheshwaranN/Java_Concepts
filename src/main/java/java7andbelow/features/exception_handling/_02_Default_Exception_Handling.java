@@ -7,11 +7,11 @@ public class _02_Default_Exception_Handling {
         /*
             Default Exception Handling
             ==========================
-            1.	Inside a method, if any exception is occurs, the method in which its
+            1.	Inside a method, if any exception occurs, then the method in which its
                 raised is responsible to create the exception object by including the
                 following information.
-                1.	Name of exception
-                2.	Description of exception
+                1.	Name of the exception
+                2.	Description of the exception
                 3.	Location at which exception occurs [Stack Trace]
 
             2.	After creating the exception object, the method handover the object to the JVM.
@@ -27,7 +27,7 @@ public class _02_Default_Exception_Handling {
                 method also does not contain the handler code, then JVM terminates the main method
                 also abnormally and removes the corresponding main method entry from the stack.
 
-            5.	JVM handovers the responsibility of the exception handling to the default exception
+            5.	JVM handover the responsibility of the exception handling to the default exception
                 handler, which is part of the JVM. Default Exception Handler prints the exception
                 information in the following format and terminates the program abnormally.
 
@@ -42,8 +42,8 @@ public class _02_Default_Exception_Handling {
             Note:
             =====
             In a program, if at least one method terminates abnormally, then the program
-            termination is abnormal termination. If all methods terminated normally, then only
-            the program termination is normal termination.
+            termination is considered as abnormal termination. If all methods terminated
+            normally, then only the program termination is considered as normal termination.
         */
     }
 }
