@@ -27,7 +27,6 @@ public class _04_Unchecked_Checked_Exceptions {
             not, such type of exceptions are called as Unchecked Exception.
 
             Example,
-            BombBlastException
             ArithmeticException
         */
 
