@@ -45,9 +45,9 @@ public class _06_Exception_CaseScenarios {
         /*
             Methods to print Exception Information
             ======================================
-            1.	printStackTrace ()
-            2.	toString ()
-            3.	getMessage ()
+            1.	printStackTrace()
+            2.	toString()
+            3.	getMessage()
 
             Throwable class defines the following methods to print the exception information.
 
@@ -57,6 +57,15 @@ public class _06_Exception_CaseScenarios {
                                   Stack Trace
             toString ()        -> Name of Exception: Description
             getMessage ()      -> Description
+        */
+        ExceptionPrintDemo demo = new ExceptionPrintDemo();
+        demo.method();
+
+        /*
+            Note:
+            =====
+            Internally default exception handler uses printStackTrace() to print the exception
+            information to the console.
         */
     }
 }
@@ -76,7 +85,7 @@ class ExCase2Demo {
         System.out.println("ExCase2Demo - Statement1");
         try {
             System.out.println("ExCase2Demo - Statement2" + 10 / 0);
-        }catch(Exception e){
+        }catch(ArithmeticException e){
             System.out.println(e.getMessage());
         }
         System.out.println("ExCase2Demo - Statement3");
@@ -94,5 +103,22 @@ class ExCase3Demo {
         }
         System.out.println("ExCase3Demo - Statement3");
         System.out.println("ExCase3Demo - Statement4");
+    }
+}
+
+class ExceptionPrintDemo {
+
+    public void method(){
+        try{
+            System.out.println(10/0);
+        }catch(ArithmeticException e){
+            System.out.println(e);
+            System.out.println("=========================================");
+            System.out.println(e.toString());
+            System.out.println("=========================================");
+            System.out.println(e.getMessage());
+            System.out.println("=========================================");
+            e.printStackTrace();
+        }
     }
 }
