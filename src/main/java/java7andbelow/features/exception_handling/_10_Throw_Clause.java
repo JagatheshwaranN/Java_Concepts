@@ -1,6 +1,6 @@
 package java7andbelow.features.exception_handling;
 
-public class _10_Throw_Class {
+public class _10_Throw_Clause {
 
     public static void main(String[] args) {
 
@@ -30,7 +30,7 @@ public class _10_Throw_Class {
 }
 /*
     In the below case, the main method is responsible for creation of exception
-     object and handover to the JVM.
+     object and hand over to the JVM.
 */
 class Demo1 {
     public static void method () {
@@ -39,7 +39,7 @@ class Demo1 {
 }
 /*
     In the below case, the programmer explicitly creating the exception object
-    and handover to the JVM.
+    and hand over to the JVM.
 */
 class Demo2 {
     public static void method() {
