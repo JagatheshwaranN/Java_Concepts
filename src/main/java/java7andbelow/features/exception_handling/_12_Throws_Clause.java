@@ -2,7 +2,7 @@ package java7andbelow.features.exception_handling;
 
 import java.io.PrintWriter;
 
-public class _11_Throws_Clause {
+public class _12_Throws_Clause {
     public static void main(String[] args) throws InterruptedException {
 
         /*
@@ -41,11 +41,11 @@ public class _11_Throws_Clause {
         /*
             Note:
             =====
-            1. In the above program, if we remove at least, one throws statement then the
-            code won’t compile.
+            1. In a program, where it contains two or more methods which throws exception,
+               if we remove at least one throws statement then the code won’t compile.
+
             2. It’s recommended to use the try catch over the throws keyword.
         */
-
         CheckedExceptionDemo1.method();
         CheckedExceptionDemo2.method();
         CheckedExceptionDemo2WithTryCatch.method();
