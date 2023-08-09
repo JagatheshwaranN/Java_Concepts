@@ -24,7 +24,7 @@ public class _13_Throws_Case_Scenarios {
             Case 4: Catch Block not recommended if no exception raise
             =========================================================
             In our program, within the try block if there is no chance of raising the exception
-            then we can't write the catch block to handle that exception. Otherwise, we will get
+            then we don't write the catch block to handle that exception. Otherwise, we will get
             the compile time error saying "Exception XXX is never thrown in body of corresponding
             try statement". But this rule is applicable only for Fully checked exception.
         */

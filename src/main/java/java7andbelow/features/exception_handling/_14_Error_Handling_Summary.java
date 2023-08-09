@@ -21,7 +21,7 @@ public class _14_Error_Handling_Summary {
 
             Throw
             =====
-            To handover our created exception object to the JVM manually.
+            To handover the user created exception object to the JVM manually.
 
             Throws
             ======
