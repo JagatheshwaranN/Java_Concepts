@@ -26,7 +26,7 @@ public class _17_Java7_Exception_Handling_Enhancement {
             To overcome this problem, SUN people introduced Try with Resources in 1.7 version
             of Java. The advantage of the Try with Resources is whatever resources we opened
             as part of try block will be closed automatically once the control reaches the end
-            of the try block either normally or abnormally and hence, we are not required to
+            of the try block either normally or abnormally. Hence, we are not required to
             close the resource explicitly. So, that the complexity of the program is reduced.
             We are not required to write the finally block so that length of the code is
             reduced and readability is improved.
