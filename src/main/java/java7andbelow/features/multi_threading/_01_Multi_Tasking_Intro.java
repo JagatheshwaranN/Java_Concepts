@@ -21,13 +21,14 @@ public class _01_Multi_Tasking_Intro {
             While typing a java program in an editor, we can listen to audio song
             from the same system. At the same time, we can download a file from the
             internet. All these tasks will be executed simultaneously and independent
-            of each and hence it is Process Based MT. It's best suitable at OS level.
+            of each other and hence it is Process Based Multi Tasking. It's best
+            suitable at OS level.
 
             Thread Based Multi-Tasking
             ==========================
             Executing several tasks simultaneously where each task is a separate independent
-            part of the same program is called as Thread Based MT. Each independent part is
-            called as Thread. It's best suitable at programmatic level.
+            part of the same program is called as Thread Based Multi Tasking. Each independent
+            part is called as Thread. It's best suitable at programmatic level.
 
             Main Objective of Multi Tasking
             ===============================
@@ -36,11 +37,17 @@ public class _01_Multi_Tasking_Intro {
 
             Application Areas of Multi Tasking
             ==================================
-            The main important application areas of MT are,
+            The main important application areas of Multi Tasking are,
             1.	To develop Multi Media graphics
             2.	To develop Animations
             3.	To develop Video Games
             4.	To develop Web Servers and Application Servers, etc.
+
+            Java Support for Multi Tasking
+            ==============================
+            When compared with the old languages, developing Multi Tasking applications with Java
+            is very easy because the Java provides inbuilt support for Multi Tasking with rich APIs
+            (Thread, Runnable, ThreadGroup, etc.)
         */
     }
 }

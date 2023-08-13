@@ -7,13 +7,13 @@ public class _19_Exception_Propagation {
             Exception Propagation
             =====================
             Inside a method if an exception raised and if we are not handling that
-            exception then exception object will be propagated to the caller method.
-            Then caller method is responsible to handle the exception. This process
-            is called as Exception Propagation.
+            exception, then the exception object will be propagated to the caller
+            method. Then caller method is responsible to handle the exception. This
+            process is called as Exception Propagation.
 
             Rethrowing Exception
             ====================
-            We can use this approach to convert one exception type to another
+            We can use this approach to convert one exception type to the another
             exception type.
         */
         ExceptionPropagationDemo.method1();
@@ -35,7 +35,7 @@ class ExceptionPropagationDemo {
 class RethrowingExceptionDemo {
     public static void method() {
         try {
-            System.out.println(10 / 0);
+            System.out.println(10/0);
         } catch (ArithmeticException ex){
             throw new NullPointerException();
         }

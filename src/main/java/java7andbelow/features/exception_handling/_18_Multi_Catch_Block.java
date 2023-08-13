@@ -43,8 +43,8 @@ public class _18_Multi_Catch_Block {
             readability of the code is improved.
 
             In multi catch block there should not be any relation between the exception
-            types (Either Child-Parent, Parent-Child, Same Type). Otherwise, we will get
-            the compile time error.
+            types (Either Child-Parent, Parent-Child, or Same Type). Otherwise, we will
+            get the compile time error.
         */
         MultiCatchDemo.method1();
         MultiCatchDemo.method2();
