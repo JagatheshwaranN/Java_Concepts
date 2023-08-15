@@ -74,18 +74,18 @@ public class _03_Thread_CaseScenarios {
             ------------    ------------------    -----------    --------
             |New / Born| -> |Ready / Runnable| -> | Running | -> | Dead |
             ------------    ------------------    -----------    --------
-            MyThread t = new MyThread () => New Thread
-            t.start ();                  => Thread will get Ready / Runnable
+            MyThread t = new MyThread() => New Thread
+            t.start();                  => Thread will get Ready / Runnable
             After Thread Scheduler allocates process. Thread will be moved to Running.
-            After run () method completes.
+            After run() method completes.
             Thread will be moved to Dead state.
 
             Case 9: IllegalThreadStateException
             ===================================
             After starting a Thread, if we are trying to restart the same Thread then
             we will get the runtime exception saying IllegalThreadStateException.
-
         */
+
         MyThreadCase123Demo myThread1 = new MyThreadCase123Demo();
         myThread1.start();
         for( int i = 0; i < 5; i++){
@@ -115,9 +115,6 @@ class MyThreadCase123Demo extends Thread {
         for( int i = 0; i < 5; i++){
             System.out.println("Child Thread From MyThreadCase123Demo Class");
         }
-    }
-    public void run(int i){
-            System.out.println("Parameterized run method From MyThreadCase123Demo Class");
     }
 }
 class MyThreadCase4Demo extends Thread {
