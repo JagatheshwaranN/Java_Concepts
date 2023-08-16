@@ -17,7 +17,7 @@ public class _05_Runnable_CaseScenarios {
 
             Case 2: t1.run()
             ================
-            No new thread will be created and Thread class run () method will be executed
+            No new thread will be created and Thread class run() method will be executed
             just like a normal method call.
 
             Case 3: t2.start()
@@ -27,7 +27,7 @@ public class _05_Runnable_CaseScenarios {
 
             Case 4: t2.run()
             ================
-            A new thread won’t be created and MyRunnable run() method will be executed
+            A new thread won't be created and MyRunnable run() method will be executed
             just like a normal method call.
 
             Case 5: r.start()
@@ -38,7 +38,8 @@ public class _05_Runnable_CaseScenarios {
 
             Case 6: r.run()
             ===============
-            No new thread will be created and MyRunnable run () method will be executed like normal method call.
+            No new thread will be created and MyRunnable run() method will be executed
+            like normal method call.
         */
 
         MyRunnableDemo r = new MyRunnableDemo();
@@ -70,7 +71,7 @@ public class _05_Runnable_CaseScenarios {
 
         // Case 6
         r.run();
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 2; i++){
             System.out.println("Main Thread from _05_Runnable_CaseScenarios class");
         }
     }
@@ -78,7 +79,7 @@ public class _05_Runnable_CaseScenarios {
 class MyRunnableDemo implements Runnable {
     @Override
     public void run() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("Child Thread from MyRunnableDemo class");
         }
     }

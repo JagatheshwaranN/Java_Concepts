@@ -13,7 +13,7 @@ public class _04_Runnable {
             MyThread   => Thread(C)  => Runnable(I) <=> Approach 1
             MyRunnable => Runnable(I)  <=> Approach 2
 
-            Note: We will get mixed output and we can’t tell the exact output.
+            Note: We will get mixed output, and we can’t tell the exact output.
         */
 
         MyRunnable runnable = new MyRunnable();

@@ -13,7 +13,7 @@ public class _06_Best_Thread_Define_Approach {
                extending any other class. Hence, we are missing the inheritance benefit.
 
             3. In second approach, while implementing Runnable interface we can extend any other
-               class. Hence, we won’t miss any inheritance benefit.
+               class. Hence, we won't miss any inheritance benefit.
 
             4. Because of the above reason, implementing Runnable Interface approach is
                recommended than extending the Thread class.
