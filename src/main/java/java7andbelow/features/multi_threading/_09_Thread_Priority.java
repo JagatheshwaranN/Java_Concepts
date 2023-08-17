@@ -12,9 +12,9 @@ public class _09_Thread_Priority {
             priorities is 1 to 10 where 1 is MIN priority and 10 is MAX priority. Thread
             class defines the following constants to represents some standard priorities,
 
-            Thread.MIN_PRIORITY = 1
+            Thread.MIN_PRIORITY  = 1
             Thread.NORM_PRIORITY = 5
-            Thread.MAX_PRIORITY = 10
+            Thread.MAX_PRIORITY  = 10
 
             Who use Thread Priority?
             ========================
@@ -41,7 +41,6 @@ public class _09_Thread_Priority {
             default priority will be inherited from Parent to Child i.e., whatever
             priority Parent thread has the same priority will be applicable to the
             Child thread.
-
         */
 
         System.out.println(Thread.currentThread().getName() +" == "+Thread.currentThread().getPriority());
@@ -64,12 +63,12 @@ public class _09_Thread_Priority {
             Note
             ====
             If we are commenting setPriority line, then both main and child threads have same
-            priority 5 and hence we can’t expect the execution order and exact output. If we
+            priority 5 and hence we can't expect the execution order and exact output. If we
             are not commenting the setPriority line, then main thread has priority 5 and child
             thread has priority 10, then child thread will get the chance first then followed
             by main thread.
 
-            Some platforms (Operating System) won’t provide the proper support for the Thread
+            Some platforms (Operating System) won't provide the proper support for the Thread
             Priorities.
         */
     }
