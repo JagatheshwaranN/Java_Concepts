@@ -7,13 +7,13 @@ public class _12_Thread_Execution_Stop_Join {
             Join() (Two Friends–Adv java and SCJP Classes–1 class completed–Completed
              person waiting for another person)
             =========================================================================
-            If a thread wants to wait until completing some other thread, then we should go for
-            Join() method.
+            If a thread wants to wait until the completion some other thread, then we should
+            go for Join() method.
 
-            For example, If a thread t1 wants to wait until the completion of t2, then t1 has to
-            call t2.join(). If t1 executes t2.join() then immediately t1 will be entered into
-            waiting state until t2 completes. Once, t2 completes, then t1 can continue its
-            execution.
+            For example, If a thread t1 wants to wait until the completion of t2, then t1 has
+            to call t2.join(). If t1 executes t2.join() then immediately t1 will be entered
+            into waiting state until t2 completes. Once, t2 completes, then t1 can continue
+            its execution.
 
             Venue fixing activity (Thread t1)
             Wedding card printing activity (Thread t2) -> t1.join()

@@ -13,7 +13,7 @@ public class _11_Thread_Execution_Stop_Yield {
 
             Yield() (Public Telephone Booth – Long Batsman – Urgent Message – 90’s )
             ========================================================================
-            Yield() causes to pause the current executing thread to give the chance for
+            Yield() is used to pause the current executing thread to give the chance for
             other waiting threads of same priority. If there are no waiting threads or all
             waiting threads have low priority, then the same thread can continue the execution.
 
@@ -35,9 +35,7 @@ public class _11_Thread_Execution_Stop_Yield {
             calls the yield() method, because of that the main thread will get the chance a
             greater number of times and the chance of completing main thread first is high.
 
-            Note: Some platforms (OS) won’t provide proper support for yield () method.
-
-
+            Note: Some platforms (OS) won't provide proper support for yield () method.
         */
         YieldDemo yieldDemo = new YieldDemo();
         yieldDemo.start();
