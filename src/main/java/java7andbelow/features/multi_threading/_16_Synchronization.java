@@ -82,9 +82,49 @@ public class _16_Synchronization {
             }
 
             }
-
-
-
         */
+
+        /*
+            Note
+            ====
+            If we are not declaring wish() method as synchronized then both threads will be
+            executed simultaneously and hence, we will get the irregular output.
+
+            If we declare wish() method as synchronized, then at a time only one thread is
+            allowed to execute the wish() on the given display object. Hence, we will get
+            the regular output.
+        */
+        Display display = new Display();
+        MyThreadDemo threadDemo1 = new MyThreadDemo(display, "Alex");
+        MyThreadDemo threadDemo2 = new MyThreadDemo(display, "John");
+        threadDemo1.start();
+        threadDemo2.start();
+    }
+}
+
+class Display {
+    public synchronized void wish(String name) {
+        for(int i = 0; i < 5; i++){
+            System.out.print("Good morning ");
+            try{
+                Thread.sleep(2000);
+            }catch (InterruptedException ex){
+                ex.printStackTrace();
+            }
+            System.out.print(name);
+            System.out.println();
+        }
+    }
+}
+
+class MyThreadDemo extends Thread {
+    Display d;
+    String name;
+    MyThreadDemo(Display d, String name){
+        this.d = d;
+        this.name = name;
+    }
+    public void run(){
+        d.wish(name);
     }
 }
