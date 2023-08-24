@@ -7,7 +7,7 @@ public class _18_Synchronized_Block {
         /*
             Synchronized Block
             ==================
-            If very few lines of the code requires synchronization, then it’s not recommended
+            If very few lines of the code requires synchronization, then it's not recommended
             to declare the entire method as synchronized. We have to enclose those few lines
             of the code using the synchronized block.
 
@@ -43,7 +43,7 @@ public class _18_Synchronized_Block {
 class Welcome {
     public  void wish(String name) throws InterruptedException {
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println("Code before Synchronized Block");
             Thread.sleep(1000);
         }
@@ -59,7 +59,7 @@ class Welcome {
             }
         }
 
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println("Code after Synchronized Block");
             Thread.sleep(1000);
         }
