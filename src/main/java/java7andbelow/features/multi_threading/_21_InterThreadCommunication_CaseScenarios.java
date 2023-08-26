@@ -24,9 +24,9 @@ public class _21_InterThreadCommunication_CaseScenarios {
             below,
 
             case A. If only wait() method called by Main Thread, then Infinite waiting of Main
-            thread since no one is there to give notification to continue the execution.
+            thread will happen as no one is there to give notification to continue the execution.
 
-            Case B. If we configure the wait() with time cutoff. Here if no one is there to give
+            Case B. If we configure the wait() with time cutoff. If no one is there to give
             notification also, the Main thread will wait for specified time cutoff and execute
             or exit.
 
