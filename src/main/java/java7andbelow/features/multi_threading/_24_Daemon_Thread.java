@@ -49,8 +49,8 @@ public class _24_Daemon_Thread {
             the child thread is also daemon. If parent thread is non-daemon, then the child thread
             is also non-daemon.
 
-            Can we change Main Tread Daemon nature?
-            =======================================
+            Can we change Main Tread's Daemon nature?
+            =========================================
             It is impossible to change the daemon nature of the Main thread. Because, it is
             already started by JVM at the beginning of the program. If we try to change the
             daemon nature of main thread, then we will get the runtime exception saying
