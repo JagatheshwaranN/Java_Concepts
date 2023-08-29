@@ -29,7 +29,7 @@ public class _25_GreenThread {
             call stop() method then immediately the thread will enter into dead state. Anyway
             stop() is deprecated and not recommended to use.
 
-            public void stop ()
+            public void stop();
 
             How to suspend and resume a Thread
             ==================================

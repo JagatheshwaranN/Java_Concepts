@@ -18,7 +18,7 @@ public class _26_ThreadGroup {
         Thread Group in Java is a child group of System Group either directly or indirectly.
         Hence, System Group acts as root for all Thread Groups in Java.
 
-        System Group contains several system levels threads like,
+        System Group contains several system level threads like,
         1.	Garbage Collector
         2.	Reference Handler
         3.	Signal Dispatcher
@@ -27,14 +27,14 @@ public class _26_ThreadGroup {
         ThreadGroup is a Java class present in java.lang package and its direct child class
         of Object.
 
-        TG Constructors
-        ===============
+        ThreadGroup Constructors
+        ========================
 
-        ThreadGroup g = new ThreadGroup (String groupName);
+        ThreadGroup g = new ThreadGroup(String groupName);
         Creates a new ThreadGroup with the specified group name. The parent of this new thread
         group is currently executing thread.
 
-        ThreadGroup g = new ThreadGroup (ThreadGroup g, String groupName);
+        ThreadGroup g = new ThreadGroup(ThreadGroup g, String groupName);
         Creates a new ThreadGroup with the specified group name. The parent of this new thread
         group is specified parent group.
     */
@@ -49,6 +49,7 @@ public class _26_ThreadGroup {
 
         /*
             Important methods of ThreadGroup Class
+            ======================================
             1.	String getName(); -> To get the name of the ThreadGroup.
             2.	int getMaxPriority(); -> To get the default max priority of the ThreadGroup.
             3.	void setMaxPriority(int p); -> To set the specific max priority of the
@@ -65,13 +66,13 @@ public class _26_ThreadGroup {
                 ThreadGroup Array.
             10.	boolean isDaemon(); -> To check whether the ThreadGroup is Daemon or not.
             11.	void setDaemon(boolean b); -> To change the Daemon nature of ThreadGroup.
-            12.	void interrupt(); -> To interrupt all waiting /sleeping threads in the
+            12.	void interrupt(); -> To interrupt all waiting / sleeping threads in the
                 ThreadGroup.
             13.	void destroy(); -> To destroy ThreadGroup and its sub ThreadGroups.
 
             The default max priority is 10 for both Thread and ThreadGroup.
 
-            Threads in the ThreadGroup that already have higher priority won’t be affected
+            Threads in the ThreadGroup that already have higher priority won't be affected
             but for newly added threads the new max priority is applicable.
         */
     }
