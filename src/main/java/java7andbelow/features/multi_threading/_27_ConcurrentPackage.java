@@ -10,8 +10,8 @@ public class _27_ConcurrentPackage {
 
             1.	We are not having any flexibility to try for a lock without waiting.
 
-            2.	There is no way to specify maximum waiting time for thread to get the lock
-                so that the thread will wait until getting the lock which may creates
+            2.	There is no way to specify maximum waiting time for a thread to get the
+                lock so that the thread will wait until getting the lock which may creates
                 performance issues and causes deadlock.
 
             3.	If a thread releases the lock, then which waiting thread will get that lock,
@@ -39,8 +39,8 @@ public class _27_ConcurrentPackage {
             void lock()
             ===========
             We can use this method to acquire a lock, if a lock is already available then
-            immediately current thread will get that lock. If the lock is not available, then
-            it will wait until getting the lock. It is exactly same behavior of traditional
+            immediately the current thread will get that lock. If the lock is not available,
+            then it will wait until getting the lock. It is exactly same behavior of traditional
             synchronized keyword.
 
             boolean tryLock()
@@ -85,16 +85,16 @@ public class _27_ConcurrentPackage {
 
             void unlock()
             =============
-            To call this method, compulsory the current thread should be owner of the lock
+            To call this method, compulsory the current thread should be the owner of the lock
             otherwise we will get the runtime exception saying IllegalMonitorStateException.
 
             ReentrantLock
             =============
             It is the implementation class of lock interface and its direct child class of
             object. Reentrant means a thread can acquire same lock multiple times without
-            any issue. Internally reentrant lock implements the thread’s personal count
-            whenever we call lock method and decrements the count value whenever the thread
-            calls the unlock method and lock will be released whenever count reaches zero.
+            any issue. Internally reentrant lock implements the thread's personal count
+            whenever we call lock method decrements the count value, and whenever the thread
+            calls the unlock method, the lock will be released whenever count reaches zero.
 
             Constructors
             ============
@@ -102,7 +102,7 @@ public class _27_ConcurrentPackage {
             ReentrantLock re = new ReentrantLock(boolean fairness);
 
             Creates ReentrantLock with the given fairness policy. If the fairness is true,
-            then the longest waiting thread can acquire the lock if it’s available. i.e.,
+            then the longest waiting thread can acquire the lock if it's available. i.e.,
             it follows First Come, First Served policy. If fairness is false, then which
             waiting thread will get the chance we can't expect.
 
