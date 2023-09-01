@@ -10,23 +10,33 @@ public class _29_ThreadPool {
             Thread Pools (Executor Framework)
             =================================
             Creating a new thread for every job may create performance and memory problems.
-            To overcome this, we should go for Thread Pool. Thread Pool is a pool of already
-            created threads ready to do our jobs. Java 1.5 version introduced the Thread Pool
-            Framework to implement the Thread Pools. Thread Pool framework is also known as
+            To overcome this, we should go for ThreadPool. ThreadPool is a pool of already
+            created threads ready to do our jobs. Java 1.5 version introduced the ThreadPool
+            Framework to implement the ThreadPools. ThreadPool framework is also known as
             Executor Framework.
 
-            We can create a Thread Pool as follows,
+            We can create a ThreadPool as follows,
 
-            Executor Service serv = Executors.newFixedThreadPool(3);
+            ExecutorService serv = Executors.newFixedThreadPool(3);
 
             We can submit a runnable job by using submit method.
             serv.submit(job);
 
-            We can shut down the executor service using shutdown method.
+            We can shut down the ExecutorService using shutdown method.
             serv.shutdown();
         */
 
-        PrintJob[] jobs = { new PrintJob("John"), new PrintJob("Alex"), new PrintJob("Blake"), new PrintJob("Eric")};
+        /*
+            In the below example, two threads are responsible to execute the 4 Jobs. So that a
+            single thread can be reused for multiple jobs.
+
+            Note:
+            =====
+            While developing/designing the web servers / application servers we can use the
+            ThreadPool concept.
+        */
+        PrintJob[] jobs = { new PrintJob("John"), new PrintJob("Alex"),
+                new PrintJob("Blake"), new PrintJob("Eric")};
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         for( PrintJob job : jobs){
             executorService.submit(job);
@@ -36,19 +46,18 @@ public class _29_ThreadPool {
 }
 
 class PrintJob implements Runnable {
-
     String name;
     PrintJob(String name){
         this.name = name;
     }
     @Override
     public void run() {
-        System.out.println(name +" job started by Thread "+Thread.currentThread().getName());
+        System.out.println(name +" job started by a Thread "+Thread.currentThread().getName());
         try{
             Thread.sleep(5000);
         }catch(InterruptedException ex){
             ex.printStackTrace();
         }
-        System.out.println(name +" job completed by Thread "+Thread.currentThread().getName());
+        System.out.println(name +" job completed by a Thread "+Thread.currentThread().getName());
     }
 }

@@ -103,13 +103,13 @@ class Case3ThreadDemo  extends Thread {
         do {
             try {
                 if (reentrantLock.tryLock(5000, TimeUnit.MILLISECONDS)) {
-                    System.out.println(Thread.currentThread().getName() + " got lock and performing operation");
+                    System.out.println(Thread.currentThread().getName() + " has got lock and performing operation");
                     Thread.sleep(10000);
                     reentrantLock.unlock();
                     System.out.println(Thread.currentThread().getName() + " releases lock");
                     break;
                 } else {
-                    System.out.println(Thread.currentThread().getName() + " couldn't got lock and performing alternate operation");
+                    System.out.println(Thread.currentThread().getName() + " couldn't get lock and performing alternate operation");
                 }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
