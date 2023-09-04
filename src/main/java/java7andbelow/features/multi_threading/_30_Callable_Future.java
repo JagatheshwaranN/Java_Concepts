@@ -16,7 +16,7 @@ public class _30_Callable_Future {
             public object call() throws Exception
 
             If we submit the callable object to the executor, then the thread after
-            completing the job, will the return the object of type Future i.e., Future
+            completing the job, will return the object of type Future i.e., Future
             object can be used to retrieve the result from the Callable Job.
         */
 
@@ -65,7 +65,7 @@ class MyCallable implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         int sum = 0;
-        System.out.println(Thread.currentThread().getName()+" is responsible to find the sum of first "+ number+" numbers");
+        System.out.println(Thread.currentThread().getName()+" is responsible to find the sum of first "+number+" numbers");
         for(int i = 1; i <= number; i++) {
             sum += i;
         }
