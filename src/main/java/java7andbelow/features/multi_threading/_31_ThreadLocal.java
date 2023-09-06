@@ -30,7 +30,7 @@ public class _31_ThreadLocal {
 
             Constructor
             ===========
-            ThreadLocal tl = new ThreadLocal ();
+            ThreadLocal tl = new ThreadLocal();
             Creates a ThreadLocal variables.
 
             Methods

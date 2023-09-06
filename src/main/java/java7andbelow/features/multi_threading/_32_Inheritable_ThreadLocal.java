@@ -28,12 +28,12 @@ public class _32_Inheritable_ThreadLocal {
 
         /*
             In the below program, if we replace InheritableThreadLocal with ThreadLocal and if
-            we are not overriding the childValue () method. Then, the output is,
+            we are not overriding the childValue() method. Then, the output is,
             Parent Thread Value – Parent Class
             Child Thread Value – null
 
             In the below program, if we are maintaining InheritableThreadLocal and not
-            overriding the childValue () method. Then, the output is,
+            overriding the childValue() method. Then, the output is,
             Parent Thread Value – Parent Class
             Child Thread Value – Parent Class
         */
