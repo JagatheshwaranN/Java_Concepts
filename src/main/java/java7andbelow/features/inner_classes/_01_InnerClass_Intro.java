@@ -12,8 +12,8 @@ public class _01_InnerClass_Intro {
             bugs as part of the Event Handling. But because of the powerful features of the Inner
             Classes, slowly programmers started using it in regular coding as well.
 
-            Without existence of one type of object, if there is no chance of existence another type
-            of object, then we should go for Inner Classes.
+            Without existence of one type of object, if there is no chance of existence of another
+            type of object, then we should go for Inner Classes.
 
             Examples,
 
@@ -32,7 +32,7 @@ public class _01_InnerClass_Intro {
                 }
             }
 
-            Map is a group of Key value pairs and each Key Value pair is called as an Entry.
+            Map is a group of key value pairs and each Key Value pair is called as an Entry.
             Without the existence of Map object there is no chance of existence of an Entry
             object. Hence, Interface Entry is defined inside the Map Interface.
             interface Map {
@@ -44,7 +44,7 @@ public class _01_InnerClass_Intro {
             =====
             1.	Without the existence of outer class object, there is no chance of existence of
             inner class object.
-            2.	The relation between the outer class and inner class is not IS-A relation and
+            2.	The relationship between the outer class and inner class is not IS-A relation and
                 its HAS-A relationship (Composition / Aggregation).
         */
     }
