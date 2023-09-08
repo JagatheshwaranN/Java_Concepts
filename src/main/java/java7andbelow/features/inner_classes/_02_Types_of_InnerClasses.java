@@ -81,9 +81,11 @@ class OuterClass2 {
 
         MethodInnerClass methodInnerClass = new MethodInnerClass();
         methodInnerClass.sum(10, 20);
+
         System.out.println("Method local inner class line 1");
         System.out.println("Method local inner class line 2");
         System.out.println("Method local inner class line 3");
+
         methodInnerClass.sum(20, 30);
     }
 }
