@@ -36,6 +36,14 @@ public class _02_Types_of_InnerClasses {
             We can access Method Local Inner Classes only within the method where we declared.
             Outside of method, we can't access because of its less scope, method local inner
             classes are most rarely used Inner Classes.
+
+            Anonymous Inner Classes
+            =======================
+            Sometimes we can declare Inner Class without name, such type of Inner Classes is called
+            as Anonymous Inner Classes.
+
+            The main purpose of Anonymous Inner Classes is just for Instant use (One time usage).
+            Based on the declaration and behavior, we have 3 types of Anonymous Inner Classes.
         */
 
         OuterClass1 outerClass1 = new OuterClass1();
