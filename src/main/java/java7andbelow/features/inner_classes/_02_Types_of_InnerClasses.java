@@ -53,6 +53,14 @@ public class _02_Types_of_InnerClasses {
         OuterClass2 outerClass2 = new OuterClass2();
         outerClass2.method1();
 
+        OuterClass3 outerClass3 = new OuterClass3() {
+            @Override
+            public void display(){
+                System.out.println("Anonymous inner class display method");
+            }
+        };
+        outerClass3.display();
+
          /*
             Nesting of Inner Classes
             ========================
@@ -95,6 +103,13 @@ class OuterClass2 {
         System.out.println("Method local inner class line 3");
 
         methodInnerClass.sum(20, 30);
+    }
+}
+
+class OuterClass3 {
+
+    public void display(){
+        System.out.println("OuterClass3 display method");
     }
 }
 
