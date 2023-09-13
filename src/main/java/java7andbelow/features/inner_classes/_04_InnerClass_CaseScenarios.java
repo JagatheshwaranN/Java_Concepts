@@ -73,7 +73,7 @@ public class _04_InnerClass_CaseScenarios {
 
         /*
             CE: Local variable x is accessed from within inner class; needs to be declared final.
-            If we declare variable x as Final, then we won’t get any compile time error.
+            If we declare variable x as Final, then we won't get any compile time error.
 
             Update: The above condition was live until Java 1.7 version. Starting from Java 8, even
             if you don't explicitly declare them as final, they are treated as effectively final
