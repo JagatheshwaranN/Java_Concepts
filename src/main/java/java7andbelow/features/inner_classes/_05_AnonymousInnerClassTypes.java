@@ -67,7 +67,7 @@ public class _05_AnonymousInnerClassTypes {
         /*
             2.	Anonymous Inner Class that implements an Interface.
             =======================================================
-            Anonymous Inner Class Approach for implement Runnable
+            Anonymous Inner Class Approach to implement Runnable
         */
         Runnable runnable = new Runnable() {
             @Override
