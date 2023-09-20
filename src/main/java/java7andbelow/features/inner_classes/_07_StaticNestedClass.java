@@ -47,9 +47,9 @@ public class _07_StaticNestedClass {
                class object i.e., inner class object is strongly associated with outer class
                object.
             2. In normal/regular inner classes we can't declare static members.
-            3. In normal/regular inner class, we can't declare main () method and hence we can't
+            3. In normal/regular inner class, we can't declare main() method and hence we can't
                invoke inner class directly from command prompt.
-            4. From normal /regular inner classes we can access both static and non-static members
+            4. From normal/regular inner classes we can access both static and non-static members
                of outer class directly.
 
             Static Nested Class
@@ -57,7 +57,7 @@ public class _07_StaticNestedClass {
             1. Without existence of outer class object there may be chance of existence of static
                nested class object i.e., static nested class object is not strongly associated
                with outer class object.
-            2. In static nested classes we can declare static members.
+            2. In static nested classes, we can declare static members.
             3. In static nested classes, we can declare main() method and hence we can invoke
                nested class directly from command prompt.
             4. From static nested classes, we can access only static members of outer class.

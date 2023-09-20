@@ -24,8 +24,8 @@ public class _08_NestedClass_Interface_Combination {
 
             Interface inside Class
             ======================
-            Inside a class if we required multiple implementations of an interface and all these
-            implementations are related to a particular class then we can define an interface
+            Inside a class if we require the multiple implementations of an interface and all
+            these implementations are related to a particular class then we can define an interface
             inside a class.
 
             class VehicleTypes {
