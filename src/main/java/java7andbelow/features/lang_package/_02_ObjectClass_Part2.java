@@ -22,7 +22,7 @@ public class _02_ObjectClass_Part2 {
             as follows,
 
             public String toString() {
-                return getClass().getName()+”@”+Integer.toHexString(hashCode());
+                return getClass().getName()+"@"+Integer.toHexString(hashCode());
             }
             classname@hascode_in_hexadecimalform
         */
@@ -45,7 +45,8 @@ public class _02_ObjectClass_Part2 {
             Note:
             =====
             In all wrapper classes, collection classes, String classes, StringBuffer classes and
-            StringBuilder classes toString () method is overridden for meaningful string representation.
+            StringBuilder classes toString() method is overridden for meaningful string
+            representation.
         */
 
     }

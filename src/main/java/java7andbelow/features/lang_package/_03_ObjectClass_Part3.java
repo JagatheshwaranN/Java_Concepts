@@ -48,5 +48,49 @@ public class _03_ObjectClass_Part3 {
             2.	If we are overriding the toString() method, then our toString() method may not
                 call hashCode() method.
         */
+
+        TestDemo1 testDemo1 = new TestDemo1(5);
+        System.out.println(testDemo1);
+
+        HashCodeDemo hashCodeDemo = new HashCodeDemo(5);
+        System.out.println(hashCodeDemo);
+
+        StringHashCodeDemo stringHashCodeDemo = new StringHashCodeDemo(5);
+        System.out.println(stringHashCodeDemo);
+    }
+}
+
+class TestDemo1 {
+
+    int i;
+    TestDemo1(int i){
+        this.i = i;
+    }
+}
+
+class HashCodeDemo {
+
+    int i;
+    HashCodeDemo(int i){
+        this.i = i;
+    }
+
+    public int hashCode(){
+        return i;
+    }
+}
+
+class StringHashCodeDemo {
+
+    int i;
+    StringHashCodeDemo(int i){
+        this.i = i;
+    }
+
+    public String toString(){
+        return i+"";
+    }
+    public int hashCode(){
+        return i;
     }
 }
