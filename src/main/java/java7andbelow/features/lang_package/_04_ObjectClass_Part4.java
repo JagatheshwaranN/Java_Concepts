@@ -82,6 +82,14 @@ public class _04_ObjectClass_Part4 {
         System.out.println(se21.equals(se22));
         System.out.println(se21.equals(se23));
         System.out.println(se21.equals(se24));
+        System.out.println("***** Most Simplified Equals *****");
+        StudentWithOwnEqualsType4 se31 = new StudentWithOwnEqualsType4 ("Alex", 101);
+        StudentWithOwnEqualsType4 se32 = new StudentWithOwnEqualsType4 ("John", 102);
+        StudentWithOwnEqualsType4 se33 = new StudentWithOwnEqualsType4 ("Alex", 101);
+        StudentWithOwnEqualsType4 se34 = se31;
+        System.out.println(se31.equals(se32));
+        System.out.println(se31.equals(se33));
+        System.out.println(se31.equals(se34));
     }
 }
 
@@ -159,6 +167,34 @@ class StudentWithOwnEqualsType3 {
     public boolean equals(Object object){
         try {
             if(object instanceof StudentWithOwnEqualsType3 student2){
+                return name.equals(student2.name) && rollno == student2.rollno;
+            } else{
+                return false;
+            }
+        }catch (ClassCastException | NullPointerException ex){
+            return false;
+        }
+    }
+}
+
+/*
+    Most simplified version of equals() method
+*/
+class StudentWithOwnEqualsType4 {
+
+    String name;
+    int rollno;
+
+    StudentWithOwnEqualsType4 (String name, int rollno) {
+        this.name = name;
+        this.rollno = rollno;
+    }
+
+    public boolean equals(Object object){
+        try {
+            if(object == this)
+                return true;
+            if(object instanceof StudentWithOwnEqualsType4 student2){
                 return name.equals(student2.name) && rollno == student2.rollno;
             } else{
                 return false;
