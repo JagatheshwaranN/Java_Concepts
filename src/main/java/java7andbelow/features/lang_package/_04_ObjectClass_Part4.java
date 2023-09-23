@@ -33,8 +33,8 @@ public class _04_ObjectClass_Part4 {
             While overriding the equals() method for content comparison we have to take care about
             the following,
 
-            1.	What is the meaning of equality i.e., whether we have to check only names, only rollnos
-                or both.
+            1.	What is the meaning of equality i.e., whether we have to check only names,
+                only rollnos or both.
             2.	If we are passing different type of object, our equals() method should not raise
                 ClassCastException i.e., we have to handle CCE to return false.
             3.	If we are passing null argument, then our equals() method should not raise

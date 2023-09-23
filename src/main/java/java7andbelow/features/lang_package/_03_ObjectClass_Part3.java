@@ -90,6 +90,7 @@ class StringHashCodeDemo {
     public String toString(){
         return i+"";
     }
+
     public int hashCode(){
         return i;
     }
