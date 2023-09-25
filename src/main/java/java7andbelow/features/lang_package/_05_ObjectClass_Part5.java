@@ -7,37 +7,10 @@ public class _05_ObjectClass_Part5 {
     public static void main(String[] args) {
 
         /*
-            String Class Equals Method
-            ==========================
-            String s1 = new String ("Alex");
-            String s2 = new String ("Alex");
-            SOP (s1 == s2); // false
-            SOP (s1.equals (s2)); // true
 
-            In String class, equals() method is overridden for content comparison. Hence,
-            even though the objects are different and content is same, then equals() method
-            returns true.
-
-            StringBuffer Class Equals Method
-            ================================
-            StringBuffer s1 = new StringBuffer ("Alex");
-            StringBuffer s2 = new StringBuffer ("Alex");
-            SOP (s1 == s2); // false
-            SOP (s1.equals (s2)); // false
-            In StringBuffer class, equals() method is not overridden for content comparison.
-            Hence, if objects are different, equals() method returns false even though the
-            content is same.
         */
 
-        String s1 = new String ("Alex");
-        String s2 = new String ("Alex");
-        System.out.println(s1 == s2);
-        System.out.println(s1.equals(s2));
 
-        StringBuffer sb1 = new StringBuffer ("Alex");
-        StringBuffer sb2 = new StringBuffer ("Alex");
-        System.out.println(sb1 == sb2);
-        System.out.println(sb1.equals(sb2));
 
         /*
             getClass()
@@ -47,7 +20,7 @@ public class _05_ObjectClass_Part5 {
             public final Class getClass ();
 
             By using this Class cls object, we can access the class level properties like
-            full qualified name of the class, methods information, constructor information, etc.
+            fully qualified name of the class, methods information, constructor information, etc.
 
             Note
             ====
@@ -68,7 +41,7 @@ public class _05_ObjectClass_Part5 {
 
             wait(), notify(), and notifyAll()
             =================================
-            We can use these methods for inter thread communication. The thread which is expecting
+            We can use these methods for inter-thread communication. The thread which is expecting
             the update, it's responsible to call the wait() method. Then, immediately the thread
             will enter into the waiting state. The thread which is responsible to perform the
             update, after performing the update, the thread can call notify() method. The waiting
