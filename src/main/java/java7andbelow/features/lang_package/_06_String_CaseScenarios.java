@@ -75,10 +75,10 @@ public class _06_String_CaseScenarios {
             ========================================
             String sObj = new String ("Java");
             In this case, two objects will be created. One is in Heap area and other is in SCP,
-            s is always pointing to Heap area.
+            sObj is always pointing to Heap area.
 
             String str = "Java";
-            In this case, only one object will be created and s is always pointing to that object.
+            In this case, only one object will be created and str is always pointing to that object.
 
             Note
             ====
@@ -107,7 +107,7 @@ public class _06_String_CaseScenarios {
             Whenever we are using the new operator compulsory a new object will be created
             in the heap area. Hence, there may be a chance of existence of two objects with
             the same content in heap area but not in SCP area. i.e., duplicate objects are
-            possible in the heap area but not in SCP area.
+            possible in the heap area but not in the SCP area.
         */
 
         String sObj3 = new String ("Java");
