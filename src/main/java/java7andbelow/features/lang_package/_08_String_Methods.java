@@ -14,7 +14,7 @@ public class _08_String_Methods {
 
             public String concat (String s)
             ===============================
-            The overloaded + and += operators also meant for concatenation purpose only.
+            The overloaded + and += operators are also meant for concatenation purpose only.
 
             public boolean equals (Object o)
             ================================
@@ -55,7 +55,7 @@ public class _08_String_Methods {
             public String trim()
             ====================
             To remove the blank spaces, present at the beginning and end of the string but
-            not the middle blank spaces.
+            not at the middle of the string.
 
             public int indexOf(char ch)
             ===========================
@@ -64,7 +64,21 @@ public class _08_String_Methods {
             public int lastIndexOf(char ch)
             ===============================
             Returns index of the last occurrence of the specified character.
+        */
 
+        /*
+            Important Note
+            ==============
+            Because of the runtime operation if there is a change in the content then with
+            those changes a new object will be created on the heap area. If there is no change
+            in the content then existing object will be reused and new object won't be created.
+            Whether the object present in heap / SCP, the rule is same.
+
+            String s1 = new String (“java”);
+            String s2 = s1.toUpperCase();
+            String s3 = s1.toLowerCase();
+            SOP (s1 == S2); // false
+            SOP (s1 == S3); // true
         */
 
         // charAt
@@ -117,5 +131,29 @@ public class _08_String_Methods {
 
         // last index-of
         System.out.println(s7.lastIndexOf('a'));
+
+        // Object Creation
+        String s11 = new String("java");
+        String s12 = s11.toUpperCase();
+        String s13 = s11.toLowerCase();
+        System.out.println(s11);
+        System.out.println(s12);
+        System.out.println(s13);
+        System.out.println(s11 == s12);
+        System.out.println(s11 == s13);
+        System.out.println("********************");
+        String s14 = "java";
+        String s15 = s14;
+        String s16 = s14.toString();
+        System.out.println(s14 == s15);
+        System.out.println(s14 == s16);
+        String s17 = s14.toLowerCase(); // No new object will be created
+        String s18 = s14.toUpperCase(); // New object will be created
+        String s19 = s18.toLowerCase(); // New object will be created
+        System.out.println(s17);
+        System.out.println(s18);
+        System.out.println(s19);
+
+
     }
 }
