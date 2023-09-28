@@ -74,7 +74,7 @@ public class _08_String_Methods {
             in the content then existing object will be reused and new object won't be created.
             Whether the object present in heap / SCP, the rule is same.
 
-            String s1 = new String (“java”);
+            String s1 = new String("java");
             String s2 = s1.toUpperCase();
             String s3 = s1.toLowerCase();
             SOP (s1 == S2); // false
@@ -153,7 +153,5 @@ public class _08_String_Methods {
         System.out.println(s17);
         System.out.println(s18);
         System.out.println(s19);
-
-
     }
 }
