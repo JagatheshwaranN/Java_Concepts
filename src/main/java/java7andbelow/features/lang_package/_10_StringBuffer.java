@@ -12,7 +12,7 @@ public class _10_StringBuffer {
             recommended to use String. Because for every change a new object will be created
             which affects the performance of the system. To handle this requirement, we should
             go for StringBuffer. The main advantage of StringBuffer over String is, all required
-            changes will be performed in the existing object only.
+            changes will be performed on the existing object only.
         */
 
         /*
@@ -24,7 +24,7 @@ public class _10_StringBuffer {
             StringBuffer reaches its max capacity, a new StringBuffer object is created
             with new capacity as below,
 
-            New capacity = (Current capacity +1) * 2
+            New capacity = (Current capacity + 1) * 2
 
             StringBuffer sb = new StringBuffer(int initialCapacity);
             ========================================================
