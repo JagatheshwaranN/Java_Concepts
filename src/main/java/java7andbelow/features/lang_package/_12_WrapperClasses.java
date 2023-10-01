@@ -8,7 +8,7 @@ public class _12_WrapperClasses {
             Wrapper Class
             =============
             The main objectives of the Wrapper classes are,
-            1.	To wrapper primitive into object form, so that we can handle primitives also
+            1.	To wrapper primitive into object form, so that we can handle primitives
                 just like objects.
             2.	To define several utility methods which are required for the primitives.
         */
@@ -17,7 +17,7 @@ public class _12_WrapperClasses {
             Constructors
             ============
             Almost all wrapper classes contain 2 constructors, one can take corresponding
-            primitive as argument and other can string as argument.
+            primitive as argument and other can take string as argument.
         */
         Integer i1 = Integer.valueOf(10);
         Integer i2 = Integer.valueOf("10");
@@ -40,13 +40,14 @@ public class _12_WrapperClasses {
 
         // Character class contains only one constructor which can take char argument.
         Character c1 = Character.valueOf('a');
-        // Character c2 = Character.valueOf("a"); - incompatible types: String cannot be converted to char
+        // Character c2 = Character.valueOf("a"); - incompatible types: String cannot be converted
+        // to char
         System.out.println(c1);
 
         /*
             Boolean class contains two constructors, one can take primitive as argument and
             the other can take string as argument. If we pass boolean primitive as argument
-            and only allowed values are true / false where case and content are important.
+            then only allowed values are true / false where case and content are important.
         */
         Boolean b1 = Boolean.valueOf(true);
         Boolean b2 = Boolean.valueOf(false);
@@ -82,5 +83,8 @@ public class _12_WrapperClasses {
             Character	    Character
             Boolean	        Boolean or String
         */
+
+        // In wrapper classes, toString() method is overridden to return the content directly.
+        // In wrapper classes, equals() method is overridden for content comparison.
     }
 }
