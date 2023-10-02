@@ -192,5 +192,17 @@ public class _13_Wrapper_Utility_Methods {
         System.out.println(s6);
         String s7 = Integer.toHexString(10);
         System.out.println(s7);
+
+        /*
+            Dancing b/w String, Primitive and Wrapper Object
+            ================================================
+            String         -> Primitive      => parseXXX()
+            Primitive      -> Wrapper Object => valueOf()
+            Wrapper Object -> String         => toString()
+
+            Primitive      -> String         => toString()
+            Wrapper Object -> Primitive      => xxxValue()
+            String         -> Wrapper Object => valueOf()
+        */
     }
 }
