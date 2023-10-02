@@ -86,7 +86,7 @@ public class _13_Wrapper_Utility_Methods {
             public boolean booleanValue();
 
             ** Note **
-            In total, 38 (6*6 +1+1) xxxValue() methods are available.
+            In total, 38 (6 * 6 + 1 + 1) xxxValue() methods are available.
         */
         Integer i5 = Integer.valueOf(130);
         System.out.println(i5.byteValue());
@@ -119,7 +119,7 @@ public class _13_Wrapper_Utility_Methods {
             Form2
             =====
             Every integral type wrapper class (Byte, Short, Int, Long) contains the following
-            parseXxx() method to convert the specified radix string to primitive.
+            parseXXX() method to convert the specified radix string to primitive.
 
             public static primitive parseXXX(String s, int radix);
 
@@ -134,5 +134,63 @@ public class _13_Wrapper_Utility_Methods {
 
         int i7 = Integer.parseInt("100", 2);
         System.out.println(i7);
+
+        /*
+            toString()
+            ==========
+            We can use the toString() method to convert the wrapper object or primitive to string.
+
+            Form1
+            =====
+            Every wrapper class contains the following toString() method to convert the wrapper
+            object to string type.
+
+            public String toString();
+
+            It is the overriding version of object class toString() method. Whenever we are trying
+            to print the wrapper object reference, internally this toString() method will be called.
+
+            Form2
+            =====
+            Every wrapper class including the character class contains the following static
+            toString() method to convert the primitive to string.
+
+            public static String toString (primitive p);
+
+            Form3
+            =====
+            Integer and Long classes contain the following toString() method to convert the
+            primitive to the specified radix string.
+
+            public static String toString (primitive p, int radix);
+
+            The allowed range of radix is 2 to 36.
+
+            Form4: toXXXString()
+            ====================
+            Integer and Long classes contain the following toXXXString() methods.
+            public static String toBinaryString(primitive p);
+            public static String toOctalString(primitive p);
+            public static String toHexString(primitive p);
+        */
+        // Form 1
+        Integer i8 = Integer.valueOf(10);
+        String s1 = i8.toString();
+        System.out.println(s1);
+        // Form 2
+        String s2 =Integer.toString(10);
+        System.out.println(s2);
+        String s3 = Character.toString('a');
+        System.out.println(s3);
+        // Form 3
+        String s4 = Integer.toString(15, 2);
+        System.out.println(s4);
+        // Form 4
+        String s5 = Integer.toBinaryString(10);
+        System.out.println(s5);
+        String s6 = Integer.toOctalString(10);
+        System.out.println(s6);
+        String s7 = Integer.toHexString(10);
+        System.out.println(s7);
     }
 }
