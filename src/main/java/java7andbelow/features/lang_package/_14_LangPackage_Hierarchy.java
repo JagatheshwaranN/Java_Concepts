@@ -48,8 +48,7 @@ public class _14_LangPackage_Hierarchy {
             methods, and it contains only one variable void.TYPE.
             In general, we can use void class in reflections to check whether the method return
             type is void or not.
-            if (getMethod("m1").getReturnType() == void.TYPE) {
-            }
+
             Void is a class representation of void keyword in Java.
         */
         Demo demo = new Demo();
