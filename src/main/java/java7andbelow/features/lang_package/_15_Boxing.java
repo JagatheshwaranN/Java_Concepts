@@ -14,7 +14,7 @@ public class _15_Boxing {
             After compilation, the above line will become as below,
             Integer I = Integer.valueOf(10);
 
-            That is internally autoboxing concept is implemented by using valueOf () method.
+            That is internally autoboxing concept is implemented by using valueOf() method.
         */
 
         Integer i1 = 10;
@@ -29,14 +29,15 @@ public class _15_Boxing {
             int i = I; (Compiler converts Integer to int automatically by Autounboxing)
 
             After compilation, the above line will become as below,
-            int i = I.intValue (10);
+            int i = I.intValue(10);
 
-            That is internally autounboxing concept is implemented by using xxxValue () method.
+            That is internally autounboxing concept is implemented by using xxxValue() method.
         */
 
         int i3 = Integer.valueOf(10);
         System.out.println(i3);
 
+        DemoTest.method1();
         /*
             Points to Remember
             ==================
@@ -45,7 +46,6 @@ public class _15_Boxing {
             Note: Just because of autoboxing and autounboxing we can use primitives and wrapper
             objects interchangeably from 1.5 version onwards.
         */
-        DemoTest.method1();
 
         /*
             Note: On null reference, if we are trying to perform autounboxing, then we will get
@@ -68,7 +68,7 @@ public class _15_Boxing {
             ================
             Integer i7 = 1000;
             Integer i8 = 1000;
-            System.out.println(i7 == i8);
+            System.out.println(i7 == i8); // false
 
             Note: Internally to provide support for autoboxing, a buffer of wrapper objects will be
             created at the time of wrapper class loading. By autoboxing, if an object is required to
@@ -78,7 +78,7 @@ public class _15_Boxing {
 
             class Integer {
                 static {
-                    -128	-127	-126	0	126	127
+                    -128	-127	-126	0	126	   127
                 }
             }
 
@@ -90,6 +90,22 @@ public class _15_Boxing {
             Character -> 0 to 127
             Boolean -> Always
             Except this range and in all remaining cases, a new object will be created.
+        */
+
+        /*
+        `   Internally autoboxing concept is implemented by using the valueOf () method. Hence, buffer concept is applicable for valueOf () method as well.
+
+            Integer X = 10;
+            Integer Y = 10;
+            SOP (X==Y); // true
+
+            Integer X = Integer.valueOf(10);
+            Integer Y = Integer.valueOf(10);
+            SOP (X==Y); // true
+
+            Integer X = 10;
+            Integer Y = Integer.valueOf(10);
+            SOP (X==Y); // true
         */
     }
 }
@@ -150,5 +166,21 @@ class WrapperObjectDemo {
         Integer i7 = 1000;
         Integer i8 = 1000;
         System.out.println(i7 == i8);
+
+        Integer i9 = 127;
+        Integer i10 = 127;
+        System.out.println(i9 == i10);
+
+        Integer i11 = 128;
+        Integer i12 = 128;
+        System.out.println(i11 == i12);
+
+        Boolean b1 = false;
+        Boolean b2 = false;
+        System.out.println(b1 == b2);
+
+        Double d1 = 10.0;
+        Double d2 = 10.0;
+        System.out.println(d1 == d2);
     }
 }
