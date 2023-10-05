@@ -20,8 +20,8 @@ public class _16_Autoboxing_Widening_VarArgMethod {
             Case3: Autoboxing vs Var Arg method
             ===================================
             In this case, Autoboxing dominates the VarArg method. In general, VarArg method will get
-            the least priority i.e., if no other method is matched then only VarArg method will get
-            the chance and its exactly same as default case inside switch.
+            the least priority i.e., if no other method is matched then only the VarArg method will
+            get the chance and its exactly same as default case inside switch.
 
             Note:
             =====
@@ -33,13 +33,12 @@ public class _16_Autoboxing_Widening_VarArgMethod {
 
             Case4: Widening -> Autoboxing Not allowed
             =========================================
-            Widening   -> Autoboxing => Not allowed in Java
-            Autoboxing -> Widening   => Allowed in Java
+            Widening -> Autoboxing => Not allowed in Java
 
             Case5: Autoboxing -> Widening allowed
             =====================================
             Int -> Integer  -> Object
-            AB  -> Widening => Allowed in Java.
+            Autoboxing -> Widening => Allowed in Java.
             Object o = 10;
             Number n = 10;
         */
