@@ -18,7 +18,7 @@ public class _17_EqualMethod_EqualityOperator {
             3.	If two objects are equal by equals() method then we can't conclude anything about
                 == operator it my return true / false i.e., if reference1.equals(reference2) is
                 true then we can't conclude anything about reference1 == reference2 it may return
-                true/false.
+                true / false.
 
             4.	If two objects are not equal by equals() method then these objects are not equal
                 by == operator i.e., if reference1.equals(reference2) is false then
