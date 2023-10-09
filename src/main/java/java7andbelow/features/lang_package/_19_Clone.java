@@ -11,7 +11,16 @@ public class _19_Clone {
             purpose of the cloning is to maintain the backup copy and to preserve the state of an
             object. We can perform cloning by using clone() method of Object class.
 
-            protected native Object clone () throws CloneNotSupportedException;
+            protected native Object clone() throws CloneNotSupportedException;
+
+            Note:
+            =====
+            We can perform cloning only for cloneable objects. An object is said to be cloneable if
+            and only if the corresponding class implements Cloneable Interface. Cloneable Interface
+            present in java.lang package and, it doesn't contain any methods and, it's a Marker
+            Interface. If we are trying to perform cloning for non-cloneable objects, then we will
+            get the RTE saying CloneNotSupportedException.
+
         */
 
         TestDemo.cloningDemo();
