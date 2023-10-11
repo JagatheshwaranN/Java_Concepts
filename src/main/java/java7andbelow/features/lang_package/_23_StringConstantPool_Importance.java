@@ -7,14 +7,14 @@ public class _23_StringConstantPool_Importance {
             /*
                 String Constant Pool
                 ====================
-                In our program, if a string object is repeatably required then it’s not recommended
+                In our program, if a string object is repeatably required then it's not recommended
                 to create separate object for every requirement because it creates performance and
                 memory problems.
 
                 Instead of creating a separate object for every requirement, we have to create only
                 one object, and we can reuse same object for every requirement so that performance
-                and memory utilization will be improved. This thing is possible because of SCP. Hence,
-                main advantages of SCP are memory utilization and performance improvement.
+                and memory utilization will be improved. This thing is possible because of SCP.
+                Hence, main advantages of SCP are memory utilization and performance improvement.
 
                 But the main problem with SCP is as several references pointing to the same object,
                 by using anyone reference if we are trying to change the content then remaining
@@ -40,24 +40,24 @@ public class _23_StringConstantPool_Importance {
             2.	Explain about immutability and mutability with example?
 
             3.	What is the difference between?
-            String s = new String ("Java");
+            String s = new String("Java");
             String s = "Java";
 
             4.	Other than immutability and mutability is any other difference b/w String and
                 StringBuffer?
             Equals method, in String equals method meant for content comparison whereas in
-            StringBuffer it’s meant for reference comparison
+            StringBuffer it's meant for reference comparison
 
             5.	What is SCP?
             It is a specially designed memory area for String Objects.
 
             6.	What is the advantage of SCP?
-            Memory utilization and performance improved.
+            Memory utilization and performance improvement.
 
             7.	What is the disadvantage of SCP?
-            Immutability
+            Immutability.
 
-            8.	Why SCP is available only String not for StringBuffer?
+            8.	Why SCP is available only for String and not for StringBuffer?
             String is most commonly used object and hence SUN people provided special memory management
             for String objects. But StringBuffer is not commonly used objects and hence special memory
             management is not required for StringBuffer.
@@ -66,7 +66,7 @@ public class _23_StringConstantPool_Importance {
             In case of String SCP, a single object can be referenced by multiple references. By using
             one reference if we are allowed to change the content in the existing object then remaining
             references will be affected to overcome this problem SUN people implemented String objects
-            as immutable. According to this, once we create a String object, we can’t perform any changes
+            as immutable. According to this, once we create a String object, we can't perform any changes
             on the object. If we are trying to perform any changes, then with those changes a new object
             will be created. But in StringBuffer there is no concept like SCP hence for every requirement
             a separate object will be created. By, using one reference if we are trying to change the
