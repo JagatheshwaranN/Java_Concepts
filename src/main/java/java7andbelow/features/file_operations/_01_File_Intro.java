@@ -10,7 +10,7 @@ public class _01_File_Intro {
         /*
             File
             ====
-            File f = new File ("abc.txt");
+            File f = new File("abc.txt");
             This line won't create any physical file. First, it will check is there any physical
             file named with abc.txt is available or not. If its available then f simply refers
             that file. If it's not available then we are just creating java file object to represent
@@ -54,6 +54,6 @@ public class _01_File_Intro {
         System.out.println(f1.createNewFile());
         File f2 = new File (folder, "demo2.txt"); // form 3
         System.out.println(f2.createNewFile());
-
     }
+
 }
