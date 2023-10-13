@@ -1,5 +1,10 @@
 package java7andbelow.features.file_operations;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class _04_File_Reader {
 
     public static void main(String[] args) {
@@ -11,8 +16,8 @@ public class _04_File_Reader {
 
             FileReader Constructors
             =======================
-            FileReader fr = new FileReader (String filename);
-            FileReader fr = new FileReader (File f);
+            FileReader fr = new FileReader(String filename);
+            FileReader fr = new FileReader(File f);
         */
 
         /*
@@ -32,7 +37,41 @@ public class _04_File_Reader {
 
             void close()
             ============
-            To close the FileReader object after completion of reading the data from the file.
+            To close the FileReader object after the completion of reading the data from the file.
         */
+        FileReaderDemo1.readFileCharDemo();
+        FileReaderDemo2.readFileCharArrDemo();
+    }
+}
+
+class FileReaderDemo1 {
+
+    public static void readFileCharDemo(){
+        try (FileReader fileReader = new FileReader("file_write.txt")){
+            int x = fileReader.read();
+            while(x != -1){
+                System.out.print((char) x);
+                x = fileReader.read();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+
+class FileReaderDemo2 {
+
+    public static void readFileCharArrDemo(){
+        File file = new File("file_write.txt");
+        char[] fileData = new char[(int)file.length()];
+        try (FileReader fileReader = new FileReader(file)){
+            int x = fileReader.read(fileData);
+            while(x != -1) {
+                System.out.print(fileData);
+                x = fileReader.read(fileData);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -34,19 +34,24 @@ public class _03_File_Writer {
             Important Methods Present in FileWriter
             =======================================
             write(int ch)
+            =============
             To write a single character to the file.
 
             write(char[] ch)
+            ================
             To write an array of character to the file.
 
             write(String ch)
+            ================
             To write a string to the file.
 
             flush()
+            =======
             To give the guarantee that total data including last character will be returned to
             the file.
 
             close()
+            =======
             To close the FileWriter object after completion of writing the data to the file.
         */
 
@@ -64,7 +69,7 @@ public class _03_File_Writer {
             Points to Remember
             ==================
             The main problem with the FileWriter is, we have to insert line separator (\n) manually
-            and which is varied from system to system. It’s difficulty to the Programmer, we can
+            and which is varied from system to system. It's difficulty to the Programmer, we can
             solve this problem using BufferedWriter and PrintWriter classes.
         */
     }
