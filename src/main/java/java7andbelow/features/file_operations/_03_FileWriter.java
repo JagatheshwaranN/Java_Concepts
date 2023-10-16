@@ -3,7 +3,7 @@ package java7andbelow.features.file_operations;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class _03_File_Writer {
+public class _03_FileWriter {
 
     public static void main(String[] args) {
 
