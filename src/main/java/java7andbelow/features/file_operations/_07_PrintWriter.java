@@ -44,7 +44,8 @@ public class _07_PrintWriter {
 
             flush()
             =======
-            To give the guarantee that total data including last character will be returned to the file.
+            To give the guarantee that total data including last character will be returned to
+            the file.
 
             close()
             =======
@@ -60,7 +61,7 @@ public class _07_PrintWriter {
 
             print(boolean b)
             ================
-            To write boolean value to the file.
+            To write a boolean value to the file.
 
             print(double d)
             ===============
@@ -80,7 +81,7 @@ public class _07_PrintWriter {
 
             println(boolean b)
             ==================
-            To write boolean value to the file and add new line.
+            To write a boolean value to the file and add new line.
 
             println(double d)
             =================
@@ -114,13 +115,13 @@ public class _07_PrintWriter {
             1.	BufferedWriter
             2.	PrintWriter
             3.	OutputStreamWriter
-            1.	FileWriter
+                1.	FileWriter
 
             Reader (Abstract Class)
             =======================
             1.	BufferedReader
             2.	InputStreamReader
-            1.	FileReader
+                1.	FileReader
         */
     }
 }
