@@ -91,6 +91,7 @@ class SerializeDeserializeDemo {
             ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
             outputStream.writeObject(bus);
             outputStream.writeObject(car);
+            outputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -101,15 +102,22 @@ class SerializeDeserializeDemo {
         try {
             FileInputStream fileInputStream = new FileInputStream("serialize1.txt");
             ObjectInputStream inputStream = new ObjectInputStream(fileInputStream);
-            Object object = inputStream.readObject();
-            if (object instanceof Bus b1) {
-                System.out.println(b1.wheels);
+            Object object;
+            while ((object = inputStream.readObject()) != null) {
+                if (object instanceof Bus b1) {
+                    System.out.println(b1.wheels);
+                }
+                if (object instanceof Car c1) {
+                    System.out.println(c1.wheels);
+                }
             }
-            if (object instanceof Car c1) {
-                System.out.println(c1.wheels);
-            }
+            inputStream.close();
+        }
+        catch (EOFException e) {
+            System.out.println("End of File is reached");
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
+
 }
