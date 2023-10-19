@@ -21,7 +21,7 @@ public class _02_Transient_Keyword {
             Transient vs Static
             ===================
             Static variable is not part of the object state and hence it won't participate in
-            serialization due to this declaring static the variable as transient, is of no use.
+            serialization due to this declaring static variable as transient, is of no use.
 
             Transient vs Final
             ==================
@@ -50,20 +50,7 @@ public class _02_Transient_Keyword {
             Cat c2 = (Cat)ois.readObject();
 
             If we don't know the order of objects in Serialization. Then we have to follow
-            below approach.
-
-            FileInputStream fis = new FileInputStream("abc.txt");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            Object obj = ois.readObject();
-
-            if (obj instanceOf Dog) {
-            Dog d2 = (Dog)ois.readObject();
-                // Perform Dog specific functionality
-            }
-            else if (obj instanceOf Cat) {
-            Cat c2 = (Cat)ois.readObject();
-                // Perform Cat specific functionality
-            }
+            below (SerializeDeserializeDemo) approach.
         */
         SerializeDeserializeDemo.serializationDemo();
     }

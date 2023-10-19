@@ -14,13 +14,13 @@ public class _01_Serialization_Intro {
             form into either File supported form / Network supported form.
 
             By using FileOutputStream and ObjectOutputStream classes we can implement Serialization.
-            The ObjectOutputStream uses FileOutputStream to send the object into file.
+            The ObjectOutputStream uses FileOutputStream to send the object into the file.
 
             Deserialization
             ===============
             The process of reading the state of an object from the file is called as Deserialization.
             But, strictly speaking, it is the process of converting an object from either File
-            supported form or Network supported form into Java supported form.
+            supported form or Network supported form into the Java supported form.
 
             By using FileInputStream and ObjectInputStream classes we can implement Deserialization.
             The ObjectInputStream uses FileInputStream to read the object from file.
