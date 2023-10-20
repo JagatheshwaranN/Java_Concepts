@@ -23,7 +23,7 @@ public class _03_ObjectGraph_In_Serialization {
             ====
             In the below program, Gadget, Smart Gadget and SmartPhone classes are Serializable as
             they implement Serializable interface. So, the three classes were serialized and forms
-            Object Graph.
+            the Object Graph.
 
             If we are not making the SmartPhone class as Serializable, then we will get the runtime
             exception saying NotSerializableException.
