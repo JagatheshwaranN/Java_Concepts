@@ -45,9 +45,9 @@ public class _04_Customized_Serialization {
             by the JVM.
 
             While performing the object serialization, we have to do extra work in the corresponding
-            class we have to define the above methods. For example, while performing account object
-            serialization, if we required to do any extra work in the account class, we have to
-            define the above methods.
+            class. So, we have to define the above methods. For example, while performing account
+            object serialization, if we required to do any extra work in the account class, we have
+            to define the above methods.
         */
         CustomSerialize.customSerializeDemo();
         /*
@@ -143,16 +143,17 @@ class CustomSerialize {
             throw new RuntimeException(e);
         }
 
+        Account1 account1;
         try{
             FileInputStream fileInputStream = new FileInputStream("account.txt");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            Account1 account1 = (Account1)objectInputStream.readObject();
-            System.out.println("Account Username : " + account1.username);
-            System.out.println("Account Password : " + account1.password);
-            System.out.println("Account Pin : " + account1.pin);
+            account1 = (Account1)objectInputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Account Username : " + account1.username);
+        System.out.println("Account Password : " + account1.password);
+        System.out.println("Account Pin : " + account1.pin);
 
     }
 
