@@ -3,7 +3,7 @@ package java7andbelow.features.regular_expression;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class _04_CharacterClass {
+public class _02_CharacterClass {
 
     public static void main(String[] args) {
 
