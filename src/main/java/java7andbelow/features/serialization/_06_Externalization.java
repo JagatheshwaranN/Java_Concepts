@@ -50,7 +50,7 @@ public class _06_Externalization {
         /*
             Note:
             =====
-            In serialization, transient keyword will play a role but in Externalization transient
+            In Serialization, transient keyword will play a role but in Externalization transient
             keyword won't play any role. Of course, transient keyword is not required in externalization.
         */
 

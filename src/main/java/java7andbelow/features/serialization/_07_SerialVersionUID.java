@@ -46,7 +46,7 @@ public class _07_SerialVersionUID {
             In the below programs, after serialization, if we perform any change to the .class file
             at receiver side we won't get any problem at the time of deserialization.
 
-            In this case, sender and receiver not required to maintain same JVM versions.
+            In this case, sender and receiver are not required to maintain the same JVM versions.
 
             Note:
             =====
