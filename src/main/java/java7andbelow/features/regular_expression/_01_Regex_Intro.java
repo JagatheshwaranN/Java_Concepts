@@ -36,7 +36,7 @@ public class _01_Regex_Intro {
             equivalent object of pattern. We can create a pattern object by using the compile()
             method of pattern class.
 
-            public static Pattern compiles(String re)
+            public static Pattern compile(String re)
 
             Example,
             Pattern pattern = Pattern.compile("ab");
