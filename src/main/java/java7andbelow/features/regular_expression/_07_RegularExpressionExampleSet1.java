@@ -3,7 +3,7 @@ package java7andbelow.features.regular_expression;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class _07_RegularExpressionExamples {
+public class _07_RegularExpressionExampleSet1 {
 
     public static void main(String[] args) {
 
@@ -48,13 +48,13 @@ class MobileNumber {
         pattern = Pattern.compile("(0|91)?[7-9][0-9]{9}");
         matcher = pattern.matcher("917896543210");
         if(matcher.find() && matcher.group().equals("917896543210")){
-            System.out.println("Valid 11 Digit Mobile Number");
+            System.out.println("Valid 12 Digit Mobile Number");
         } else {
             System.out.println("Invalid Mobile Number");
         }
         matcher = pattern.matcher("07896543210");
         if(matcher.find() && matcher.group().equals("07896543210")){
-            System.out.println("Valid 12 Digit Mobile Number");
+            System.out.println("Valid 11 Digit Mobile Number");
         } else {
             System.out.println("Invalid Mobile Number");
         }
