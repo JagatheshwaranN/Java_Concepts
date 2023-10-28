@@ -39,7 +39,7 @@ public class _02_Collection_Intro {
             If we want to represent a group of individual objects as a single entity, then we
             should go for collection. Collection interface defines the most common methods
             which are applicable for any collection object. In general, collection interface
-            is considered as root interface of a collection framework. There is no concrete
+            is considered as a root interface of a collection framework. There is no concrete
             class that implements collection interface directly.
 
             Collection vs Collections
@@ -50,5 +50,16 @@ public class _02_Collection_Intro {
             Collections are a utility class present in the java.util package to define several
             utility methods for Collection objects like sorting, searching, etc.
         */
+
+        /*
+            The following are legacy characters present in the Collection framework as below,
+            1. Enumeration (I)
+            2. Dictionary (AC)
+            3. Vector (C)
+            4. Stack (C)
+            5. Hashtable (C)
+            6. Properties (C)
+        */
     }
+
 }
