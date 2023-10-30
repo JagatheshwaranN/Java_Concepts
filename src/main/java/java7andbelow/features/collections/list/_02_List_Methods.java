@@ -10,8 +10,8 @@ public class _02_List_Methods {
             We can preserve insertion order via index, and we can differentiate duplicate
             objects by using index. Hence, index will play a crucial role in the List.
 
-            List interface defines the following specific methods.
-            ======================================================
+            List interface defines the following List specific methods.
+            ===========================================================
             void add(int index, Object o)
             boolean addAll(int index, Collection c)
             Object get(int index)
@@ -22,4 +22,5 @@ public class _02_List_Methods {
             ListIterator listIterator()
         */
     }
+
 }
