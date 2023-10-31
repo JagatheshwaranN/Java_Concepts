@@ -37,5 +37,24 @@ public class _03_Collection_Difference {
             3. Relatively performance is low.
             4. Introduced in 1.0 version and its legacy.
         */
+
+        /*
+            Difference b/w ArrayList and LinkedList
+            =======================================
+            ArrayList
+            =========
+            1. ArrayList is the best choice if our frequent operation is retrieval operation.
+            2. ArrayList is the worst choice if our frequent operation is insertion/deletion in
+               the middle because internally several shift operations are performed.
+            3. Elements are stored in the consecutive memory locations.
+
+            LinkedList
+            ==========
+            1. LinkedList is the best choice if our frequent operation is insertion/deletion in
+               the middle.
+            2. LinkedList is the worst choice if our frequent operation is retrieval operation.
+            3. Elements are not stored in the consecutive memory locations.
+        */
     }
+
 }
