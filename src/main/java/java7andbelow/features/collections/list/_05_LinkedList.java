@@ -18,7 +18,7 @@ public class _05_LinkedList {
             LinkedList is the best choice if our frequent operation is insertion/deletion
             in the middle.
 
-            LinkedList is the worst choice if our frequent operation is retrieval operations.
+            LinkedList is the worst choice if our frequent operation is retrieval operation.
         */
 
         /*
