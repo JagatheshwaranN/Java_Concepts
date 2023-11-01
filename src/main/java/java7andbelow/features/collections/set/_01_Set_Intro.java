@@ -39,5 +39,12 @@ public class _01_Set_Intro {
 
             1. Tree Set (C) 1.2 v
         */
+
+        /*
+            Set Methods
+            ===========
+            Set interface doesn't contain any new method, and we have to use only collection
+            interface methods.
+        */
     }
 }
