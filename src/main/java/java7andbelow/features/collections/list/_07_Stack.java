@@ -26,12 +26,12 @@ public class _07_Stack {
             To remove and return top of the stack.
 
             Object peek()
-            To return top of the stack without removal of object.
+            To return top of the stack without removal of an object.
 
-            boolean empty()
+            Boolean empty()
             Returns true if the stack is empty.
 
-            int search(Object o)
+            Int search(Object o)
             Returns offset if the element is available otherwise returns -1.
         */
         StackDemo.demo();
@@ -53,4 +53,5 @@ class StackDemo {
         System.out.println(stack.peek());
         System.out.println(stack);
     }
+
 }

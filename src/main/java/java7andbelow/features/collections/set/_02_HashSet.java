@@ -1,5 +1,7 @@
 package java7andbelow.features.collections.set;
 
+import java.util.HashSet;
+
 public class _02_HashSet {
 
     public static void main(String[] args) {
@@ -52,5 +54,41 @@ public class _02_HashSet {
             For example, Fill Ratio 0.75 means after filling 75% ratio, a new hashset object
             will be created automatically.
         */
+        HashSetDemo.demo();
     }
+}
+
+class HashSetDemo {
+
+    public static void demo() {
+
+        HashSet<Object> hashSet = new HashSet<>();
+        System.out.println(hashSet.isEmpty());
+        hashSet.add("A");
+        hashSet.add('b');
+        hashSet.add(2);
+        System.out.println(hashSet.size());
+        hashSet.remove(2);
+        System.out.println(hashSet.contains('b'));
+        System.out.println(hashSet);
+        System.out.println("*************************");
+        HashSet<Object> hashSet1 = new HashSet<>();
+        hashSet1.addAll(hashSet);
+        hashSet1.add("C");
+        hashSet1.add("D");
+        hashSet1.add("E");
+        System.out.println(hashSet1);
+        hashSet1.retainAll(hashSet);
+        System.out.println(hashSet1);
+        System.out.println(hashSet1.containsAll(hashSet));
+        hashSet1.removeAll(hashSet);
+        hashSet1.add(1);
+        hashSet1.add(2);
+        hashSet1.add(3);
+        System.out.println(hashSet1);
+        hashSet1.iterator().forEachRemaining(System.out::println);
+        hashSet1.clear();
+        System.out.println(hashSet1);
+    }
+
 }

@@ -11,7 +11,7 @@ public class _08_Enumeration {
             The 3 cursors of Java
             =====================
             If we want to get the objects one by one from the collection. Then we should go
-            for Cursors. There are 3 types of cursors available in Java as below,
+            for Cursors. There are 3 types of cursors available in Java as below.
 
             1.	Enumeration
             2.	Iterator
@@ -22,12 +22,12 @@ public class _08_Enumeration {
             We can use enumeration to get the object one by one from a legacy collection object.
             We can create an enumeration object by using the elements method of vector class.
 
-            Public Enumeration elements ();
+            Public Enumeration elements();
 
             Enumeration Methods
             ===================
-            public boolean hasMoreElements ();
-            public Object nextElement ();
+            public boolean hasMoreElements();
+            public Object nextElement();
         */
         EnumerationDemo.demo();
     }

@@ -55,6 +55,22 @@ public class _03_Collection_Difference {
             2. LinkedList is the worst choice if our frequent operation is retrieval operation.
             3. Elements are not stored in the consecutive memory locations.
         */
+
+        /*
+            Difference b/w HashSet and LinkedHashSet
+            ========================================
+            HashSet
+            =======
+            1. The underlying DSA is Hashtable.
+            2. Insertion Order is not preserved.
+            3. Introduced in 1.2 v
+
+            LinkedHashSet
+            =============
+            1. The underlying DSA is a combination of LinkedList and Hashtable.
+            2. Insertion Order preserved.
+            3. Introduced in 1.4 v
+        */
     }
 
 }
