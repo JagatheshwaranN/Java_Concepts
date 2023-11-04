@@ -49,11 +49,10 @@ public class _05_TreeSet {
 
             Note:
             =====
-            Until 1.6 v, null is allowed as a first element to the empty TreeSet, but from 1.7 v
-            onwards null is not allowed even as the first element i.e., (A null such type of story
-            is not applicable for TreeSet from 1.7 v).
+            Until Java 1.6 v, null is allowed as a first element to the empty TreeSet, but from
+            1.7 v onwards null is not allowed even as the first element i.e., (A null such type
+            of story is not applicable for TreeSet from Java 1.7 v).
         */
-
 
         /*
             Comparable
