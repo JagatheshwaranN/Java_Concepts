@@ -11,6 +11,9 @@ public class _01_Map_Intro {
             objects as key value pairs, then we should go for Map.Both Key and Value are objects
             only.Duplicate keys are not allowed, but values can be duplicated.
 
+            Each key-value pair is called as an Entry.Hence, Map is considered as a collection
+            of Entry objects.
+
             Map (I) 1.2 v
 
             The classes which implement Map interface are as below.
