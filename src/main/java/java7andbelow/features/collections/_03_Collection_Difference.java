@@ -71,6 +71,57 @@ public class _03_Collection_Difference {
             2. Insertion Order preserved.
             3. Introduced in 1.4 v
         */
+
+        /*
+            Comparison of Comparable & Comparator
+            =====================================
+            Comparable
+            ==========
+            1. It is meant for Default natural sorting order.
+            2. Present in java.lang package.
+            3. It defines only one method compareTo().
+            4. String and all Wrapper classes implement comparable interface.
+
+            Comparator
+            ==========
+            1. It is meant for customized sorting order.
+            2. Present in java.util package.
+            3. It defines 2 methods compare() and equals().
+            4. The only implemented classes of Comparator are Collator and RuleBasedCollator.
+        */
+
+        /*
+            Comparison of Set Implemented Classes
+            =====================================
+            Property - HashSet
+            ==================
+            Underlying DSA - Hashtable
+            Duplicate Objects - Not allowed
+            Insertion Order - Not preserved
+            Sorting Order - Not applicable
+            Heterogeneous Objects - Allowed
+            Null Acceptance - Allowed
+
+            Property - LinkedHashSet
+            ========================
+            Underlying DSA - Combination of LinkedList and HashTable
+            Duplicate Objects - Not allowed
+            Insertion Order - Preserved
+            Sorting Order - Not applicable
+            Heterogeneous Objects - Allowed
+            Null Acceptance - Allowed
+
+            Property - TreeSet
+            ==================
+            Underlying DSA - Balanced Tree
+            Duplicate Objects - Not allowed
+            Insertion Order - Not preserved
+            Sorting Order - Applicable
+            Heterogeneous Objects - Not allowed
+            Null Acceptance - For Empty TreeSet as First element null is allowed until 1.6 v of java.
+                              From 1.7 v, null is not allowed.
+        */
+
     }
 
 }

@@ -30,9 +30,9 @@ public class _06_ComparatorInterface {
         /*
             Note:
             =====
-            If we are not passing a comparator object in TreeSet h = new TreeSet(new MyComparator()) line,
-            then internally JVM will call compareTo() method which is meant for default natural sorting
-            order.In this case, the output is [0, 5, 10, 15, 20].
+            If we are not passing a comparator object in TreeSet<Object> treeSet = new TreeSet<>(new OwnComparator1())
+            line, then internally JVM will call compareTo() method which is meant for default natural
+            sorting order.In this case, the output is [0, 5, 10, 15, 20].
         */
 
         /*
