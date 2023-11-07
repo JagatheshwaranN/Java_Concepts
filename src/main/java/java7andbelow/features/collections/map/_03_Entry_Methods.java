@@ -14,9 +14,9 @@ public class _03_Entry_Methods {
             interface Map {
 
                 interface Entry {
-                    Object getKey ();
-                    Object getValue ();
-                    Object setValue (Object newObj);
+                    Object getKey();
+                    Object getValue();
+                    Object setValue(Object newObj);
                 }
             }
 

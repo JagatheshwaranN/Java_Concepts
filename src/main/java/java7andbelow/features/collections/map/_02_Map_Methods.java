@@ -14,9 +14,9 @@ public class _02_Map_Methods {
             be replaced with new value and returns old value.
 
             Map map = new Map();
-            m.put(101, 'Alex'); => returns null
-            m.put(102, 'John'); => returns null
-            m.put(101, 'Blake'); => returns Alex
+            map.put(101, 'Alex'); => returns null
+            map.put(102, 'John'); => returns null
+            map.put(101, 'Blake'); => returns Alex
 
             void putAll(Map m)
             ==================
