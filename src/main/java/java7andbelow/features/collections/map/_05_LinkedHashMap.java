@@ -2,60 +2,58 @@ package java7andbelow.features.collections.map;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class _04_HashMap {
+public class _05_LinkedHashMap {
 
     public static void main(String[] args) {
 
         /*
-            HashMap
-            =======
-            1.	The underlying DSA is Hashtable
-            2.	The insertion order is not preserved, and it's based on hashCode of keys.
-            3.	Duplicate keys aren't allowed, but values can be duplicated.
-            4.	Heterogeneous objects allowed for both key and value.
-            5.	Null is allowed for a key only once.
-            6.	Null is allowed for value any number of times.
-            7.	HashMap implements Serializable and Cloneable interfaces.
-            8.	It is the best choice if our frequent operation is searching operation.
+            LinkedHashMap
+            =============
+            LinkedHashMap is a child class of LinkedHashMap. It is exactly the same as LinkedHashMap (including
+            methods and constructors) except the following differences.
 
-            HashMap Constructors
-            ====================
-            HashMap m = new HashMap();
-            Creates an empty HashMap object with default initial capacity 16 and default fill ratio 0.75.
+            LinkedHashMap
+            =============
+            1. The underlying DSA is a combination of LinkedList and Hashtable.
+	        2. Insertion order is preserved.
 
-            HashMap m = new HashMap(int initialCapacity);
-            Creates an empty HashMap object with specified initial capacity 16 and default fill ratio 0.75.
+	        LinkedHashMap Constructors
+            ==========================
+            LinkedHashMap m = new LinkedHashMap();
+            Creates an empty LinkedHashMap object with default initial capacity 16 and default fill ratio 0.75.
 
-            HashMap m = new HashMap(int initialCapacity, float fillRatio);
-            Creates an empty HashMap object with specified initial capacity and fill ratio.
+            LinkedHashMap m = new LinkedHashMap(int initialCapacity);
+            Creates an empty LinkedHashMap object with specified initial capacity 16 and default fill ratio 0.75.
 
-            HashMap m = new HashMap (Map m);
-            Creates an equivalent HashMap object for the given Map.
+            LinkedHashMap m = new LinkedHashMap(int initialCapacity, float fillRatio);
+            Creates an empty LinkedHashMap object with specified initial capacity and fill ratio.
+
+            LinkedHashMap m = new LinkedHashMap (Map m);
+            Creates an equivalent LinkedHashMap object for the given Map.
         */
-        HashMapDemo.demo();
+        LinkedHashMapDemo.demo();
 
         /*
-            To get synchronized version of HashMap object
-            =============================================
-            By default, HashMap is non-synchronized, but we can get synchronized version of HashMap
-            by using the synchronizedMap() method of Collections class.
-            HashMap m = new HashMap();
-            Map m1 = Collections.synchronizedMap(m);
+            Note:
+            =====
+            LinkedHashSet and LinkedHashMap are commonly used for developing
+            cache-based applications.
         */
     }
 
 }
 
-class HashMapDemo {
+class LinkedHashMapDemo {
 
     public static void demo() {
-        Map<String, Object> hashmap = new HashMap<>();
+        Map<String, Object> hashmap = new LinkedHashMap<>();
         hashmap.put("Car", "Benz");
         hashmap.put("Bike", "Honda");
 
-        Map<String, Object> hashmap1 = new HashMap<>();
+        Map<String, Object> hashmap1 = new LinkedHashMap<>();
         hashmap1.put("Name", "Alex");
         hashmap1.put("Age", 28);
         hashmap1.put("Salary", 80000.00);

@@ -122,6 +122,43 @@ public class _03_Collection_Difference {
                               From 1.7 v, null is not allowed.
         */
 
+        /*
+            Difference b/w HashMap and Hashtable
+            ====================================
+            HashMap
+            =======
+            1. Every method present in HashMap is non-synchronized.
+            2. At a time, multiple threads are allowed to operate on HashMap object, and it's not
+               thread safe.
+            3. Relatively performance is high as threads are not required to wait to operate on
+               HashMap object.
+            4. Null is allowed for both keys and values.
+            5. Introduced in 1.2 version.
+
+            Hashtable
+            =========
+            1. Every method present in Hashtable is synchronized.
+            2. At a time, only one thread is allowed to operate on a Hashtable object, and it is
+               thread safe.
+            3. Relatively performance is low as threads are required to wait to operate on a Hashtable
+               object.
+            4. Null is not allowed for both keys and values.
+            5. Introduced in 1.0 version.
+        */
+
+        /*
+            Difference b/w HashMap and LinkedHashMap
+            ========================================
+            HashMap
+            =======
+            1. The underlying DSA is Hashtable.
+            2. Insertion order is not preserved, and it is based on hashCode of Keys.
+
+            LinkedHashMap
+            =============
+            1. The underlying DSA is a combination of LinkedList and Hashtable.
+	        2. Insertion order is preserved.
+        */
     }
 
 }
