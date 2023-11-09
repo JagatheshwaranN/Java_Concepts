@@ -15,14 +15,14 @@ public class _06_IdentityHashMap {
 
             In the case of normal HashMap, JVM will use equals() method to identify
             duplicate keys, which is meant for content comparison.But, in the case of
-            IdentityHashMap, JVM will == operator to identify duplicate keys, which
+            IdentityHashMap, JVM will use == operator to identify duplicate keys, which
             is meant for reference (address) comparison.
         */
         IdentityHashMapDemo.demo();
         /*
             Here, I1 and I2 are duplicate keys because the I1.equals(I2) returns true.
             If we replace HashMap with IdentityHashMap, then I1 and I2 are not duplicate keys
-            because the I1 == I2 returns false.
+            because I1 == I2 returns false.
 
             Note: As of today, the IdentityHashMap is working. I believe it started using
             equals() method.
@@ -48,4 +48,5 @@ class IdentityHashMapDemo {
         identityMap.put(i4, "Alex");
         System.out.println(identityMap);
     }
+
 }

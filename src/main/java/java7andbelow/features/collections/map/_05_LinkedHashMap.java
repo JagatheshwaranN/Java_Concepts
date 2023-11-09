@@ -12,7 +12,7 @@ public class _05_LinkedHashMap {
         /*
             LinkedHashMap
             =============
-            LinkedHashMap is a child class of LinkedHashMap. It is exactly the same as LinkedHashMap (including
+            LinkedHashMap is a child class of HashMap.It is exactly the same as HashMap (including
             methods and constructors) except the following differences.
 
             LinkedHashMap
