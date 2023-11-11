@@ -32,8 +32,8 @@ public class _09_TreeMap {
 
             Note:
             =====
-            The above null acceptance rule is applicable until 1.6 v, and from 1.7 v onwards, null
-            is not allowed for a key. But, for values we can use null any number of times.
+            The above null acceptance rule is applicable until a Java 1.6 version, and from 1.7 version
+            onwards, null is not allowed for a key. But, for values we can use null any number of times.
 
             TreeMap Constructors
             ====================
@@ -66,7 +66,7 @@ class TreeMapDemo {
         treeMap.put("D", 107);
         treeMap.put("E", 125);
         treeMap.put("F", 136);
-        // treeMap.put(null, 140);
+        // treeMap.put(null, 140); - NPE
         System.out.println(treeMap);
         System.out.println(treeMap.firstKey());
         System.out.println(treeMap.lastKey());
