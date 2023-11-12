@@ -29,8 +29,8 @@ public class _10_Hashtable {
             fill ratio 0.75.
 
             Hashtable ht = new Hashtable(int initialCapacity, float fillRatio);
-            Creates an empty hashtable object with specified initial capacity 11 and fill
-            ratio 0.75.
+            Creates an empty hashtable object with specified initial capacity and fill
+            ratio.
 
             Hashtable ht = new Hashtable(Map m);
             Creates an equivalent hashtable object for the given map.
@@ -40,7 +40,7 @@ public class _10_Hashtable {
             The below program provides the output as below.
             {6=C, 16=F, 5=A, 15=D, 2=B, 23=E}
 
-            If we change the hashCode () method of Temp class as below,
+            If we change the hashCode() method of Temp class as below,
             public int hashCode() {
                 return i%9;
             }
@@ -60,7 +60,7 @@ class HashtableDemo {
 
     public static void demo() {
         Hashtable<Object, Object> hashtable = new Hashtable<>();
-        // Hashtable<Object, Object> hashtable = new Hashtable<>(30);
+        // Hashtable<Object, Object> hashtable = new Hashtable<>(25);
         hashtable.put(new Temp1(5), "A");
         hashtable.put(new Temp1(2), "B");
         hashtable.put(new Temp1(6), "C");

@@ -1,5 +1,11 @@
 package java7andbelow.features.collections.map;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 public class _11_Properties {
 
     public static void main(String[] args) {
@@ -13,7 +19,7 @@ public class _11_Properties {
             and even sometimes server restart is also required which creates a big business impact on
             the client.
 
-            We can overcome this problem by using properties file such a type of variable things we
+            We can overcome this problem by using properties file.Those types of variable things we
             have to configure in the properties file. From the properties file, we have to read into
             java program, and we can use those properties. The main advantage of this approach is, if
             there is a change in the properties file, to reflect that change, just redeployment is
@@ -48,5 +54,31 @@ public class _11_Properties {
             void store (OutputStream os, String comment)
             It is used to store properties from java properties object into properties file.
         */
+        PropertiesDemo.demo();
     }
+
+}
+
+class PropertiesDemo {
+
+    public static void demo() {
+        Properties properties = new Properties();
+        try(FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir")+"//data.properties")){
+            properties.load(fileInputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(properties);
+        String userName = properties.getProperty("username");
+        System.out.println(userName);
+        properties.setProperty("email", "john@test.com");
+        System.out.println(properties);
+        properties.propertyNames().asIterator().forEachRemaining(System.out::println);
+        try(FileOutputStream fileOutputStream = new FileOutputStream(System.getProperty("user.dir")+"//data.properties")){
+            properties.store(fileOutputStream, "Properties file updated");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
