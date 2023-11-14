@@ -1,7 +1,6 @@
 package java7andbelow.features.collections.map;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -63,7 +62,8 @@ class PropertiesDemo {
 
     public static void demo() {
         Properties properties = new Properties();
-        try(FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir")+"//data.properties")){
+        try(FileInputStream fileInputStream = new FileInputStream(
+                System.getProperty("user.dir")+"//data.properties")){
             properties.load(fileInputStream);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -74,7 +74,8 @@ class PropertiesDemo {
         properties.setProperty("email", "john@test.com");
         System.out.println(properties);
         properties.propertyNames().asIterator().forEachRemaining(System.out::println);
-        try(FileOutputStream fileOutputStream = new FileOutputStream(System.getProperty("user.dir")+"//data.properties")){
+        try(FileOutputStream fileOutputStream = new FileOutputStream(
+                System.getProperty("user.dir")+"//data.properties")){
             properties.store(fileOutputStream, "Properties file updated");
         } catch (IOException e) {
             throw new RuntimeException(e);
