@@ -16,8 +16,9 @@ public class _01_Queue_Intro {
             be delivered, for this requirement, queue is the best choice.
 
             Usually, Queue follows FIFO order, but based on our requirement, we can implement our own
-            priority order as well (PriorityQueue). From 1.5v onwards, LinkedList class also implements
-            Queue Interface. LinkedList based implementation of Queue always follows FIFO order.
+            priority order as well (PriorityQueue). From Java 1.5 v onwards, LinkedList class also
+            implements Queue Interface. LinkedList based implementation of Queue always follows FIFO
+            order.
 
             Queue (I) 1.5 v
             PriorityQueue (I) 1.5 v

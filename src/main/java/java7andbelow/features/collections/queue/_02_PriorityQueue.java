@@ -24,22 +24,22 @@ public class _02_PriorityQueue {
 
             PriorityQueue Constructors
             ==========================
-            PriorityQueue q = new PriorityQueue ();
+            PriorityQueue q = new PriorityQueue();
             Creates an empty PriorityQueue with default initial capacity 11 and all objects will be
             inserted according to default natural sorting order.
 
-            PriorityQueue q = new PriorityQueue (int initialCapacity);
+            PriorityQueue q = new PriorityQueue(int initialCapacity);
             Creates an empty PriorityQueue with specified initial capacity, and all objects will be
             inserted according to default natural sorting order.
 
-            PriorityQueue q = new PriorityQueue (int initialCapacity, Comparator c);
+            PriorityQueue q = new PriorityQueue(int initialCapacity, Comparator c);
             Creates an empty PriorityQueue with specified initial capacity, and all objects will be
             inserted according to customized sorting order.
 
-            PriorityQueue q = new PriorityQueue (SortedSet s);
+            PriorityQueue q = new PriorityQueue(SortedSet s);
             Creates an equivalent PriorityQueue for the given Sortedset.
 
-            PriorityQueue q = new PriorityQueue (Collection c);
+            PriorityQueue q = new PriorityQueue(Collection c);
             Creates an equivalent PriorityQueue for the given Collection.
 
             PriorityQueue Specific Methods
