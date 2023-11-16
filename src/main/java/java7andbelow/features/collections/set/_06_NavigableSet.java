@@ -24,25 +24,25 @@ public class _06_NavigableSet {
 
             NavigableSet Methods
             ====================
-            floor (e)
+            floo(e)
             It returns the highest element which is <= e.
 
-            lower (e)
+            lower(e)
             It returns the highest element which is < e.
 
-            ceiling (e)
+            ceiling(e)
             It returns the lowest element which is >= e.
 
-            higher (e)
+            higher(e)
             It returns the lowest element which is > e.
 
-            pollFirst ()
+            pollFirst()
             It removes and returns the first element.
 
-            pollLast ()
+            pollLast()
             It removes and returns the last element.
 
-            descendingSet ()
+            descendingSet()
             It returns NavigableSet in reverse order.
         */
         NavigableSetDemo.demo();

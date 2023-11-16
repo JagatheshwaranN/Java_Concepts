@@ -23,25 +23,25 @@ public class _12_NavigableMap {
 
             NavigableMap Methods
             ====================
-            floorKey (e)
+            floorKey(e)
             It returns the highest element which is <= e.
 
-            lowerKey (e)
+            lowerKey(e)
             It returns the highest element which is < e.
 
-            ceilingKey (e)
+            ceilingKey(e)
             It returns the lowest element which is >= e.
 
-            higherKey (e)
+            higherKey(e)
             It returns the lowest element which is > e.
 
-            pollFirstEntry ()
+            pollFirstEntry()
             It removes and returns the first element.
 
-            pollLastEntry ()
+            pollLastEntry()
             It removes and returns the last element.
 
-            descendingMap ()
+            descendingMap()
             It returns NavigableSet in reverse order.
         */
         NavigableMapDemo.demo();
