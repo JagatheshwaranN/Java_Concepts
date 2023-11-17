@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class _08_Collections {
+public class _08_Collections_Sort {
 
     public static void main(String[] args) {
 
@@ -29,7 +29,6 @@ public class _08_Collections {
         */
         CollectionSortDemo.demo();
         CollectionCustomSortDemo.demo();
-
     }
 
 }
