@@ -15,7 +15,7 @@ public class _09_Collections_Search {
             Collections class defines several utility methods for collection objects like sorting,
             searching, reversing, etc.
 
-            Collections class defines the following binarySearch() methods.
+            Collections class defines the following two binarySearch() methods.
 
             public static int binarySearch(List l, Object target);
             If we want the list to search, according to default natural sorting order, then we have to

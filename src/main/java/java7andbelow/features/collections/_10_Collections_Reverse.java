@@ -12,7 +12,7 @@ public class _10_Collections_Reverse {
             Reversing elements of List
             ==========================
             Collections class defines the following reverse methods to reverse elements of the list.
-            public static void reverse (List l)
+            public static void reverse(List l)
         */
         CollectionReverseDemo.demo();
 
