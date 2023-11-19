@@ -20,7 +20,7 @@ public class _13_ConversionOfArrayToList {
 
             Note:
             =====
-            By using the array reference, if we perform any change automatically, that change will
+            By using the array reference, if we perform any change, automatically that change will
             be reflected in the list. Similarly, by using the list reference, if we perform any
             change, that change will be reflected automatically to the array.
 
