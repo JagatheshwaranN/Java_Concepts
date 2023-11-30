@@ -12,8 +12,8 @@ public class _04_ConcurrentHashMap {
             =================
             1.	Underlying DSA is Hashtable
             2.	ConcurrentHashMap allows concurrent read and thread safe update operations.
-            3.	To perform read operation, thread won’t require any lock. But for performing
-                the update operation thread requires lock, but it’s the lock of only a
+            3.	To perform read operation, thread won't require any lock.But for performing
+                the update operation thread requires lock, but it's the lock of only a
                 particular part of Map (Bucket level lock / segment lock).
             4.	Concurrent update achieved by internally dividing Map into smaller portions
                 which is defined by Concurrency lock.
@@ -71,7 +71,7 @@ class ConcurrentHashMapThread extends Thread {
         ConcurrentHashMapThread concurrentHashMapThread = new ConcurrentHashMapThread();
         concurrentHashMapThread.start();
         for (Map.Entry<Integer, String> entry : concurrentHashMap.entrySet()) {
-            System.out.println("Main thread updating list and current object is : "+entry.toString());
+            System.out.println("Main thread retrieving list and current object is : "+entry.toString());
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
