@@ -66,15 +66,11 @@ public class _05_ConcurrentCollection_Differences {
            3. Every read and write operation requires total map object lock.
            4. While one thread iterates the map object, the other threads are not allowed to
               modify a map; otherwise we will get ConcurrentModificationException.
-           5. Iterator of SynchronizedMap is fail-fast, and it raises ConcurrentModification
+           5. Iterator of Hashtable is fail-fast, and it raises ConcurrentModification
               Exception.
            6. Null is allowed for both keys and values.
            7. Introduced in 1.0 version.
-
-
-
-
-
         */
+
     }
 }
