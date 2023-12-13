@@ -135,5 +135,29 @@ public class _05_ConcurrentCollection_Differences {
             6. Introduced in Java 1.0 version.
         */
 
+        /*
+            Difference b/w CopyOnWriteArraySet and SynchronizedSet
+            ======================================================
+            CopyOnWriteArraySet
+            ===================
+            1. It is thread safe because every update operation will be performed
+               on separate cloned copy.
+            2. While one thread iterating a set object, the other threads are allowed to modify
+               a set in a safe manner, and we won't get any ConcurrentModificationException.
+            3. Iterator is fail-safe.
+            4. Iterator of CopyOnWriteArraySet can perform only read operation, and can't perform
+               remove operation otherwise we will get RuntimeException.(UnsupportedOperationException)
+            5. Introduced in Java 1.5 version.
+
+            SynchronizedSet
+            ===============
+            1. It is Thread safe because at a time only one thread can perform operation.
+            2. While one thread iterating a set object, the other threads are not allowed
+               to modify Set.Otherwise, we will get ConcurrentModificationException.
+            3. Iterator is fail fast.
+            4. Iterator can perform both read and remove operations.
+            5. Introduced in Java 1.2 version.
+        */
     }
+
 }
