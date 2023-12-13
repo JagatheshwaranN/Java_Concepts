@@ -76,7 +76,7 @@ class CopyOnWriteArrayListDemo1 {
         ArrayList<Object> arrayList = new ArrayList<>();
         arrayList.add("A");
         arrayList.add("D");
-        copyOnWriteArrayList.addAll(arrayList);
+        copyOnWriteArrayList.addAllAbsent(arrayList);
         System.out.println(copyOnWriteArrayList);
     }
 

@@ -72,5 +72,68 @@ public class _05_ConcurrentCollection_Differences {
            7. Introduced in 1.0 version.
         */
 
+        /*
+            Difference b/w ArrayList and CopyOnWriteArrayList
+            =================================================
+            ArrayList
+            =========
+            1. Its not thread safe.
+            2. While one thread iterating list object, the other threads are not allowed to
+               modify a list.Otherwise, we will get ConcurrentModificationException.
+            3. Iterator is fail fast.
+            4. Iterator of ArrayList can perform remove operation.
+            5. Introduced in Java 1.2 version.
+
+            CopyOnWriteArrayList
+            ====================
+            1. It is not thread safe because every update operation will be performed on the
+               separate cloned copy.
+            2. While one thread iterating list object, the other threads are allowed to modify
+               a list in a safe manner, and we won't get any ConcurrentModificationException.
+            3. Iterator is fail-safe.
+            4. Iterator of CopyOnWriteArrayList can't perform remove operation otherwise we will
+               get RuntimeException.(UnsupportedOperationException)
+            5. Introduced in Java 1.5 version.
+        */
+
+        /*
+            Difference b/w CopyOnWriteArrayList, SynchronizedList, and Vector
+            =================================================================
+            CopyOnWriteArrayList
+            ====================
+            1. We will get Thread safety because every update operation will be performed
+               on separate cloned copy.
+            2. At a time, multiple threads are allowed to access / operate on CopyOnWriteArrayList.
+            3. While one thread iterating list object, the other threads are allowed to modify
+               a list in a safe manner, and we won't get any ConcurrentModificationException.
+            4. Iterator is fail-safe and won't raise any ConcurrentModificationException.
+            5. Iterator of CopyOnWriteArrayList can't perform remove operation otherwise we will
+               get RuntimeException.(UnsupportedOperationException)
+            6. Introduced in Java 1.5 version.
+
+            SynchronizedList
+            ================
+            1. We will get Thread safety by locking a total map object.
+            2. At a time, only one thread is allowed to perform any operation on a map object.
+            3. While one thread iterates the map object, the other threads are not allowed to
+               modify a map; otherwise we will get ConcurrentModificationException.
+            4. Iterator of SynchronizedMap is fail-fast, and it raises ConcurrentModification
+               Exception.
+            5. Iterator can perform remove operation.
+            6. Introduced in Java 1.2 version.
+
+            Vector
+            =====
+            1. We will get Thread safety because at a time, only one thread is allowed to access
+               a Vector object.
+            2. At a time, only one thread is allowed to perform any operation on a vector object.
+            3. While one thread iterates the vector object, the other threads are not allowed to
+               modify a vector; otherwise we will get ConcurrentModificationException.
+            4. Iterator of vector is fail-fast, and it raises ConcurrentModification
+               Exception.
+            5. Iterator can perform remove operation.
+            6. Introduced in Java 1.0 version.
+        */
+
     }
 }
