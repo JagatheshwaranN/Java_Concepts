@@ -28,10 +28,10 @@ public class _07_CopyOnWriteArraySet {
         /*
             CopyOnWriteArraySet Constructors
             ================================
-            CopyOnWriteArraySet s = new CopyOnWriteArraySet ();
+            CopyOnWriteArraySet s = new CopyOnWriteArraySet();
             Creates an empty CopyOnWriteArraySet object.
 
-            CopyOnWriteArraySet s = new CopyOnWriteArraySet (Collection c);
+            CopyOnWriteArraySet s = new CopyOnWriteArraySet(Collection c);
             Creates an equivalent CopyOnWriteArraySet object for the given Collection.
         */
 
