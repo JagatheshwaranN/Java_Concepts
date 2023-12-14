@@ -1,5 +1,8 @@
 package java7andbelow.features.generics;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class _01_NeedForGenerics {
 
     public static void main(String[] args) {
@@ -61,6 +64,40 @@ public class _01_NeedForGenerics {
             String name1 = (String)al.get(0);
             Hence, the type casting is a bigger headache in collections.
         */
+        ArrayDemo.demo();
+        ArrayListDemo.demo();
+    }
+
+}
+
+class ArrayDemo {
+
+    public static void demo() {
+        String[] strArray = new String[10];
+        strArray[0] = "java";
+        strArray[1] = "program";
+        // strArray[2] = Integer.valueOf(10); // Compile Time Error
+        System.out.println(Arrays.toString(strArray));
+
+        String word = strArray[0];
+        System.out.println(word);
+    }
+
+}
+
+class ArrayListDemo {
+
+    @SuppressWarnings("rawtypes")
+    public static void demo() {
+        ArrayList arrayList = new ArrayList();
+        arrayList.add("java");
+        arrayList.add("program");
+        arrayList.add(10);
+        System.out.println(arrayList);
+
+        // String word = arrayList.get(0); // CompileTimeError: Incompatible Types
+        String word = (String) arrayList.get(0);
+        System.out.println(word);
     }
 
 }

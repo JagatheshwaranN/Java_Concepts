@@ -1,5 +1,7 @@
 package java7andbelow.features.generics;
 
+import java.util.ArrayList;
+
 public class _02_Generics_Intro {
 
     public static void main(String[] args) {
@@ -30,5 +32,22 @@ public class _02_Generics_Intro {
             al.add("Alex");
             String name1 = al.get(0);
         */
+        GenericArrayListDemo.demo();
     }
+
+}
+
+class GenericArrayListDemo {
+
+    public static void demo() {
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("java");
+        arrayList.add("program");
+        // arrayList.add(10); // Compile Time Error
+        System.out.println(arrayList);
+
+        String word = arrayList.get(0);
+        System.out.println(word);
+    }
+
 }
