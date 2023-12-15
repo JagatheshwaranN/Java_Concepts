@@ -10,7 +10,7 @@ public class _02_Generics_Intro {
             Generics Intro
             ==============
             To overcome the above problems of Collections, SUN people introduced the Generics
-            concept in 1.5 version. Hence, the main objectives of Generics are,
+            concept in a Java 1.5 version.Hence, the main objectives of Generics are,
             1.	To provide type safety
             2.	To resolve a type casting problem
 
@@ -18,7 +18,7 @@ public class _02_Generics_Intro {
             ArrayList object as follows.
             ArrayList<String> al = new ArrayList<String>();
 
-            For this ArrayList, we can add only string type objects. By mistake, if you are
+            For this ArrayList, we can add only string type objects. By mistake, if we are
             trying to add any other type of object, then we will get the compile time error.
             al.add("Alex");
             al.add("Blake");

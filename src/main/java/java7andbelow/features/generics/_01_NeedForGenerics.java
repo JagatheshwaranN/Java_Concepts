@@ -20,7 +20,7 @@ public class _01_NeedForGenerics {
             only String type objects, we can choose a String array. By mistake, if we are
             trying to add any other type of object, then we will get compile time error.
 
-            String s = new String[10000];
+            String s = new String[10];
             s[0] = "Alex";
             s[1] = "Blake";
             s[2] = new Integer(10); // Compile Time Error
@@ -49,7 +49,7 @@ public class _01_NeedForGenerics {
             casting because there is a guarantee for the type of elements present inside
             the Array.
 
-            String[] s = new String[10000];
+            String[] s = new String[10];
             s[0] = "Alex";
             String name1 = s[0];
             Hence, at the time of retrieval, type casting is not required.
