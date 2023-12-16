@@ -14,14 +14,14 @@ public class _03_ArrayList_GenericArrayList {
             ArrayList
             =========
             1. It is a non-generic version of ArrayList object.
-            2. For this AL, we can add any type of object and hence it’s not type safe.
+            2. For this AL, we can add any type of object and hence it's not type safe.
             3. At the time of retrieval compulsory, we need to perform type casting.
 
             ArrayList<String>
             =================
             1. It is a generic version of ArrayList object.
             2. For this AL, we can add only String type of objects and hence its type safe.
-            3. At the time of retrieval, we don’t need to perform type casting.
+            3. At the time of retrieval, we don't need to perform type casting.
         */
 
         /*
@@ -29,14 +29,14 @@ public class _03_ArrayList_GenericArrayList {
             ===========
             1. Polymorphism concept is applicable only for base type but not for parameter type.
                Usage of Parent reference to hold a Child object is the concept of polymorphism.
-               ArrayList <String> al = new ArrayList <String>();
-               List <String> al = new ArrayList <String>();
-               Collection<String> al = new ArrayList <String>();
-               ArrayList <Object> al = new ArrayList <String>(); // CE: Incompatible Types
+               ArrayList<String> al = new ArrayList<String>();
+               List<String> al = new ArrayList<String>();
+               Collection<String> al = new ArrayList<String>();
+               ArrayList <Object> al = new ArrayList<String>(); // CE: Incompatible Types
 
             2. For the type parameter, we can provide any class or interface name, but not primitive.
                If we are trying to give primitive, then we will get compile time error.
-               ArrayList <int> al = new ArrayList <int>(); // CE: java: unexpected type
+               ArrayList<int> al = new ArrayList<int>(); // CE: java: unexpected type
         */
         GenericArrayListDeclareDemo.demo();
     }

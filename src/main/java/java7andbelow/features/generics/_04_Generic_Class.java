@@ -1,5 +1,7 @@
 package java7andbelow.features.generics;
 
+import java.util.ArrayList;
+
 public class _04_Generic_Class {
 
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class _04_Generic_Class {
 
             In Java 1.5 version, a generic version of ArrayList class is declared as follows.
 
-            class ArrayList <T> {
+            class ArrayList<T> {
                 add(T t);
                 T get(int index);
             }
@@ -34,7 +36,7 @@ public class _04_Generic_Class {
             ArrayList<String> al = new ArrayList<String>();
 
             For this requirement, compiler considered version of ArrayList class is as follows,
-            class ArrayList <String> {
+            class ArrayList<String> {
                 add(String s);
                 String get(int index);
             }
@@ -57,8 +59,42 @@ public class _04_Generic_Class {
 
             Based on our requirement, we can define our own Generic classes as well.
             Account<Gold> a1 = new Account<Gold>();
-            Account<Platform> a2 = new Account<Platform>();
+            Account<Platinum> a2 = new Account<Platinum>();
         */
+        GenericDemo.demo();
+    }
+
+}
+
+class Generic<T> {
+    T object;
+
+    Generic(T object){
+        this.object = object;
+    }
+
+    public void show(){
+        System.out.println("The type of object : "+object.getClass().getName());
+    }
+
+    public T getObject(){
+        return object;
+    }
+
+}
+
+class GenericDemo {
+    public static void demo(){
+
+        Generic<String> arrayList1 = new Generic<>("Alex");
+        arrayList1.show();
+        System.out.println(arrayList1.getObject());
+        Generic<Integer> arrayList2 = new Generic<>(100);
+        arrayList2.show();
+        System.out.println(arrayList2.getObject());
+        Generic<Boolean> arrayList3 = new Generic<>(true);
+        arrayList3.show();
+        System.out.println(arrayList3.getObject());
     }
 
 }
