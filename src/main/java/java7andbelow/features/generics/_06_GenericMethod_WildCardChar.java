@@ -1,5 +1,7 @@
 package java7andbelow.features.generics;
 
+import java.util.ArrayList;
+
 public class _06_GenericMethod_WildCardChar {
 
     public static void main(String[] args) {
@@ -57,10 +59,26 @@ public class _06_GenericMethod_WildCardChar {
             ArrayList<?> al = new ArrayList<String>();
             ArrayList<? extends Number> al = new ArrayList<Integer>();
             ArrayList<? extends Number> al = new ArrayList<String>(); // CTE : Incompatible Types
-            ArrayList<? Super String> al = new ArrayList<Object>();
+            ArrayList<? super String> al = new ArrayList<Object>();
             ArrayList<?> al = new ArrayList<?>(); // CE: Unexpected Type Found:? Required: class or Interface
-            ArrayList<?> al = new ArrayList<? extends Number>(); // CE: Unexpected Type Found: ? extends Number Required: class or interface
+            ArrayList<?> al = new ArrayList<? extends Number>(); // CE: Unexpected Type Found:? extends Number Required: class or interface
         */
+        GenericWildCardDemo.demo();
+    }
+
+}
+
+class GenericWildCardDemo {
+
+    public static void demo() {
+        ArrayList<String> al1 = new ArrayList<String>();
+        ArrayList<?> al2 = new ArrayList<Integer>();
+        ArrayList<?> al3 = new ArrayList<String>();
+        ArrayList<? extends Number> al4 = new ArrayList<Integer>();
+        // ArrayList<? extends Number> al5 = new ArrayList<String>(); // CTE : Incompatible Types
+        ArrayList<? super String> al6 = new ArrayList<Object>();
+        // ArrayList<?> al7 = new ArrayList<?>(); // CTE: Unexpected Type Found:? Required: class or Interface
+        // ArrayList<?> al = new ArrayList<? extends Number>(); // CTE: Unexpected Type Found:? extends Number Required: class or interface
     }
 
 }

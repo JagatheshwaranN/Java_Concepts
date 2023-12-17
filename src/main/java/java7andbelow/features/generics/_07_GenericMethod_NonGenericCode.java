@@ -49,10 +49,10 @@ public class _07_GenericMethod_NonGenericCode {
             ===========
             The main purpose of Generics is to provide type safety and resolve type
             casting problems. Type safety and Type casting both are applicable at
-            compile time. Hence, Generics concept also applicable only at compile time
-            but not at runtime. At the time of compilation, as last step the generic
-            syntax will be removed and for the JVM Generics syntax won’t be available.
-            Hence, the following declarations are equal.
+            compile time. Hence, Generics concept is also applicable only at compile
+            time but not at runtime. At the time of compilation, as the last step, the
+            generic syntax will be removed and for the JVM Generics syntax won't be
+            available.Hence, the following declarations are equal.
 
             ArrayList al = new ArrayList<String>();
             ArrayList al = new ArrayList<Integer>();
