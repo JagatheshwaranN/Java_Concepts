@@ -86,15 +86,15 @@ class Generic<T> {
 class GenericDemo {
     public static void demo(){
 
-        Generic<String> arrayList1 = new Generic<>("Alex");
-        arrayList1.show();
-        System.out.println(arrayList1.getObject());
-        Generic<Integer> arrayList2 = new Generic<>(100);
-        arrayList2.show();
-        System.out.println(arrayList2.getObject());
-        Generic<Boolean> arrayList3 = new Generic<>(true);
-        arrayList3.show();
-        System.out.println(arrayList3.getObject());
+        Generic<String> generic1 = new Generic<>("Alex");
+        generic1.show();
+        System.out.println(generic1.getObject());
+        Generic<Integer> generic2 = new Generic<>(100);
+        generic2.show();
+        System.out.println(generic2.getObject());
+        Generic<Boolean> generic3 = new Generic<>(true);
+        generic3.show();
+        System.out.println(generic3.getObject());
     }
 
 }

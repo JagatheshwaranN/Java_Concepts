@@ -32,14 +32,16 @@ public class _05_Bounded_Types {
             class Test<T extends Integer>{
             }
             Test<Integer> t1 = new Test<Integer>();
-            Test<String> t2 = new Test<String>(); // CTE Type parameter java.lang.String is not within its bound.
+            Test<String> t2 = new Test<String>(); // CTE: Type parameter java.lang.String is not within its bound.
 
             class Test<T extends Runnable>{
             }
             Test<Runnable> t1 = new Test<Runnable>();
             Test<Thread> t2 = new Test<Thread>();
-            Test<Integer> t3 = new Test<Integer>(); // CTE Type parameter java.lang.Integer is not within its bound.
+            Test<Integer> t3 = new Test<Integer>(); // CTE: Type parameter java.lang.Integer is not within its bound.
 
+            Combo Bounded Types
+            ===================
             We can define bounded types even in combination as well.
             Example,
             class Test<T extends Number & Runnable>{
@@ -65,7 +67,7 @@ public class _05_Bounded_Types {
                 }
                 class Test<T implements Runnable>{ // Invalid
                 }
-                class Test< T Super String>{ // Invalid
+                class Test<T Super String>{ // Invalid
                 }
 
             2.	As a type parameter, we can take any valid java identifier but its convention
