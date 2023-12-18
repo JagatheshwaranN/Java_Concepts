@@ -42,6 +42,7 @@ public class _07_GenericMethod_NonGenericCode {
             then it will start behaving like a generic object. i.e., the location in which
             an object presents, based on that, the behaviour of the object will be defined.
         */
+
         Test.demo();
 
         /*
