@@ -31,7 +31,7 @@ public class _07_GenericMethod_NonGenericCode {
             public <T extends Comparable & Runnable> void m1()
             public <T extends Number & Comparable & Runnable> void m1()
             public <T extends Runnable & Number> void m1() // Invalid, first we should take class then Interface
-            public <T extends Number & Thread> void m1() // Invalid, we can’t extend more than one class
+            public <T extends Number & Thread> void m1() // Invalid, we can't extend more than one class
         */
 
         /*
@@ -115,4 +115,19 @@ class Test {
 //    public void m1 (ArrayList<Integer> al) {
 //    }
 
+    public <T> void m2(){}
+
+    public <T extends Number> void m3(){}
+
+    public <T extends Runnable> void m4(){}
+
+    public <T extends Number & Runnable> void m5(){}
+
+    public <T extends Comparable & Runnable> void m6(){}
+
+    public <T extends Number & Comparable & Runnable> void m7(){}
+
+    // public <T extends Runnable & Number> void m8(){} - Invalid, first we should take class then Interface
+
+    // public <T extends Number & Thread> void m9(){} - Invalid, we can't extend more than one class
 }

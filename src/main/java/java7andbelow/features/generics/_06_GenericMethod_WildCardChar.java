@@ -44,7 +44,7 @@ public class _06_GenericMethod_WildCardChar {
             null because we don't know the type of X exactly. This type of method is the best suitable
             for read only operations.
 
-            4.	m1(ArrayList<? Super X> al)
+            4.	m1(ArrayList<? super X> al)
             ===============================
             Here X can be either class or interface. If X is a class, then we can call this
             method by passing the ArrayList of X type or its superclasses. If X is an interface,
@@ -60,15 +60,15 @@ public class _06_GenericMethod_WildCardChar {
             ArrayList<? extends Number> al = new ArrayList<Integer>();
             ArrayList<? extends Number> al = new ArrayList<String>(); // CTE : Incompatible Types
             ArrayList<? super String> al = new ArrayList<Object>();
-            ArrayList<?> al = new ArrayList<?>(); // CE: Unexpected Type Found:? Required: class or Interface
+            ArrayList<?> al = new ArrayList<?>(); // CTE: Unexpected Type Found:? Required: class or Interface
             ArrayList<?> al = new ArrayList<? extends Number>(); // CE: Unexpected Type Found:? extends Number Required: class or interface
         */
-        GenericWildCardDemo.demo();
+        GenericWildCardCharDemo.demo();
     }
 
 }
 
-class GenericWildCardDemo {
+class GenericWildCardCharDemo {
 
     public static void demo() {
         ArrayList<String> al1 = new ArrayList<String>();
@@ -78,7 +78,7 @@ class GenericWildCardDemo {
         // ArrayList<? extends Number> al5 = new ArrayList<String>(); // CTE : Incompatible Types
         ArrayList<? super String> al6 = new ArrayList<Object>();
         // ArrayList<?> al7 = new ArrayList<?>(); // CTE: Unexpected Type Found:? Required: class or Interface
-        // ArrayList<?> al = new ArrayList<? extends Number>(); // CTE: Unexpected Type Found:? extends Number Required: class or interface
+        // ArrayList<?> al8 = new ArrayList<? extends Number>(); // CTE: Unexpected Type Found:? extends Number Required: class or interface
     }
 
 }
