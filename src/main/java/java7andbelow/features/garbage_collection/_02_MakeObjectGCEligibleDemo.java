@@ -21,6 +21,7 @@ public class _02_MakeObjectGCEligibleDemo {
             Even though there is a reference between objects internally but without
             an external reference, it's of no use and becomes eligible for GC.
         */
+        Test.demo();
 
         /*
             Note
@@ -115,5 +116,3 @@ class Test {
     }
 
 }
-
-
