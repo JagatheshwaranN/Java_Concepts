@@ -19,10 +19,14 @@ public class _02_Locale {
             Locale Constructors
             ====================
             Locale l = new Locale(String lang);
+
+            @Deprecated
             Locale l = new Locale(String lang, String country);
 
+            Locale l = Locale.of(String lang, String country);
+
             Example,
-            Locale l = new Locale ("pa", "IN");
+            Locale l = new Locale("pa", "IN");
 
             Locale class already define some constants to represent some standard Locale.
             We can use these constants directly.
