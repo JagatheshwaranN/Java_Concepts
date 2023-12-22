@@ -65,9 +65,9 @@ public class _04_Finalization {
         /*
             Case 6
             ======
-            The objects which are not using in our program and not eligible for GC.Such a type
+            The objects which are not used in our program and not eligible for GC.Such a type
             of not used objects is called as Memory Leaks.In our program, if memory leaks are
-            present, then the program will be terminated by raising out of memory error.Hence,
+            present, then the program will be terminated by throwing out of memory error.Hence,
             if an object is no longer required, it is highly recommended to make that object
             eligible for GC.
 
@@ -116,7 +116,7 @@ class Case1Demo {
 }
 
 /*
-    In the above program, finalize() method executed 3 times, in those 2 times
+    In the below example, finalize() method executed 3 times, in those 2 times
     explicitly by programmer and one time by the GC.In this case, the output is.
 
     Finalize Method called
@@ -128,11 +128,11 @@ class Case1Demo {
     method call and the object won't be destroyed.If GC calls finalize() method,
     then only an object will be destroyed.
 
-    For example, Init (), service () and destroy () methods are considered as
+    For example, init(), service() and destroy() methods are considered as
     life cycle methods of Servlet.Just before destroying a servlet object, web
-    container calls destroy () method to perform clean-up activities. But based
-    on requirement, we can call destroy () method from init and service, then
-    destroy () method will be executed like a normal method call and a servlet
+    container calls destroy() method to perform clean-up activities.But based
+    on the requirement, we can call destroy() method from init and service, then
+    destroy() method will be executed like a normal method call and a servlet
     object won't be destroyed.
 */
 class Case2Demo {
@@ -153,8 +153,8 @@ class Case2Demo {
 }
 
 /*
-    In the below program, even though object eligible for GC 2 times, but Garbage Collector
-     calls finalize() method only once.
+    In the below example, even though object eligible for GC 2 times, but Garbage
+    Collector calls finalize() method only once.
 */
 class Case4Demo {
     static Case4Demo case4Demo;
@@ -180,9 +180,9 @@ class Case4Demo {
 }
 
 /*
-    If we keep on increasing, the for-loop condition limit at a certain point memory
-    problem will be raised.Then JVM runs GC.GC calls finalize() method on every object
-    separately and destroys that object.
+    In the below example, If we keep on increasing, the for-loop condition limit at
+    a certain point memory problem will be raised.Then JVM runs GC.GC calls finalize()
+    method on every object separately and destroys that object.
 */
 class Case5Demo {
     static int count = 0;
@@ -199,4 +199,3 @@ class Case5Demo {
 //    }
 
 }
-
