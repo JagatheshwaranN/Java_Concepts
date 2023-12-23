@@ -8,7 +8,7 @@ public class _01_Internationalization_Intro {
             I18N Intro
             ==========
             The process of designing web applications in such a way which provides support
-            for various countries and languages and currencies automatically without
+            for various countries, languages, and currencies automatically without
             performing any change in the application, is called as Internationalization.
 
             For example, if the request is coming from India, then the response should be

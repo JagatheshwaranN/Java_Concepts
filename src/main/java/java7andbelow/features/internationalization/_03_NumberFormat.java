@@ -1,11 +1,12 @@
 package java7andbelow.features.internationalization;
 
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Locale;
 
 public class _03_NumberFormat {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         /*
             NumberFormat
@@ -22,8 +23,8 @@ public class _03_NumberFormat {
             To get the NumberFormat object for the default Locale, NumberFormat class
             defines the following methods.
 
-            NumberFormat Mehods
-            ===================
+            NumberFormat Methods
+            ====================
             public static NumberFormat getInstance();
             public static NumberFormat getCurrencyInstance();
             public static NumberFormat getPercentInstance();
@@ -60,7 +61,7 @@ public class _03_NumberFormat {
             public void setMaximumFractionDigits(int n)
             public void setMinimumFractionDigits(int n)
             public void setMaximumIntegerDigits(int n)
-            public void setMaximumIntegerDigits(int n)
+            public void setMinimumIntegerDigits(int n)
 
         */
 
@@ -71,19 +72,36 @@ public class _03_NumberFormat {
 
 class NumberFormatDemo {
 
-    public static void demo1() {
+    public static void demo1() throws ParseException {
 
         double val = 123456.789;
         NumberFormat numberFormat = NumberFormat.getCurrencyInstance(Locale.ITALY);
         System.out.println("Italy format : " + numberFormat.format(val));
+
         numberFormat = NumberFormat.getCurrencyInstance(Locale.US);
         System.out.println("USA format : " + numberFormat.format(val));
+
         numberFormat = NumberFormat.getCurrencyInstance(Locale.CHINA);
         System.out.println("China format : " + numberFormat.format(val));
 
         Locale locale = Locale.of("ta", "IN");
         NumberFormat numberFormat1 = NumberFormat.getCurrencyInstance(locale);
         System.out.println("India format : " + numberFormat1.format(val));
+
+        numberFormat = NumberFormat.getInstance();
+        System.out.println(numberFormat.format(val));
+
+        numberFormat = NumberFormat.getCurrencyInstance();
+        System.out.println(numberFormat.format(val));
+
+        numberFormat = NumberFormat.getNumberInstance();
+        System.out.println(numberFormat.format(val));
+
+        numberFormat = NumberFormat.getPercentInstance();
+        System.out.println(numberFormat.format(val));
+
+        numberFormat = NumberFormat.getInstance();
+        System.out.println(numberFormat.parse("123,456.789"));
     }
 
     public static void demo2() {
