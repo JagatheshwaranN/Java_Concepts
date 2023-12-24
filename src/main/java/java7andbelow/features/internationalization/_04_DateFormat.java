@@ -44,10 +44,10 @@ public class _04_DateFormat {
             Once we got the DateFormat object, we can call the following
             methods on that object.
 
-            public String format (Date d)
+            public String format(Date d)
             To convert a Java Date form to Locale specific String form.
 
-            public Date parse (String s) throws ParseException
+            public Date parse(String s) throws ParseException
             To convert a Locale specific String form to a Java Date form.
         */
 
