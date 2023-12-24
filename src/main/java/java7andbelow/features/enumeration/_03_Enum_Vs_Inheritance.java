@@ -56,7 +56,8 @@ public class _03_Enum_Vs_Inheritance {
             direct child class of Object. Implements Serializable and Comparable interfaces.
 
         */
-        EnumInterfaceDemo.demo();
+        EnumInterfaceDemo.demo1();
+        EnumInterfaceDemo.demo2();
     }
 
 }
@@ -84,10 +85,38 @@ enum Car implements Vehicle {
     }
 }
 
+interface Color {
+
+    String getColor();
+}
+
+enum BasicColors implements Color {
+    RED("Red"),
+    BLUE("Blue"),
+    GREEN("Green");
+
+    private final String colorName;
+
+    BasicColors(String colorName) {
+        this.colorName = colorName;
+    }
+
+    @Override
+    public String getColor() {
+        return colorName;
+    }
+}
+
 class EnumInterfaceDemo {
 
-    public static void demo() {
+    public static void demo1() {
         Car.SEDAN.start();
         Car.SEDAN.stop();
     }
+
+    public static void demo2() {
+        Color color = BasicColors.GREEN;
+        System.out.println(color.getColor());
+    }
 }
+
