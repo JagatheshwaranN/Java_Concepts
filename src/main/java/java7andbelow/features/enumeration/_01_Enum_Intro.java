@@ -10,11 +10,11 @@ public class _01_Enum_Intro {
             If we want to represent a group of named constants then we should go for enum.
 
             enum Month {
-            JAN, FEB …. DEC;
+            JAN, FEB ... DEC;
             }
 
             The main objective of enum is to define our own data types (enumerated data
-            types). Enum concept introduced in Java 1.5 v when compared with old languages
+            types).Enum concept introduced in Java 1.5v when compared with old languages
             enum, Java enum is more powerful.
 
             Internal implementation of Enum
@@ -42,9 +42,9 @@ public class _01_Enum_Intro {
             }
 
             class Test {
-                public static void main (String[] args) {
+                public static void main(String[] args) {
                     Juice j = Juice.MANGO;
-                    SOP (j);
+                    SOP(j);
                 }
             }
 
@@ -92,7 +92,7 @@ class EnumDemo {
     }
 
     public enum Juice {
-        ORANGE, MANGO;
+        ORANGE, MANGO
     }
 
 }

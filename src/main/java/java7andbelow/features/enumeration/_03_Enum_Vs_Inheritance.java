@@ -8,7 +8,7 @@ public class _03_Enum_Vs_Inheritance {
             Enum Vs Inheritance
             ===================
             1.	Every Enum is always direct child class of java.lang.Enum and
-                hence our Enum can’t extend any other Enum (Because Java won't
+                hence our Enum can't extend any other Enum (Because Java won't
                 provide support for multiple inheritance).
 
             2.	Every Enum is always final implicitly, and hence for our Enum we
@@ -118,5 +118,6 @@ class EnumInterfaceDemo {
         Color color = BasicColors.GREEN;
         System.out.println(color.getColor());
     }
+
 }
 

@@ -37,7 +37,7 @@ class EnumSwitchDemo {
     }
 
     public enum Juice {
-        ORANGE, MANGO;
+        ORANGE, MANGO
     }
 
 }
