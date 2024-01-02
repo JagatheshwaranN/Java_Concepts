@@ -20,7 +20,7 @@ public class _02_Jar_File {
             servlet-api.jar. We have to place this jar file in classpath to compile
             servlet program.
 
-            To run a jdbc program, all dependent classes are available in ojdbc14.jar.
+            To run a jdbc program, all dependent classes are available in ojdbc.jar.
             To run jdbc program, we have to place this jar file in the classpath.
 
             To use log4j in our application, dependent classes are available in log4j.jar.
@@ -31,18 +31,18 @@ public class _02_Jar_File {
             ====================================
             To create a jar file (Zip file)
             ===============================
-            Jar -cvf calc.jar Test.class
-            Jar -cvf calc.jar A.class B.class
-            Jar -cvf calc.jar *.class
-            Jar -cvf calc.jar *.*
+            jar -cvf calc.jar Test.class
+            jar -cvf calc.jar A.class B.class
+            jar -cvf calc.jar *.class
+            jar -cvf calc.jar *.*
 
             To extract a jar file
             =====================
-            Jar -xvf calc.jar
+            jar -xvf calc.jar
 
             To display the table of contents
             ================================
-            Jar -tvf calc.jar
+            jar -tvf calc.jar
 
             Example
             =======
@@ -54,8 +54,8 @@ public class _02_Jar_File {
                 }
             }
 
-            Javac Calc.java
-            Jar -cvf Calc.jar Calc.class
+            javac Calc.java
+            jar -cvf Calc.jar Calc.class
 
             Client's Role
             =============
@@ -64,8 +64,8 @@ public class _02_Jar_File {
                     Calc.add(10, 20);
                 }
             }
-            C:\exercises> Javac -cp D:\Calc.jar Sum.java
-            C:\excercises> Java -cp . ; D:\Calc.jar Sum
+            C:\exercises> javac -cp D:\Calc.jar Sum.java
+            C:\exercises> java -cp . ; D:\Calc.jar Sum
 
             Note:
             =====
@@ -95,7 +95,7 @@ public class _02_Jar_File {
             =======
             import java.util.*;
             class Test {
-                public static void main (String[] args) {
+                public static void main(String[] args) {
                     Properties p = System.getProperties();
                     p.list(System.out);
                 }
@@ -109,7 +109,7 @@ public class _02_Jar_File {
             behavior of Java program.
 
             class Test {
-                public static void main (String[] args) {
+                public static void main(String[] args) {
                     String course = System.getProperty("course");
                         if(course.equals("java")) {
                             SOP (Java information);
