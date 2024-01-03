@@ -47,7 +47,7 @@ public class _05_Path_CPath_JDK_JRE_JVM {
             Javaw (Java without console output)
             ===================================
             We can use a javaw command to run a java class file where SOP statements will
-            be executed but the corresponding output won’t be displayed to the console. In
+            be executed but the corresponding output won't be displayed to the console. In
             general, we can use javaw command to run GUI-based applications.
 
             Javaws (Java Web Start Utility)
@@ -62,4 +62,5 @@ public class _05_Path_CPath_JDK_JRE_JVM {
             and enhancement will become easy because of centralized control.
         */
     }
+
 }

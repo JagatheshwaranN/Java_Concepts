@@ -12,11 +12,11 @@ public class _04_Create_Jar_File {
             import java.awt.*;
             import java.awt.event.*;
             public class JarDemo {
-                Frame f = new Frame ();
+                Frame f = new Frame();
                 f.addWindowListener(new WindowAdapter() {
                         public void windowClose(WindowEvent e) {
                         for (int i=1;i<=10;i++) {
-                        SOP (I’m closing window+i);
+                        SOP (I'm closing window+i);
                         System.exit(0);
                         }
                     });
@@ -54,8 +54,8 @@ public class _04_Create_Jar_File {
             A batch file contains a group of commands, whenever we double-click a
             batch file, then all commands will be executed one by one sequentially.
 
-            Java -cp C:\excercises JarDemo
-            Save the file with extension .bat.
+            Java -cp C:\exercises JarDemo
+            Save the file with extension .bat
         */
     }
 
