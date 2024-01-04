@@ -15,7 +15,7 @@ public class _01_Assertion_Intro {
             To overcome this problem, SUN people introduced Assertions concept in Java 1.4
             version. The main advantage of Assertions when compared with SOPs is after
             fixing the bug, we are not required to remove the Assert statements because
-            they won’t be executed by default at runtime. Based on our requirement,
+            they won't be executed by default at runtime. Based on our requirement,
             we can enable and disable assertions. By default, assertions are disabled.
 
             Hence, the main objective of Assertions is to perform the debugging. Usually,
@@ -75,6 +75,58 @@ public class _01_Assertion_Intro {
         */
         AssertionDemo1.simpleDemo();
         AssertionDemo2.augmentDemo();
+
+        /*
+            Conclusion
+            ==========
+            1.	assert(b): e; e will be executed if and only if first argument is false,
+            i.e., if first argument is true, then second argument won’t be evaluated.
+
+            Example,
+            class Test {
+                public static void main (String[] args) {
+                    int x = 10;
+                    assert(x==10): ++x;
+                    SOP (x);
+                }
+            }
+
+            Javac Test.java
+            Java Test
+            O/P 10
+            Java -ea Test
+            O/P 10
+
+            2.	assert(b): e; For e we can take method call, but void return type method
+            call is not allowed. Otherwise, we will get the compile time error.
+
+            Example,
+            class Test {
+                public static void main (String[] args) {
+                    int x = 10;
+                    assert(x>10): m1();
+                    SOP (x);
+                }
+            }
+            public static int m1 () {
+            return 777;
+            }
+
+            Javac Test.java
+            Java Test
+            O/P 10
+            Java -ea Test
+            RE: AssertionError: 777
+
+            If m1 () method return type is void, then we will get the compile time error
+            saying a void type not allowed here.
+
+            Note:
+            =====
+            Among 2 versions of assertions, it is recommended to use an augmented version
+            because it provides more information for debugging.
+        */
+
     }
 
 }
@@ -89,7 +141,7 @@ public class _01_Assertion_Intro {
 
     Note:
     =====
-    By default, assert statements won’t be executed because the assertions are disabled
+    By default, assert statements won't be executed because the assertions are disabled
     by default. But we can enable the assertions by using an -ea option.
 */
 class AssertionDemo1 {
