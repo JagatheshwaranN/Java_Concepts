@@ -15,7 +15,7 @@ public class _03_UseOfAssertions {
             ===============
             public void withdraws (double amount) {
                 if (amount < 100)
-                    throw new IllegalRequestException ();
+                    throw new IllegalRequestException();
                 else
                 process request;
             }
@@ -26,21 +26,22 @@ public class _03_UseOfAssertions {
                 assert (amount >= 100);
                 process request;
             }
+
             2.	While performing debugging in our program if there is any place where the
                 control is not allowed to reach, i.e., the best place to use assertions.
 
             switch(x) {
-            case1:
-            SOP ("JAN");
-            break;
-            case2:
-            SOP ("FEB");
-            break;
-            case12:
-            SOP ("DEC");
-            break;
-            default:
-                assert(false);
+                case1:
+                    SOP ("JAN");
+                    break;
+                case2:
+                    SOP ("FEB");
+                    break;
+                case12:
+                    SOP ("DEC");
+                    break;
+                default:
+                    assert(false);
             }
 
             3.	It is always inappropriate to validate the public method arguments using the

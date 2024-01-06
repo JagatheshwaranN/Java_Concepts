@@ -27,8 +27,8 @@ public class _04_Case_Study {
 
             class Test {
                 public static void main (String[] args) {
-                boolean assertOn = false;
-                assert (assertOn): assertOn=true;
+                    boolean assertOn = false;
+                    assert(assertOn): assertOn=true;
                     if(assertOn) {
                         SOP (assertOn);
                     }

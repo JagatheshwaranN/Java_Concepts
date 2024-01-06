@@ -20,7 +20,7 @@ public class _05_AssertionError {
                     try {
                         assert (x> 10)
                     }
-                    catch (AssertionError ex) {
+                    catch(AssertionError ex) {
                         SOP (I'm foolish bcoz I'm catching assertion error);
                     }
                     SOP (x);
@@ -29,7 +29,7 @@ public class _05_AssertionError {
 
             Note:
             =====
-            In the case of web application, if we run java program in debug mode automatically
+            In case of web application, if we run java program in debug mode automatically
             assert statements will be executed.
         */
     }
