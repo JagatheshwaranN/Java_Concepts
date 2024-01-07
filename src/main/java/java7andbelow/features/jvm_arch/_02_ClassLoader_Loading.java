@@ -2,7 +2,7 @@ package java7andbelow.features.jvm_arch;
 
 import java.lang.reflect.Method;
 
-public class _02_ClassLoader_Subsystem {
+public class _02_ClassLoader_Loading {
 
     public static void main(String[] args) {
 
