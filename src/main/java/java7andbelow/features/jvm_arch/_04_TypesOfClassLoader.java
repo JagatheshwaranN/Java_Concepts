@@ -27,7 +27,7 @@ public class _04_TypesOfClassLoader {
             Extension class loader
             ======================
             Extension class loader is the child class of Bootstrap class loader. Extension
-            class loader is responsible to load classes from the extension classpath.
+            class loader is responsible for load classes from the extension classpath.
 
             JDK -> JRE -> LIB -> EXT -> *.jar
 

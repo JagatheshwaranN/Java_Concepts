@@ -35,7 +35,7 @@ public class _03_ClassLoader_Linking_Initialization {
             Example,
             class Test {
                 public static void main (String[] args) {
-                    String s = new String(“java”);
+                    String s = new String("java");
                     Student s1 = new Student ();
                 }
             }
