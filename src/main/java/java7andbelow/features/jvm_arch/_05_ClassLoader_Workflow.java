@@ -17,9 +17,9 @@ public class _05_ClassLoader_Workflow {
 
             3. If it is not loaded, then JVM requests a class loader subsystem to load that
                particular class. Then, class loader subsystem handovers the request to
-               application class loader.
+               Application Class Loader.
 
-            4. Application class loader delegates the request to Extension class loader, which
+            4. Application Class Loader delegates the request to Extension Class Loader, which
                in turn delegates the request to Bootstrap Class Loader.
 
             5. Then Bootstrap Class Loader will search in Bootstrap classpath if it is available,
@@ -40,9 +40,9 @@ public class _05_ClassLoader_Workflow {
         /*
             Note:
             =====
-            Bootstrap class loader is not a java object. Hence, we got the null. But extension
-            and application class loaders are java objects. Hence, we are getting the
-            corresponding outputs.
+            Bootstrap Class Loader is not a java object.Hence, we got the null.But
+            Extension and Application Class Loaders are java objects. Hence, we are
+            getting the corresponding outputs.
 
             Class loader subsystem gives the highest priority for BCL, and then ECL and
             followed by ACL.
