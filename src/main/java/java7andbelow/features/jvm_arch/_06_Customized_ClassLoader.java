@@ -32,9 +32,9 @@ public class _06_Customized_ClassLoader {
             }
 
             class Client {
-                public static void main (String[] args) {
-                    Dog d1 = new Dog (); // Loaded by default class loader
-                    CustClassLoader cl = new CustClassLoader ();
+                public static void main(String[] args) {
+                    Dog d1 = new Dog(); // Loaded by default class loader
+                    CustClassLoader cl = new CustClassLoader();
                     cl.loadClass("Dog"); // Loaded by customized class loader
                     ;;;
                     cl.loadClass("Dog");
