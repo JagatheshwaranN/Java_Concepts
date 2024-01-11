@@ -67,20 +67,20 @@ public class _07_Various_Memory_Areas_JVM_Part1 {
             How to set maximum and minimum heap sizes
             =========================================
             Heap memory is finite (fixed) memory but based on our requirement we can set
-            the maximum and minimum heap sizes i.e., we can increase /decrease the heap
+            the maximum and minimum heap sizes i.e., we can increase / decrease the heap
             size based on our requirement. We can use the following flags with java command.
 
-            To set maximum heap size (maxMemory)
-            ====================================
+            To set the maximum heap size (maxMemory)
+            ========================================
             Java -xmx512m HeapMemoryDetails
             The above command will set the maximum heap size as 512 MB.
 
-            To set minimum heap size (totalMemory)
-            =======================================
-            Java -xms64m HeapMemoryDemo
+            To set the minimum heap size (totalMemory)
+            ==========================================
+            Java -xms64m HeapMemoryDetails
             The above command will set the minimum heap size as 64 MB.
 
-            Java -xmx512m -xms64m HeapMemoryDemo
+            Java -xmx512m -xms64m HeapMemoryDetails
             The above command will set the maximum and minimum heap size.
         */
 

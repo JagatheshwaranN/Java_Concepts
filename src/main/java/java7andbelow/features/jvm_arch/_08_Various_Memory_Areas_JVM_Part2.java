@@ -72,5 +72,17 @@ public class _08_Various_Memory_Areas_JVM_Part2 {
             For every thread, JVM will create a separate native method stack. All native method
             calls invoked by the thread will be stored in the corresponding native method stack.
         */
+
+        /*
+            Conclusions
+            ===========
+            Method Area, Heap Area and Stack Area are considered as important memory areas with
+            respect to Programmers.Method Area and Heap Area are per JVM whereas Stack Area, PC
+            Registers and Native Method Stacks are per thread.
+
+            1. Static variables will be stored in the Method Area.
+            2. Instance variables will be stored in the Heap Area.
+            3. Local variables will be stored in the Stack Area.
+        */
     }
 }
