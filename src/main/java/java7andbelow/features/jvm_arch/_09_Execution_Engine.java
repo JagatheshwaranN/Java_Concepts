@@ -18,7 +18,7 @@ public class _09_Execution_Engine {
             and execute that machine code line by line. The problem with interpreter is, it
             interprets every time even the same method invoked multiple times which reduces the
             performance of the system. To overcome this problem, SUN people introduced JIT
-            compiler in 1.1 version.
+            compiler in Java 1.1 version.
 
             JIT Compiler
             ===========
