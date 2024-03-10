@@ -1,0 +1,83 @@
+Questions
+=========
+What is Method Overloading?
+
+How is Method Overloading different from Method Overriding?
+
+What are the criteria for method overloading?
+
+Can we overload methods by changing the return type?
+
+Give an example of method overloading in Java?
+
+Explain the concept of Varargs in method overloading?
+
+How does the compiler determine which method to call during method overloading?
+
+Can methods be overloaded in the same class if they have the same parameters but different return types?
+
+Explain the role of autoboxing and widening in method overloading?
+
+Can you overload methods based on the order of parameters?
+
+What happens if you have two overloaded methods that differ only in the number of parameters,
+but one of them has a varargs parameter?
+
+Consider two overloaded methods, one with a parameter of type int and the other with a parameter
+of type long. If you call the method with an int argument, which method will be invoked?
+
+How does autoboxing and unboxing affect method overloading?
+
+Explain the behavior if you have two overloaded methods, one with a parameter of type Object and
+the other with a parameter of type String, and you pass a null argument?
+
+Can you overload methods in the same class with different access modifiers?
+
+Consider two overloaded methods, one with a parameter of type int[] and the other with varargs of
+type int. If you call the method with multiple int arguments, which method will be invoked?
+
+Explain the behavior if you have two overloaded methods, one with a parameter of type double and
+the other with a parameter of type float, and you pass a float argument?
+
+Can you overload methods by changing only the return type and using generics?
+
+Scenario: Overloaded Methods with Inheritance
+Suppose you have a base class with an overloaded method, and a subclass that overrides one of those
+methods. Explain the rules and considerations when it comes to method overloading and overriding in
+this scenario?
+
+Complex Scenario: Varargs and Array Parameters
+Consider a class with two overloaded methods—one that takes an array of integers and the other that
+takes varargs of integers. If you call the method with multiple integer arguments, how does the
+compiler decide which method to invoke?
+
+Real-world Scenario: API Design
+Imagine you are designing a library or API that involves method overloading. How would you structure
+the overloaded methods to ensure clarity, usability, and avoid potential pitfalls for developers
+using your library?
+
+Scenario: Overloaded Constructors and Methods
+Suppose you have a class with overloaded constructors and overloaded methods. Describe a scenario
+where both constructor and method overloading are used together and explain how the compiler
+resolves method calls?
+
+Complex Scenario: Generics and Method Overloading
+Create a scenario involving generic methods and overloaded methods. Discuss the challenges and
+considerations when dealing with generic types in the context of method overloading?
+
+Scenario: Overloaded Methods with Autoboxing and Widening
+Consider a class with overloaded methods, one that takes a primitive int and another that takes
+an Integer. Explain how autoboxing and widening play a role in method resolution when calling
+these methods?
+
+
+
+
+
+
+
+
+
+
+
+
