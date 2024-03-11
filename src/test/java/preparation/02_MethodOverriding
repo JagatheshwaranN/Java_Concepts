@@ -1,0 +1,21 @@
+Questions
+=========
+What is method overriding in Java?
+
+What are the rules for method overriding in Java?
+
+Can the overridden method be private or static?
+
+What is the @Override annotation used for in method overriding?
+
+Explain the difference between method overloading and method overriding.
+
+What is the significance of the super keyword in method overriding?
+
+Can a subclass override a private method in its superclass?
+
+How does method overriding support polymorphism in Java?
+
+What is covariant return type in method overriding?
+
+Explain the concept of dynamic method dispatch in method overriding.
