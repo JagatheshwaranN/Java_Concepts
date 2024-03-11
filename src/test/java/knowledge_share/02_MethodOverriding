@@ -42,6 +42,7 @@ can be treated as objects of a common superclass.
 9. What is covariant return type in method overriding?
 Answer: Covariant return type allows a subclass method to have a return type that is a subtype of
 the return type of the overridden method in the superclass. This feature was introduced in Java 5.
+Covariant return types only apply to non-primitive types.
 
 10. Explain the concept of dynamic method dispatch in method overriding.
 Answer: Dynamic method dispatch refers to the process where the appropriate overridden method is
@@ -83,10 +84,14 @@ Answer: Not allowed, return type must be same or covariant.
 Answer: No, private methods are not inherited
 
 15. How can you call the superclass version of the overridden method from the subclass?
-Answer: Using the super keyword.
+Answer: Using the super keyword. The super() keyword is used to invoke the overridden method in
+the superclass. It is particularly useful when the subclass wants to extend or modify the behavior
+of the superclass method but still wants to execute the overridden method's functionality.
 
-16. What are the access modifiers' behavior during method overriding?
-Answer: Visibility cannot be decreased.
+16. What are the access modifiers' behavior during method overriding? / Can you override a method
+and change its access level (e.g., from protected to private) in the subclass?
+Answer: No, the access level of the overriding method cannot be more restrictive than the overridden
+method. In other words, you cannot reduce the visibility of the method in the subclass.
 
 17. Can you throw a checked exception in the overriding method that wasn't declared in
 the superclass method?
@@ -120,3 +125,60 @@ public class Main {
     p.printMessage(); // Output: Static method from Child (Method Hiding)
   }
 }
+
+20. If a superclass method throws an exception, can the overridden method in the subclass
+throw a broader exception? Why or why not?
+Answer: No, the overridden method cannot throw a broader exception. It must throw the same
+exception type or a subtype of the exception thrown by the overridden method. This is to
+maintain compatibility with the superclass.
+
+21. Consider a scenario where a superclass and its subclass both have a method with the same
+name and parameters. If an object of the subclass is created and the method is called, which
+method will be executed—superclass or subclass?
+Answer: The method in the subclass will be executed. This is an example of method overriding,
+where the method in the subclass provides a specific implementation that is chosen at runtime
+based on the actual type of the object.
+
+22. What is the difference between hiding a method and overriding it? Provide an example.
+Answer: Hiding a method (using the static keyword) is not the same as overriding it. Hiding
+involves creating a new method with the same name in a subclass, while overriding involves
+providing a specific implementation for a method in the superclass. Hiding does not follow
+the polymorphic behavior associated with method overriding.
+
+23. Explain the concept of final methods in the context of method overriding.
+Answer: If a method in the superclass is marked as final, it cannot be overridden in any
+subclass. This ensures that the method's implementation in the superclass is not modified
+by any subclass. A final method in the superclass cannot be overridden in any subclass.
+The final keyword explicitly indicates that the method's implementation is not allowed
+to be changed.
+
+24. Consider a scenario where a superclass has a private method and a public method with
+the same name. Can the subclass override the public method?
+Answer: No, the subclass cannot override the private method. Method overriding requires
+the overridden method to be visible to the subclass, and private methods are not inherited
+by subclasses. The public method in the superclass is a different method with the same name,
+and the subclass can provide its own implementation for it.
+
+25. What is the role of unchecked exception in method overriding?
+Answer: Unchecked Exceptions (RuntimeExceptions):
+Overriding methods in the subclass can throw unchecked exceptions (runtime exceptions) even
+if the superclass method does not declare them. There are no restrictions on unchecked
+exceptions.
+
+class Superclass {
+    void method() {}
+}
+
+class Subclass extends Superclass {
+    // Valid override with unchecked exception
+    void method() throws NullPointerException {}
+}
+
+
+
+
+
+
+
+
+
