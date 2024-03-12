@@ -174,11 +174,336 @@ class Subclass extends Superclass {
     void method() throws NullPointerException {}
 }
 
+26. Discuss the scenarios in which the super keyword is necessary and beneficial during
+method overriding. Provide examples to illustrate your points?
+Answer: The super keyword in Java is used to refer to the superclass or parent class. It
+becomes necessary and beneficial during method overriding in various scenarios:
 
+Calling Overridden Method:
+==========================
+When a subclass overrides a method from its superclass, using the super keyword allows the
+subclass to explicitly call the overridden method of the superclass. This is useful when
+you want to extend the behavior of the superclass method in the subclass while still
+utilizing the functionality of the superclass method.
 
+class Superclass {
+    void display() {
+        System.out.println("Superclass display method");
+    }
+}
 
+class Subclass extends Superclass {
+    @Override
+    void display() {
+        super.display(); // Calls the overridden method in the superclass
+        System.out.println("Subclass display method");
+    }
+}
 
+public class Main {
+    public static void main(String[] args) {
+        Subclass obj = new Subclass();
+        obj.display();
+    }
+}
+Output:
+Superclass display method
+Subclass display method
 
+Accessing Superclass Members:
+=============================
+In the subclass, if a member variable or method is shadowed by a member in the subclass
+with the same name, you can use super to access the member of the superclass.
+class Superclass {
+    String message = "Hello from Superclass";
 
+    void display() {
+        System.out.println(message);
+    }
+}
+
+class Subclass extends Superclass {
+    String message = "Hello from Subclass";
+
+    @Override
+    void display() {
+        System.out.println(super.message); // Accessing superclass member variable
+        super.display(); // Accessing superclass method
+        System.out.println(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Subclass obj = new Subclass();
+        obj.display();
+    }
+}
+Output:
+Hello from Superclass
+Hello from Superclass
+Hello from Subclass
+
+Invoking Superclass Constructor:
+================================
+When a subclass constructor is called, it automatically invokes the default constructor
+of the superclass. However, if the superclass has parameterized constructors, you can
+use super to explicitly call a specific constructor of the superclass.
+
+class Superclass {
+    int value;
+
+    Superclass(int value) {
+        this.value = value;
+    }
+}
+
+class Subclass extends Superclass {
+    Subclass(int value, int additionalValue) {
+        super(value); // Invoking the superclass constructor
+        this.value += additionalValue;
+    }
+
+    void display() {
+        System.out.println("Value in Subclass: " + value);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Subclass obj = new Subclass(5, 10);
+        obj.display();
+    }
+}
+Output:
+Value in Subclass: 15
+
+27. In a scenario where a class implements multiple interfaces, each with a method of the
+same name but different parameter lists, how can method overriding be achieved, and what
+challenges might arise?
+interface Interface1 {
+  void doSomething(String message);
+}
+
+interface Interface2 {
+  void doSomething(int number);
+}
+
+class MyClass implements Interface1, Interface2 {
+
+  @Override
+  public void doSomething(String message) {
+    System.out.println("Processing message: " + message);
+  }
+
+  @Override
+  public void doSomething(int number) {
+    System.out.println("Processing number: " + number);
+  }
+}
+
+Explanation:
+============
+Interfaces: Two interfaces, Interface1 and Interface2, define a method named doSomething with
+different parameter lists (String and int respectively).
+Class Implementation: MyClass implements both interfaces.
+Method Overriding: The class provides separate implementations for each doSomething method
+using the @Override annotation. This ensures the methods from the interfaces are overridden.
+
+Challenges:
+===========
+No ambiguity: Since the methods have different parameter lists, the compiler can clearly
+identify which method to call based on the provided arguments. There's no conflict during
+overriding.
+
+Clarity: Explicit method names with different parameter lists make the code easier to
+understand and maintain.
+
+28. Consider a situation where a class extends another class and implements an interface, both
+of which have a method with the same name. Discuss the resolution of method invocation and how
+the compiler and runtime determine which method is called?
+
+public class Demo8 {
+
+    public static void main(String[] args) throws IOException {
+        NonBase nonBase = new NonBase();
+        nonBase.display();
+        nonBase.display(5);
+        nonBase.show();
+    }
+
+    static class Base {
+        public void display(){
+            System.out.println("Base Display");
+        }
+
+        public void show(){
+            System.out.println("Base Show");
+        }
+    }
+
+    static class NonBase extends Base implements BAC{
+
+        @Override
+        public void display(){
+            System.out.println("NonBase Display");
+        }
+        @Override
+        public void display(int value) {
+            System.out.println(value);
+        }
+
+        @Override
+        public void show(){
+            System.out.println("NonBase Show");
+        }
+    }
+}
+
+interface BAC {
+    void display(int value);
+
+    void show();
+}
+
+1. Method in the Derived Class Takes Precedence: If a method is defined in the class
+itself (either directly or through inheritance), it takes precedence over methods with
+the same signature in interfaces.
+
+2. If Ambiguity Exists in Interfaces: If the same method is present in multiple interfaces
+implemented by the class, the class must provide its own implementation, resolving the
+ambiguity. If the class doesn't provide an implementation, a compilation error occurs.
+
+Key Points:
+===========
+The compiler prioritizes methods in the current class during method lookup.
+Methods are distinguished based on their parameter lists, allowing for unique implementations.
+This approach enables polymorphism, where the appropriate method is invoked based on the
+arguments provided at runtime.
+
+29. Explain the concept of the "Bridge Method" in the context of method overriding,
+particularly when dealing with generics. Provide an example to demonstrate how bridge methods
+are generated and their significance?
+Answer:  In Java, bridge methods are a concept introduced to ensure type safety when
+dealing with generics and method overriding. They are automatically generated by the
+compiler to maintain compatibility with code written in versions of Java prior to the
+introduction of generics (Java 5 and earlier).
+
+When a class extends or implements a generic type and overrides a method with a generic
+signature, the bridge method is introduced to ensure that the type safety is maintained
+during runtime. This is necessary because generics in Java use type erasure, meaning
+that the actual type information is erased during compilation, and the JVM deals with
+raw types.
+
+In Java, bridge methods come into play when dealing with generics and method overriding.
+Here's a breakdown of the concept:
+
+Bridge Methods:
+===============
+Purpose: Bridge methods are synthetic methods created by the Java compiler to ensure
+compatibility between generic types and method overriding mechanisms.
+
+Scenario: When a subclass inherits from a generic class and provides a more specific
+implementation for a method with a generic type parameter, the compiler might generate
+a bridge method.
+
+Reason for Bridge Methods:
+==========================
+Type Erasure: During compilation, generic type information is erased. This means that
+methods with different generic type parameters might have the same signature after erasure.
+
+Example: Consider a generic class Node<T> with a method setData(T data).
+
+A subclass MyNode extends Node<Integer> and overrides setData(T data) with setData(Integer data).
+
+After erasure, both methods become setData(Object data).
+
+Challenge:
+==========
+Without bridge methods, the compiler wouldn't recognize MyNode.setData(Integer) as an
+override because the erased signatures are identical. This could lead to unexpected
+behavior and potential runtime errors.
+
+Bridge Method in Action:
+========================
+class Node<T> {
+  public void setData(T data) {
+    System.out.println("Setting data in Node: " + data);
+  }
+}
+
+class MyNode extends Node<Integer> {
+  @Override
+  public void setData(Integer data) {
+    System.out.println("Setting data in MyNode: " + data);
+  }
+}
+
+Explanation:
+============
+The compiler recognizes that MyNode.setData(Integer) should override Node.setData(T).
+To bridge the gap between the generic and specific method, the compiler creates a
+bridge method:
+// Bridge method generated by the compiler
+public void setData(Object data) {
+  setData((Integer) data); // Cast to the specific type
+}
+
+Significance:
+=============
+Bridge methods ensure that method overriding works correctly even with generics and
+type erasure. They maintain type safety by casting the argument to the specific type
+expected by the subclass method.
+
+Key Points:
+===========
+Bridge methods are invisible to the programmer and are not explicitly called in the code.
+They are essential for maintaining backward compatibility and ensuring proper polymorphism
+with generics.
+
+30. Discuss the impact of covariant return types on method overriding. Provide insights
+into how it contributes to code flexibility and potential challenges it may introduce?
+Answer: The impact of covariant return types on method overriding includes:
+
+Code Flexibility: Covariant return types allow developers to make their code more expressive
+and flexible by returning a more specific type in the overridden method. This is particularly
+useful when working with subclasses that specialize or refine the behavior of their superclass.
+
+Enhanced Readability: Covariant return types improve code readability as developers can
+clearly see the return type of the overridden method in the subclass without needing to
+cast the result.
+
+While covariant return types offer several advantages, there are a few considerations and
+potential challenges:
+
+Compatibility: Covariant return types are only available in Java 5 and later versions. If you
+need to maintain compatibility with older Java versions, this feature might not be available.
+
+Method Signature: When overriding a method with a covariant return type, it's essential to
+ensure that the method signature (including the method name and parameters) remains the same.
+Otherwise, it would be considered as a new method in the subclass.
+
+Potential for Confusion: While covariant return types can improve expressiveness, misuse or
+overuse might lead to confusion. Developers should use them judiciously and consider the
+overall design of their classes and interfaces.
+
+Potential for Type Casting: Although the compiler ensures type safety, explicit casting might
+be needed when assigning the return value to a superclass variable.
+
+Animal animal = new Dog();
+Animal babyAnimal = animal.getBaby(); // Needs casting for clarity
+
+// Explicit cast to access specific methods of Puppy
+Puppy puppy = (Puppy) babyAnimal;
+puppy.playFetch();
+
+Runtime Class Checks: In certain scenarios, runtime checks might be necessary to determine the
+actual type of the returned object before using subclass-specific methods.
+
+Key Points:
+===========
+Covariant return types offer greater flexibility in method overriding by allowing subclasses
+to return more specific types. This improves code clarity and type safety but might introduce
+the need for casting and runtime checks in specific situations.
 
 
