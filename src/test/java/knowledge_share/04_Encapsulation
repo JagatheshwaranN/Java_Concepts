@@ -1,0 +1,97 @@
+Questions
+=========
+1. What is Encapsulation in Java?
+Encapsulation in Java is the mechanism of wrapping data (variables) and code acting on the
+data (methods) together as a single unit. It restricts direct access to some of the object's
+components, which helps in preventing accidental modification of data and ensures that the
+data remains consistent.
+
+2. Why is Encapsulation important in Java?
+Encapsulation is important in Java for several reasons:
+1. It helps in maintaining the integrity of data by preventing it from being accessed directly.
+2. It enables the implementation of access control through access modifiers.
+3. It facilitates code organization and maintenance by grouping related data and behavior.
+
+3. How do you achieve Encapsulation in Java?
+Encapsulation in Java is achieved by declaring the variables of a class as private and providing
+public getter and setter methods to access and modify these variables, respectively. This way,
+the internal state of the object is protected, and controlled access is provided to the outside
+world.
+
+4. What are the benefits of Encapsulation?
+Benefits of Encapsulation include:
+1. Data Hiding: It hides the internal state of objects and only exposes necessary operations.
+2. Modularity: It promotes modularity by separating concerns and providing clear boundaries for
+components.
+3. Flexibility: It allows the internal implementation details of a class to be changed without
+affecting the code that uses the class.
+4. Security: It prevents unauthorized access and modification of data.
+
+5. Can you explain the principle of "data hiding" in Encapsulation?
+Data hiding in Encapsulation refers to the practice of making the internal state of an object
+inaccessible from outside of the object's definition. This is achieved by declaring the instance
+variables of a class as private, so they cannot be accessed directly from outside the class.
+
+6. What are access modifiers in Java? How do they relate to Encapsulation?
+Access modifiers in Java, such as public, private, protected, and default (package-private),
+are used to control the visibility of classes, variables, methods, and constructors. They play
+a crucial role in Encapsulation by specifying the accessibility of the members of a class.
+
+7. How does Encapsulation contribute to the concept of information hiding?
+Encapsulation contributes to the concept of information hiding by encapsulating the internal
+state of objects and providing controlled access to it. This prevents the details of the
+implementation from being exposed and allows changes to be made to the internal representation
+of objects without affecting the code that uses them.
+
+8. Can you provide an example of Encapsulation in a real-world scenario?
+Example of Encapsulation: Consider a class representing a bank account. It may have private
+instance variables such as accountNumber and balance, along with public methods like deposit()
+and withdraw() to interact with these variables. By encapsulating these variables and methods,
+we ensure that the account data remains consistent and cannot be directly modified from outside
+the class.
+
+9. What happens if we don't use Encapsulation in our Java code?
+Without using Encapsulation, the internal state of objects would be exposed, making them prone
+to accidental modification and manipulation. This could lead to data inconsistency and
+compromise the integrity of the code.
+
+10. Can Encapsulation be achieved without using access modifiers?
+No, Encapsulation cannot be achieved without using access modifiers. Access modifiers are
+essential for controlling the visibility of class members and enforcing Encapsulation
+principles.
+
+11. What is the difference between Encapsulation and Abstraction?
+Encapsulation focuses on bundling the data and methods that operate on the data into a single
+unit, hiding the internal implementation details. Abstraction, on the other hand, focuses on
+hiding the complex implementation details and showing only the essential features of an object.
+While Encapsulation is about data hiding and access control, Abstraction is about simplifying
+the interface.
+
+12. How can we implement Encapsulation in a Java class?
+Encapsulation in a Java class can be implemented by:
+Declaring the instance variables of the class as private.
+Providing public getter and setter methods to access and modify these variables, respectively.
+Controlling access to the internal state of the object through these getter and setter methods.
+
+13. What are the different access levels provided by Java access modifiers?
+Access levels provided by Java access modifiers:
+Private: Accessible only within the same class.
+Default (no modifier): Accessible only within the same package.
+Protected: Accessible within the same package and by subclasses.
+Public: Accessible from any other class.
+
+14. Can you explain the concept of "getter" and "setter" methods in Encapsulation?
+Getter and setter methods in Encapsulation are used to access and modify the private variables
+of a class, respectively. Getter methods retrieve the value of a variable, while setter methods
+set or modify the value of a variable. These methods provide controlled access to the
+encapsulated data.
+
+15. How does Encapsulation help in maintaining code integrity and security?
+Encapsulation helps in maintaining code integrity and security by:
+1. Preventing direct access to internal data, reducing the chances of accidental modification.
+2. Enforcing access control through access modifiers, ensuring that data is accessed and modified
+only through designated methods.
+3. Facilitating code maintenance and evolution by encapsulating implementation details, allowing
+changes to be made without affecting other parts of the codebase.
+4. Enhancing code readability and understandability by providing clear boundaries and encapsulating
+related functionality within classes
