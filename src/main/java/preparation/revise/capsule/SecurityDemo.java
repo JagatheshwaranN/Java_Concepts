@@ -11,24 +11,29 @@ public class SecurityDemo {
         bankAccount.deposit(200);
         System.out.println(bankAccount.getBalance());
     }
+
     static class BankAccount {
 
         private double balance;
 
-        public void setBalance(double balance){
+        public void setBalance(double balance) {
             this.balance = balance;
         }
 
-        public double getBalance(){
+        public double getBalance() {
             return balance;
         }
 
-        public void withDraw(double amount){
-            balance = balance - amount;
+        public void withDraw(double amount) {
+            if (amount > 0 && amount <= balance) {
+                balance = balance - amount;
+            }
         }
 
-        public void deposit(double amount){
-            balance = balance + amount;
+        public void deposit(double amount) {
+            if (amount > 0) {
+                balance = balance + amount;
+            }
         }
     }
 }
