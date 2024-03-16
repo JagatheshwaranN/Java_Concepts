@@ -1,0 +1,187 @@
+Questions
+=========
+1. What is inheritance in Java?
+Inheritance is a mechanism in Java by which one class inherits the properties and behaviors
+(methods) of another class. The class that is inherited from is called the superclass or
+parent class, and the class that inherits is called the subclass or child class.
+
+2. Explain the types of inheritance in Java.
+Java supports four types of inheritance:
+1. Single inheritance: A subclass inherits from only one superclass.
+2. Multilevel inheritance: A subclass inherits from another subclass.
+3. Hierarchical inheritance: Multiple subclasses inherit from a single superclass.
+4. Multiple inheritance (indirectly supported): A subclass inherits from multiple superclasses
+through a chain of inheritance. Java doesn't directly support multiple inheritance, but it can
+be achieved using interfaces.
+
+3. What is method overriding?
+Method overriding is a feature of inheritance where a subclass provides a specific implementation
+for a method that is already defined in its superclass. The method in the subclass must have the
+same signature (name, parameters, and return type) as the method in the superclass.
+
+4. How does method overriding differ from method overloading?
+Method overriding occurs in subclasses when a method with the same signature as a method in the
+superclass is defined. Method overloading occurs within the same class when multiple methods have
+the same name but different parameters.
+
+5. What is the super keyword used for in Java?
+The super keyword in Java is used to refer to the immediate superclass of a class. It can be
+used to access superclass methods, constructors, and instance variables.
+
+6. Can constructors be inherited in Java?
+Constructors are not inherited in Java. However, constructors of the superclass can be invoked
+from the subclass using the super() keyword.
+
+7. What is the final keyword used for in inheritance?
+In the context of inheritance, the final keyword can be used to prevent a class from being
+subclassed. If a method is declared as final, it cannot be overridden in subclasses.
+
+8. Explain the concept of method hiding.
+Method hiding occurs when a static method in a subclass has the same signature as a static
+method in its superclass. In this case, the method in the subclass hides the method in the
+superclass.
+
+9. What is the Object class in Java?
+The Object class is the root class of all Java classes. Every class in Java is directly or
+indirectly derived from the Object class. It provides methods that are common to all Java
+objects, such as equals(), hashCode(), and toString().
+
+10. Can a subclass access private members of its superclass?
+No, a subclass cannot directly access private members (fields or methods) of its superclass.
+They are not visible or accessible in the subclass. However, they can be indirectly accessed
+through public or protected methods defined in the superclass.
+
+11. What are the advantages and disadvantages of using inheritance?
+Advantages of Inheritance:
+==========================
+Code Reuse: Inheritance allows you to reuse code from existing classes, saving development time
+and effort.
+Polymorphism: Inheritance facilitates polymorphism, allowing objects of a subclass to be treated
+as objects of their superclass, providing flexibility and extensibility.
+Easier Maintenance: Inheritance promotes a hierarchical structure, making it easier to organize
+and maintain code.
+
+Disadvantages of Inheritance:
+=============================
+Tight Coupling: Subclasses are tightly coupled to their superclasses, making changes to the
+superclass potentially affect all its subclasses.
+Potential for Fragility: Changes to the superclass implementation can inadvertently break
+functionality in subclasses, leading to unexpected behavior.
+
+12. Describe a scenario where Inheritance might not be the best approach for code reuse?
+Certainly! One scenario where inheritance might not be the best approach for code reuse
+is when there is a relationship between classes that is based more on behavior than on a
+strict "is-a" relationship.
+
+Let's consider a scenario involving different types of vehicles: cars and bicycles.
+
+At first glance, it might seem reasonable to create a superclass called Vehicle and then
+create subclasses Car and Bicycle to inherit common properties and behaviors from Vehicle.
+However, upon closer inspection, we might realize that while both cars and bicycles are
+forms of transportation, they have fundamental differences in behavior and functionality
+that make them less suitable for a strict inheritance hierarchy.
+
+For example:
+Behavioral Differences: Cars and bicycles have fundamentally different behaviors. Cars have
+engines, can accelerate, brake, and have gears. Bicycles, on the other hand, are pedal-powered,
+have no engine, and operate differently in terms of speed control and maneuverability.
+
+Complexity: The behavior and functionality of a car are typically more complex than that of
+a bicycle. Cars have numerous subsystems such as engine management, braking systems,
+transmission, etc., while bicycles are relatively simpler.
+
+Changing Requirements: The requirements for cars and bicycles may evolve independently over
+time. For example, if a new regulation requires all vehicles to have a certain safety feature,
+implementing this in the Vehicle superclass might lead to unnecessary complexity for the
+Bicycle subclass, which doesn't need that feature.
+
+13. What are some potential issues to consider when using Inheritance extensively?
+Using inheritance extensively can lead to several potential issues that developers need
+to consider:
+
+Inheritance Hierarchies Becoming Complex:
+=========================================
+As the number of subclasses and levels of inheritance increases, the inheritance hierarchy
+can become complex and difficult to understand. This complexity can make it challenging to
+maintain and debug code.
+
+Tight Coupling:
+===============
+Extensive use of inheritance can lead to tight coupling between classes, where changes in
+one part of the hierarchy can have unintended effects on other parts. This can increase
+the risk of introducing bugs and make the codebase more fragile.
+
+Inappropriate Subclassing:
+==========================
+Inheritance can lead to the creation of subclasses that inherit behavior that is not
+appropriate for them. This can result in classes that are overly complex or have unnecessary
+dependencies.
+
+Difficulty in Reusability:
+==========================
+Inheritance can sometimes limit reusability because subclasses are tightly bound to their
+superclasses. Changes to a superclass may require corresponding changes to all subclasses,
+reducing the flexibility of the codebase.
+
+Violation of Encapsulation:
+===========================
+Inheritance can sometimes violate the principle of encapsulation by exposing implementation
+details of superclasses to subclasses. This can lead to dependencies between classes that
+should be independent.
+
+Performance Overhead:
+=====================
+Inheritance can introduce performance overhead, especially in languages like Java where method
+dispatch involves runtime lookup. This overhead may become significant in performance-critical
+applications.
+
+Difficulty in Testing:
+======================
+Extensive inheritance hierarchies can make testing more challenging, as it may be necessary
+to test interactions between multiple levels of subclasses. This can increase the complexity
+and time required for testing.
+
+Reduced Flexibility for Change:
+===============================
+Extensive use of inheritance can make it more difficult to modify and extend the codebase.
+Changes to a superclass may require modifications to multiple subclasses, leading to increased
+development time and effort.
+
+14. What is "is-a" relationship in Java, explain with example?
+In Java, an "is-a" relationship refers to a type of relationship between classes where one
+class is a specialized version of another class. This relationship is typically represented
+using inheritance, where a subclass inherits from a superclass.
+
+Here's an example to illustrate the "is-a" relationship:
+// Superclass
+class Animal {
+    public void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+// Subclass
+class Dog extends Animal {
+    public void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+// Subclass
+class Cat extends Animal {
+    public void meow() {
+        System.out.println("Cat is meowing");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();  // Outputs "Animal is eating"
+        myDog.bark(); // Outputs "Dog is barking"
+
+        Cat myCat = new Cat();
+        myCat.eat();  // Outputs "Animal is eating"
+        myCat.meow(); // Outputs "Cat is meowing"
+    }
+}
