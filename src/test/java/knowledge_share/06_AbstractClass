@@ -48,10 +48,12 @@ related classes. Abstract classes can contain fields, constructors, and concrete
 addition to abstract methods. Interfaces, on the other hand, are used to define contracts for
 unrelated classes and support multiple inheritance.
 
-10. Can an abstract class have static methods?
-Yes, an abstract class can have static methods. However, static methods cannot be overridden
-by subclasses. They are useful for defining utility methods that can be accessed directly
-using the class name.
+10. Can you declare an abstract method as private or static?
+Private: No, abstract methods cannot be private. The purpose of an abstract method is to be
+overridden by subclasses, and private methods are not accessible outside the class.
+Static: No, abstract methods cannot be static. Static methods belong to the class itself, not
+instances. Overriding doesn't apply to static methods, and abstract methods require
+implementation in subclasses.
 
 11. Difference between abstract classes and interfaces?
 Both abstract classes and interfaces promote abstraction in Java. However, there are key
@@ -93,3 +95,204 @@ provide default implementations for some methods defined in the interface, allow
 concrete subclasses to override only the necessary methods. This can help reduce
 redundancy in the subclass implementations.
 
+17. Can you create an abstract method with an access modifier (public, protected)?
+Yes, abstract methods can have access modifiers (public, protected)  to control their
+visibility and accessibility by subclasses. Public abstract methods are accessible by
+any subclass, while protected abstract methods are only accessible by subclasses within
+the same package or subclasses extending the class in different packages.
+
+18. Can you create an abstract class with a main method?
+Technically, yes, you can declare a main method in an abstract class. However, it's not
+recommended. Since you cannot directly create objects of an abstract class, the main method
+wouldn't be usable in the typical way. It might be better to move the main method to a
+concrete subclass.
+
+19. What is the default access modifier for an abstract method?
+The default or implicit modifier for abstract method is Public.
+
+20. Describe a scenario where you might use an abstract class with only concrete methods.
+This scenario is less common but can be useful for:
+
+Utility Classes: An abstract class with only static utility methods can be used to group
+related utility functions without the need for creating objects. Subclasses can extend
+this class to add more utility methods specific to their needs.
+
+Template Method Pattern: In this design pattern, an abstract class defines the overall
+structure of an operation with concrete methods for some steps. Subclasses can override
+specific steps to customize the behavior while inheriting the common structure.
+
+21. Explain the concept of abstract class loading and instantiation in Java. How does it
+differ from loading and instantiating concrete classes?
+Abstract classes in Java can be loaded and instantiated like any other class, but with
+some differences. During class loading, the abstract class bytecode is loaded into memory
+by the classloader, but instances of abstract classes cannot be created directly. However,
+concrete subclasses of the abstract class can be instantiated. The instantiation process
+involves creating an object of the concrete subclass, which inherits the abstract class's
+properties and behaviors.
+
+22. Can an abstract class have a non-abstract (concrete) method with the same signature as
+one of its abstract methods? If yes, explain the implications.
+Yes, an abstract class can have a non-abstract method with the same signature as one of its
+abstract methods. This scenario is known as method hiding. When a subclass overrides the
+abstract method and provides a concrete implementation, the non-abstract method in the
+abstract class with the same signature becomes hidden. The implications include potential
+confusion and unexpected behavior if developers mistakenly call the hidden method thinking
+it will execute the overridden implementation.
+
+23. Explain the relationship between abstract classes, anonymous inner classes, and lambda
+expressions in Java. How do they complement each other in modern Java programming?
+Abstract classes, anonymous inner classes, and lambda expressions are all mechanisms for
+achieving abstraction and defining behavior in Java. Abstract classes provide a way to define
+a common interface with concrete methods and abstract methods. Anonymous inner classes allow
+for on-the-fly implementation of interfaces or abstract classes without explicitly defining
+a separate class. Lambda expressions provide a concise syntax for representing anonymous
+functions, which can be used as arguments to methods or assigned to variables. Together, they
+offer flexibility and expressiveness in modern Java programming, allowing developers to write
+more concise and readable code by leveraging abstraction and functional programming paradigms.
+
+24. Can you declare abstract methods that throw exceptions? If so, how are exceptions handled
+in such scenarios?
+Yes, you can declare abstract methods that throw exceptions. However, there's a twist to consider:
+The abstract method signature must include the throws clause specifying the checked exceptions
+it might throw.
+Subclasses overriding the abstract method must either handle the declared exceptions or propagate
+them further using throws clause in their method signature.
+
+public class ACExceptionHandleDemo {
+
+    public static void main(String[] args) throws IOException {
+        SubClass subClass = new SubClass();
+        subClass.readData();
+    }
+
+    public static abstract class SuperClass {
+
+        abstract void readData() throws IOException;
+    }
+
+    public static class SubClass extends SuperClass {
+        @Override
+        void readData() throws IOException {
+            System.out.println("Read Data Method In SubClass");
+        }
+    }
+}
+
+25. Explain how you can utilize inner classes with abstract classes. Describe potential use
+cases for this combination?
+Abstract classes can leverage inner classes for various purposes:
+
+Helper Classes: Define private inner classes within the abstract class to encapsulate
+helper methods specific to the functionality provided by the abstract class. These inner
+classes can access the abstract class's members directly, promoting code organization
+and encapsulation.
+
+Nested Abstract Classes: Create nested abstract classes within an outer abstract class
+to represent more granular functionalities related to the overall concept. This allows
+for a hierarchical structure with different levels of abstraction.
+
+abstract class AbstractClass {
+    private int data;
+
+    // Constructor
+    public AbstractClass(int data) {
+        this.data = data;
+    }
+
+    // Abstract method
+    abstract void abstractMethod();
+
+    // Inner class for helper methods
+    private class Helper {
+        // Helper method to process data
+        public void processData() {
+            System.out.println("Processing data: " + data);
+        }
+    }
+
+    // Method to perform an operation using the helper method
+    public void performOperation() {
+        Helper helper = new Helper();
+        helper.processData();
+        abstractMethod(); // Call to abstract method
+    }
+
+    // Nested abstract class
+    abstract class NestedAbstractClass {
+        abstract void nestedAbstractMethod();
+    }
+}
+
+// Concrete subclass
+class ConcreteClass extends AbstractClass {
+    // Constructor
+    public ConcreteClass(int data) {
+        super(data);
+    }
+
+    // Implementation of abstract method
+    @Override
+    void abstractMethod() {
+        System.out.println("Concrete implementation of abstractMethod");
+    }
+
+    // Nested concrete class
+    class NestedConcreteClass extends NestedAbstractClass {
+        // Implementation of nested abstract method
+        @Override
+        void nestedAbstractMethod() {
+            System.out.println("Concrete implementation of nestedAbstractMethod");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an instance of ConcreteClass
+        ConcreteClass instance = new ConcreteClass(10);
+
+        // Calling method to perform operation
+        instance.performOperation();
+
+        // Creating an instance of NestedConcreteClass
+        ConcreteClass.NestedConcreteClass nestedInstance = instance.new NestedConcreteClass();
+
+        // Calling method from nested concrete class
+        nestedInstance.nestedAbstractMethod();
+    }
+}
+
+26. Why we can't instantiate Abstract class? Explain the reason?
+In Java, you cannot instantiate an abstract class directly because abstract classes are
+incomplete, meaning they contain one or more abstract methods that lack implementation.
+Abstract methods are intended to be implemented by concrete subclasses, providing specific
+functionality.
+
+The main reason behind not allowing instantiation of abstract classes is to enforce the
+concept of abstraction and to prevent the creation of objects that are incomplete or lack
+essential functionality.
+
+Here are some key points explaining why you can't instantiate an abstract class:
+
+Incomplete Implementation: Abstract classes may contain one or more abstract methods, which
+are methods without a body. These methods are meant to be implemented by concrete subclasses
+to provide specific behavior. Since abstract classes themselves are incomplete due to the
+presence of abstract methods, Java prevents direct instantiation of such classes.
+
+Abstraction and Design: Abstract classes serve as blueprints for creating concrete subclasses.
+They define a common interface and provide a structure for subclasses to follow. Instantiating
+an abstract class would violate the principle of abstraction, as it would create objects without
+fully defining their behavior.
+
+Enforcement of Contracts: Abstract classes often define contracts or protocols that concrete
+subclasses must adhere to. By preventing instantiation of abstract classes, Java ensures that
+these contracts are fulfilled by providing implementations for all abstract methods.
+
+Potential Ambiguity: If instantiation of abstract classes were allowed, it would lead to
+ambiguity regarding the behavior of objects. Since abstract classes may contain a mix of
+concrete and abstract methods, it would be unclear which methods should be executed when an
+object is instantiated.
+
+Encapsulation and Modularity: Abstract classes encapsulate common behavior and provide a modular
+approach to software design. Allowing instantiation of abstract classes would break encapsulation
+and hinder the modularity of the codebase.
