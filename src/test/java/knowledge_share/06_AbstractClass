@@ -1,0 +1,95 @@
+Questions
+=========
+1. What is an abstract class in Java?
+An abstract class in Java is a class that cannot be instantiated directly. It serves as a
+blueprint for other classes and may contain abstract methods, which are methods declared
+without implementation. Abstract classes can also have concrete methods and fields.
+
+2. How do you declare an abstract class in Java?
+An abstract class is declared using the abstract keyword. For example:
+public abstract class AbstractClass {
+    // Abstract methods and/or concrete methods
+}
+
+3. Can an abstract class have constructors?
+Yes, an abstract class can have constructors. These constructors are typically used to
+initialize fields of the abstract class or perform common initialization tasks. However,
+abstract classes cannot be instantiated directly, so constructors are typically invoked
+by subclasses.
+
+4. What is the purpose of abstract methods in an abstract class?
+Abstract methods define the interface for the subclasses. They declare the method signature
+without providing the implementation. Subclasses of the abstract class must provide
+implementations for all abstract methods, or they themselves must be declared as abstract.
+
+5. Can an abstract class have concrete methods?
+Yes, an abstract class can have concrete (non-abstract) methods. These methods provide
+default behavior or functionality that subclasses can inherit. Subclasses may choose to
+override these methods to provide their own implementation or can use them as-is.
+
+6. Can an abstract class extend another abstract class?
+Yes, an abstract class can extend another abstract class. This allows for the creation
+of hierarchical class structures where each abstract class can provide some level of
+implementation while still leaving some methods to be implemented by subclasses.
+
+7. What happens if a subclass does not implement all the abstract methods of its superclass?
+If a subclass fails to implement all the abstract methods inherited from its superclass,
+the subclass itself must be declared as abstract. Abstract subclasses cannot be instantiated
+directly, so any concrete subclass of the abstract subclass must provide implementations for
+all inherited abstract methods.
+
+8. Can an abstract class be final in Java?
+No, an abstract class cannot be declared as final. The purpose of an abstract class is to
+be subclassed and extended by other classes. Declaring it as final would prevent this behavior.
+
+9. When should you use an abstract class instead of an interface?
+Use an abstract class when you want to provide a common base implementation for a group of
+related classes. Abstract classes can contain fields, constructors, and concrete methods in
+addition to abstract methods. Interfaces, on the other hand, are used to define contracts for
+unrelated classes and support multiple inheritance.
+
+10. Can an abstract class have static methods?
+Yes, an abstract class can have static methods. However, static methods cannot be overridden
+by subclasses. They are useful for defining utility methods that can be accessed directly
+using the class name.
+
+11. Difference between abstract classes and interfaces?
+Both abstract classes and interfaces promote abstraction in Java. However, there are key
+differences:
+1. Implementation: Abstract classes can have concrete methods providing default
+implementations, while interfaces only contain abstract methods.
+2. Multiple Inheritance: A class can inherit from only one superclass but can implement
+multiple interfaces, achieving a form of multiple inheritance.
+3. Instantiation: You cannot create objects of an abstract class, but you can create
+objects of classes that implement an interface.
+
+12. Can a method in an abstract class be both abstract and static? If not, why?
+No, a method cannot be both abstract and static in Java. Abstract methods are meant
+to be overridden by subclasses, while static methods belong to the class itself and
+cannot be overridden. Combining these modifiers would create a contradiction in terms
+of method behavior.
+
+13. How does the concept of multiple inheritance relate to abstract classes in Java?
+Java does not support multiple inheritance of classes, meaning a class cannot directly
+extend more than one class. However, a Java class can implement multiple interfaces.
+Abstract classes can be part of a hierarchy where multiple abstract classes extend
+a common abstract superclass, but this does not violate the single inheritance rule.
+
+14. Is it possible to create an instance of an abstract class using anonymous class
+instantiation?
+Yes, it's possible to create an instance of an abstract class using anonymous class
+instantiation. However, you would need to provide implementations for all abstract
+methods of the abstract class within the anonymous class.
+
+15. How can you prevent subclassing of an abstract class in Java?
+To prevent subclassing of an abstract class, you can declare the class itself as 'final'.
+This prevents any further extension of the class hierarchy beyond the abstract class.
+However, this approach should be used judiciously, as it limits potential flexibility
+and reuse.
+
+16. Can an abstract class implement an interface? If yes, provide an example scenario.
+Yes, an abstract class can implement an interface. One scenario is when you want to
+provide default implementations for some methods defined in the interface, allowing
+concrete subclasses to override only the necessary methods. This can help reduce
+redundancy in the subclass implementations.
+
