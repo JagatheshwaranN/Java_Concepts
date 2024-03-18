@@ -1,0 +1,154 @@
+Questions
+=========
+1. What is an interface in Java?
+An interface is a blueprint that defines a set of methods that a class must implement. It
+specifies the behavior a class must exhibit but doesn't provide the implementation details.
+An interface in Java is a reference type, similar to a class, that can contain only constants,
+method signatures, default methods, static methods, and nested types.
+
+2. How is an interface different from a class?
+Interfaces cannot have instance fields, constructors, or non-static methods other than abstract
+methods. Additionally, a class can implement multiple interfaces but can only extend one class.
+
+3. What are the key features of interfaces?
+1. Interfaces support multiple inheritance of type (a class can implement multiple interfaces).
+2. Interfaces are used to achieve abstraction and multiple inheritance in Java.
+3. Interfaces cannot be instantiated; they can only be implemented by classes or extended by
+other interfaces.
+
+4. Can an interface have fields?
+Yes, but only constants (static final fields). These fields are implicitly public, static,
+and final.
+
+5. Can you provide an example of an interface in Java?
+interface Animal {
+    void makeSound();
+}
+
+6. How do you implement an interface in a class?
+To implement an interface, you use the implements keyword in the class declaration followed
+by the interface name.
+
+7. Can a class implement multiple interfaces?
+Yes, a class can implement multiple interfaces separated by commas.
+
+8. What is the difference between implementing an interface and extending a class in Java?
+Implementing an interface means the class promises to provide implementations for all the
+methods declared in the interface. Extending a class means inheriting properties and methods
+from another class.
+
+9. Can interfaces have constructors?
+No, interfaces cannot have constructors because they cannot be instantiated.
+
+10. What are default methods in interfaces?
+Default methods are methods in interfaces that have a default implementation. They were
+introduced in Java 8 to provide backward compatibility for existing interfaces when new
+methods are added.
+
+11. Can default methods be overridden?
+Yes, default methods can be overridden by implementing classes.
+
+12. What are static methods in interfaces?
+Static methods in interfaces are methods that are associated with the interface itself, not
+with any instance of a class implementing the interface.
+
+13. Can static methods in interfaces be inherited?
+No, static methods in interfaces cannot be inherited or overridden.
+
+14. Can you create an object of an interface?
+No, you cannot create an object of an interface directly. Interfaces only define what a class
+can do, not how it does it. You can create a reference variable of the interface type and
+assign it to an object of a class that implements the interface.
+
+15. What are the benefits of using interfaces?
+Achieve abstraction: Separates the "what" from the "how", promoting loose coupling and
+code reusability.
+Promote polymorphism: Enables different classes to implement the same interface methods
+in different ways.
+Define contracts: Interface methods act as a contract between a class and the outside world,
+ensuring it provides the expected functionality.
+
+16. What is the difference between an interface and an abstract class?
+Both interfaces and abstract classes promote abstraction, but with key differences:
+Method implementation: Interfaces only declare abstract methods, while abstract classes can
+have both abstract and concrete methods.
+Inheritance: A class can implement multiple interfaces but can only extend one abstract class
+(avoiding the diamond problem).
+
+17. What are marker interfaces?
+Marker interfaces are interfaces with no method declarations. They are used to provide additional
+information about a class without defining any specific behavior. (e.g., Serializable interface).
+A marker interface in Java is an interface with no methods or constants, it acts as a tag to inform
+the compiler or runtime environment about some special behavior of the implementing class. The
+presence of a marker interface signifies that instances of the implementing class possess certain
+capabilities or characteristics.
+
+18. What are the new features introduced for interfaces in Java 8?
+1. Default methods: Allow interfaces to define method implementations with a default behavior.
+2. Static methods: Interfaces can now contain static utility methods.
+3. Functional interfaces: Interfaces with a single abstract method can be used with lambda
+expressions and method references.
+
+19. Explain the difference between interface inheritance and class inheritance. When would you
+use each?
+Interface inheritance: A class can implement multiple interfaces, inheriting methods from each.
+Useful for promoting polymorphism and achieving multiple functionalities.
+Class inheritance: A class extends one parent class, inheriting all its methods and fields.
+Used for code reusability and creating specialized subclasses.
+
+20. How would you handle situations where multiple interfaces have methods with the same signature?
+If the methods have the same functionality, consider using a single interface.
+If functionalities differ, ensure clear naming conventions and document the purpose of
+each method.
+In rare cases, anonymous classes can be used to provide temporary implementations for
+resolving conflicts.
+
+21. Explain how interfaces can be used to achieve loose coupling in large-scale Java applications.
+Interfaces define contracts, allowing different implementations without modifying
+dependent code. This promotes modularity, testability, and easier maintenance.
+
+22. Can an interface extend  interfaces, and if so, how deep can the interface hierarchy go?
+Yes, an interface can extend multiple interfaces in Java using the extends keyword. There's no
+limit on how deep the interface hierarchy can go. Interfaces can extend multiple interfaces,
+forming a hierarchy of any depth.
+
+23. What are marker annotations, and how are they different from marker interfaces?
+Marker annotations are annotations with no members, similar to marker interfaces. The key
+difference is that marker annotations are more flexible and can be applied to any element
+(classes, methods, fields), whereas marker interfaces can only be implemented by classes.
+
+24. Explain the difference between functional interfaces and normal interfaces. Provide examples.
+Functional interfaces have exactly one abstract method and can have any number of default or
+static methods. They are used to enable lambda expressions and method references. Normal
+interfaces, on the other hand, can have any number of abstract methods.
+
+Example of a functional interface:
+==================================
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void myMethod();
+}
+Example of a normal interface:
+==============================
+interface MyNormalInterface {
+    void method1();
+    void method2();
+}
+
+25. How do default methods in interfaces affect multiple inheritance in Java?
+Default methods were introduced in Java 8 to provide backward compatibility for interfaces
+when new methods are added. They allow interfaces to provide method implementations without
+affecting classes that implement them. This facilitates multiple inheritance of behavior in
+Java interfaces.
+
+26. Can a class override a default method provided by an interface? If so, how?
+Yes, a class can override a default method provided by an interface. If a class directly
+provides an implementation for the method with the same signature as the default method in
+the interface, it overrides the default implementation.
+
+27. What is MarkerAnnotation?
+In summary, while the exact use of the @MyMarkerAnnotation in the provided code snippet depends
+on the specific context and requirements of the application or framework, marker annotations in
+general are used to mark classes or program elements for various purposes such as metadata,
+configuration, conditional behavior, or documentation.
+
