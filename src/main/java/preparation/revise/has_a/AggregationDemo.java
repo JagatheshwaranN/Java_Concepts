@@ -7,8 +7,8 @@ public class AggregationDemo {
 
     public static void main(String[] args) {
 
-        Book book1 = new Book("Basics of Java Programming");
-        Book book2 = new Book("Data Structures and Algorithms");
+        Books book1 = new Books("Basics of Java Programming");
+        Books book2 = new Books("Data Structures and Algorithms");
         Library library = new Library();
         library.addBook(book1);
         library.addBook(book2);
@@ -16,11 +16,11 @@ public class AggregationDemo {
     }
 }
 
-class Book {
+class Books {
 
     private final String title;
 
-    public Book(String title){
+    public Books(String title){
         this.title = title;
     }
 
@@ -31,13 +31,13 @@ class Book {
 
 class Library {
 
-    private final List<Book> bookList;
+    private final List<Books> bookList;
 
     public Library(){
         bookList = new ArrayList<>();
     }
 
-    public void addBook(Book book){
+    public void addBook(Books book){
         bookList.add(book);
     }
 

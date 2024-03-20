@@ -1,0 +1,70 @@
+Questions
+=========
+1. What is Cohesion? What do you understand by the term "cohesion" in the context of software
+engineering?
+Cohesion refers to the degree to which the elements of a module belong together. It measures
+the strength of the relationship between the methods and data of a class or the components of
+a module. High cohesion within a module or class means that its responsibilities are closely
+related, making it more understandable, reusable, and maintainable. There are different levels
+of cohesion, from low (coincidental cohesion) to high (functional cohesion).
+
+2. What is Coupling? Can you explain "coupling" and its impact on software design?
+Coupling describes how tightly connected or dependent modules are to each other. It measures
+the degree of interdependence between modules. High coupling means that a module is highly
+dependent on other modules, which makes it harder to understand, modify, or replace that module
+without affecting others. Low coupling (or loose coupling) is desirable as it promotes module
+independence, enhancing the system's flexibility and maintainability.
+
+3. What is the difference between cohesion and coupling?
+Cohesion and coupling both deal with the relationships within and between modules, but they
+focus on different aspects. Cohesion refers to the internal relatedness of the elements within
+a single module or class, aiming for a single, well-defined responsibility. High cohesion means
+the module/class does a specific thing well. Coupling, on the other hand, refers to the
+interdependencies between different modules or classes. The goal is to have low coupling to reduce
+the impact of changes and improve modularity. In summary, cohesion focuses on the internal workings
+of a module/class, while coupling focuses on the relationships between modules/classes.
+
+4. How Can You Achieve High Cohesion and Low Coupling in Java?
+High Cohesion: Achieve high cohesion by designing classes and modules with narrowly focused
+responsibilities. This can be done by:
+1. Ensuring each class has a single responsibility (Single Responsibility Principle).
+2. Grouping related functions and data together in classes.
+3. Using private methods for functionality that is not meant to be exposed outside of the class.
+Low Coupling: Achieve low coupling through design patterns and principles that promote independence,
+such as:
+1. Interface-based programming: Define interfaces for interactions between classes, which reduces
+the dependency on concrete implementations.
+2. Dependency Injection: Pass dependencies from outside rather than creating them inside the class,
+which allows for more flexibility and easier testing.
+3. Using design patterns like the Observer pattern for event-driven communication or the Factory
+pattern to decouple object creation.
+
+5. Why are High Cohesion and Low Coupling Important?
+High cohesion and low coupling are important because they directly contribute to the maintainability,
+understandability, flexibility, and testability of the code. High cohesion ensures that classes and
+modules are designed with a single focus or responsibility, making them easier to understand, debug,
+and test. Low coupling reduces dependencies between modules, making the system more modular and
+flexible, which simplifies changes and the introduction of new features. Together, they help in
+building systems that are robust, scalable, and easier to maintain.
+
+6. What are the different levels of cohesion in Java?
+There are several levels of cohesion, ranging from high (most desirable) to low:
+Highly Cohesive: Elements within the class work together to achieve a single,
+well-defined task.
+Moderately Cohesive: Elements are somewhat related but may perform multiple subtasks
+related to the main responsibility.
+Low Cohesion: Elements have little to no relation and perform unrelated functionalities
+within the same class. This is generally an indicator of bad design practices.
+
+7. What are the different types of coupling in Java, and how can we achieve loose coupling?
+
+There are various types of coupling, with data coupling being the most preferred (low coupling):
+1. Data Coupling: Modules communicate through simple data items like primitives or objects with
+relevant information.
+2. Stamp Coupling: Modules share complex data structures, making changes in one potentially
+affect the other.
+3. Control Coupling: One module dictates the flow of execution in another through control
+flags or data values.
+4. Common Coupling: Modules rely on global data, leading to tight dependency. We can achieve
+loose coupling by using interfaces, dependency injection, and avoiding inheritance for
+reuse if composition can suffice.

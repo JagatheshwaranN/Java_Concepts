@@ -98,14 +98,55 @@ Excessive composition can tightly couple objects, making them less reusable and 
 in isolation. It might also lead to complex object hierarchies and difficulty in managing
 object lifecycles.
 
-====
-
 14. How can you leverage composition and aggregation to achieve immutability in Java objects?
 Immutability means an object's state cannot be changed after creation.
 Composition can help achieve immutability. By making member objects immutable, the whole object
 becomes immutable.
 Aggregation can also be used if the part objects are immutable.
 
-1. Can you achieve composition using public constructors for both whole and part objects?
+15. Can you achieve composition using public constructors for both whole and part objects?
+Yes, In a pure composition scenario, even if a part object has a public constructor, it should
+not be instantiated or managed outside the scope of its whole object to maintain the composition
+semantics. Let's illustrate this with an example:
 
-Answer: No. By definition, composition mandates a strong association where the whole object controls the part object's lifecycle. If the part object's constructor is public, it can be created independently, violating the dependency.
+Example: Computer and Processor Relationship
+Imagine a Computer class (the whole) that has a Processor class as a part. In a compositional
+relationship, the Computer should control the lifecycle of the Processor.
+
+public class Processor {
+    private String model;
+
+    // Public constructor
+    public Processor(String model) {
+        this.model = model;
+    }
+
+    public String getModel() {
+        return model;
+    }
+}
+
+public class Computer {
+    private Processor processor; // Composition: Computer owns Processor
+
+    public Computer(String processorModel) {
+        this.processor = new Processor(processorModel); // The Computer controls the Processor's lifecycle
+    }
+
+    public Processor getProcessor() {
+        return processor;
+    }
+}
+
+Public Constructors: Both Computer and Processor have public constructors. This allows
+external entities to create instances of these classes. However, the compositional
+relationship is maintained by how the Computer class internally manages Processor.
+
+Controlled Lifecycle: The Computer class controls the lifecycle of Processor by instantiating
+it within its constructor. This means the Processor instance is bound to the lifecycle of its
+Computer instance—when the Computer is created, so is the Processor; when the Computer is
+destroyed, the Processor goes with it.
+
+Encapsulation: The Computer class does not expose a way to replace its Processor after creation,
+emphasizing the strong association between the two. While you can access the Processor through
+a getter, there is no setter method, ensuring the Processor instance cannot be swapped out.
