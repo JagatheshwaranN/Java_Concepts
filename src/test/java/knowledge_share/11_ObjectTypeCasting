@@ -1,0 +1,51 @@
+Questions
+=========
+1. What is type casting in Java?
+Type casting in Java is the process of converting one data type into another. In the context
+of object-oriented programming, it refers to treating an object of one class as another class.
+This can be done explicitly (casting) or implicitly (done by the compiler).
+
+2. What is the difference between upcasting and down-casting?
+Upcasting: Upcasting is casting from a subclass to a superclass. It is always safe and implicit.
+Upcasting is done automatically by the compiler and doesn't require any explicit casting.
+
+Down-casting: Down-casting is casting from a superclass to a subclass. It is not implicit and
+requires explicit casting. Down-casting can potentially throw a ClassCastException if the object
+being casted is not actually an instance of the subclass.
+
+3. How do you perform upcasting in Java?
+Upcasting in Java is performed automatically by the compiler. You don't need to explicitly cast
+the object.
+Example: Superclass obj = new Subclass(); // Upcasting
+
+4. How do you perform down-casting in Java?
+Down-casting in Java is performed explicitly by casting the superclass reference to a subclass
+reference using the cast operator.
+Example:
+SuperClass obj1 = new SubClass();
+SubClass obj2 = (SubClass)obj1; // Down-casting
+
+5. What is the instanceof operator used for in Java?
+The instanceof operator in Java is used to check whether an object is an instance of a particular
+class or interface. It returns true if the object is an instance of the specified class or interface,
+otherwise it returns false.
+
+6. How is the instanceof operator related to type casting?
+The instanceof operator is often used in conjunction with type casting to ensure that down-casting
+is safe and does not lead to a ClassCastException. Before performing down-casting, you can check
+if the object is an instance of the subclass using the instanceof operator.
+
+7. Can you upcast and downcast primitive data types in Java?
+No, primitive data types in Java cannot be upcasted or down-casted like objects. Primitive data
+types are implicitly converted using widening or narrowing conversions, but not through casting.
+
+8. Can you upcast and downcast between unrelated classes in Java?
+No, upcasting and down-casting can only be performed between classes that are in an inheritance
+hierarchy (i.e., superclass and subclass relationship). Trying to upcast or downcast between
+unrelated classes will result in a compile-time error.
+
+9. What happens if you try to downcast an object to an unrelated class in Java?
+If you try to downcast an object to an unrelated class in Java, it will result in a
+ClassCastException at runtime. This is because the JVM cannot perform the type conversion due
+to the lack of an inheritance relationship between the classes.
+
