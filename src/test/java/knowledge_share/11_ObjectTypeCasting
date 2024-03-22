@@ -49,3 +49,94 @@ If you try to downcast an object to an unrelated class in Java, it will result i
 ClassCastException at runtime. This is because the JVM cannot perform the type conversion due
 to the lack of an inheritance relationship between the classes.
 
+10. How do you ensure safe down-casting in Java?
+Safe down-casting involves checking the instance type before casting. This can be done using
+the instanceof operator along with conditional statements.
+For example:
+Animal animal = new Dog();
+if (animal instanceof Dog) {
+    Dog dog = (Dog) animal;
+    // Now you can safely work with the 'dog' object
+}
+
+11. You have an interface Drawable with a method draw(). You have two classes Circle and Square
+that implement Drawable. How can you downcast an object of type Drawable to either Circle or Square
+safely and handle the ClassCastException if it occurs?
+public class DowncastWithIFaceDemo {
+
+    public static void main(String[] args) {
+
+        Drawable drawable = new Circle();
+        if(drawable instanceof Circle){
+            Circle circle = (Circle) drawable;
+            circle.draw();
+        } else if(drawable instanceof Square){
+            Square square = (Square) drawable;
+            square.draw();
+        }else{
+            System.out.println("Drawable is not an instance of Circle / Square");
+        }
+    }
+
+    public interface  Drawable {
+        void draw();
+    }
+
+    public static class Circle implements Drawable {
+
+        @Override
+        public void draw() {
+            System.out.println("Draw a Circle");
+        }
+    }
+
+    public static class Square implements Drawable {
+
+        @Override
+        public void draw() {
+            System.out.println("Draw a Square");
+        }
+    }
+}
+
+12. Explain the difference between casting an int to a double and casting an Integer
+object to a Double object?
+Casting can't be applied to primitive datatype, and it should be only for object datatype.
+Casting int to double is primitive type widening. The int value is converted to a larger
+double type without object creation.
+Casting Integer to Double involves two steps:
+=============================================
+1. Unboxing: The Integer object is unwrapped to get the primitive int value.
+2. Auto-boxing: The int value is then boxed into a new Double object.
+
+13. How does type casting relate to polymorphism in Java?
+Type casting allows you to manipulate objects of different types at runtime. Polymorphism
+enables treating objects of different subclasses through a common superclass interface.
+While polymorphism focuses on handling objects through their methods regardless of the
+specific type, casting allows for specific type conversions when needed. They work together
+for flexible object-oriented programming.
+
+14. Are there situations where you might avoid down-casting altogether? If so, how?
+Yes, it's generally recommended to minimize down-casting due to potential runtime errors.
+Here are alternatives:
+Use interfaces and abstract classes: Design your code to rely on interfaces or abstract classes
+for common functionality. Subclasses can implement specific behaviors without requiring down-casting
+in the main code.
+instanceof checks: Use instanceof to check the object type before performing any operation specific
+to a subclass.
+
+15. Discuss the performance implications of casting in Java?
+Casting itself is generally a fast operation. However, frequent down-casting can impact performance
+due to potential ClassCastException checks at runtime. Additionally, autoboxing/unboxing might have
+slight overhead compared to direct primitive operations.
+
+16. Differentiate between the instanceof operator and the equality operator (==) for checking
+types during down-casting?
+instanceof: This operator checks if an object is an instance of a particular class or its subclass
+in the inheritance hierarchy. It's safer for down-casting as it avoids runtime errors if the object
+isn't the expected type.
+==: This operator checks for reference equality, meaning it compares if both references point to
+the same object in memory. It's not suitable for type checking during down-casting.
+
+
+
