@@ -1,0 +1,54 @@
+Questions
+=========
+1. What is instance control flow in Java?
+Instance control flow refers to the sequence of initialization of instance variables,
+instance initialization blocks (non-static blocks), and the constructor invocation when an
+object of a class is created.
+
+2. Explain the order of execution for instance variables, instance blocks, and constructors
+during object creation?
+During object creation:
+1. Instance variables are initialized in the order they are declared in the class.
+2. Instance initialization blocks are executed in the order they appear in the class.
+3. Constructor(s) are invoked after instance variables are initialized and instance blocks
+are executed.
+
+3. Can you have multiple instance initialization blocks within a class?
+Yes, a class can contain multiple instance initialization blocks, and they are executed in the
+order they appear in the class during object creation.
+
+4. What happens if an instance initialization block throws an exception?
+If an instance initialization block throws an exception, the object creation process fails, and
+an error message is printed indicating the cause of the failure. The object will not be successfully
+instantiated.
+
+5. Explain the difference between static and instance initialization blocks.
+Static initialization blocks are preceded by the static keyword and are executed when the class
+is loaded into memory, whereas instance initialization blocks are not preceded by the static
+keyword and are executed each time an object of the class is created.
+
+6. How does the presence of inheritance impact the instance control flow?
+Inheritance affects instance control flow by adding the initialization process of superclass
+components before the initialization of subclass components. Superclass instance initialization
+blocks and constructors are executed before subclass instance initialization blocks and constructors
+during object creation.
+
+7. Discuss the significance of instance initialization blocks in class design.
+Instance initialization blocks are useful for performing common initialization tasks that need to
+be executed for every object creation. They provide a way to initialize instance variables or
+perform other initialization logic that cannot be accomplished within constructors.
+
+8. Explain the concept of forward reference in instance initialization.
+Forward reference occurs when an instance initialization block tries to access an instance variable
+or method that is declared later in the class. This results in a compilation error because Java
+requires all instance variables and methods to be declared before they are accessed.
+
+9. How can you handle common initialization tasks shared across multiple constructors in a class?
+You can use instance initialization blocks to centralize common initialization tasks shared across
+multiple constructors. By placing initialization logic in instance initialization blocks, you can
+ensure that it is executed regardless of which constructor is used to create the object.
+
+10. Can instance initialization blocks access static variables and methods?
+Yes, instance initialization blocks can access static variables and methods because they are
+executed in the context of an object, and objects have access to both instance and static members
+of a class.
