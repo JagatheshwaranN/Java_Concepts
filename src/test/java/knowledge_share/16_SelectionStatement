@@ -128,5 +128,67 @@ public class IfElseChainExample {
     }
 }
 
+10. Explain the concept of short-circuit evaluation in Java if statements and provide an example.
+Short-circuit evaluation is a behavior in which the second operand of a logical && (AND) or ||
+(OR) operator is evaluated only if the result of the overall expression is not already determined
+by the evaluation of the first operand.
+Example:
+boolean condition1 = true;
+boolean condition2 = false;
+if (condition1 && condition2) {
+}
 
+11. Discuss the difference between if statements and ternary conditional expressions in Java.
+If statements are used for conditional branching, allowing for executing different blocks of
+code based on a condition. Ternary conditional expressions (condition ? expression1 : expression2)
+provide a concise way to express a conditional assignment or expression where one of two values
+is chosen based on a condition.
+
+12. Explain the concept of the ternary operator in Java and provide an example.
+The ternary operator (? :) is a shorthand way of expressing an if-else statement in a single line.
+It evaluates a boolean expression and returns one of two values based on the result of the evaluation.
+Example:
+int x = 5;
+String result = (x > 0) ? "Positive" : "Negative";
+System.out.println(result); // Output: Positive
+
+13. Discuss the use of the switch statement with enum types in Java and provide an example.
+In Java, the switch statement can be used with enum types to handle different cases based on
+the values of enum constants.
+Example:
+enum Day { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY }
+
+Day today = Day.WEDNESDAY;
+switch (today) {
+    case MONDAY:
+        System.out.println("Start of the week");
+        break;
+    case WEDNESDAY:
+        System.out.println("Midweek");
+        break;
+    // Other cases...
+}
+
+14. Explain the concept of fall-through in switch statements in Java and provide an example.
+Fall-through occurs when the control flow of a switch statement continues to the next case
+label after executing the block of code associated with the matched case.
+Example:
+int x = 2;
+switch (x) {
+    case 1:
+        System.out.println("One");
+    case 2:
+        System.out.println("Two"); // This will be printed due to fall-through
+        break;
+    case 3:
+        System.out.println("Three");
+}
+
+15. Explain the difference between using a ternary operator and an if-else statement for a
+simple condition. When might you prefer one over the other?
+Ternary Operator: A concise way to express a simple if-else condition in one line.
+If-Else Statement: More readable and maintainable for complex conditions.
+Preference: Use a ternary operator for short, straightforward conditions to improve code
+readability. However, for complex logic or improving code maintainability, opt for if-else
+statements.
 
