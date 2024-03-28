@@ -107,6 +107,46 @@ within another. It is useful for preserving the original cause of an exception w
 propagating it up the call stack. This can be achieved by passing the original exception
 as a parameter to another exception's constructor.
 
+21. In what scenarios might the finally block not be executed?
+The finally block won't run if the JVM terminates abruptly due to errors like OutOfMemoryError
+or ThreadDeath. Additionally, if a System.exit() method is called within the try or catch block,
+the finally block might be bypassed.
+
+22. What are the advantages of using try-with-resources compared to a traditional
+try-catch-finally block?
+The try-with-resources statement is used to automatically close resources that implement the
+AutoCloseable interface (e.g., InputStream, OutputStream, Connection) after they are no longer
+needed, regardless of whether an exception occurs or not. It simplifies resource management and
+reduces the likelihood of resource leaks.
+
+Unlike traditional try-catch-finally blocks where you need to explicitly close resources in the
+finally block, try-with-resources automatically closes resources at the end of the block, making
+the code more concise and less error-prone.
+
+23. Discuss the role of custom exceptions in Java. When and why would you create custom exceptions?
+Provide an example.
+1. Custom exceptions in Java are user-defined exception classes that extend either Exception (for
+checked exceptions) or RuntimeException (for unchecked exceptions).
+2. They are created to represent application-specific error conditions that are not adequately covered
+by built-in exceptions.
+3. Custom exceptions can provide more descriptive error messages and help improve code readability and
+maintainability.
+An example of creating a custom exception:
+public class InvalidAgeException extends RuntimeException {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+24. Differentiate between exception chaining and nested exceptions in Java?
+Exception chaining involves throwing one exception and then linking the cause to another exception
+using the initCause method. Nested exceptions, introduced in Java 7, allow embedding another exception
+object within your exception class for a more structured representation of the error chain.
+
+
+
+
+
 
 
 
