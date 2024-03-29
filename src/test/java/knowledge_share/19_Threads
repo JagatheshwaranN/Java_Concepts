@@ -1,0 +1,169 @@
+Questions
+=========
+1. What is a thread in Java?
+A thread in Java is a lightweight process, a separate path of execution within a program.
+It allows concurrent execution of tasks, enabling the program to perform multiple operations
+simultaneously.
+
+2. How can you create a thread in Java?
+There are two ways to create a thread in Java:
+1. By extending the Thread class and overriding its run() method.
+2. By implementing the Runnable interface and passing an instance of the implementing class
+to a Thread constructor.
+
+3. What is the Runnable interface?
+The Runnable interface in Java represents a task that can be executed by a thread. It has a
+single abstract method run() that needs to be implemented by any class that wants to define
+a task to be executed by a thread.
+
+4. What is the difference between Thread class and Runnable interface for creating threads?
+When you extend the Thread class, your class cannot extend any other class because Java does
+not support multiple inheritance. But, by implementing the Runnable interface, you can extend
+another class and still create a thread.
+
+Using the Runnable interface promotes better object-oriented design because the class implementing
+Runnable is more likely to be a cohesive unit.
+
+5. What is the start() method in Java threads?
+The start() method is used to begin the execution of a thread. When start() is called, the JVM
+calls the run() method of the thread internally. It's important to note that calling the run()
+method directly won't start a new thread; it will just execute the run() method on the current
+thread.
+
+6. What is the join() method in Java threads?
+The join() method allows one thread to wait for the completion of another thread. When a thread
+calls join() on another thread, it waits until the other thread completes its execution before
+proceeding.
+
+7. What is thread synchronization?
+Thread synchronization is the process of controlling the access to shared resources by multiple
+threads to prevent data inconsistency or corruption. In Java, synchronization can be achieved
+using the synchronized keyword, locks, or other concurrency utilities provided by the java.util
+.concurrent package.
+
+8. What is deadlock in Java? How can it be avoided?
+Deadlock is a situation in which two or more threads are blocked forever, waiting for each other
+to release resources. Deadlock can be avoided by following some best practices such as:
+1. Avoiding nested locks.
+2. Ensuring that locks are acquired and released in the same order by all threads.
+3. Using timeouts when acquiring locks.
+4. Using higher-level concurrency utilities like java.util.concurrent instead of low-level
+synchronization primitives.
+
+9. What are the different states of a thread?
+A thread can be in one of the following states: New, Runnable, Blocked, Waiting, Timed Waiting,
+and Terminated.
+
+10. What is the difference between a process and a thread?
+A process is a self-contained program execution environment, whereas a thread is a unit of
+execution within a process. Processes are heavyweight and resource-intensive, while threads
+are lightweight and share the resources of the process.
+
+11. What is the difference between start() and run() methods?
+The start() method starts the thread and creates a new thread of execution for the thread's
+code. The run() method contains the actual code that the thread will execute.
+
+12. What are daemon threads?
+A daemon thread is a thread that runs in the background, providing services to other threads.
+They are typically used for tasks such as garbage collection and monitoring, and they
+automatically terminate when all non-daemon threads have finished executing.
+
+13. What is synchronization?
+Synchronization is the process of coordinating access to shared resources by multiple
+threads to prevent race conditions and data corruption.
+
+14. What are different ways to achieve synchronization in Java?
+Java provides various synchronization mechanisms like synchronized methods and blocks,
+locks (reentrant locks), and atomic operations to achieve thread safety.
+
+15. What is a thread pool?
+A thread pool is a collection of pre-initialized threads that are ready to perform tasks.
+Instead of creating new threads for each task, thread pools re-use existing threads, which
+reduces the overhead of thread creation and destruction. Thread pools can manage the number
+of active threads, prevent resource exhaustion, and provide better control over the execution
+of tasks. They are commonly used in server applications and other scenarios where managing
+concurrency is crucial.
+
+16. What are the benefits of using multithreading?
+Multithreading in Java offers several advantages.
+=================================================
+1. First, it allows multiple tasks to run concurrently within a single program, improving
+performance and resource usage, especially on computers with multiple cores.
+2. Second, it enhances responsiveness by keeping applications interactive even during
+long-running tasks.
+3. Third, threads can share resources like memory and file handles, enabling efficient
+communication between different parts of the program.
+4. Fourth, multithreading promotes modular design, breaking down complex tasks into smaller,
+manageable units.
+5. Fifth, it enables parallel execution of tasks, reducing overall execution time, especially
+for intensive or I/O-bound operations.
+6. Sixth, applications can scale better with hardware improvements, leveraging available
+processing power more effectively.
+7. Lastly, multithreading facilitates asynchronous programming, handling events and asynchronous
+I/O operations efficiently. Overall, multithreading makes Java programs more efficient,
+responsive, and capable of handling concurrent tasks effectively.
+
+17. Explain the difference between wait(), notify(), and notifyAll() methods.
+1. wait(): Causes the current thread to wait until another thread invokes the notify() or
+notifyAll() method for the same object.
+2. notify(): Wakes up a single thread that is waiting on the object's monitor. If multiple
+threads are waiting, it is arbitrary which one is awakened.
+3. notifyAll(): Wakes up all threads that are waiting on the object's monitor. They will
+compete for the lock once notified.
+It's important to note that these methods should be used within synchronized blocks to avoid
+illegal monitor state exceptions.
+
+18. What is thread starvation and how can it be prevented?
+Thread starvation occurs when a thread is unable to gain regular access to shared resources
+and is unable to make progress. This often happens when certain threads monopolize resources,
+leaving others waiting indefinitely. It can be mitigated by implementing fair scheduling
+algorithms, using timeouts when acquiring locks, and periodically yielding CPU time to other
+threads.
+
+19. Explain the concept of thread-local variables and when they might be useful.
+Thread-local variables are variables that are local to each thread, meaning that each thread has
+its own independent copy of the variable. They are useful when you need to store thread-specific
+data, such as user sessions in a web application or transaction context in a database connection
+pool. Thread-local variables ensure that each thread operates on its own distinct data without
+interference from other threads.
+
+20. What are the potential pitfalls of using multithreading in Java, and how can they be mitigated?
+Some potential pitfalls of multithreading in Java include deadlock, race conditions, and
+excessive thread creation. These can be mitigated by following best practices such as proper
+synchronization, avoiding nested locks, using thread-safe data structures, and minimizing the
+creation and destruction of threads. Additionally, thorough testing and code review can help
+identify and resolve threading issues early in the development process.
+
+21. What is the purpose of the volatile keyword in Java?
+The volatile keyword is used to indicate that a variable's value may be modified by multiple
+threads that are executing concurrently. It ensures that changes made by one thread to the
+variable are visible to other threads immediately.
+
+22. DeadLock vs LiveLock
+In summary, deadlock occurs when threads are blocked indefinitely waiting for each other to
+release resources, while livelock occurs when threads are actively trying to resolve a conflict
+but are stuck in a repetitive cycle without making progress. Both scenarios can result in a
+loss of application functionality and require careful design and implementation to prevent.
+
+Deadlock:
+=========
+Deadlock occurs when two or more threads are blocked indefinitely, each waiting for the other
+to release a resource that they need. In other words, each thread holds a resource while waiting
+to acquire another resource held by another thread, resulting in a deadlock situation where none
+of the threads can proceed.
+Deadlocks typically arise due to a lack of proper synchronization or incorrect resource allocation
+strategies in the code.
+Deadlocks can be difficult to detect and debug because the program may appear to be functioning
+normally, but it becomes unresponsive or deadlocked when certain conditions are met.
+
+Livelock:
+=========
+Livelock is a situation where two or more threads actively try to resolve a conflict, but they
+do so in such a way that none of the threads make progress. Unlike deadlock, where threads are
+blocked, in livelock, threads are not blocked but are stuck in a repetitive cycle of trying to
+resolve the conflict.
+Livelock can occur when threads are programmed to respond to each other's actions in a way that
+causes them to continually change their state without making progress towards a resolution.
+Livelock can also be challenging to detect and resolve because the threads involved are not
+technically blocked, but they are unable to make forward progress.
+
