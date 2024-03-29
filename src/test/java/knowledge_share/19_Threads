@@ -113,12 +113,14 @@ compete for the lock once notified.
 It's important to note that these methods should be used within synchronized blocks to avoid
 illegal monitor state exceptions.
 
-18. What is thread starvation and how can it be prevented?
-Thread starvation occurs when a thread is unable to gain regular access to shared resources
-and is unable to make progress. This often happens when certain threads monopolize resources,
-leaving others waiting indefinitely. It can be mitigated by implementing fair scheduling
-algorithms, using timeouts when acquiring locks, and periodically yielding CPU time to other
-threads.
+18. Explain the concept of thread starvation and how it can be mitigated in Java?
+Thread starvation occurs when a thread is unable to gain access to resources or CPU time because
+other threads are consistently given priority. This can lead to unfair scheduling and degradation
+of performance.
+Thread starvation can be mitigated by implementing fair scheduling policies, such as using the
+ReentrantLock class with fairness enabled, which ensures that the longest-waiting thread gets
+access to the lock first. Additionally, using thread pools with bounded queues and properly
+managing thread priorities can help prevent thread starvation.
 
 19. Explain the concept of thread-local variables and when they might be useful.
 Thread-local variables are variables that are local to each thread, meaning that each thread has
@@ -167,3 +169,54 @@ causes them to continually change their state without making progress towards a 
 Livelock can also be challenging to detect and resolve because the threads involved are not
 technically blocked, but they are unable to make forward progress.
 
+23. Explain the difference between intrinsic locking (synchronized blocks/methods) and explicit
+locking (Lock interface) in Java. When would you use one over the other?
+1. Intrinsic locking, provided by the synchronized keyword, is built into the Java language and
+is used to ensure that only one thread can execute a synchronized block or method on an object
+at a time. It provides a simple and intuitive way to achieve thread synchronization but has
+limitations such as lack of flexibility and potential for deadlocks.
+2. Explicit locking, using the Lock interface from the java.util.concurrent.locks package, offers
+more control and flexibility over synchronization. It allows finer-grained locking, supports
+features like try-lock, lock timeouts, and conditions, and can help avoid problems like deadlock.
+You might choose explicit locking when you need more advanced synchronization features or finer
+control over locking compared to intrinsic locking.
+
+24. What are the benefits and drawbacks of using thread pools in Java?
+Benefits of using thread pools:
+===============================
+1. Improved performance: Thread pools can reduce the overhead associated with creating and destroying
+threads by reusing existing threads for multiple tasks.
+2. Better resource management: Thread pools limit the number of concurrent threads, preventing the
+system from becoming overwhelmed and improving resource utilization.
+3. Simplified concurrency management: Thread pools abstract away the complexity of managing individual
+threads, making it easier to develop concurrent applications.
+
+Drawbacks of using thread pools:
+================================
+1. Potential for resource contention: If tasks in the pool are long-running or blocked, it can lead
+to resource contention and reduced throughput.
+2. Overhead of managing threads: Maintaining a pool of threads requires additional overhead in terms
+of memory and CPU usage, which may impact performance.
+3. Difficulty in tuning: Determining the optimal size of the thread pool and configuring parameters
+such as the queue size and rejection policy can be challenging and require tuning based on the
+specific workload.
+
+25. What is the difference between thread-local variables and shared variables in Java?
+When would you use each?
+Thread-local variables are variables that are local to each thread and are not shared between
+threads. Each thread has its own copy of the variable, which is not visible to other threads.
+Thread-local variables are typically used when you need to maintain per-thread state or context,
+such as in the case of thread-local storage (TLS) or maintaining user sessions in web applications.
+
+Shared variables, on the other hand, are variables that are accessible to multiple threads and
+can be shared between them. Access to shared variables must be synchronized to ensure thread
+safety and prevent data races. Shared variables are used when multiple threads need to access
+or modify a common state or resource.
+
+26. ThreadLocal vs. InheritableThreadLocal: Compare and contrast ThreadLocal and
+InheritableThreadLocal. When would you use each?
+Both ThreadLocal and InheritableThreadLocal provide thread-specific storage. ThreadLocal isolates
+data for each thread, while InheritableThreadLocal allows child threads to inherit data from the
+parent thread. Use ThreadLocal for thread-specific configurations or data that shouldn't be shared.
+Use InheritableThreadLocal when data needs to be passed down to child threads, like security contexts
+or resource managers.
