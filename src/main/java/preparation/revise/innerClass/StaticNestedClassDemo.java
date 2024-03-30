@@ -29,7 +29,7 @@ public class StaticNestedClassDemo {
     }
 
 
-    public static class InnerClass {
+    protected static class InnerClass {
 
         String name = "John";
         int age = 29;

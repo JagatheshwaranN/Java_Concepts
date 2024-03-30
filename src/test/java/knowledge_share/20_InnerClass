@@ -68,3 +68,44 @@ classes because they must be accessed through an instance of the outer class.
 Inner classes are commonly used in Java Swing applications for event handling. For example,
 an ActionListener can be implemented using an anonymous inner class to handle button clicks
 or other events efficiently within the same class scope.
+
+16. Is it possible to declare an interface inside an inner class?
+Yes, it is possible to declare an interface inside an inner class. This is known as a
+nested interface.
+
+17. Can an inner class implement multiple interfaces?
+Yes, an inner class can implement multiple interfaces, similar to any other class in Java.
+
+18. Can a local inner class access local variables of the enclosing method if they are not
+declared final?
+No, a local inner class cannot access non-final local variables of the enclosing method after
+the method exits. This is because the local variable might be garbage collected after the
+method finishes.
+
+19. Can you extend a class and implement an interface simultaneously in an anonymous inner class?
+No, In Java, an inner class (including anonymous inner classes) cannot extend a class and implement
+an interface simultaneously. An inner class can either extend a class or implement an interface, but
+not both at the same time.
+
+20. Can an inner class be declared as private or protected?
+Yes, an inner class can be declared as private, protected, or public, just like any other class
+in Java.
+
+21. Can an anonymous inner class access static members of its outer class directly?
+No, anonymous inner classes cannot directly access static members of their outer class without
+an instance of the outer class. While they have access to non-static members through the this
+reference, static members belong to the class itself, not the instance.
+Solution: You can access static members using the outer class name like OuterClass.staticMemberName.
+
+22. How can you differentiate between accessing a member with the same name in both the inner and
+outer class?
+Java uses shadowing to resolve this. When accessing a member with the same name from within the
+inner class, you need to use the outer class name as a prefix (e.g., OuterClass.memberName).
+This clarifies which member you're referring to.
+
+23. How can you create a thread-safe inner class?
+There are two main approaches:
+1. Make the inner class static: Static nested classes are inherently thread-safe because there's
+only one instance shared across all threads.
+2. Synchronize access to shared resources: If a member inner class needs to access shared resources
+of the outer class, synchronize methods within the inner class to ensure thread safety.

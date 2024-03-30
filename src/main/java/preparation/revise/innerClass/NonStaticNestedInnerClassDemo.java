@@ -20,7 +20,7 @@ public class NonStaticNestedInnerClassDemo {
     }
 
 
-    class InnerClass {
+    private class InnerClass {
 
         String name = "John";
         int age = 29;
