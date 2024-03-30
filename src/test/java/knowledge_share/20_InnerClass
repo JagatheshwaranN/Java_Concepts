@@ -109,3 +109,16 @@ There are two main approaches:
 only one instance shared across all threads.
 2. Synchronize access to shared resources: If a member inner class needs to access shared resources
 of the outer class, synchronize methods within the inner class to ensure thread safety.
+
+24. How does serialization of inner classes work in Java? What considerations should be taken into
+account?
+When serializing an inner class in Java, the outer class instance is also serialized along with the
+inner class instance. This is because inner classes have an implicit reference to the outer class
+instance. Considerations include ensuring that the outer class is serializable and properly handling
+serialization of non-serializable outer classes.
+
+25. Explain the concept of shadowing in inner classes. How can you access the shadowed members?
+Shadowing in inner classes occurs when an inner class declares a member with the same name as a
+member in its enclosing class. To access the shadowed members, you can use the this keyword to
+refer to the current instance of the inner class and OuterClassName.this to refer to the instance
+of the outer class.
