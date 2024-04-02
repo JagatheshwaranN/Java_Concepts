@@ -1,0 +1,83 @@
+Questions
+=========
+1. What are collections in Java?
+Collections in Java are frameworks that provide an architecture to store and manipulate a
+group of objects. They are used to store, retrieve, manipulate, and communicate aggregate
+data.
+
+2. What is the difference between Collection and Collections in Java?
+Collection is an interface that represents a single group of objects, whereas Collections
+is a utility class in Java that contains static methods for operating on collections.
+
+3. What are the main interfaces in the Java Collection framework?
+The main interfaces are:
+1. List: Ordered collection of elements that allows duplicate elements.
+2. Set: Collection that does not allow duplicate elements.
+3. Map: Key-value pair collection.
+4. Queue: Collection used to hold multiple elements before processing.
+
+4. What is the difference between ArrayList and LinkedList?
+ArrayList uses a dynamic array for storing elements and provides fast random access but slower
+insertion and deletion, while LinkedList uses a doubly-linked list for storage and provides
+faster insertion and deletion but slower random access.
+
+5. How does HashMap work in Java?
+HashMap uses a hash table to store key-value pairs. It uses the hash code of the keys to store
+and retrieve elements quickly. In case of hash collisions, it uses a linked list or balanced
+tree to store multiple elements with the same hash code.
+
+6. What is the difference between HashMap and HashTable?
+In summary, HashMap is preferred in most scenarios due to its better performance and flexibility.
+Hashtable is mainly used in legacy code or situations where thread-safety is a strict requirement.
+However, in modern Java development, alternatives like ConcurrentHashMap are often preferred over
+Hashtable for thread-safe use cases due to better performance.
+Synchronization:
+================
+1. HashMap is not synchronized, meaning it is not thread-safe. Multiple threads can access HashMap
+concurrently, but if any thread modifies it structurally (addition or deletion of mappings), it
+must be synchronized externally.
+2. Hashtable is synchronized, meaning it is thread-safe. All methods in Hashtable are synchronized,
+so it can be safely accessed by multiple threads without additional synchronization.
+
+Null keys and values:
+=====================
+1. HashMap allows one null key and any number of null values. Retrieval of Null Key value is
+possible.
+2. Hashtable allows one null key and any number of null values. Retrieval of Null Key value
+is not possible anf throws NullPointerException.
+
+Performance:
+============
+1. HashMap generally performs better than Hashtable in single-threaded scenarios due to its lack of
+synchronization overhead.
+2. In multi-threaded scenarios, Hashtable might perform better in some cases because it is synchronized.
+
+Iterator fail-fast vs. enumerator fail-safe:
+============================================
+1. HashMap uses iterator for traversing the elements. The iterator in HashMap is fail-fast, meaning it
+throws a ConcurrentModificationException if the map is modified structurally while iterating.
+2. Hashtable uses enumerator for traversing the elements. The enumerator in Hashtable is fail-safe,
+meaning it doesn't throw any exception if the map is modified structurally while enumerating.
+
+Performance trade-off:
+======================
+Due to its synchronization, Hashtable may incur performance overhead compared to HashMap, especially in
+scenarios where synchronization is not necessary.
+
+7. What is the purpose of the Comparable and Comparator interfaces?
+Comparable interface is used to define the natural ordering of elements within a class, while
+Comparator interface is used to define custom ordering of elements outside the class.
+
+8. How can you synchronize a List in Java?
+You can synchronize a List in Java using the Collections.synchronizedList() method.
+For example:
+List<String> synchronizedList = Collections.synchronizedList(new ArrayList<>());
+
+9. How do you iterate over elements in a List in Java?
+You can iterate over elements in a List using various methods such as for-each loop, Iterator,
+ListIterator, or Stream API.
+
+10. What is the difference between fail-fast and fail-safe iterators?
+Fail-fast iterators throw ConcurrentModificationException if the collection is modified while
+iterating, whereas fail-safe iterators allow modification of the collection while iterating and
+do not throw any exception.
