@@ -16,17 +16,12 @@ The main interfaces are:
 3. Map: Key-value pair collection.
 4. Queue: Collection used to hold multiple elements before processing.
 
-4. What is the difference between ArrayList and LinkedList?
-ArrayList uses a dynamic array for storing elements and provides fast random access but slower
-insertion and deletion, while LinkedList uses a doubly-linked list for storage and provides
-faster insertion and deletion but slower random access.
-
-5. How does HashMap work in Java?
+4. How does HashMap work in Java?
 HashMap uses a hash table to store key-value pairs. It uses the hash code of the keys to store
 and retrieve elements quickly. In case of hash collisions, it uses a linked list or balanced
 tree to store multiple elements with the same hash code.
 
-6. What is the difference between HashMap and HashTable?
+5. What is the difference between HashMap and HashTable?
 In summary, HashMap is preferred in most scenarios due to its better performance and flexibility.
 Hashtable is mainly used in legacy code or situations where thread-safety is a strict requirement.
 However, in modern Java development, alternatives like ConcurrentHashMap are often preferred over
@@ -64,20 +59,94 @@ Performance trade-off:
 Due to its synchronization, Hashtable may incur performance overhead compared to HashMap, especially in
 scenarios where synchronization is not necessary.
 
-7. What is the purpose of the Comparable and Comparator interfaces?
+6. What is the purpose of the Comparable and Comparator interfaces?
 Comparable interface is used to define the natural ordering of elements within a class, while
 Comparator interface is used to define custom ordering of elements outside the class.
 
-8. How can you synchronize a List in Java?
+7. How can you synchronize a List in Java?
 You can synchronize a List in Java using the Collections.synchronizedList() method.
 For example:
 List<String> synchronizedList = Collections.synchronizedList(new ArrayList<>());
 
-9. How do you iterate over elements in a List in Java?
+8. How do you iterate over elements in a List in Java?
 You can iterate over elements in a List using various methods such as for-each loop, Iterator,
 ListIterator, or Stream API.
 
-10. What is the difference between fail-fast and fail-safe iterators?
+9. What is the difference between fail-fast and fail-safe iterators?
 Fail-fast iterators throw ConcurrentModificationException if the collection is modified while
 iterating, whereas fail-safe iterators allow modification of the collection while iterating and
 do not throw any exception.
+
+10. What are the benefits of using the Collections Framework?
+There are many benefits to using the Collections Framework, including:
+1. Consistency: It provides a consistent way to work with various collections of objects.
+2. Reusability:** Many common operations like sorting and searching are already implemented
+and can be reused across different collection types.
+3. Extensibility: The framework is designed to be extensible, allowing you to create your
+custom collection implementations.
+
+11. What is the difference between ArrayList and LinkedList?
+ArrayList uses a dynamic array for storing elements and provides fast random access but slower
+insertion and deletion, while LinkedList uses a doubly-linked list for storage and provides
+faster insertion and deletion but slower random access.
+
+12. Difference between HashSet and TreeSet:
+Both HashSet and TreeSet implement the Set interface, but they differ in how they store and
+order elements:
+1. HashSet: Uses a hash table for storing elements. Doesn't guarantee any specific order for
+elements and allows null values (only one).
+2. sTreeSet: Uses a tree-based structure to store elements. Maintains a sorted order for the
+elements and doesn't allow null values.
+
+13. What is the difference between HashSet and LinkedHashSet?
+HashSet does not maintain any order of elements, while LinkedHashSet maintains the insertion
+order of elements.
+Set<String> hashSet = new HashSet<>();
+Set<String> linkedHashSet = new LinkedHashSet<>();
+HashSet
+1. Uses Hashtable for storage.
+2. Doesn't guarantee order of elements.
+3. Relatively performance is high when compared with LinkedHashset.
+4. Has a lower memory usage as it doesn't require extra DS for ordering of elements.
+LinkedHashSet
+1. Uses Hashtable for storage.
+2. Preserve the insertion order of elements.
+3. Relatively performance is low due to the overhead of maintaining LinkedList DS for order
+preservation.
+4. Uses more memory as it requires it stores elements in both hashtable and LinkedList.
+
+14. Explain the difference between List and Set.
+List allows duplicate elements and maintains the insertion order of elements, while Set does
+not allow duplicate elements and does not maintain any order.
+
+15. What is the purpose of the Collections.unmodifiableList() method?
+The Collections.unmodifiableList() method returns an unmodifiable view of the specified list.
+It prevents modification of the original list.
+Example:
+List<String> originalList = new ArrayList<>();
+originalList.add("Apple");
+originalList.add("Banana");
+List<String> unmodifiableList = Collections.unmodifiableList(originalList);
+
+16. Explain the purpose of the java.util.Queue interface.
+The Queue interface represents a collection designed for holding elements prior to processing.
+It follows the FIFO (First-In-First-Out) principle for element retrieval.
+Example:
+Queue<String> queue = new LinkedList<>();
+queue.add("One");
+queue.add("Two");
+String element = queue.poll(); // Retrieves and removes the head of the queue
+
+17. What is the purpose of the java.util.Deque interface?
+The Deque interface represents a double-ended queue, which allows insertion and removal of
+elements from both ends. It extends the Queue interface.
+Example:
+Deque<String> deque = new ArrayDeque<>();
+deque.addFirst("First");
+deque.addLast("Last");
+
+18. What is an Iterator and how is it used?
+An iterator in Java is an object that enables you to traverse through a collection (like a list,
+set, or map) and access each element sequentially, one at a time, without needing to know the
+internal representation of the collection. Iterators provide a uniform way to access elements
+regardless of the underlying data structure of the collection.
