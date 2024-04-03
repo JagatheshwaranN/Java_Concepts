@@ -63,6 +63,12 @@ scenarios where synchronization is not necessary.
 Comparable interface is used to define the natural ordering of elements within a class, while
 Comparator interface is used to define custom ordering of elements outside the class.
 
+Comparator and Comparable interfaces are used for custom sorting of objects. Comparable is
+implemented by a class to define its natural ordering, while Comparator is used for defining
+custom ordering externally. Use Comparable when you want to define a natural ordering for a
+class. Use Comparator when you want to define multiple ordering options or when you don't have
+access to the class's source code.
+
 7. How can you synchronize a List in Java?
 You can synchronize a List in Java using the Collections.synchronizedList() method.
 For example:
@@ -150,3 +156,54 @@ An iterator in Java is an object that enables you to traverse through a collecti
 set, or map) and access each element sequentially, one at a time, without needing to know the
 internal representation of the collection. Iterators provide a uniform way to access elements
 regardless of the underlying data structure of the collection.
+
+19. How can you compare two sets for equality, considering the order of elements might differ?
+Equality for sets doesn't consider order. Here are two approaches:
+1. Use HashSet.containsAll(): Check if all elements from one set are present in the other using
+containsAll().
+2. Use Set.equals() with a custom comparator: Define a comparator that ignores element order and
+compare sets using equals() with this comparator.
+
+20. Explain how collections can be synchronized for thread safety.
+The Collections Framework provides methods like Collections.synchronizedList() or
+Collections.synchronizedMap() that wrap existing collections and provide synchronized access to
+their methods. Alternatively, you can use thread-safe collection implementations like
+ConcurrentHashMap or CopyOnWriteArrayList.
+
+21. What is the difference between HashSet, LinkedHashSet, and TreeSet? When would you use each
+of them?
+HashSet stores elements using a hash table, providing constant-time performance for basic
+operations but does not guarantee any specific order. LinkedHashSet maintains the insertion
+order of elements in addition to the unique elements property. TreeSet is a sorted set that
+orders elements based on their natural ordering or a provided comparator. Use HashSet when
+order doesn't matter and you need fast access. Use LinkedHashSet when you need to maintain
+the insertion order. Use TreeSet when you need elements sorted.
+
+22. How does ConcurrentHashMap achieve thread-safety compared to Hashtable and synchronizedMap?
+ConcurrentHashMap achieves thread-safety by dividing the underlying data structure into segments,
+allowing multiple threads to access different segments concurrently. This minimizes contention
+compared to Hashtable and synchronizedMap, which lock the entire data structure during modification,
+leading to potential performance bottlenecks in highly concurrent scenarios.
+
+23. Explain the differences between HashMap and TreeMap. When would you choose one over the other?
+HashMap uses a hash table for storing key-value pairs, providing constant-time performance for
+basic operations but does not guarantee any specific order. TreeMap is a sorted map that orders
+elements based on their natural ordering or a provided comparator. Use HashMap when order doesn't
+matter and you need fast access. Use TreeMap when you need elements sorted.
+
+24. Can you explain the internal implementation of the HashSet class in Java? How does it ensure
+uniqueness of elements?
+HashSet internally uses a HashMap to store elements. It ensures uniqueness by checking if the hash
+code of an element already exists in the set. If the hash code already exists, it further checks for
+equality using the equals() method to determine if the element is already present. If not, it adds
+the element to the set.
+
+25. Discuss the differences between Iterator, ListIterator, and Enumeration in Java. When would you
+use each?
+Iterator is used for iterating over collections in a forward direction, while ListIterator is used
+for iterating over lists bidirectionally and modifying the list during iteration. Enumeration is an
+older interface primarily used for legacy collections, and its use is discouraged in modern Java.
+Use Iterator for iterating collections. Use ListIterator for lists when you need bidirectional
+traversal and modification.
+
+
