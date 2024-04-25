@@ -1,5 +1,6 @@
 package programs;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class DuplicateChars {
@@ -7,6 +8,7 @@ public class DuplicateChars {
     public static String input = "Better butter";
     public static void main(String[] args) {
         findDuplicateCharsUsingHashMap();
+        findDuplicateCharsUsingSorting();
     }
 
     static void findDuplicateCharsUsingHashMap() {
@@ -29,4 +31,22 @@ public class DuplicateChars {
         }
     }
 
+    static void findDuplicateCharsUsingSorting() {
+
+        char[] inputCharArr = input.replaceAll("\\s+", "").toCharArray();
+        Arrays.sort(inputCharArr);
+        String sortedInput = new String(inputCharArr);
+        int inputLen = sortedInput.length();
+        System.out.println(sortedInput);
+        for(int i = 0; i < inputLen - 1; i++){
+            int count = 1;
+            while(i < inputLen - 1 && sortedInput.charAt(i)==sortedInput.charAt(i+1)){
+                count++;
+                i++;
+            }
+            if(count >= 1) {
+                System.out.println(sortedInput.charAt(i)+"="+count);
+            }
+        }
+    }
 }
