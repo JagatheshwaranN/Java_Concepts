@@ -423,3 +423,19 @@ with the updates made by deposit and withdrawal operations.
 By encapsulating the balance variable and providing synchronized access methods, we maintain
 data integrity and prevent race conditions that could occur if multiple threads accessed and
 modified the balance concurrently.
+
+How does encapsulation contribute to code reusability and maintainability in Java programming?
+
+Encapsulation promotes modular design: By encapsulating data and functionality within objects,
+encapsulation encourages a modular approach to software design. Each object encapsulates a specific
+set of properties and behaviors, making it easier to reuse and extend functionality without affecting
+other parts of the system.
+
+Encapsulation facilitates abstraction: Encapsulation allows developers to define clear interfaces for
+interacting with objects while hiding their internal implementation details. This abstraction makes it
+easier to reuse and swap out components within a system without impacting other parts of the codebase.
+
+Encapsulation enables encapsulated components to be used as building blocks: Encapsulated objects can
+serve as reusable building blocks that can be combined to create larger, more complex systems. By
+encapsulating functionality within well-defined objects, developers can reuse these objects in various
+contexts, leading to greater code reusability.

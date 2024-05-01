@@ -296,3 +296,35 @@ object is instantiated.
 Encapsulation and Modularity: Abstract classes encapsulate common behavior and provide a modular
 approach to software design. Allowing instantiation of abstract classes would break encapsulation
 and hinder the modularity of the codebase.
+
+What is Abstraction Leak?
+The term "abstraction leak" refers to situations where implementation details, intended to be hidden,
+become visible to users of an abstraction. This can happen when the abstraction is incomplete or when
+internal details are exposed unintentionally, leading to potential misuse or misunderstanding.
+
+What are the advantages of Interface over Abstract Class?
+Multiple Inheritance: Interfaces in Java allow a class to implement multiple interfaces, enabling it
+to inherit behaviors from multiple sources.
+
+Contractual Agreement: Interfaces define a contract for implementing classes, ensuring consistency in
+behavior across different implementations.
+
+Compatibility with Existing Class Hierarchies: Since Java doesn't support multiple inheritance with
+classes, interfaces offer a way to extend functionality without altering existing class hierarchies.
+
+Promotes Loose Coupling: Interfaces promote loose coupling by allowing classes to interact based on
+interfaces rather than concrete implementations, facilitating easier maintenance and modifications.
+
+Supports Distributed Systems: Interfaces are commonly used in distributed systems to define remote
+services and communicate between components.
+
+How abstraction contribute in Code Reusability and Maintainability?
+Code Reusability: Abstraction allows for the creation of generic, reusable components that can be
+easily incorporated into different parts of the codebase. By hiding implementation details and
+exposing only essential interfaces, abstract components can be reused across various contexts.
+
+Maintainability: Abstraction simplifies code maintenance by encapsulating complex implementation
+details within abstract components. This separation of concerns makes it easier to modify or replace
+specific implementations without affecting other parts of the system. Additionally, abstraction
+promotes a clear division between interface and implementation, making the codebase easier to
+understand and manage over time.
