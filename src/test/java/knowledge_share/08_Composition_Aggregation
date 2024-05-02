@@ -38,7 +38,7 @@ class Books {
 }
 
 class Library {
-  private List<Book> books;
+  private List<Books> books;
 
   public Library() {
     books = new ArrayList<>();
@@ -150,3 +150,8 @@ destroyed, the Processor goes with it.
 Encapsulation: The Computer class does not expose a way to replace its Processor after creation,
 emphasizing the strong association between the two. While you can access the Processor through
 a getter, there is no setter method, ensuring the Processor instance cannot be swapped out.
+
+16. How Composition and Aggregation are implemented?
+Your explanation is clear. You could also mention that composition is often implemented using
+constructor injection or setter injection, while aggregation can be implemented using member
+variables or method parameters.
