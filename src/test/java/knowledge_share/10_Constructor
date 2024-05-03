@@ -175,10 +175,11 @@ public class ConstructorNonStaticMethodDemo {
 }
 
 
-Certainly! The concern when calling non-static, especially overridable, methods from a constructor is about the object's state. If a subclass overrides these methods, the overridden version gets called even before the subclass constructor has run. This might lead to unexpected behavior if the subclass method relies on subclass-specific fields or initialization. Here's an example to demonstrate this issue:
+Certainly! The concern when calling non-static, especially overridable, methods from a constructor is about
+the object's state. If a subclass overrides these methods, the overridden version gets called even before the
+subclass constructor has run. This might lead to unexpected behavior if the subclass method relies on
+subclass-specific fields or initialization. Here's an example to demonstrate this issue:
 
-java
-Copy code
 class Base {
     public Base() {
         initialize();
@@ -229,3 +230,73 @@ The initialize() method in Derived attempts to use the message field. However, t
 Derived constructor has not run yet, so the field initialization private String
 message = "Hello from Derived"; has not occurred if the field relied on more complex
 initialization that couldn't be completed at the declaration point.
+
+Role of Constructors in Creating Immutable Objects:
+====================================================
+Constructors play a fundamental role in creating immutable objects because they allow us to
+initialize the object's state upon creation. In immutable classes, once an object is created,
+its state cannot be changed. Therefore, it's essential to set all the object's fields during
+construction itself. Let's illustrate this with an example:
+
+public final class ImmutablePerson {
+    private final String name;
+    private final int age;
+
+    public ImmutablePerson(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+In the ImmutablePerson class above, both name and age are final and initialized in the constructor.
+Once an instance of ImmutablePerson is created, its state cannot be modified, making it immutable.
+
+Constructor vs. Static Factory Method for Object Creation:
+==========================================================
+Both constructors and static factory methods can be used for object creation, but they serve different
+purposes and offer distinct advantages.
+
+Static Factory Method:
+======================
+Static factory methods are static methods within a class that return an instance of the class. They
+provide more flexibility in object creation compared to constructors. Static factory methods can have
+meaningful names, can return a cached instance, or even return a subclass instance. Here's an example:
+
+public class MyClass {
+    private int value;
+
+    private MyClass(int value) {
+        this.value = value;
+    }
+
+    // Static factory method for object creation
+    public static MyClass createInstance(int value) {
+        return new MyClass(value);
+    }
+
+    // Other methods...
+}
+
+// Creating an object using a static factory method
+MyClass obj = MyClass.createInstance(10);
+
+When to use each approach:
+==========================
+Use Constructor:
+================
+For basic object creation and initialization.
+When the class represents a fundamental entity with a clear initialization process.
+
+Use Static Factory Method:
+==========================
+For providing more descriptive names for object creation.
+When you want to return cached instances or control object creation logic.
+When you want to return instances of subclasses or different implementations based on parameters.
