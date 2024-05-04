@@ -15,7 +15,7 @@ public class AnonymousInnerClassDemo3 {
 
     }
 
-    static interface IFace {
+    interface IFace {
         void show();
     }
 }
