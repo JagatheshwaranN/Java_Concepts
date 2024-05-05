@@ -115,3 +115,11 @@ for (int[] row : matrix) {
         sum += element;
     }
 }
+
+20. Explain the concept of array cloning. How do you clone an array?
+Array cloning involves creating a new array with the same contents as an existing array. You can
+clone an array using the clone() method or by using Arrays.copyOf() method.
+
+21. Can you use arrays with other data structures or classes? If yes, how?
+Arrays can be used with other data structures like LinkedList or Queue, or even with custom classes
+where arrays can store objects.

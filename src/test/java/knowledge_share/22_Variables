@@ -134,5 +134,3 @@ declarations in a Java class.
 before the main method.
 2. Instance variable initialization (including assignment of default values) happens at
 object creation time, before any constructors are called.
-
-
