@@ -183,11 +183,3 @@ encountered, the JVM checks if an identical string already exists in the pool. I
 existing string is reused; otherwise, a new string is created and added to the pool. String
 interning helps in conserving memory by reducing duplication of string objects and can improve
 performance by enabling reference equality checks (==) rather than content-based checks (.equals()).
-
-
-
-
-
-
-
-
