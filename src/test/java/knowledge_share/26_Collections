@@ -39,7 +39,7 @@ Null keys and values:
 1. HashMap allows one null key and any number of null values. Retrieval of Null Key value is
 possible.
 2. Hashtable allows one null key and any number of null values. Retrieval of Null Key value
-is not possible anf throws NullPointerException.
+is not possible and throws NullPointerException.
 
 Performance:
 ============
@@ -101,7 +101,7 @@ Both HashSet and TreeSet implement the Set interface, but they differ in how the
 order elements:
 1. HashSet: Uses a hash table for storing elements. Doesn't guarantee any specific order for
 elements and allows null values (only one).
-2. sTreeSet: Uses a tree-based structure to store elements. Maintains a sorted order for the
+2. TreeSet: Uses a tree-based structure to store elements. Maintains a sorted order for the
 elements and doesn't allow null values.
 
 13. What is the difference between HashSet and LinkedHashSet?
