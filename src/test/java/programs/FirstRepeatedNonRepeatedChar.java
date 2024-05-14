@@ -5,10 +5,10 @@ import java.util.LinkedHashSet;
 
 public class FirstRepeatedNonRepeatedChar {
 
-    public static String input = "ppython concept of the day";
+    public static String input = "python concept of the day";
 
     public static void main(String[] args) {
-        //findNonRepeatedAndRepeatedCharUsingMap();
+        findNonRepeatedAndRepeatedCharUsingMap();
         findNonRepeatedAndRepeatedChar();
     }
 
@@ -43,6 +43,26 @@ public class FirstRepeatedNonRepeatedChar {
 
         String inputWithoutSpace = input.replaceAll("\\s", "").trim();
         char[] inputCharArr = inputWithoutSpace.toCharArray();
+        char[] result = new char[2];
+        int[] charCount = new int[256];
+
+        for (char c : inputCharArr) {
+            charCount[c]++;
+        }
+
+        for (char c : inputCharArr) {
+
+            if (charCount[c] > 1 && result[0] == '\0') {
+                result[0] = c;
+                System.out.println("First Repeated Character : " + c);
+            } else if (charCount[c] == 1 && result[1] == '\0') {
+                result[1] = c;
+                System.out.println("First Non Repeated Character : " + c);
+            }
+            if (result[0] != '\0' && result[1] != '\0') {
+                break;
+            }
+        }
     }
 
 }
