@@ -1,4 +1,4 @@
-package preparation.fp_excercises;
+package preparation.fp_excercises.part1;
 
 import java.util.function.*;
 public class UnaryOperatorDemo {
