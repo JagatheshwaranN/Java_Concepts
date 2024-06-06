@@ -1,6 +1,7 @@
 package preparation.fp_excercises.part2;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Course {
 
@@ -56,6 +57,28 @@ public class Course {
         new Course("Azure", "Devops", 98, 100),
         new Course("Docker", "Devops", 95, 200),
         new Course("Kubernetes", "Devops", 95, 100));
+
+        Course.verifyAllMatch(courseList);
+        Course.verifyNoneMatch(courseList);
+        Course.verifyAnyMatch(courseList);
+    }
+
+    private static void verifyAllMatch(List<Course> courses) {
+
+        Predicate<Course> reviewScorePredicate = course -> course.reviewScore > 90;
+        System.out.println(courses.stream().allMatch(reviewScorePredicate));
+    }
+
+    private static void verifyNoneMatch(List<Course> courses) {
+
+        Predicate<Course> reviewScorePredicate = course -> course.reviewScore < 90;
+        System.out.println(courses.stream().noneMatch(reviewScorePredicate));
+    }
+
+    private static void verifyAnyMatch(List<Course> courses) {
+
+        Predicate<Course> reviewScorePredicate = course -> course.reviewScore < 90;
+        System.out.println(courses.stream().anyMatch(reviewScorePredicate));
     }
 
 }
