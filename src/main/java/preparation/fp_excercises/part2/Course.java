@@ -1,7 +1,9 @@
 package preparation.fp_excercises.part2;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Course {
 
@@ -61,6 +63,9 @@ public class Course {
         Course.verifyAllMatch(courseList);
         Course.verifyNoneMatch(courseList);
         Course.verifyAnyMatch(courseList);
+        Course.compareAscByStudents(courseList);
+        Course.compareDescByStudents(courseList);
+        Course.compareDescByStudentsAndReviewScore(courseList);
     }
 
     private static void verifyAllMatch(List<Course> courses) {
@@ -80,5 +85,26 @@ public class Course {
         Predicate<Course> reviewScorePredicate = course -> course.reviewScore < 90;
         System.out.println(courses.stream().anyMatch(reviewScorePredicate));
     }
+
+    private static void compareAscByStudents(List<Course> courses) {
+
+        Comparator<Course> compareByNoOfStudents = Comparator.comparing(Course::getNumberOfStudents);
+        System.out.println(courses.stream().sorted(compareByNoOfStudents).collect(Collectors.toList()));
+    }
+
+    private static void compareDescByStudents(List<Course> courses) {
+
+        Comparator<Course> compareByNoOfStudents = Comparator.comparingInt(Course::getNumberOfStudents).reversed();
+        System.out.println(courses.stream().sorted(compareByNoOfStudents).collect(Collectors.toList()));
+    }
+
+    private static void compareDescByStudentsAndReviewScore(List<Course> courses) {
+
+        Comparator<Course> compareByNoOfStudentsAndReviewScore = Comparator.comparingInt(Course::getNumberOfStudents).thenComparing(Course::getReviewScore).reversed();
+        System.out.println(courses.stream().sorted(compareByNoOfStudentsAndReviewScore).collect(Collectors.toList()));
+    }
+
+
+
 
 }
