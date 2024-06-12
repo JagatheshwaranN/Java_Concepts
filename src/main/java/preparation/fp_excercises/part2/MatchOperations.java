@@ -60,9 +60,9 @@ public class MatchOperations {
         new MatchOperations("Docker", "Devops", 95, 200),
         new MatchOperations("Kubernetes", "Devops", 95, 100));
 
-        MatchOperations.verifyAllMatch(courseList);
+     //   MatchOperations.verifyAllMatch(courseList);
         MatchOperations.verifyNoneMatch(courseList);
-        MatchOperations.verifyAnyMatch(courseList);
+       // MatchOperations.verifyAnyMatch(courseList);
         
     }
 
