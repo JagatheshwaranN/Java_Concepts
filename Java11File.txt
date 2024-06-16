@@ -1,1 +1,3 @@
-This is Java11 File
+This is a Java11 File.
+When focused, it expands.
+Concentration is the secret of Success.
