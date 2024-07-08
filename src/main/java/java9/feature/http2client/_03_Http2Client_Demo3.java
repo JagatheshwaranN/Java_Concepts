@@ -15,7 +15,7 @@ public class _03_Http2Client_Demo3 {
 
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder().uri(new URI("https://www.redbus.in/info/aboutus")).GET().build();
-		HttpResponse<Path> response = client.send(request, HttpResponse.BodyHandlers.ofFile(Paths.get("HttpClientDemo3.html")));
+		HttpResponse<Path> response = client.send(request, HttpResponse.BodyHandlers.ofFile(Paths.get("testData/HttpClientDemo3.html")));
 		System.out.println("Response Status Code  ==> " + response.statusCode());
 	}
 }

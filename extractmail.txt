@@ -1,3 +1,0 @@
-test_john@abc.com
-Alex.TheGreat_@test.com
-test.automate_@gmail.com

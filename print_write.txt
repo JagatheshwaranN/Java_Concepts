@@ -1,9 +1,0 @@
-apple
-banana
-orange
-100
-1000
-100.0
-1000.0
-A
-true
