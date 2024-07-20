@@ -1,4 +1,4 @@
-package preparation.calc;
+package preparation.calc.advanced;
 
 @FunctionalInterface
 public interface MathOperation {

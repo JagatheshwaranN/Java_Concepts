@@ -1,4 +1,4 @@
-package preparation.calc;
+package preparation.calc.basic;
 
 public class TestCalculator {
 
