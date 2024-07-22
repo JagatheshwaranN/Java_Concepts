@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class CompareOperations {
 
-    private String courseName;
+    private final String courseName;
 
     private String category;
 
