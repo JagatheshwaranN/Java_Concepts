@@ -1,0 +1,22 @@
+================================================================================
+1. Method Overloading
+=====================
+MO - Method Overloading
+1. Same method name with different parameters.
+2. Criteria - Number of params, Type of params, Order of params. We can't overload
+   only with order of params. We need different number or type of params.
+3. Return Type and Access modifiers are not considered in MO.
+4. VarArg method can be used in method overloading. But it takes least precedence.
+5. Compiler calls the correct method with the help of number, type and
+   order of params in method overloading.
+6. Autoboxing and Widening is used along with method overloading. AB helps to
+   convert the primitive type to its wrapper type and WD helps to convert the
+   smaller data type to larger data type.
+7. Compiler choose most specific /closest implementation while calling a method in
+   method overloading.
+
+Notes:
+======
+1. Autoboxing and Unboxing may sometimes pays way for ambiguity in the MO.
+2. Widening or Narrowing takes precedence over the Autoboxing and unboxing.
+================================================================================
