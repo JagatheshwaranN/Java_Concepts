@@ -1,4 +1,4 @@
-================================================================================
+====================================================================================
 1. Method Overloading
 =====================
 MO - Method Overloading
@@ -14,9 +14,33 @@ MO - Method Overloading
    smaller data type to larger data type.
 7. Compiler choose most specific /closest implementation while calling a method in
    method overloading.
+8. Method Overloading works on reference type not based on the runtime object.
 
 Notes:
 ======
 1. Autoboxing and Unboxing may sometimes pays way for ambiguity in the MO.
 2. Widening or Narrowing takes precedence over the Autoboxing and unboxing.
-================================================================================
+====================================================================================
+2. Method Overriding
+====================
+1. Subclass method provides implementation for the method which is already in
+   Superclass.
+2. Criteria - Same method name, inheritance hierarchy, non-static methods, and
+   not private methods.
+3. Private and Static methods can't be overridden. Final class methods can't be
+   Overridden.
+4. Method Hiding involves creation of new method with same name in a subclass.
+   It can be achieved with static methods.
+5. Return of the overriding method can be same or covariant type [Sub type].
+6. Visibility of access modifiers can be increased or maintained in same level
+   but can't be decreased.
+7. Checked Exception thrown by overriding method should be same as Superclass
+   method or less than the Superclass method. But, overriding method can throw
+   runtime exception.
+8. Super Keyword can be used in Subclass overriding method to call the Superclass
+   methods / members.
+9. Superclass default constructor can be called automatically when the Subclass
+   constructor is invoked.
+10. Method Overriding works based on the runtime object rather than the reference
+   type.
+====================================================================================
