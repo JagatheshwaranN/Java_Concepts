@@ -1,7 +1,35 @@
 ====================================================================================
-1. Method Overloading
+1. Polymorphism [Ability of an object to take multiple forms]
+===============
+Polymorphism - In Java, it allows objects of different classes to be treated as an
+object of common super class thru Inheritance, Method Overloading and Overriding.
+
+2 Types of polymorphism
+=======================
+1. Compile Time
+2. Runtime
+
+1. Method Overloading AKA Early Binding / Static Binding / Compile Time Polymorphism
+   / Static Method Dispatch.
+2. Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
+   / Dynamic Method Dispatch.
+3. Usage of Parent reference to hold the Child object it’s the concept of Polymorphism.
+   List l = new ArrayList ();
+   List l = new LinkedList ();
+
+Note:
+=====
+Parent class reference can be used to hold the Child object. By using that reference
+we can call only the methods available in parent class. But we can’t call child class
+methods whereas using the child class reference we can call both methods.
+====================================================================================
+2. Method Overloading [Method Resolution takes care by Compiler]
 =====================
 MO - Method Overloading
+
+Method Overloading AKA Early Binding / Static Binding / Compile Time Polymorphism
+/ Static Method Dispatch.
+
 1. Same method name with different parameters.
 2. Criteria - Number of params, Type of params, Order of params. We can't overload
    only with order of params. We need different number or type of params.
@@ -21,8 +49,12 @@ Notes:
 1. Autoboxing and Unboxing may sometimes pays way for ambiguity in the MO.
 2. Widening or Narrowing takes precedence over the Autoboxing and unboxing.
 ====================================================================================
-2. Method Overriding
+3. Method Overriding [Method Resolution takes care by JVM]
 ====================
+
+Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
+/ Dynamic Method Dispatch.
+
 1. Subclass method provides implementation for the method which is already in
    Superclass.
 2. Criteria - Same method name, inheritance hierarchy, non-static methods, and

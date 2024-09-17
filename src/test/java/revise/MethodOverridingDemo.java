@@ -15,7 +15,7 @@ public class MethodOverridingDemo {
         // base1.test4();
         // derived1.test4();
         derived1.test5();
-
+        derived1.test6(1,2,3);
     }
 }
 
@@ -48,6 +48,10 @@ class Base1 {
     protected void test5() throws Exception {
         System.out.println("Base - Test5");
         System.out.println(10/0);
+    }
+
+    public void test6(int... i) {
+        System.out.println("Base - Test6");
     }
 }
 
@@ -90,6 +94,15 @@ class Derived1 extends Base1 {
         System.out.println(10/0);
     }
 
+//    @Override
+//    public void test6(int i) {  // - Compile Time error
+//        System.out.println("Derived - Test6");
+//    }
+
+    @Override
+    public void test6(int... i) {
+        System.out.println("Derived - Test6");
+    }
 }
 
 final class Base2 {
@@ -99,3 +112,24 @@ final class Base2 {
 }
 
 // class Derived2 extends Base2 - Cannot inherit from final 'revise.Base2'
+
+abstract class Base3 {
+
+    public void demo1() {
+        System.out.println("Abstract Base3 - Demo1");
+    }
+
+    public abstract void demo2();
+}
+
+abstract class Derived3 extends Base3 {
+
+    @Override
+    public abstract void demo1();
+
+    @Override
+    public void demo2() {
+        System.out.println("Abstract Derived - Demo2");
+    }
+
+}
