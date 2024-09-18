@@ -76,3 +76,20 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 10. Method Overriding works based on the runtime object rather than the reference
    type.
 ====================================================================================
+4. Encapsulation
+================
+1. Encapsulation = Data Hiding + Abstraction.
+    Data Hiding => Data hiding refers to the practice of making the internal state of
+    an object inaccessible from outside of the object's definition.
+    Abstraction => Abstraction, focuses on hiding the complex implementation details
+    and showing only the essential features of an object.
+2. Criteria - Private variables and Public getters and setters.
+3. Integrity, Access Control and Code Organization.
+4. Benefits - Data hiding, Modularity, Flexibility and Security.
+5. Without Encapsulation - It leads to Data inconsistency and compromise on the
+   integrity of the code.
+6. Encapsulation promotes loose coupling and high cohesion.
+7. Alternatives for Setters/Getters - Builder Pattern and Immutable Objects.
+8. Java Reflections might have impact on Encapsulation. It access private members,
+   violation of  encapsulation, and security risks.
+====================================================================================

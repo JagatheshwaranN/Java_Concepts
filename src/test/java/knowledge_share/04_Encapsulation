@@ -97,9 +97,16 @@ changes to be made without affecting other parts of the codebase.
 related functionality within classes
 
 16. What is the difference between Encapsulation and Data Abstraction?
-Explain that Encapsulation is the mechanism (access modifiers) to achieve data abstraction.
-Data Abstraction focuses on the interface (methods) that users interact with, hiding the
-underlying implementation details.
+1. Encapsulation protects data by keeping it inside a class and controlling access through
+methods.
+2. Data Abstraction hides complex details and shows only what’s necessary, focusing on what
+an object does, not how.
+3. Encapsulation manages data access, while abstraction simplifies interactions by exposing
+only the essentials.
+
+Encapsulation bundles data and methods into a class, while data abstraction hides implementation
+details and provides a simplified interface. Encapsulation is a mechanism for achieving data
+abstraction.
 
 17. How can access modifiers be used to control inheritance?
 1. Private members are not inherited by subclasses.
