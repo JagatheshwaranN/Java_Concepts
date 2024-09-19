@@ -93,3 +93,22 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 8. Java Reflections might have impact on Encapsulation. It access private members,
    violation of  encapsulation, and security risks.
 ====================================================================================
+5. Inheritance
+==============
+1. Inheritance AKA Is-A Relationship.
+2. It is a mechanism by which one class can acquire / access the properties and
+   behaviours of another class.
+3. Extends keyword is used to implement the inheritance relation.
+4. Types - Single, Multilevel, Hierarchical and Multiple [Not supported by Class, but
+   by Interface].
+5. Only methods properties and methods can be inherited whereas Constructors can't be
+   inherited.
+6. Final classes can't be inherited. Likewise private members [fields / methods] can't
+   be inherited.
+7. Example - Object class in Java is a root class for all the classes in Java. It's
+   methods - equals(), hashCode() and toString() is accessible all Java classes.
+8. Benefits - Code reusability, Supports Polymorphism, and Easy maintenance.
+9. Limitations - Tight coupling, and Potential for Fragility [ Changes made to Super
+   can impact the Child].
+10. Inheritance is applicable for both classes and interfaces.
+====================================================================================
