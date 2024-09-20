@@ -101,7 +101,7 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 3. Extends keyword is used to implement the inheritance relation.
 4. Types - Single, Multilevel, Hierarchical and Multiple [Not supported by Class, but
    by Interface].
-5. Only methods properties and methods can be inherited whereas Constructors can't be
+5. Only properties[variables] and methods can be inherited whereas Constructors can't be
    inherited.
 6. Final classes can't be inherited. Likewise private members [fields / methods] can't
    be inherited.
@@ -111,4 +111,22 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 9. Limitations - Tight coupling, and Potential for Fragility [ Changes made to Super
    can impact the Child].
 10. Inheritance is applicable for both classes and interfaces.
+====================================================================================
+6. Abstract Class
+=================
+1. Abstract class is class which has methods with no implementations.It is defined
+   using the abstract keyword.
+2. Need - To achieve the abstraction.
+3. Abstraction - It is a mechanism where abstract class defines what methods must be
+   implemented by its subclasses without providing the full implementation itself.
+4. Criteria - Class shouldn't be final. Methods shouldn't be private or static.
+5. Objects are not created for the Abstract class as it has methods without implementations.
+6. Abstract class can have constructors which is invoked by subclass.
+7. Abstract methods in abstract class is used to define the interface for the subclass
+   / implementation class.
+8. Abstract class can have concrete methods as well.
+9. If Subclass doesn't provide implementation, then it should be declared as Abstract.
+10. Benefits - Code Reusability, Abstraction, Encapsulation and Polymorphism.
+11. Limitations - Cannot be instantiated, Mandatory method implementation, Increased
+    complexity and Less Flexibility.
 ====================================================================================
