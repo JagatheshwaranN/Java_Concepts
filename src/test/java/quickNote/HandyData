@@ -130,3 +130,27 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 11. Limitations - Cannot be instantiated, Mandatory method implementation, Increased
     complexity and Less Flexibility.
 ====================================================================================
+7. Interface
+============
+1. Interface is a blueprint / contract which defines set of methods that a class must
+   implement. [Any service requirement specification or any contract between the client
+    and service provider is called as Interface]
+2. Need - To achieve the abstraction.
+3. Every method declared inside interface is always public abstract.
+4. Every variables declared inside interface is always public static final.
+5. Interface can't have instance variables,constructors, or non-static methods.
+6. Interface can't be instantiated. They can only be implemented by a class or extends
+   another interface.
+7. Interface can have constants, abstract methods, default methods, private methods and
+   static methods.
+8. Benefits - Abstraction, code reusability, Loose coupling,polymorphism, define contract.
+9. Marker Interface - Interface with no method declarations. It provides the information
+   about the implementation class.
+   Ex: Serializable, Cloneable, and RandomAccess interfaces.
+10. Functional Interface - Interface with single abstract method can be used with
+    lambda or method reference.
+11. Interface can extend multiple interfaces.
+12. Interface used in serialization where it marks the class as serializable.
+13. Adapter pattern allows incompatible interfaces to work together by providing the
+    bridge between them.
+====================================================================================
