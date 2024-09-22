@@ -143,7 +143,7 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
    another interface.
 7. Interface can have constants, abstract methods, default methods, private methods and
    static methods.
-8. Benefits - Abstraction, code reusability, Loose coupling,polymorphism, define contract.
+8. Benefits - Abstraction, code reusability, Loose coupling, polymorphism, define contract.
 9. Marker Interface - Interface with no method declarations. It provides the information
    about the implementation class.
    Ex: Serializable, Cloneable, and RandomAccess interfaces.
@@ -153,4 +153,22 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 12. Interface used in serialization where it marks the class as serializable.
 13. Adapter pattern allows incompatible interfaces to work together by providing the
     bridge between them.
+====================================================================================
+8. Composition & Aggregation
+============================
+1. Composition and Aggregation provides the "Has-A" relationship between objects in Java.
+2. Composition has strong relationship between classes where the parent (containing
+   object) is responsible for the lifetime of the child(contained object).
+3. Aggregation has weak relationship between classes where the parent (containing object)
+   is not responsible for the lifetime of the child( contained object) and both can exists
+   independently.
+4. In composition, the contained object is often initialized inside the containing class
+   constructor.
+5. Benefits - Improved object lifecycle management, modular design, and encapsulation.
+6. Drawback of Composition - Excessive composition can tightly couple the objects.
+7. Composition is implemented using Constructor / Setter injection, whereas Aggregation
+   is implemented using member variables or method parameters.
+8. Composition can be used as an option in place of inheritance.
+9. If we want the part of the functionality of the class then we should go for the Has
+   A relationship, whereas if complete functionality is needed then we should use Is-A.
 ====================================================================================

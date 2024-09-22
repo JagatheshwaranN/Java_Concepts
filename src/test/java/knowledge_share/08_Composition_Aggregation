@@ -44,7 +44,7 @@ class Library {
     books = new ArrayList<>();
   }
 
-  public void addBook(Book book) {
+  public void addBook(Books book) {
     books.add(book);
   }
 }
