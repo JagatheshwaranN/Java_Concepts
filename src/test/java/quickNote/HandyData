@@ -154,7 +154,7 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 13. Adapter pattern allows incompatible interfaces to work together by providing the
     bridge between them.
 ====================================================================================
-8. Composition & Aggregation
+8. Composition & Aggregation [AKA HAS-A Relation]
 ============================
 1. Composition and Aggregation provides the "Has-A" relationship between objects in Java.
 2. Composition has strong relationship between classes where the parent (containing
@@ -171,4 +171,18 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 8. Composition can be used as an option in place of inheritance.
 9. If we want the part of the functionality of the class then we should go for the Has
    A relationship, whereas if complete functionality is needed then we should use Is-A.
+====================================================================================
+9. Cohesion & Coupling
+======================
+1. Cohesion refers to the degree to which the elements of the module belongs together.
+   It measures the bonding between the data and methods of a class.
+2. Coupling refers to how tightly modules are dependent on each other. It measures the
+   bonding between the modules.
+3. High Cohesion can be achieved by following SRP design pattern, grouping related functions
+   and data together. Using private methods for functionality that is not meant to expose.
+4. Low coupling can be achieved by following Interface based programming, Dependency injection
+   and using design patterns like observer pattern or factory pattern.
+5. Advantages of High Cohesion and Low Coupling - Code Maintainability, Understandability,
+   flexibility, testability, robustness and scalability.
+6. Recommended is always High Cohesion and Low Coupling. Reverse is not advisable.
 ====================================================================================
