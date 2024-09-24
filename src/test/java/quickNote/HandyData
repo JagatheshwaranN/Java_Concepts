@@ -177,7 +177,7 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
 1. Cohesion refers to the degree to which the elements of the module belongs together.
    It measures the bonding between the data and methods of a class.
 2. Coupling refers to how tightly modules are dependent on each other. It measures the
-   bonding between the modules.
+   bonding between the modules [Classes].
 3. High Cohesion can be achieved by following SRP design pattern, grouping related functions
    and data together. Using private methods for functionality that is not meant to expose.
 4. Low coupling can be achieved by following Interface based programming, Dependency injection
@@ -186,3 +186,26 @@ Method Overriding AKA Late Binding / Dynamic Binding / Runtime Polymorphism
    flexibility, testability, robustness and scalability.
 6. Recommended is always High Cohesion and Low Coupling. Reverse is not advisable.
 ====================================================================================
+10. Constructor
+===============
+Constructor [ Special type of Method]
+1. Constructor are special type of method, which is used to initialize the Objects.
+   [Instance variables] It is called / invoked implicitly when an instance of class
+   is created.
+2. Significance - Have same name as class name and doesn't have return type.
+3. Types - Default and Parameterized.
+4. Criteria - Constructor can't be final|static|abstract.
+5. Constructors can be overloaded. It allows for creation of Objects in different ways.
+6. Constructors can't be overridden.
+7. "this()" method is used for constructor chaining which means we can call a constructor
+   from another constructor using this keyword and it should be first statement in it.
+8. Constructor can throw exception.
+9. "super()" method is used to call the superclass constructor from the subclass constructor.
+10. Private constructor are allowed and its often used in Singleton Design Pattern.
+11. The only applicable modifiers for Constructors are Public, Private, Protected
+    and Default.
+12. If we are not having any constructor, then only compiler will generate the default
+    constructor.
+====================================================================================
+
+
