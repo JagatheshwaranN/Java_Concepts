@@ -1,5 +1,6 @@
 package beforeJava8.features.oops;
 
+@SuppressWarnings("All")
 public class _17_Object_TypeCasting {
 
     public static void main(String[] args) {

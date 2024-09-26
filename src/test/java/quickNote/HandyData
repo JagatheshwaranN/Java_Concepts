@@ -207,5 +207,27 @@ Constructor [ Special type of Method]
 12. If we are not having any constructor, then only compiler will generate the default
     constructor.
 ====================================================================================
+11. Type Casting
+================
+1. Type casting refers to converting the data of one type to another.
+   [Treating the object of one class as another class]
+2. Types - UpCasting and DownCasting.
+3. Criteria - Inheritance relationship is required.
+4. UpCasting - Casting from a subclass to a superclass. Safe and done by compiler.
+5. DownCasting - Casting from a superclass to a subclass. Risk and needs explicit
+   casting by programmer. It might throw ClassCastException if object being casted
+   is not instance of subclass.
+6. InstanceOf operator is used to check whether the object is an instance of class/
+   interface. It is used in DownCasting before performing the casting, it is used
+   to check that object is instance of the class / interface.
+7. Object TypeCasting is ONLY for reference data types not for primitives.
+8. Converting of Integer Object to Double requires 2 steps.
+   1. Integer object to int primitive using Unboxing
+   2. Int primitive to Double object using AutoBoxing
+9. Examples
+   Superclass obj = new Subclass(); // Upcasting
+   SuperClass obj1 = new SubClass();
+   SubClass obj2 = (SubClass)obj1; // Down-casting
+====================================================================================
 
 
