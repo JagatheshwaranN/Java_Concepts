@@ -229,5 +229,36 @@ Constructor [ Special type of Method]
    SuperClass obj1 = new SubClass();
    SubClass obj2 = (SubClass)obj1; // Down-casting
 ====================================================================================
-
+12. Static Block [First code block to be executed]
+================
+1. Block of code enclosed with static keyword is called as Static Block.
+   It is implicitly [automatically] executed by JVM at the time of class loading.
+2. Purpose - static variables initialization or one time initialization task.
+3. If error occurred in static block then class load will not load properly and
+   throws an error.
+4. Usage - Initializing static variables, Loading resources, and Initializing
+   constants.
+5. Non-static member are not allowed inside the static block. Only Static Members
+   allowed.
+6. Its safer to initialize the final static variables inside static block.
+7. We can use Try Catch inside the static block.
+8. Static block executes first than the static variables.
+9. Until Java 1.6 even can use static blocks without main() method.
+====================================================================================
+Static Control Flow
+===================
+1. Static control flow refers to the sequence of execution of static blocks,
+   static variables initialization and static method invocation.
+2. Static variables affects the static block execution if its called in static
+   block and not initialized.
+3. Forward Reference - When a static block tries to access a static variable or
+   method that is declared later in class.
+4. With Inheritance relation, the Parent class static members are initialized /
+   loaded first then followed by the Child class static members.
+5. Whenever we are executing a Java class, the following sequence of steps will be
+   executed as part of the static control flow.
+   1.	Identification of static members from top to bottom.
+   2.	Execution of static variables assignments and static blocks from top to bottom.
+   3.	Execution of main method.
+====================================================================================
 
