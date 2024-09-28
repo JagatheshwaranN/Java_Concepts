@@ -245,8 +245,8 @@ Constructor [ Special type of Method]
 8. Static block executes first than the static variables.
 9. Until Java 1.6 even can use static blocks without main() method.
 ====================================================================================
-Static Control Flow
-===================
+13. Static Control Flow
+=======================
 1. Static control flow refers to the sequence of execution of static blocks,
    static variables initialization and static method invocation.
 2. Static variables affects the static block execution if its called in static
@@ -260,5 +260,27 @@ Static Control Flow
    1.	Identification of static members from top to bottom.
    2.	Execution of static variables assignments and static blocks from top to bottom.
    3.	Execution of main method.
+====================================================================================
+14. Instance Blocks & Control Flow
+==================================
+1. Instance Control Flow refers to the initialization of instance variables,
+   instance initialization blocks, and constructor invocations when an object
+   of a class is created.
+2. Purpose - Used to initialize the instance variables for every object creation.
+   It can also perform initialization tasks which can't done in Constructors.
+3. If error is thrown in instance blocks then object creation process fails,
+   and error message is printed indicating the error.
+4. Instance initialization blocks will be executed each time when an object
+   of a class is created.
+5. With Inheritance relation, the Parent class instance members are initialized /
+   loaded first then followed by the Child class instance members.
+6. Forward Reference - When a instance block tries to access a instance variable or
+   method that is declared later in class.
+7. Instance blocks can access both static variables and methods because the object
+   has access to both instance and static members of a class.
+8. In instance control flow, the following sequence of the events will be executed.
+   1.	Identification of Instance members from top to bottom.
+   2.	Execution of Instance variables assignments and instance blocks from top to bottom.
+   3.	Execution of Constructor.
 ====================================================================================
 
