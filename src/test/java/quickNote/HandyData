@@ -272,15 +272,32 @@ Constructor [ Special type of Method]
    and error message is printed indicating the error.
 4. Instance initialization blocks will be executed each time when an object
    of a class is created.
-5. With Inheritance relation, the Parent class instance members are initialized /
-   loaded first then followed by the Child class instance members.
+5. With Inheritance relation, the Parent class instance members are initialized
+   first then followed by the Child class instance members.
 6. Forward Reference - When a instance block tries to access a instance variable or
    method that is declared later in class.
 7. Instance blocks can access both static variables and methods because the object
    has access to both instance and static members of a class.
 8. In instance control flow, the following sequence of the events will be executed.
    1.	Identification of Instance members from top to bottom.
-   2.	Execution of Instance variables assignments and instance blocks from top to bottom.
+   2.	Execution of Instance variables assignments and instance blocks from top to
+        bottom.
    3.	Execution of Constructor.
 ====================================================================================
-
+15. Loops
+=========
+1. 3 Types of loops available in Java. For loop, While loop and Do-While loop.
+2. The break statement terminate the loop prematurely, based on a condition.
+3. The continue statement skips the current iteration of the loop.
+4. For loop is traditional loop which gives more control on the iteration/execution.
+5. For Each loop AKA enhanced for loop which is used for Arrays / Collections. The
+   target element in for each loop should be Iterable object.
+6. Use 'for' loop when you know the number of iterations beforehand or need to iterate
+   over a range of values.
+7. Use 'while' loop when you don't know the number of iterations beforehand or when you
+   need to check a condition before each iteration.
+8. Use 'do-while' loop when you want to execute the loop body at least once, regardless
+   of the condition being true.
+9. In for loop, if we don't take the condition value explicitly then compiler will
+   assign it as true and the loop will run infinite times.
+====================================================================================
