@@ -301,3 +301,23 @@ Constructor [ Special type of Method]
 9. In for loop, if we don't take the condition value explicitly then compiler will
    assign it as true and the loop will run infinite times.
 ====================================================================================
+16. Selection Statement
+=======================
+1. Two types of conditional selection statements available in Java.
+   1. if else
+   2. switch
+2. If block executes if condition is true otherwise the else block will execute.
+3. Switch - It works based on matching of the case. If the case is matched then
+   corresponding block will be executed. If none is matched then default case is
+   executed.
+4. If statement is used when the conditions are complex or when you need to check
+   inequality.
+5. Switch statement is used when you have fixed set of values to compare and
+   conditions are simple.
+6. Short-circuit evaluation is a behaviour in which the second operand of logical
+   && or || operator is evaluated only if the result of the overall expression is
+   not determined by first operand.
+7. If statement can be represented in shorthand way by using the Ternary operator.
+8. The allowed argument types for the switch statements are byte, short, char, int,
+   Byte, Short, Character and Integer, Enum  and String types also allowed.
+====================================================================================
