@@ -301,8 +301,8 @@ Constructor [ Special type of Method]
 9. In for loop, if we don't take the condition value explicitly then compiler will
    assign it as true and the loop will run infinite times.
 ====================================================================================
-16. Selection Statement
-=======================
+16. Selection Statements
+========================
 1. Two types of conditional selection statements available in Java.
    1. if else
    2. switch
@@ -320,4 +320,20 @@ Constructor [ Special type of Method]
 7. If statement can be represented in shorthand way by using the Ternary operator.
 8. The allowed argument types for the switch statements are byte, short, char, int,
    Byte, Short, Character and Integer, Enum  and String types also allowed.
+====================================================================================
+17. Transfer Statements
+=======================
+1. 3 Types of Transfer Statements available in Java.
+   1. Break, 2. Continue, and 3. Return
+2. Break - Used to exits the loop prematurely based on condition.
+   Used to exits the switch statement.
+3. Continue - Used to skip the remaining code in the current iteration
+   and moves on to the next.
+4. Return - Used to exits a method and optionally returns a value.
+5. A labeled break statement allows you to break out of a nested loop
+   directly to a specific outer loop.
+6. A labeled continue is used to skip the current iteration of an outer loop
+   when working with nested loops.
+7. Drawbacks - Makes code harder to read and maintain. The logic flow
+   becomes less clear.
 ====================================================================================
