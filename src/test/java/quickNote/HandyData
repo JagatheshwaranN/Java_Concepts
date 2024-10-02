@@ -337,3 +337,42 @@ Constructor [ Special type of Method]
 7. Drawbacks - Makes code harder to read and maintain. The logic flow
    becomes less clear.
 ====================================================================================
+18. Exception Handling
+======================
+1. An Exception is an event that disrupts the normal flow of program's instruction during
+   the execution.
+2. Throwable is a base class for all exceptions and errors. It has 2 subclasses such as
+   Exception and Error.
+3. Types - Checked and Unchecked Exceptions
+   Example: Checked - IOException and SQLException [ Compile Time]
+			Unchecked - NullPointerException and ArrayIndexOutOfBoundsException [Runtime]
+4. Try-Catch block is used to handle the exception in Java.
+5. The code which throws exception is taken inside the Try block and Catch is used to
+   handle the exception if its thrown.
+6. Finally block is used to execute the important code, like closing resources [files /
+   DB connections]. Irrespective of exception thrown or not, finally will execute.
+7. throw keyword is used to explicitly throw an exception within the method.
+   [To hand over the user created exception object to the JVM manually.]
+8. throws keyword is used in method signature to indicate that the method may throw exception.
+   [To delegate the responsibility of the exception handling to the caller.]
+9. Custom exceptions can be created by extending the Exception class for Checked and Runtime
+   Exception class for unchecked.
+10. Try-with-resources  can be used in place of Try-Catch block for implicit resources
+    management.
+11. Exception chaining AKA Exception Wrapping it allows one exception to be nested within
+    another.
+    This way, the original exception is preserved while propagate in the call stack.
+12. Finally block won't run - JVM terminates bcoz od OutofMemory Error / ThreadDeath /
+    System.exit()
+
+ArrayIndexOutOfBoundsException
+NullPointerException
+ClassCastException
+StackOverFlowError
+NoClassDefFoundError
+ExceptionInInitializerError
+IllegalArgumentException
+NumberFormatException
+IllegalStateException
+Assertion Error
+====================================================================================

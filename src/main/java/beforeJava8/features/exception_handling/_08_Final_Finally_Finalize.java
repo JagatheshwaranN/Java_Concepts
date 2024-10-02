@@ -22,7 +22,7 @@ public class _08_Final_Finally_Finalize {
             Finally
             =======
             Finally, is a block always associated with try catch to maintain clean up code.
-            The specialty of the finally code is, it will always be executed irrespective of
+            The specialty of the finally block is, it will always be executed irrespective of
             whether the exception is raised / not raised and whether handled / not handled.
             try {
                 Risky code

@@ -11,7 +11,7 @@ public class _01_Exception_Handling_Intro {
             is called as Exception.
 
             Example,
-            TypePunctured Exception
+            TyrePunctured Exception
             Sleeping Exception
             FileNotFound Exception
 
