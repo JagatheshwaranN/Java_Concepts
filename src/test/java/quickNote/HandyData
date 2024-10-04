@@ -344,14 +344,14 @@ Constructor [ Special type of Method]
 2. Throwable is a base class for all exceptions and errors. It has 2 subclasses such as
    Exception and Error.
 3. Types - Checked and Unchecked Exceptions
-   Example: Checked - IOException and SQLException [ Compile Time]
+   Example: Checked - IOException and SQLException [Compile Time]
 			Unchecked - NullPointerException and ArrayIndexOutOfBoundsException [Runtime]
 4. Try-Catch block is used to handle the exception in Java.
 5. The code which throws exception is taken inside the Try block and Catch is used to
    handle the exception if its thrown.
 6. Finally block is used to execute the important code, like closing resources [files /
    DB connections]. Irrespective of exception thrown or not, finally will execute.
-7. throw keyword is used to explicitly throw an exception within the method.
+7. throw keyword is used to explicitly to throw an exception within the method.
    [To hand over the user created exception object to the JVM manually.]
 8. throws keyword is used in method signature to indicate that the method may throw exception.
    [To delegate the responsibility of the exception handling to the caller.]
@@ -360,9 +360,8 @@ Constructor [ Special type of Method]
 10. Try-with-resources  can be used in place of Try-Catch block for implicit resources
     management.
 11. Exception chaining AKA Exception Wrapping it allows one exception to be nested within
-    another.
-    This way, the original exception is preserved while propagate in the call stack.
-12. Finally block won't run - JVM terminates bcoz od OutofMemory Error / ThreadDeath /
+    another. This way, the original exception is preserved while propagate in the call stack.
+12. Finally block won't run - If JVM terminates because od OutofMemory Error / ThreadDeath /
     System.exit()
 
 ArrayIndexOutOfBoundsException
@@ -376,3 +375,69 @@ NumberFormatException
 IllegalStateException
 Assertion Error
 ====================================================================================
+19. Threads
+===========
+Threads
+=======
+1. Thread is a lightweight process. It is a separate path of execution within a program.
+2. Thread allows concurrent execution of tasks, which enables the program to perform
+   multiple operations.
+3. Thread can be implemented in 2 ways as below.
+   1. Thread Class - By extending a Thread class and overriding its run() method.
+   2. By implementing a Runnable interface and by passing the instance of implement class to
+      Thread constructor.
+4. Thread States - New, Runnable, Blocked, Waiting [Timed Waiting] and Terminated.
+5. When we create Thread using Thread Class you can't extend any other class but whereas
+   when we implement a Runnable interface we can extend class simultaneously.
+6. Start() - It is used to start the execution of a thread. When start() called, JVM
+   internally calls the run() method. Thread class start() method is responsible to register
+   the thread with Thread scheduler and all other mandatory activities.
+7. Join() - It allows one thread to wait for the completion of another thread.
+   t1.join(t2) - t1 will wait until the completion of t2.
+8. Thread Synchronization - Controlling the access to the shared resources by multiple
+   threads. It can be achieved by using synchronized keyword, locks, etc.
+9. Deadlock - Its a situation where two or more threads blocked forever, waiting for each
+   other to release the resources.
+10. Deadlock can be avoided by eliminating the nested locks, ensure lock acquire and release
+    in same order by threads and using timeouts when acquiring locks.
+11. Process is a self contained program execution environment whereas thread is a unit of
+    execution within a process. Process heavy weight and resource intensive. Thread shares
+    resources and lightweight.
+12. A daemon thread is a thread which runs in background and provide services to other threads.
+    Example, Garbage Collector Thread.
+13. Synchronization can be achieved by methods, blocks, locks [reentrant locks], etc.
+14. ThreadPool - A collection of pre-initialized threads which are ready to perform tasks. It
+    reduces the overhead of thread creation and destruction.
+15. wait() - makes current thread to wait until another thread invokes notify() /notifyAll()
+    method for same object.
+	notify() - wakes up single thread which is waiting on the object's monitor.
+	notifyAll() - wakes up all the threads that are waiting on the object's monitor.
+16. Thread Starvation - It is a condition that occurs when a thread is unable to gain the
+    resource access / CPU time because other threads are given priority. It can be prevented
+    by implementing fair scheduling policies, such as using reentrant locks with fairness
+    enabled.
+17. MultiThreading advantages - Make programs more efficient, responsive, handling concurrent
+    tasks, improving performance and resource usage.
+18. MultiThreading pitfalls - Deadlock, Race condition and excessive thread creation. These
+    can be eliminated by proper synchronization, avoiding nested locks, using thread-safe Data
+    Structures.
+19. Volatile keyword used with variables indicates that value may be changed by multiple
+    threads that works concurrently.
+20. Livelock - It occurs when threads are actively trying to resolve a conflict but stuck in
+    repetitive cycle without making progress.
+21. ThreadLocal - It isolates the data for each thread.I.e., each thread has its own copy of
+    data and not shared.
+22. InheritableThreadLocal - It allows child threads to inherits the data from the parent
+    threads.
+Thread Life Cycle
+=================
+------------    ------------------    -----------    --------
+|New / Born| -> |Ready / Runnable| -> | Running | -> | Dead |
+------------    ------------------    -----------    --------
+MyThread t = new MyThread() => New Thread
+t.start();                  => Thread will get Ready / Runnable
+After Thread Scheduler allocates process. Thread will be moved to Running.
+After run() method completes.
+Thread will be moved to Dead state.
+====================================================================================
+
