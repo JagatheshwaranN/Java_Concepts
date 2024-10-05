@@ -1,4 +1,4 @@
-package revise;
+package revise.threads;
 
 @SuppressWarnings("All")
 public class ThreadCreationDemo {

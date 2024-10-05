@@ -429,6 +429,12 @@ Threads
     data and not shared.
 22. InheritableThreadLocal - It allows child threads to inherits the data from the parent
     threads.
+23. Thread in sleeping / waiting state can be interrupted by calling the interrupt() method.
+24. We can prevent a Thread execution [stop thread execution] by using the following methods,
+    1. Yield()
+    2. Join()
+    3. Sleep()
+
 Thread Life Cycle
 =================
 ------------    ------------------    -----------    --------

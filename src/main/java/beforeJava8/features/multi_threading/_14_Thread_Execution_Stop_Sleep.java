@@ -17,7 +17,7 @@ public class _14_Thread_Execution_Stop_Sleep {
 
             Note: Every sleep() method throws InterruptedException, which is checked
             exception. Hence, whenever we are using the sleep() method, compulsory we
-            should handle InterruptedException either by try catch or by throws keyword.
+            should handle InterruptedException either by try catch or by 'throws' keyword.
             Otherwise, we will get the compile time error.
 
             If we call Thread.sleep(), then as per the Thread life cycle, the running
