@@ -51,7 +51,7 @@ public class _20_InterThreadCommunication {
             =====
             Every wait() method throws InterruptedException which is checked exception hence
             whenever we are using the wait() method, then compulsory we should handle the IE
-            either by try catch or by throws keyword. Otherwise, we will get the compile time
+            either by try catch or by 'throws' keyword. Otherwise, we will get the compile time
             error.
 
             If we call Thread.wait(), then as per the Thread life cycle, the running thread
