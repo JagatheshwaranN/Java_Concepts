@@ -446,4 +446,29 @@ After Thread Scheduler allocates process. Thread will be moved to Running.
 After run() method completes.
 Thread will be moved to Dead state.
 ====================================================================================
-
+20. Inner Class [Introduced in Java 1.1]
+===============
+1. A class can be defined inside another class is called as Inner Class.
+2. Inner Class can access the members of the Outer Class including private members.
+3. Usage - To logically group classes that are only used in one place.
+4. Types of Inner Class as below,
+   1. Normal Inner Class
+   2. Static Inner Class
+   3. Local Inner Class
+   4. Anonymous Inner Class
+5. Static Inner Class can access only static members of Outer Class whereas Non-Static
+   [Inner Class] can access both static and non-static members of the Outer Class.
+6. Anonymous Inner Classes are classes without name, they are defined and instantiate
+   at same time. They are useful for implementing Interfaces / extending classes on fly.
+7. The scope of the Inner Class is limited to the scope of the Outer Class.
+8. Inner Class can be declared as Private / Protected / Public.
+9. Relation between the Outer and Inner class is Has A relation. i.e., Composition /
+   Aggregation.
+10. Among classes and interfaces, we can declare anything inside anything.
+    1. Interface which is declared inside interface is always public and static
+       whether we are declaring or not.
+    2. Class which is declared inside interface is always public and static whether
+       we are declaring or not.
+    3. Interface which is declared inside a class is always static but need not be
+       public.
+====================================================================================
