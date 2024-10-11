@@ -377,8 +377,6 @@ Assertion Error
 ====================================================================================
 19. Threads
 ===========
-Threads
-=======
 1. Thread is a lightweight process. It is a separate path of execution within a program.
 2. Thread allows concurrent execution of tasks, which enables the program to perform
    multiple operations.
@@ -459,7 +457,7 @@ Thread will be moved to Dead state.
 5. Static Inner Class can access only static members of Outer Class whereas Non-Static
    [Inner Class] can access both static and non-static members of the Outer Class.
 6. Anonymous Inner Classes are classes without name, they are defined and instantiate
-   at same time. They are useful for implementing Interfaces / extending classes on fly.
+   at same time. They are useful for implementing interfaces / extending classes on fly.
 7. The scope of the Inner Class is limited to the scope of the Outer Class.
 8. Inner Class can be declared as Private / Protected / Public.
 9. Relation between the Outer and Inner class is Has A relation. i.e., Composition /
@@ -471,4 +469,20 @@ Thread will be moved to Dead state.
        we are declaring or not.
     3. Interface which is declared inside a class is always static but need not be
        public.
+====================================================================================
+21. Array
+=========
+1. An Array in Java is a DataStructure that allows you to store the multiple / group
+   of values of same type under single variable.
+2. The elements / values inside the array can be accessed by index.
+3. Elements of the array can be iterated using the for loop / enhanced for loop.
+4. Default values of array as below,
+   1. Primitive  - [int / float / long / double ] - 0, boolean - false.
+   2. Reference - null.
+5. A multi-dimensional array in Java is an array of arrays. It is used to
+   store elements in tabular form with rows and columns.
+6. Sometimes we can declare an array without name, such type of array is called as
+   Anonymous array. The main purpose of it, is just for instant use (one time usage).
+6. Advantages - Accessing elements will be faster.
+7. Limitations - Insertion / Deletion will be slow, and its fixed in size.
 ====================================================================================
