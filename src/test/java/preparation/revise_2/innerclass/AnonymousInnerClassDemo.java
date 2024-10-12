@@ -1,4 +1,4 @@
-package preparation.revise.innerclass;
+package preparation.revise_2.innerclass;
 
 public class AnonymousInnerClassDemo {
 

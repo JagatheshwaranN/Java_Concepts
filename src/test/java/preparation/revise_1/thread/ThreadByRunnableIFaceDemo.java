@@ -1,4 +1,4 @@
-package preparation.revise.thread;
+package preparation.revise_1.thread;
 
 public class ThreadByRunnableIFaceDemo {
 

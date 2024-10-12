@@ -1,4 +1,4 @@
-package preparation.revise.inherit;
+package preparation.revise_1.inherit;
 
 public class DiamondProblemFixDemo {
 

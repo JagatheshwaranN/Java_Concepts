@@ -1,4 +1,4 @@
-package preparation.revise.loop;
+package preparation.revise_1.loop;
 
 public class LoopTilingExample {
     public static void main(String[] args) {

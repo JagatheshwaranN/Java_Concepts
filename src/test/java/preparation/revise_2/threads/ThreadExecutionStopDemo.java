@@ -1,4 +1,4 @@
-package preparation.revise.threads;
+package preparation.revise_2.threads;
 
 public class ThreadExecutionStopDemo {
 

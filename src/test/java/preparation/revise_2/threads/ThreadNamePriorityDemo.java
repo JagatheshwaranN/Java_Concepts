@@ -1,4 +1,4 @@
-package preparation.revise.threads;
+package preparation.revise_2.threads;
 
 @SuppressWarnings("All")
 public class ThreadNamePriorityDemo {

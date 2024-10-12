@@ -1,4 +1,4 @@
-package preparation.revise.string;
+package preparation.revise_1.string;
 
 public class StrStrBufStrBuildDemo {
 

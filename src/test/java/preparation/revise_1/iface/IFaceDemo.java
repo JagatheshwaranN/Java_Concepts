@@ -1,4 +1,4 @@
-package preparation.revise.iface;
+package preparation.revise_1.iface;
 
 public class IFaceDemo {
 

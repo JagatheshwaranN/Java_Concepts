@@ -1,4 +1,4 @@
-package preparation.revise.main;
+package preparation.revise_1.main;
 
 public class MainMethodDemo1 {
 

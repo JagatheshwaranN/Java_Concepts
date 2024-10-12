@@ -1,4 +1,4 @@
-package preparation.revise;
+package preparation.revise_2;
 
 @SuppressWarnings("All")
 public class PolymorphismDemo {

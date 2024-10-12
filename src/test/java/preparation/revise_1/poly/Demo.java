@@ -1,4 +1,4 @@
-package preparation.revise.poly;
+package preparation.revise_1.poly;
 
 class Animal {
     public void makeSound() {

@@ -1,4 +1,4 @@
-package preparation.revise.has_a;
+package preparation.revise_1.has_a;
 
 public class CompositionDemo {
 

@@ -1,4 +1,4 @@
-package preparation.revise.icf;
+package preparation.revise_1.icf;
 
 public class InstanceCtrlFlowWithStaticMembersDemo {
 

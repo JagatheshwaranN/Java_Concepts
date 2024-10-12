@@ -1,4 +1,4 @@
-package preparation.revise.capsule;
+package preparation.revise_1.capsule;
 
 public class EncapsuleWithThreadDemo {
 

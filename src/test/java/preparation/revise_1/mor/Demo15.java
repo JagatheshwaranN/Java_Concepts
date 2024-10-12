@@ -1,4 +1,4 @@
-package preparation.revise.mor;
+package preparation.revise_1.mor;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

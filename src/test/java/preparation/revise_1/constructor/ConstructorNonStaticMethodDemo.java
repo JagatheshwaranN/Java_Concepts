@@ -1,4 +1,4 @@
-package preparation.revise.constructor;
+package preparation.revise_1.constructor;
 
 public class ConstructorNonStaticMethodDemo {
 

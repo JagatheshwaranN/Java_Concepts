@@ -1,4 +1,4 @@
-package preparation.revise.absract;
+package preparation.revise_1.absract;
 
 public class ACUtilityMethodDemo {
 

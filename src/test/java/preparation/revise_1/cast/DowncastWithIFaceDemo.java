@@ -1,4 +1,4 @@
-package preparation.revise.cast;
+package preparation.revise_1.cast;
 
 public class DowncastWithIFaceDemo {
 

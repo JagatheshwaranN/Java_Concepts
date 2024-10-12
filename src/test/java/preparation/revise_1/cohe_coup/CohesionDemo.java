@@ -1,4 +1,4 @@
-package preparation.revise.cohe_coup;
+package preparation.revise_1.cohe_coup;
 
 public class CohesionDemo {
 
