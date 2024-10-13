@@ -534,3 +534,35 @@ Thread will be moved to Dead state.
 12. Volatile variable is always read directly from and written directly to the
     main memory.
 ====================================================================================
+23. Main Method
+===============
+   Java 1.6 => Static block execution and NoSuchMethodError.
+   Java 1.7 => Error: Main method not found in class Test.
+1. main() - It is the entry point of the Java program. The JVM calls the main() to
+   execute the Java program.
+2. The String[] args is allows to take the cmdline arguments when
+3. Criteria - main() don't return value. Can't be private / protected. If its not public
+   then JVM can't access main().
+4. main() - It can be declared as final but not needed as it already has static so its
+   implicitly final.
+5. The syntax of main() is public static void main(String[] args), if we change the syntax,
+   then the program will fail to execute.
+6. main() can be declared with synchronized keyword but its not common and may introduce
+   unnecessary overhead.
+7. For main method, overloading and inheritance concepts are applicable. But method overriding
+   is not applicable instead method hiding is applicable.
+8. At runtime, JVM always searches for the main() method with the following prototype.
+   a.	Why public, To call by JVM from anywhere.
+   b.	Why static, Without the existence of object, JVM has to call this method.
+   c.	Why void, main() won’t return anything to JVM.
+   d.	Why main name, This is the name which is configured inside the JVM.
+   e.	Why String[] args, This is command line arguments. Most commonly used datatype in
+        Java is String so only the command line argument takes String array and also String
+        datatype can be converted into other datatype easily.
+9. Different style of writing main() method.
+   public static void main(String[] args)
+   static public void main(String[] args)
+   public static final void main(String[] args)
+   public static synchronized void main(String[] args)
+   static final synchronized strictfp public void main(String... we)
+====================================================================================
