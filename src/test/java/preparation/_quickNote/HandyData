@@ -586,3 +586,32 @@ Thread will be moved to Dead state.
    By using this Class cls object, we can access the class level properties like
    fully qualified name of the class, methods information, constructor information, etc.
 ====================================================================================
+25. String
+==========
+1. A String in Java is an object that is used to represent a sequence of
+   characters.
+2. String object can be created in 2 ways - String literals and new operator.
+3. StringBuilder is a mutable sequence of characters. Its similar to StringBuffer
+   but not synchronized.
+4. String is immutable in Java which inherently makes it thread safe.
+5. String - Immutable, ThreadSafe, Concatenation using + involve performance overhead
+   and can be used when the string is not changed frequently.
+6. StringBuffer - Mutable, ThreadSafe as its synchronized, Concatenation using append()
+   is efficient. Less in performance when compared with StringBuilder.Used when ThreadSafe
+   is required.
+7. StringBuilder - Mutable, NOT ThreadSafe, Concatenation using append() is efficient.
+   High in performance when compared with StringBuffer.Used when ThreadSafe is NOT required
+   and performance is crucial.
+8. String str = "Hello"; - Object will be created in SCP only when NO existing object
+   present.
+9. String str = new String("Hello"); - Object will be created in Heap Memory even though
+   similar Object is already present in SCP.
+10. SCP - String Constant Pool is a special memory area in Heap Memory where String Literals
+    are stored. The String literals are stored among all references in the Program.
+11. String class constructors.
+		String s = new String ();
+        String s = new String (String literal);
+        String s = new String (StringBuffer sb);
+        String s = new String (char[] ch);
+        String s = new String (byte[] b);
+====================================================================================
