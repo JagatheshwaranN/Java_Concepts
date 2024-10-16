@@ -615,3 +615,43 @@ Thread will be moved to Dead state.
         String s = new String (char[] ch);
         String s = new String (byte[] b);
 ====================================================================================
+26. Collections
+===============
+1. Collections in java are a framework that provides an architecture to store and manipulate
+   group of objects.
+2. Collection is an interface whereas Collections is a class.
+3. Important collection interfaces - List, Map, Set and Queue.
+4. List - Order collection which contains duplicates.
+   Set - Collection that doesn't allow duplicates.
+   Map - Its a Key Value pair collection.
+   Queue - Collection used to hold elements before processing.
+5. HashMap uses hashtable to store the KeyValue pairs. It uses the hashcode of the Keys to
+   store and retrieve the values quickly.
+6. HashMap is preferred over HashTable. HashTable is used for legacy collection where Thread
+   safety is strict requirement. ConcurrentHashMap is used nowadays.
+7. HashMap uses iterator which is fail fast i.e., we can't modify elements while iterating.
+   If we do, will get ConcurrentModificationException.
+8. HashTable uses enumerator which is failsafe i.e., we can modify elements while enumerating
+   and we don't get ConcurrentModificationException.
+9. Comparable interface is used for sorting elements in natural sorting order.
+10. Comparator interface is used for custom sorting of elements.
+11. List and Set can be made synchronized by using the below methods.
+    Collections.synchronizedList(new ArrayList());
+	Collections.synchronizedSet(new HashSet());
+	Collections.synchronizedMap(new HashMap());
+12. Benefits - Consistency, Reusability and Extensibility.
+13. ArrayList uses dynamic array for storage, faster access of elements.
+14. LinkedList uses doubly linked list for storage, faster insertion and deletion.
+15. HashSet uses hashtable for storing elements. Doesn't guarantee of order.
+16. TreeSet uses tree based structure to store elements. Maintains sorted order.
+17. LinkedHashSet uses HashTable for storage. Preserves insertion order.
+18. Dequeue interface represents double ended queue, which allows insertion and deletion
+    of elements from both ends.
+19. Iterator - Is an object in Java allows you to traverse the Collection [List/Set/Map].
+20. HashSet internally uses HashMap to store elements. It ensures uniques by checking the
+    hashcode of element already exists in set. If hashcode already exists, it further checks
+	for equality using equals() method.
+21. Iterator is used for iterating over collection in forward direction.
+    ListIterator is used for iterating over the list in both directions.
+	Enumerator is an old interface used with legacy collections.
+====================================================================================

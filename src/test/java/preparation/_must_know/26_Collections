@@ -4,7 +4,7 @@ Questions
 Collections in Java are frameworks that provide an architecture to store and manipulate a
 group of objects. They are used to store, retrieve, manipulate, and communicate aggregate
 data.
-
+x`
 2. What is the difference between Collection and Collections in Java?
 Collection is an interface that represents a single group of objects, whereas Collections
 is a utility class in Java that contains static methods for operating on collections.
