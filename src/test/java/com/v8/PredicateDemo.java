@@ -19,11 +19,15 @@ public class PredicateDemo {
         check(p1.and(p2), input);
     }
 
-    static void check(Predicate<Integer> predicate, int[] arr) {
+    public static void check(Predicate<Integer> predicate, int[] arr) {
         for(int val : arr) {
             if(predicate.test(val)) {
                 System.out.println(val);
             }
         }
+    }
+
+    public PredicateDemo() {
+        System.out.println("Default Constructor");
     }
 }
