@@ -2,7 +2,10 @@ package com.v8;
 
 import java.util.function.Predicate;
 
+@TestDemo(value = "123")
 public class PredicateDemo {
+
+    private int val;
 
     public static void main(String[] args) {
 
@@ -29,5 +32,17 @@ public class PredicateDemo {
 
     public PredicateDemo() {
         System.out.println("Default Constructor");
+    }
+
+    public PredicateDemo(int val) {
+        this.val = val;
+    }
+
+    public int getVal() {
+        return val;
+    }
+
+    public void setVal(int val) {
+        this.val = val;
     }
 }
